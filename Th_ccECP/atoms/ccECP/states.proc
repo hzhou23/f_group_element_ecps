@@ -1,0 +1,211 @@
+proc GS_5s2_5p6_6s2_4f9
+{rhf,nitord=30,maxit=100
+ start,H0
+ print,orbitals=2
+ wf,elec=19, spin=5, sym=3
+    occ,2,3,3,0,3,0,0,1
+ closed,2,1,2,0,1,0,0,1
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc EX_5s2_5p6_6s2_4f8_5d1
+{rhf,maxdis=30,iptyp='DIIS',nitord=30,maxit=100; shift,-2.0,-2.0
+ start,H0
+ print,orbitals=2
+ wf,elec=19, spin=7, sym=7
+    occ,2,3,3,1,3,0,0,1
+ closed,2,1,2,0,1,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc EX_5s2_5p6_6s1_4f8_5d2
+{rhf,nitord=30,maxit=100
+ start,H0
+ print,orbitals=2
+ wf,elec=19, spin=9, sym=1
+    occ,2,3,3,1,3,0,1,1
+ closed,1,1,2,0,1,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc EX_5s2_5p6_6s2_4f8_6p1
+{rhf,maxdis=30,iptyp='DIIS',nitord=30,maxit=100; shift,-2.0,-1.0
+ start,H0
+ print,orbitals=2
+ wf,elec=19, spin=7, sym=8
+    occ,2,3,4,0,3,0,0,1
+ closed,2,1,2,0,1,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc IP1_5s2_5p6_6s1_4f9
+{rhf,nitord=30,maxit=100
+ start,H0
+ print,orbitals=2
+ wf,elec=18, spin=6, sym=3
+    occ,2,3,3,0,3,0,0,1
+ closed,1,1,2,0,1,0,0,1
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc IP1_5s2_5p6_6s1_4f8_5d
+{rhf,maxdis=30,iptyp='DIIS',nitord=30,maxit=100; shift,-2.0,-2.0
+ start,H0
+ print,orbitals=2
+ wf,elec=18, spin=8, sym=7
+    occ,2,3,3,1,3,0,0,1
+ closed,1,1,2,0,1,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc IP1_5s2_5p6_6s2_4f8
+{rhf,nitord=30,maxit=100
+ start,H0
+ print,orbitals=2
+ wf,elec=18, spin=6, sym=6
+    occ,2,3,3,0,3,0,0,1
+ closed,2,1,2,0,1,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc IP2_5s2_5p6_4f9
+{rhf,nitord=30,maxit=100
+ start,H0
+ print,orbitals=2
+ wf,elec=17, spin=5, sym=3
+    occ,1,3,3,0,3,0,0,1
+ closed,1,1,2,0,1,0,0,1
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc IP2_5s2_5p6_4f8_5d1
+{rhf,maxdis=30,iptyp='DIIS',nitord=30,maxit=100; shift,-2.0,-2.0
+ start,H0
+ print,orbitals=2
+ wf,elec=17, spin=7, sym=7
+    occ,1,3,3,1,3,0,0,1
+ closed,1,1,2,0,1,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc IP2_5s2_5p6_6s1_4f8
+{rhf,nitord=30,maxit=100
+ start,H0
+ print,orbitals=2
+ wf,elec=17, spin=7, sym=6
+    occ,2,3,3,0,3,0,0,1
+ closed,1,1,2,0,1,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc IP3_5s2_5p6_4f8
+{rhf,nitord=30,maxit=100
+ start,H0
+ print,orbitals=2
+ wf,elec=16, spin=6, sym=6
+    occ,1,3,3,0,3,0,0,1
+ closed,1,1,2,0,1,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc IP3_5s2_5p6_4f7_5d1
+{rhf,maxdis=30,iptyp='DIIS',nitord=30,maxit=100; shift,-2.0,-2.0
+ start,H0
+ print,orbitals=2
+ wf,elec=16, spin=8, sym=5
+    occ,1,3,3,1,3,0,0,1
+ closed,1,1,1,0,1,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc IP3_5s2_5p6_6s1_4f7
+{rhf,nitord=30,maxit=100
+ start,H0
+ print,orbitals=2
+ wf,elec=16, spin=8, sym=8
+    occ,2,3,3,0,3,0,0,1
+ closed,1,1,1,0,1,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc IP4_5s2_5p6_4f7
+{rhf,nitord=30,maxit=100
+ start,H0
+ print,orbitals=2
+ wf,elec=15, spin=7, sym=8
+    occ,1,3,3,0,3,0,0,1
+ closed,1,1,1,0,1,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+proc IP7_5s2_5p3_4f7
+{rhf,nitord=30,maxit=100
+ start,H0
+ print,orbitals=2
+ wf,elec=12, spin=10, sym=1
+    occ,1,3,3,0,3,0,0,1
+ closed,1,0,0,0,0,0,0,0
+ sym,1,1,1,3,2,1,3,2
+ sym,2,1
+ sym,3,1
+ sym,5,1
+}
+endproc
+
+

@@ -1,0 +1,28 @@
+#!/bin/bash
+#SBATCH --job-name scf
+#SBATCH --account=MAT151
+#SBATCH -N 4
+#SBATCH -t 00:10:00
+#SBATCH -o scf.output
+#SBATCH -e scf.error
+
+cd $SLURM_SUBMIT_DIR
+
+echo JobID : $SLURM_JOBID 
+echo Number of nodes requested: $SLURM_JOB_NUM_NODES 
+echo List of nodes assigned to the job: $SLURM_NODELIST 
+
+
+
+module load intel
+module load hdf5/1.10.7
+module load fftw/3.3.8
+module load netlib-lapack
+module load python
+module list
+
+export OMP_NUM_THREADS=4
+srun -N 4 -c 4 --cpu-bind=cores -n 32 pw.x -input scf.in
+
+###rm -rf pwscf_output
+

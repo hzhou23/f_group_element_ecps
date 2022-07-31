@@ -1,0 +1,15 @@
+# run an example in the examples directory
+# given by the file name without .c extension
+echo '========================================='
+echo $1;
+cp examples/$1'.c'  userfu.c;
+make exe;
+./exe;
+mv -v *.pro examples;
+mv -v *.mes examples;
+rm -f exe;
+rm userfu.c;
+rm -f *.pro;
+rm -f *.mes;
+
+

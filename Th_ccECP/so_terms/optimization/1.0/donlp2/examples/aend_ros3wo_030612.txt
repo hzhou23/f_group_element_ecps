@@ -1,0 +1,56 @@
+hb1 = 0.361905316834072`40.;
+hb2 = -0.116803401607002`40.;
+hb3 = 0.613359019695413`40.;
+hb4 = 0.141539065077517`40.;
+h\[Alpha]21 = 0.0`40.;
+h\[Alpha]31 = 0.698846832940704`40.;
+h\[Alpha]32 = -0.0107932298011225`40.;
+h\[Alpha]41 = -0.875769265640604`40.;
+h\[Alpha]42 = -0.284709454463436`40.;
+h\[Alpha]43 = 1.71139458518839`40.;
+h\[Gamma] = 0.22375933090210537159`40.;
+h\[Gamma]21 = 0.623049256951827312683`40.;
+h\[Gamma]31 = -0.216811733839707314472`40.;
+h\[Gamma]32 = -0.124384420370818322176`40.;
+h\[Gamma]41 = 1.08299939965162613484`40.;
+h\[Gamma]42 = 0.477656694656746273489`40.;
+h\[Gamma]43 = -1.14882152187372163994`40.;
+
+hb1+hb2>0, hb3>0 und hb4>4 ist okay wegen h\[Alpha]21 = 0.
+
+Die Entwicklung ist etwas vorangeschritten und dabei sind
+in einem anderen Zusammenhang weitere Bedingungen aufgetaucht.
+
+Alles wie bisher, nur die letzten drei Bedingungen - in Ihrer
+Notation con[9], con[10] und con[11] muessen nicht
+mehr von den Matrizen AA, AB und B erfuellt sein, sondern
+von transformierten Matrizen.
+
+Dafuer fuehrt man die Transformationsmatrix 
+ H = ( 1 0 0 0
+       b1/(b1+b2)   b2/(b1+b2)  0  0
+       0 0 1 0
+       0 0 0 1 )
+
+und ihre Inverse
+
+ HINV = ( 1 0 0 0
+          -b1/b2   (b1+b2)/b2  0  0
+          0 0 1 0
+          0 0 0 1 )
+
+ein. Die b's sind Ihre b[j]'s, also die ueblichen
+Gewichte der Methode.
+
+Mit Hilfe von H und HINV werden die neuen Matrizen
+
+   AATR = H*AA*HINV
+   ABTR = H*AB*HINV
+    BTR = H*B*HINV
+
+definiert. Diese treten nun in den letzten drei Bedingungen
+an die Stelle der alten Matrizen.
+
+Koennten Sie noch einmal versuchen, mit dieser kleinen Aenderung eine
+aehnlich gute Startloesung wie die obige zu finden? Besten
+Dank im Voraus. 

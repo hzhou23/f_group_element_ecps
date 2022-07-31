@@ -1,0 +1,44 @@
+&CONTROL
+   calculation     = 'scf'
+   max_seconds     = 6900
+   outdir          = 'pwscf_output'
+   prefix          = 'pwscf'
+   pseudo_dir      = './'
+/
+
+&SYSTEM
+   ecutwfc         = 700
+   ibrav           = 0
+   input_dft       = 'pbe'
+   nat             = 1
+   nbnd            = 20
+   nosym           = .true.
+   nspin           = 2
+   ntyp            = 1
+   occupations     = 'fixed'
+   starting_magnetization(1) = 0.2
+   tot_charge      = 0
+   tot_magnetization = 7
+/
+
+&ELECTRONS
+   conv_thr        = 1e-06
+   electron_maxstep = 1000
+   mixing_beta     = 0.2
+/
+
+
+ATOMIC_SPECIES 
+   Tb 158.92400000000004 Tb.upf
+
+ATOMIC_POSITIONS bohr
+   Tb       9.44863066       9.44863066       9.44863066 
+
+K_POINTS gamma
+
+CELL_PARAMETERS bohr
+        18.89726133       0.00000000       0.00000000 
+         0.00000000      18.89726133       0.00000000 
+         0.00000000       0.00000000      18.89726133 
+
+
