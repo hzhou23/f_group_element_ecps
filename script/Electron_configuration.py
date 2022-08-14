@@ -28,16 +28,6 @@ class orbital_occupation:
 
         return state_name_occ
 
-    def add_occ( occ_a: List[int], occ_b: List[int]) -> List[int]:
-        max_len = max(len(occ_a), len(occ_b))
-        while len(occ_a) <max_len:
-            occ_a.append(0)
-        while len(occ_b) <max_len:
-            occ_b.append(0)
-        final_occ = [occ_a[i]+occ_b[i] for i in range(max_len)]
-        
-        return final_occ
-    
     def __yoon_s(self, principal : int, n_e : int) -> str:
         return '{} 0 0 0 1 {} \n'.format(principal, n_e)
 
@@ -50,41 +40,73 @@ class orbital_occupation:
     def __yoon_f(self, principal : int, n_e : int) -> str :
         return '{} 3 -3 3 1 {} \n{} 3 -2 3 1 {} \n{} 3 -1 3 1 {} \n{} 3 0 3 1 {} \n{} 3 1 3 1 {} \n{} 3 2 3 1 {} \n{} 3 3 3 1 {} \n'.format(principal, min(max(n_e - 0, 0), 2), principal, min(max(n_e - 2, 0), 2), principal, min(max(n_e - 4, 0),2), principal, min(max(n_e - 6, 0), 2), principal, min(max(n_e - 8, 0),2), principal, min(max(n_e - 10, 0), 2), principal, min(max(n_e - 12, 0), 2))
 
-    def yoon_state(self, state : List[int]) -> Tuple[int,str]:
+    def yoon_state(self, state : List[int], ae : bool = True) -> Tuple[int,str]:
         yoon_content = []
         state_len = len(state)
         existing_orbital = []
         for key in self.orbital_map.keys():
             if key < state_len:
                 existing_orbital.append(self.orbital_map[key])
+        if ae:
+            for orb_num,orb in enumerate(existing_orbital):
+                orb_principal = int(orb[0])
+                if orb[1] == 's':
+                    yoon_orb = self.__yoon_s(principal = orb_principal, n_e = state[orb_num])
+                elif orb[1] == 'p':
+                    yoon_orb = self.__yoon_p(principal = orb_principal, n_e = state[orb_num])
+                elif orb[1] == 'd':
+                    yoon_orb = self.__yoon_d(principal = orb_principal, n_e = state[orb_num])
+                else:
+                    yoon_orb = self.__yoon_f(principal = orb_principal, n_e = state[orb_num])
 
-        for orb_num,orb in enumerate(existing_orbital):
-            orb_principal = int(orb[0])
-            if orb[1] == 's':
-                yoon_orb = self.__yoon_s(principal = orb_principal, n_e = state[orb_num])
-            elif orb[1] == 'p':
-                yoon_orb = self.__yoon_p(principal = orb_principal, n_e = state[orb_num])
-            elif orb[1] == 'd':
-                yoon_orb = self.__yoon_d(principal = orb_principal, n_e = state[orb_num])
+                yoon_content.append(yoon_orb)
+        else:
+            non_zero_ind = next((i for i, x in enumerate(state) if x), None)
+            if non_zero_ind is not None:
+                non_zero_ele = self.orbital_map[non_zero_ind]
+                ref_principal = int(non_zero_ele[0]) - 1
+                existing_orbital = existing_orbital[non_zero_ind:]
+                for orb_num,orb in enumerate(existing_orbital):
+                    orb_principal = int(orb[0])
+                    if orb[1] == 's':
+                        yoon_orb = self.__yoon_s(principal = orb_principal-ref_principal, n_e = state[orb_num+non_zero_ind])
+                    elif orb[1] == 'p':
+                        yoon_orb = self.__yoon_p(principal = orb_principal-ref_principal+1, n_e = state[orb_num+non_zero_ind])
+                    elif orb[1] == 'd':
+                        yoon_orb = self.__yoon_d(principal = orb_principal-ref_principal+2, n_e = state[orb_num+non_zero_ind])
+                    else:
+                        yoon_orb = self.__yoon_f(principal = orb_principal-ref_principal+3, n_e = state[orb_num+non_zero_ind])
+                
+                    yoon_content.append(yoon_orb)
             else:
-                yoon_orb = self.__yoon_f(principal = orb_principal, n_e = state[orb_num])
-
-            yoon_content.append(yoon_orb)
+                yoon_content = []
         
         yoon_content = "".join(yoon_content)
         lines = yoon_content.count('\n')
         return lines,yoon_content
 
-    @property
-    def yoon_ae(self) -> Tuple[List, List]:
+    def yoon(self, ae : bool = True) -> Tuple[List, List]:
         yoon_ae_contents = []
         yoon_ae_lines = []
         for state in self.occ_list:
-            lines, content = self.yoon_state(state)
+            lines, content = self.yoon_state(state, ae)
             yoon_ae_lines.append(lines)
             yoon_ae_contents.append(content)
         
         return yoon_ae_lines, yoon_ae_contents
+
+    def add_occ(occ_a: List[int], occ_b: List[int]) -> List[int]:
+        max_len = max(len(occ_a), len(occ_b))
+        while len(occ_a) <max_len:
+            occ_a.append(0)
+        while len(occ_b) <max_len:
+            occ_b.append(0)
+        final_occ = [occ_a[i]+occ_b[i] for i in range(max_len)]
+        while final_occ[-1] == 0:
+            final_occ.pop(-1)
+        
+        return final_occ
+
 
 class Electron_configure:
     def __init__(self, name : str, num_e : int, core: List[int], ecp_states: List[List]) -> None:
@@ -94,8 +116,10 @@ class Electron_configure:
         self.ecp_states = ecp_states
         self.ae_states = []
         for ecp_ele in self.ecp_states:
-            self.ae_states.append(orbital_occupation.add_occ(self.core, ecp_ele))
-    
+            self.ae_states.append(orbital_occupation.add_occ(core, ecp_ele))
+            while ecp_ele[-1] == 0 and len(ecp_ele) > 1:
+                ecp_ele.pop(-1)
+
     @property
     def ae_configures(self) -> Dict[str, List]:
         ae_state_occ = orbital_occupation(occ_list = self.ae_states).state_occ
@@ -113,11 +137,14 @@ class Electron_configure:
 
         return ecp_state_occ
     
-    def write_yoon_ae(self, result_path: str, file_names: List[str]) -> None:
+    def write_yoon(self, result_path: str, file_names: List[str], ae : bool = True) -> None:
         assert len(file_names) == len(self.ae_states), "Total number of files should equal to the length of AE states."
         os.makedirs(result_path, exist_ok = True)
         path_file_name = [result_path+i for i in file_names]
-        occupation_line, occupation_table = orbital_occupation(occ_list = self.ae_states).yoon_ae
+        if ae:
+            occupation_line, occupation_table = orbital_occupation(occ_list = self.ae_states).yoon(ae = ae)
+        else: 
+            occupation_line, occupation_table = orbital_occupation(occ_list = self.ecp_states).yoon(ae = ae)
 
         for file_num, single_file in enumerate(path_file_name):
             with open(single_file, 'w') as f:
@@ -128,12 +155,5 @@ class Electron_configure:
                 f.write(combined_content)
 
 
-if __name__ == '__main__':
 
-    Y = Electron_configure(name = 'Y', num_e = 39, core = [2,2,6,2,6,10], ecp_states = [[0,0,0,0,0,0],[0,0,0,0,0,0,2,6,1,0,2]])
-    print(Y.ae_configures)
-    print(Y.ecp_configures)
-    work_path = os.getcwd()
-    result_path = work_path+'/../result/'
-    file_names = ["core.d", "ground.d"]
-    Y.write_yoon_ae(result_path = result_path, file_names = file_names)
+
