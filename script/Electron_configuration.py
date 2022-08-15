@@ -29,16 +29,16 @@ class orbital_occupation:
         return state_name_occ
 
     def __yoon_s(self, principal : int, n_e : int) -> str:
-        return '{} 0 0 0 1 {} \n'.format(principal, n_e)
+        return '{} 0 0 0 1 {}\n'.format(principal, n_e)
 
     def __yoon_p(self, principal : int, n_e : int) -> str:
-        return '{} 1 -1 1 1 {} \n{} 1 0 1 1 {} \n{} 1 1 1 1 {} \n'.format(principal, min(max(n_e - 0, 0), 2), principal, min(max(n_e - 2, 0), 2), principal, min(max(n_e - 4, 0),2))
+        return '{} 1 -1 1 1 {}\n{} 1 0 1 1 {}\n{} 1 1 1 1 {}\n'.format(principal, min(max(n_e - 0, 0), 2), principal, min(max(n_e - 2, 0), 2), principal, min(max(n_e - 4, 0),2))
 
     def __yoon_d(self, principal : int, n_e : int) -> str :
-        return '{} 2 -2 2 1 {} \n{} 2 -1 2 1 {} \n{} 2 0 2 1 {} \n{} 2 1 2 1 {} \n{} 2 2 2 1 {} \n'.format(principal, min(max(n_e - 0, 0), 2), principal, min(max(n_e - 2, 0), 2), principal, min(max(n_e - 4, 0),2), principal, min(max(n_e - 6, 0), 2), principal, min(max(n_e - 8, 0),2))
+        return '{} 2 -2 2 1 {}\n{} 2 -1 2 1 {}\n{} 2 0 2 1 {}\n{} 2 1 2 1 {}\n{} 2 2 2 1 {}\n'.format(principal, min(max(n_e - 0, 0), 2), principal, min(max(n_e - 2, 0), 2), principal, min(max(n_e - 4, 0),2), principal, min(max(n_e - 6, 0), 2), principal, min(max(n_e - 8, 0),2))
 
     def __yoon_f(self, principal : int, n_e : int) -> str :
-        return '{} 3 -3 3 1 {} \n{} 3 -2 3 1 {} \n{} 3 -1 3 1 {} \n{} 3 0 3 1 {} \n{} 3 1 3 1 {} \n{} 3 2 3 1 {} \n{} 3 3 3 1 {} \n'.format(principal, min(max(n_e - 0, 0), 2), principal, min(max(n_e - 2, 0), 2), principal, min(max(n_e - 4, 0),2), principal, min(max(n_e - 6, 0), 2), principal, min(max(n_e - 8, 0),2), principal, min(max(n_e - 10, 0), 2), principal, min(max(n_e - 12, 0), 2))
+        return '{} 3 -3 3 1 {}\n{} 3 -2 3 1 {}\n{} 3 -1 3 1 {}\n{} 3 0 3 1 {}\n{} 3 1 3 1 {}\n{} 3 2 3 1 {}\n{} 3 3 3 1 {}\n'.format(principal, min(max(n_e - 0, 0), 2), principal, min(max(n_e - 2, 0), 2), principal, min(max(n_e - 4, 0),2), principal, min(max(n_e - 6, 0), 2), principal, min(max(n_e - 8, 0),2), principal, min(max(n_e - 10, 0), 2), principal, min(max(n_e - 12, 0), 2))
 
     def yoon_state(self, state : List[int], ae : bool = True) -> Tuple[int,str]:
         yoon_content = []
@@ -82,6 +82,9 @@ class orbital_occupation:
                 yoon_content = []
         
         yoon_content = "".join(yoon_content)
+        yoon_content_list = yoon_content.split('\n')
+        yoon_content_list = [i for i in yoon_content_list if len(i)<1 or i[-1] != '0']
+        yoon_content = '\n'.join(yoon_content_list)
         lines = yoon_content.count('\n')
         return lines,yoon_content
 
