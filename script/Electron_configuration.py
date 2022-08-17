@@ -158,13 +158,16 @@ class Electron_configure:
         for file_num, single_file in enumerate(path_file_name):
             with open(single_file, 'w') as f:
                 if ae:
-                    head = 'i\n{} 2000\nd\n1\nu\n0\na\n0 {} .5 .0001 100\n'.format(self.num_e, occupation_line[file_num])
+                    head = 'i\n{} 2000\nd\n0\nu\n2\na\n0 {} .5 .0001 100\n'.format(self.num_e, occupation_line[file_num])
                 else:
                     head = 'i\n{} 2000\nd\n0\nu\n2\ng\na\n0 {} .5 .0001 200\n'.format(self.num_e, occupation_line[file_num])
                 content = occupation_table[file_num]
                 tail = 'w\nout\nq'
                 combined_content = head+content+tail
                 f.write(combined_content)
+
+    def write_Molpro(self, molpro_path : str, ae : bool = True) -> None:
+
 
 
 
