@@ -306,15 +306,26 @@ class orbital_occupation:
         
         for k,v in self.orbital_map.items():
             if v == state_average_orb:
-                pseudo_closed_state[k] = 0
                 if v[1] == 's':
                     pseudo_occ_state[k] = 2
+                    if state[k] < 2:
+                        pseudo_closed_state[k] = 0
+
                 elif v[1] == 'p':
                     pseudo_occ_state[k] = 6
+                    if state[k] < 6:
+                        pseudo_closed_state[k] = 0
+
                 elif v[1] == 'd':
                     pseudo_occ_state[k] = 10
+                    if state[k] < 10:
+                        pseudo_closed_state[k] = 0
+
                 elif v[1] == 'f':
                     pseudo_occ_state[k] = 14
+                    if state[k] < 14:
+                        pseudo_closed_state[k] = 0
+
                 else:
                     raise Exception("Only s, p, d, f orbitals supported in state average calculations.")
                     
