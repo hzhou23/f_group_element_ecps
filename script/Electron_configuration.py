@@ -194,9 +194,48 @@ class orbital_occupation:
 
 
 
+    def molpro_state_openshell_sym(self, state: List[int])->Tuple[int, int]:
+        openshell = 0
+        sym = 1
+        for i_num,i in enumerate(state):
+            if i != 0:
+                current_orb = self.orbital_map[i_num][1]
+
+                if current_orb == 's':
+                    orb_feature = s()
+                elif current_orb == 'p':
+                    orb_feature = p()
+                elif current_orb == 'd':
+                    orb_feature = d()
+                elif current_orb == 'f':
+                    orb_feature = f()
+            
+                if i <= orb_feature.half_fill:
+                    openshell += i
+                else :
+                    openshell += orb_feature.full_fill - i
+
+                site = list(range(len(orb_feature.symmetries)))
+
+                ind= list(combinations(site, openshell))[0]
+                if len(ind) == 0:
+                    ind = (0,0)
+                tmp_sym_list = [orb_feature.symmetries[i] for i in ind]
+                tmp_sym = total_sym(tmp_sym_list)
+                sym = bipart_sym(sym, tmp_sym)
+
+
+        return openshell, sym
+
     def molpro_wf(self, state : List[int], state_average_orb: str) -> Tuple[List[int],List[str]]: 
         ''' For a given input state, and the given state average orbital, it will return : number of valence electron, total symmetry and number of open shell electron as a list.'''
+        remain_state = ujson.loads(ujson.dumps(state))
+        for k,v in self.orbital_map.items():
+            if v == state_average_orb:
+                remain_state[k] = 0
         
+        remain_openshell, remain_sym = self.molpro_state_openshell_sym(remain_state )
+
         weights=[]
         molpro_wf_list=[]
         for k,v in self.orbital_map.items():
@@ -218,20 +257,22 @@ class orbital_occupation:
         else:
             open_shell = orb_feature.full_fill - num_e
 
-        index_list = list(combinations(site, num_e))
-        if len(index_list) == 0:
-            index_list = [(0,0)]
+        index_list = list(combinations(site, open_shell))
         symmetry = []
         for ind in index_list :
-            tmp_sym = [orb_feature.symmetries[i] for i in ind]
-            symmetry.append(total_sym(tmp_sym))
+            if len(ind) == 0:
+                ind = (0,0)
+            
+            tmp_sym_list = [orb_feature.symmetries[i] for i in ind]
+            tmp_sym = total_sym(tmp_sym_list)
+            symmetry.append(bipart_sym(tmp_sym, remain_sym))
         
         sym_counter = Counter(symmetry)
         for k,v in sym_counter.items():
             wf = [0,0,0]
             wf[0] = sum(state)
             wf[1] = int(k)
-            wf[2] = open_shell
+            wf[2] = open_shell + remain_openshell
             weights.append(v)
             wf = ','.join(map(str, wf))
             molpro_wf_list.append(wf)
