@@ -198,7 +198,7 @@ proc Vp5
 {rhf
  start,atden
  print,orbitals=2
- wf,7,2,1
+ wf,7,5,1
  occ,1,1,1,0,1,0,0,0
  closed,1,1,1,0,0,0,0,0
  orbital,4202.2
@@ -208,14 +208,14 @@ pop
  start,4202.2
  occ,1,1,1,0,1,0,0,0
  closed,1,0,0,0,0,0,0,0
- wf,7,2,1;state,1
- wf,7,3,1;state,1
  wf,7,5,1;state,1
+ wf,7,3,1;state,1
+ wf,7,2,1;state,1
  orbital,5202.2
 }
 {rhf,nitord=1,maxit=0
  start,5202.2
- wf,7,2,1
+ wf,7,5,1
  occ,1,1,1,0,1,0,0,0
  closed,1,1,1,0,0,0,0,0
 }
@@ -226,7 +226,7 @@ proc VIp4
 {rhf
  start,atden
  print,orbitals=2
- wf,6,4,2
+ wf,6,7,2
  occ,1,1,1,0,1,0,0,0
  closed,1,1,0,0,0,0,0,0
  orbital,4202.2
@@ -236,14 +236,14 @@ pop
  start,4202.2
  occ,1,1,1,0,1,0,0,0
  closed,1,0,0,0,0,0,0,0
- wf,6,4,2;state,1
- wf,6,6,2;state,1
  wf,6,7,2;state,1
+ wf,6,6,2;state,1
+ wf,6,4,2;state,1
  orbital,5202.2
 }
 {rhf,nitord=1,maxit=0
  start,5202.2
- wf,6,4,2
+ wf,6,7,2
  occ,1,1,1,0,1,0,0,0
  closed,1,1,0,0,0,0,0,0
 }
