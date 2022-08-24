@@ -209,15 +209,17 @@ class orbital_occupation:
                     orb_feature = d()
                 elif current_orb == 'f':
                     orb_feature = f()
-            
-                if i <= orb_feature.half_fill:
-                    openshell += i
-                else :
-                    openshell += orb_feature.full_fill - i
 
                 site = list(range(len(orb_feature.symmetries)))
 
-                ind= list(combinations(site, openshell))[0]
+                if i <= orb_feature.half_fill:
+                    openshell += i
+                    ind= list(combinations(site, openshell))[0]
+                else :
+                    assert i <= orb_feature.full_fill, "Occupation exceeding, current orbital is {}, current occupation is {}".format(current_orb, i)
+                    openshell += orb_feature.full_fill - i
+                    ind= list(combinations(site, openshell))[-1]
+
                 if len(ind) == 0:
                     ind = (0,0)
                 tmp_sym_list = [orb_feature.symmetries[i] for i in ind]
@@ -234,8 +236,8 @@ class orbital_occupation:
             if v == state_average_orb:
                 remain_state[k] = 0
         
-        remain_openshell, remain_sym = self.molpro_state_openshell_sym(remain_state )
-
+        remain_openshell, remain_sym = self.molpro_state_openshell_sym(remain_state)
+        print(remain_sym)
         weights=[]
         molpro_wf_list=[]
         for k,v in self.orbital_map.items():
