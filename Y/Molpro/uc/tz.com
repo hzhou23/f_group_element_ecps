@@ -1,7 +1,7 @@
 ***,Calculation for Y atom, singlet and triplet
 memory,512,m
 
-set,dkroll=1,dkho=99,dkhp=2
+set,dkroll=1,dkho=10,dkhp=2
 
 geometry={
 1

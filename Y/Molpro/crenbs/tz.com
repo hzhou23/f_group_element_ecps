@@ -43,7 +43,7 @@ ECP, y, 36, 3 ;
 2,2.56730008,-108.04507446;
 1,4.38630009,11.55035400;
 0,1.97099996,7.16109085;
-include,aug-cc-pwCVTZ.basis
+include,crenbs.basis
 }
 
 include,states.proc
@@ -82,8 +82,7 @@ do i=1,15
     endif
     scf(i)=energy
     _CC_NORM_MAX=2.0
-    {rccsd(t),shifts=0.2,shiftp=0.2,thrdis=1.0;diis,1,1,15,1;maxit,100;core
-    orbital,ignore_error}
+    {rccsd(t);shift,1.0,1.0;maxit,100;core; check,0}
     ccsd(i)=energy
 enddo
 
