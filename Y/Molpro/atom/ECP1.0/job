@@ -1,0 +1,12 @@
+#!/bin/bash -l
+#SBATCH -J ECP1.0
+#SBATCH -q debug
+#!SBATCH -N 1
+#SBATCH -n 16
+#SBATCH -C haswell
+#SBATCH -t 00:30:00
+#SBATCH -o tz
+
+module load molpro
+molpro -n 12 tz.com
+
