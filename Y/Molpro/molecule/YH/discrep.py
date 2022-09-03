@@ -24,7 +24,7 @@ styles = {
 #'smal-se3'     :{'label': 'energy3',      'color':'#006666','linestyle':'--','dashes': (4,3)     },
 #
 'mwbstu'     :{'label': 'MWBSTU',      'color':'#008000','linestyle':'--','dashes': (6,6)     },
-'ECP'      :{'label': 'ECP',    'color':'#00FFFF','linestyle':'--','dashes': (4,2,1,2) },
+'ECP'      :{'label': 'ECP',    'color':'#76EE00','linestyle':'--','dashes': (4,2,1,2) },
 #'w2'      :{'label': 'w2',    'color':'#cc0099','linestyle':'--','dashes': (4,2,1,2) },
 #'w2'      :{'label': 'w2',    'color':'#39e600','linestyle':'--','dashes': (4,2,1,2) },
 #'w3'     :{'label': 'w3',      'color':'#4daf4a','linestyle':'-','dashes': (2,3)     },
