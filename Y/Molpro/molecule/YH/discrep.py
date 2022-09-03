@@ -13,9 +13,9 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = [ 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc', 'ECP', ]#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc', 'ECP', ]#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles = {
-#'uc'        :{'label': 'UC',       'color':'#e41a1c','linestyle':'-'},
+'UC'        :{'label': 'UC',       'color':'#e41a1c','linestyle':'-'},
 'crenbl'    :{'label': 'CRENBL','color':'#ff7f00','linestyle':'--','dashes': (8,5,1,3)},
 'lanl2'   :{'label': 'LANL2',    'color':'#377eb8','linestyle':'-','dashes': (3,1,1,2) },
 'mdfstu'    :{'label': 'MDFSTU',      'color':'#984ea3','linestyle':'--','dashes': (6,3)     },
