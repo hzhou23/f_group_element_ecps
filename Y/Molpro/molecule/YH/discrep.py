@@ -15,7 +15,7 @@ toev=27.21138602
 
 ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc', 'ECP', ]#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles = {
-'UC'        :{'label': 'UC',       'color':'#e41a1c','linestyle':'-'},
+'UC'        :{'label': 'UC',       'color':'#8B3E2F','linestyle':'-'},
 'crenbl'    :{'label': 'CRENBL','color':'#ff7f00','linestyle':'--','dashes': (8,5,1,3)},
 'lanl2'   :{'label': 'LANL2',    'color':'#377eb8','linestyle':'-','dashes': (3,1,1,2) },
 'mdfstu'    :{'label': 'MDFSTU',      'color':'#984ea3','linestyle':'--','dashes': (6,3)     },
@@ -24,7 +24,7 @@ styles = {
 #'smal-se3'     :{'label': 'energy3',      'color':'#006666','linestyle':'--','dashes': (4,3)     },
 #
 'mwbstu'     :{'label': 'MWBSTU',      'color':'#008000','linestyle':'--','dashes': (6,6)     },
-'ECP'      :{'label': 'ECP',    'color':'#8B3E2F','linestyle':'--','dashes': (4,2,1,2) },
+'ECP'      :{'label': 'ECP',    'color':'#e41a1c','linestyle':'--','dashes': (4,2,1,2) },
 #'w2'      :{'label': 'w2',    'color':'#cc0099','linestyle':'--','dashes': (4,2,1,2) },
 #'w2'      :{'label': 'w2',    'color':'#39e600','linestyle':'--','dashes': (4,2,1,2) },
 #'w3'     :{'label': 'w3',      'color':'#4daf4a','linestyle':'-','dashes': (2,3)     },
