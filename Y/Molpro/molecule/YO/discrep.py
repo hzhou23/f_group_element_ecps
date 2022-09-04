@@ -67,7 +67,7 @@ def plot():
     fig,ax = init()
     data = get_data()
     #print data.head()
-    data.to_csv("YH_TZ.csv", sep=',', index=False)
+    data.to_csv("YO_TZ.csv", sep=',', index=False)
 
     ax.axhspan(-0.05,0.05,alpha=0.25,color='gray')
     ax.axhline(0.0,color='black')
@@ -75,15 +75,15 @@ def plot():
     ax.set_ylabel('Discrepancy (eV)')
     for i,ecp in enumerate(ecps):
         x = data['r']
-        y = (data[ecp] - data['ae'])*toev
+        y = (data[ecp] - data['ae']+0.01049448)*toev
         plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.10,2.10))
 #    ax.set_ylim((-0.25,0.25))
-    ax.set(title='YH tz Discrepancies')
+    ax.set(title='YO tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
     plt.axvline(1.40,ls='--',color='gray',linewidth=1.0)
-    plt.savefig('YH_TZ.pdf')
+    plt.savefig('YO_TZ.pdf')
     plt.show()
 
 if __name__ == '__main__':
