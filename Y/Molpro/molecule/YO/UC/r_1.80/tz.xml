@@ -1,3 +1,10 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
 
  Primary working directories    : /global/cscratch1/sd/haihan
  Secondary working directories  : /global/cscratch1/sd/haihan
@@ -12,12 +19,14 @@
  id        : lbl
 
  Nodes     nprocs
- nid02299    11
+ nid01841    11
  Number of processes for MPI-2 version of Molpro:   nprocs(total)=   12   nprocs(compute)=   11   nprocs(helper)=    1
 
  Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
  default implementation of scratch files=sf  
 
+ --><job>
+  <!--
  ***,Calculation for all-electron YH molecule, SCF and CCSD(T)
  memory,1,g
  gthresh,twoint=1.0E-12
@@ -25,7 +34,7 @@
  
  set,dkroll=1,dkho=10,dkhp=4
  basis={
- Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Y/Molpro/molecule/YO/UC/r_1.40/../generate/Y-aug-cc-pwCVTZ.basis
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Y/Molpro/molecule/YO/UC/r_1.80/../generate/Y-aug-cc-pwCVTZ.basis
 
  File /global/common/cori/software/molpro/2015/molprop_2015_1_linux_x86_64_i8/lib/include/../generate/O-aug-cc-pVTZ.basis does not exist
  Input error

@@ -6,7 +6,7 @@ gthresh,throvl=1.0E-12
 set,dkroll=1,dkho=10,dkhp=4
 basis={
 include,../generate/Y-aug-cc-pwCVTZ.basis
-include,../generate/O-aug-cc-pVTZ.basis
+include,../generate/O-aug-cc-pwCVTZ.basis
 }
 
 Y_ccsd=-3383.299108
@@ -41,7 +41,7 @@ scf=energy
 _CC_NORM_MAX=2.0
 {rccsd(t);maxit,100;core,8,3,3,1}
 ccsd=energy
-bind=ccsd-Y_ccsd-H_ccsd
+bind=ccsd-Y_ccsd-O_ccsd
 
 
 table,1.50,scf,ccsd,bind

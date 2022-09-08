@@ -11,7 +11,7 @@ n=10
 for ((i=0; i<=n; i++))
 do
 	r=$(echo "$equil+$i*$d" | bc -l)
-	mkdir $basefolder/r_$r
+	#mkdir $basefolder/r_$r
 	cp $HOME/job $basefolder/r_$r
 	cp $HOME/template.com $basefolder/r_$r/tz.com
 	cp $HOME/*.basis $basefolder/r_$r/
