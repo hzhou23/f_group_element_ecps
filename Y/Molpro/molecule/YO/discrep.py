@@ -85,7 +85,7 @@ def plot():
     ax.set(title='YO tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
-    plt.axvline(1.40,ls='--',color='gray',linewidth=1.0)
+    plt.axvline(1.7845062635213145,ls='--',color='gray',linewidth=1.0)
     plt.savefig('YO_TZ.pdf')
     plt.show()
 
