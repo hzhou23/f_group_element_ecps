@@ -76,7 +76,7 @@ def plot():
     for i,ecp in enumerate(ecps):
         x = data['r']
         if ecp == 'UC':
-            y = (data[ecp] - data['ae']-0.05229328)*toev
+            y = (data[ecp] - data['ae']-0.000018)*toev
         else:
             y = (data[ecp] - data['ae']+0.01049448)*toev
         plt.plot(x,y,**styles[ecp])
