@@ -12,7 +12,7 @@ workdir = os.getcwd()
 ae = pd.read_csv(workdir+'/AE/dkh_p_2/tz.table1.csv', sep='\s*,\s*', engine='python')
 df['AE'] = ae['CCSD'].values-ae['CCSD'].values[0]
 
-pps=['uc', 'sbkjc', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','ECP1.0']
+pps=['uc', 'sbkjc', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','ECP1.0','ECP1.1']
 
 for pp in pps:
         ecp = pd.read_csv(workdir+'/'+pp+'/tz.table1.csv', sep='\s*,\s*', engine='python')

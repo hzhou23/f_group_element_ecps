@@ -8,7 +8,7 @@ HOME=`pwd`
 basefolder=$HOME/..
 n=10
 
-for i in crenbl sbkjc mwbstu mdfstu ECP lanl2
+for i in crenbl sbkjc mwbstu mdfstu ECP lanl2 ECP1
 do
 	echo $i
 	mkdir $basefolder/$i

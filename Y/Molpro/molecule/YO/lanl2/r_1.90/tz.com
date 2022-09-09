@@ -1,5 +1,5 @@
 ***,Calculation for Y atom, singlet and triplet
-memory,2,g
+memory,1,g
 
 gthresh,twoint=1.0E-12
 
