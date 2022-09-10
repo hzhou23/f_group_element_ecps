@@ -6,7 +6,7 @@ d=$(echo "0.10" | bc -l)
 HOME=`pwd`
 
 basefolder=$HOME/..
-n=10
+n=15
 
 for i in crenbl sbkjc mwbstu mdfstu ECP lanl2 ECP1
 do

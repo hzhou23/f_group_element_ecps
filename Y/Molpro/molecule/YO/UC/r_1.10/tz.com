@@ -9,9 +9,9 @@ include,../generate/Y-aug-cc-pwCVTZ.basis
 include,../generate/O-aug-cc-pwCVTZ.basis
 }
 
-Y_ccsd=-3383.299108 
+Y_ccsd=-3383.299108
 O_ccsd=-75.03694110
- 
+  
 !These are the wf cards parameters
 ne = 47
 symm = 1
