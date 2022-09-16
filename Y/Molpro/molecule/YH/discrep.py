@@ -77,7 +77,7 @@ def plot():
         x = data['r']
         y = (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((1.10,2.10))
+    ax.set_xlim((1.40,2.60))
 #    ax.set_ylim((-0.25,0.25))
     ax.set(title='YH tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
