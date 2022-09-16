@@ -77,12 +77,13 @@ def plot():
         x = data['r']
         y = (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((1.30,2.60))
+    ax.set_xlim((1.10,2.60))
 #    ax.set_ylim((-0.25,0.25))
     ax.set(title='YH tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
     plt.axvline(1.9163505966976846,ls='--',color='gray',linewidth=1.0)
+    plt.axvline(1.3337226338750705, ls = '--',color='gray',linewidth = 1.0)
     plt.savefig('YH_TZ.pdf')
     plt.show()
 
