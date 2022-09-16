@@ -19,7 +19,7 @@ styles = {
 'crenbl'    :{'label': 'CRENBL','color':'#ff7f00','linestyle':'--','dashes': (8,5,1,3)},
 'lanl2'   :{'label': 'LANL2',    'color':'#377eb8','linestyle':'-','dashes': (3,1,1,2) },
 'mdfstu'    :{'label': 'MDFSTU',      'color':'#984ea3','linestyle':'--','dashes': (6,3)     },
-'sbkjc'     :{'label': 'SBKJC',    'color':'#DC0174','linestyle':'-','dashes': (3,1,1,2) },
+'sbkjc'     :{'label': 'SBKJC',    'color':'#DEB887','linestyle':'-','dashes': (3,1,1,2) },
 #'sub0'       :{'label': 'Sub0',      'color':'#6600ff','linestyle':'--','dashes': (3,2)      },
 #'smal-se3'     :{'label': 'energy3',      'color':'#006666','linestyle':'--','dashes': (4,3)     },
 #
@@ -81,7 +81,7 @@ def plot():
             y = (data[ecp] - data['ae']+0.01049448)*toev
         plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.40,2.30))
-    ax.set_ylim((-0.2,0.18))
+    ax.set_ylim((-0.2,0.1))
     ax.set(title='YO tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
