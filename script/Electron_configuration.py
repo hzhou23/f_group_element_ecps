@@ -186,7 +186,7 @@ class orbital_occupation:
             multi_content = '\npop\n{{multi\n start,4202.2\n occ,{}\n closed,{}\n'.format(pseudo_occ_line, pseudo_closed_line)
             for i_num in range(len(wf_triples)):
                 multi_content += ' wf,{};state,{}\n'.format(wf_triples[i_num],state_weights[i_num])
-            multi_content += ' orbital,5202.2\n}\n'
+            multi_content += ' natorb,ci,print\n orbital,5202.2\n}\n'
             
             multi_list.append(multi_content)
 
