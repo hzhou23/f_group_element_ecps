@@ -440,12 +440,12 @@ class Electron_configure:
         print("Writing Molpro files...\n NOTE: In the states.proc file, no 'sym' or 'restrict' were added, please make sure you add them later on.")
         os.makedirs(molpro_path, exist_ok = True)
         if ae:
-            statesproc = molpro_path + '/states_ae_nosym.proc'
+            statesproc = molpro_path + '/{}_states_ae_nosym.proc'.format(self.name)
             first_rhf = orbital_occupation(occ_list = self.ae_states).molpro_rhf(proc_name = proc_name, state_average_orbs = state_average_orbs)
             multi = orbital_occupation(occ_list = self.ae_states).molpro_multi(state_average_orbs = state_average_orbs)
             last_rhf = orbital_occupation(occ_list = self.ae_states).molpro_rhf(proc_name = None,state_average_orbs = state_average_orbs)
         else :
-            statesproc = molpro_path + '/states_ecp_nosym.proc'
+            statesproc = molpro_path + '/{}_states_ecp_nosym.proc'.format(self.name)
             first_rhf = orbital_occupation(occ_list = self.ecp_states).molpro_rhf(proc_name = proc_name, state_average_orbs = state_average_orbs)
             multi = orbital_occupation(occ_list = self.ecp_states).molpro_multi(state_average_orbs = state_average_orbs)
             last_rhf = orbital_occupation(occ_list = self.ecp_states).molpro_rhf(proc_name = None,state_average_orbs = state_average_orbs)
