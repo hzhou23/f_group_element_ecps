@@ -34,8 +34,8 @@ proc Id3s1
 {rhf
  start,atden
  print,orbitals=2
- wf,40,1,4
- occ,7,3,3,2,3,2,2,0
+ wf,40,6,4
+ occ,8,3,3,2,3,1,2,0
  closed,6,3,3,1,3,1,1,0
  sym,1,1,1,1,3,2,1,3,2,1
  restrict,1,1,9.1
@@ -59,52 +59,11 @@ pop
 }
 {rhf,nitord=1,maxit=0
  start,5202.2
- wf,40,1,4
- occ,7,3,3,2,3,2,2,0
+ wf,40,6,4
+ occ,8,3,3,2,3,1,2,0
  closed,6,3,3,1,3,1,1,0
  sym,1,1,1,1,3,2,1,3,2,1
  restrict,1,1,9.1
-}
-endproc
-
-
-proc Id3p1
-{rhf
- start,atden
- print,orbitals=2
- wf,39,4,3
- occ,8,3,3,2,3,1,1,0
- closed,6,3,3,1,3,1,1,0
- sym,1,1,1,1,3,2,1,3,2
- orbital,3202.2
-}
-{rhf
- start,3202.2
- print,orbitals=2
- wf,40,3,4
- occ,8,4,3,2,3,1,1,0
- closed,6,3,3,1,3,1,1,0
- sym,1,1,1,1,3,2,1,3,2
- orbital,4202.2
-}
-pop
-{multi
- start,4202.2
- occ,8,4,3,2,3,2,2,0
- closed,6,3,3,1,3,1,1,0
- wf,40,3,4;state,7
- wf,40,5,4;state,7
- wf,40,8,4;state,9
- wf,40,2,4;state,7
- natorb,ci,print
- orbital,5202.2
-}
-{rhf,nitord=1,maxit=0
- start,5202.2
- wf,40,3,4
- occ,8,4,3,2,3,1,1,0
- closed,6,3,3,1,3,1,1,0
- sym,1,1,1,1,3,2,1,3,2
 }
 endproc
 
@@ -145,8 +104,8 @@ proc IPd2s1
 {rhf
  start,atden
  print,orbitals=2
- wf,39,1,3
- occ,9,3,3,1,3,1,1,0
+ wf,39,6,3
+ occ,7,3,3,2,3,1,2,0
  closed,6,3,3,1,3,1,1,0
  sym,1,1,1,1,3,2,1,3,2,1
  restrict,1,1,9.1
@@ -170,8 +129,8 @@ pop
 }
 {rhf,nitord=1,maxit=0
  start,5202.2
- wf,39,1,3
- occ,9,3,3,1,3,1,1,0
+ wf,39,6,3
+ occ,7,3,3,2,3,1,2,0
  closed,6,3,3,1,3,1,1,0
  sym,1,1,1,1,3,2,1,3,2,1
  restrict,1,1,9.1
