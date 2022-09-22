@@ -1,0 +1,492 @@
+proc Id4s1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,41,1,5
+ occ,8,3,3,2,3,2,2,0
+ closed,6,3,3,1,3,1,1,0
+ sym,1,1,1,1,3,2,1,1,3,2
+ restrict,1,1,7.1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,9,3,3,2,3,2,2,0
+ closed,6,3,3,1,3,1,1,0
+ wf,41,7,5;state,1
+ restrict,1,1,7.1
+ wf,41,6,5;state,1
+ restrict,1,1,7.1
+ wf,41,4,5;state,1
+ restrict,1,1,7.1
+ wf,41,1,5;state,2
+ restrict,1,1,7.1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,41,1,5
+ occ,8,3,3,2,3,2,2,0
+ closed,6,3,3,1,3,1,1,0
+}
+endproc
+
+
+
+
+proc IPd4
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,40,1,4
+ occ,7,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ wf,40,1,4;state,2
+ wf,40,4,4;state,1
+ wf,40,6,4;state,1
+ wf,40,7,4;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,40,1,4
+ occ,7,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+}
+endproc
+
+proc IPd4_1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,40,4,4
+ occ,8,3,3,1,3,2,2
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ wf,40,1,4;state,2
+ wf,40,4,4;state,1
+ wf,40,6,4;state,1
+ wf,40,7,4;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,40,4,4
+ occ,8,3,3,1,3,2,2
+ closed,6,3,3,1,3,1,1
+}
+endproc
+
+proc IPd4_2
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,40,6,4
+ occ,8,3,3,2,3,1,2
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ wf,40,1,4;state,2
+ wf,40,4,4;state,1
+ wf,40,6,4;state,1
+ wf,40,7,4;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,40,6,4
+ occ,8,3,3,2,3,1,2
+ closed,6,3,3,1,3,1,1
+}
+endproc
+
+proc IPd4_3
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,40,7,4
+ occ,8,3,3,2,3,2,1
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ wf,40,1,4;state,2
+ wf,40,4,4;state,1
+ wf,40,6,4;state,1
+ wf,40,7,4;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,40,7,4
+ occ,8,3,3,2,3,2,1
+ closed,6,3,3,1,3,1,1
+}
+endproc
+
+
+proc IId3
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,39,1,3
+ occ,6,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ wf,39,1,3;state,1
+ wf,39,4,3;state,3
+ wf,39,6,3;state,3
+ wf,39,7,3;state,3
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,39,1,3
+ occ,6,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+}
+endproc
+
+proc IId3_1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,39,4,3
+ occ,7,3,3,1,3,2,2
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ wf,39,1,3;state,1
+ wf,39,4,3;state,3
+ wf,39,6,3;state,3
+ wf,39,7,3;state,3
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,39,4,3
+ occ,7,3,3,1,3,2,2
+ closed,6,3,3,1,3,1,1
+}
+endproc
+
+proc IId3_2
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,39,4,3
+ occ,8,3,3,2,3,1,1
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ wf,39,1,3;state,1
+ wf,39,4,3;state,3
+ wf,39,6,3;state,3
+ wf,39,7,3;state,3
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,39,4,3
+ occ,8,3,3,2,3,1,1
+ closed,6,3,3,1,3,1,1
+}
+endproc
+
+proc IId3_3
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,39,6,3
+ occ,7,3,3,2,3,1,2
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ wf,39,1,3;state,1
+ wf,39,4,3;state,3
+ wf,39,6,3;state,3
+ wf,39,7,3;state,3
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,39,6,3
+ occ,7,3,3,2,3,1,2
+ closed,6,3,3,1,3,1,1
+}
+endproc
+
+proc IId3_4
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,39,6,3
+ occ,8,3,3,1,3,2,1
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ wf,39,1,3;state,1
+ wf,39,4,3;state,3
+ wf,39,6,3;state,3
+ wf,39,7,3;state,3
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,39,6,3
+ occ,8,3,3,1,3,2,1
+ closed,6,3,3,1,3,1,1
+}
+endproc
+
+
+proc IId3_5
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,39,7,3
+ occ,7,3,3,2,3,2,1
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ wf,39,1,3;state,1
+ wf,39,4,3;state,3
+ wf,39,6,3;state,3
+ wf,39,7,3;state,3
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,39,7,3
+ occ,7,3,3,2,3,2,1
+ closed,6,3,3,1,3,1,1
+}
+endproc
+
+proc IId3_6
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,39,7,3
+ occ,8,3,3,1,3,1,2
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ wf,39,1,3;state,1
+ wf,39,4,3;state,3
+ wf,39,6,3;state,3
+ wf,39,7,3;state,3
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,39,7,3
+ occ,8,3,3,1,3,1,2
+ closed,6,3,3,1,3,1,1
+}
+endproc
+
+
+proc IVd1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,37,1,1
+ occ,7,3,3,1,3,1,1,0
+ closed,6,3,3,1,3,1,1,0
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2,0
+ closed,6,3,3,1,3,1,1,0
+ wf,37,1,1;state,2
+ wf,37,4,1;state,1
+ wf,37,6,1;state,1
+ wf,37,7,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,37,1,1
+ occ,7,3,3,1,3,1,1,0
+ closed,6,3,3,1,3,1,1,0
+}
+endproc
+
+proc IVd1_1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,37,4,1
+ occ,6,3,3,2,3,1,1,0
+ closed,6,3,3,1,3,1,1,0
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2,0
+ closed,6,3,3,1,3,1,1,0
+ wf,37,1,1;state,2
+ wf,37,4,1;state,1
+ wf,37,6,1;state,1
+ wf,37,7,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,37,4,1
+ occ,6,3,3,2,3,1,1,0
+ closed,6,3,3,1,3,1,1,0
+}
+endproc
+
+proc IVd1_2
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,37,6,1
+ occ,6,3,3,1,3,2,1,0
+ closed,6,3,3,1,3,1,1,0
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2,0
+ closed,6,3,3,1,3,1,1,0
+ wf,37,1,1;state,2
+ wf,37,4,1;state,1
+ wf,37,6,1;state,1
+ wf,37,7,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,37,6,1
+ occ,6,3,3,1,3,2,1,0
+ closed,6,3,3,1,3,1,1,0
+}
+endproc
+
+proc IVd1_3
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,37,7,1
+ occ,6,3,3,1,3,1,2,0
+ closed,6,3,3,1,3,1,1,0
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,8,3,3,2,3,2,2,0
+ closed,6,3,3,1,3,1,1,0
+ wf,37,1,1;state,2
+ wf,37,4,1;state,1
+ wf,37,6,1;state,1
+ wf,37,7,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,37,7,1
+ occ,6,3,3,1,3,1,2,0
+ closed,6,3,3,1,3,1,1,0
+}
+endproc
+
+
