@@ -15,7 +15,7 @@ include,aug-cc-pwCVTZ.basis
 include,Zr_states_ae.proc
 
 
-do i=1,16
+do i=1,15
     if (i.eq.1) then
         Id2s2
     else if (i.eq.2) then
@@ -37,16 +37,14 @@ do i=1,16
     else if (i.eq.10) then
         IVp6
     else if (i.eq.11) then
-        Vp5
-    else if (i.eq.12) then
         VIp4
-    else if (i.eq.13) then
+    else if (i.eq.12) then
         VIIp3
-    else if (i.eq.14) then
+    else if (i.eq.13) then
         VIIIp2
-    else if (i.eq.15) then
+    else if (i.eq.14) then
         IXp1
-    else if (i.eq.16) then
+    else if (i.eq.15) then
         Xp
     endif
     scf(i)=energy

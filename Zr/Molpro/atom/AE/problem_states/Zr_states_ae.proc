@@ -1,0 +1,58 @@
+proc Id2s2
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,40,1,2
+ occ,9,3,3,1,3,1,1,0
+ closed,7,3,3,1,3,1,1,0
+ sym,1,1,1,1,3,2,1,1,3,2
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,9,3,3,2,3,2,2,0
+ closed,7,3,3,1,3,1,1,0
+ wf,40,1,2;state,1
+ wf,40,4,2;state,3
+ wf,40,6,2;state,3
+ wf,40,7,2;state,3
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,40,1,2
+ occ,9,3,3,1,3,1,1,0
+ closed,7,3,3,1,3,1,1,0
+ sym,1,1,1,1,3,2,1,1,3,2
+}
+endproc
+
+proc Vp5
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,35,2,1
+ occ,6,3,3,1,3,1,1
+ closed,6,2,3,1,3,1,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,6,3,3,1,3,1,1
+ closed,6,2,2,1,2,1,1
+ wf,35,2,1;state,1
+ wf,35,3,1;state,1
+ wf,35,5,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,35,2,1
+ occ,6,3,3,1,3,1,1
+ closed,6,2,3,1,3,1,1
+}
+endproc
