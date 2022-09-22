@@ -40,7 +40,7 @@ do i=1,17
     else if (i.eq.9) then
         IIIp1
     else if (i.eq.10) then
-        IIIf1
+        III_f1
     else if (i.eq.11) then
         IVp6
     else if (i.eq.12) then

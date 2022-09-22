@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /global/cscratch1/sd/haihan
+ Secondary working directories  : /global/cscratch1/sd/haihan
+ Wavefunction directory         : /global/homes/h/haihan/wfu/
+ Main file repository           : /global/cscratch1/sd/haihan/
+
+ SHA1      : 19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ NAME      : 2015.1.36
+ ARCHNAME  : linux/x86_64
+ FC        : /opt/cray/pe/craype/2.5.14/bin/ftn
+ BLASLIB   : -L/opt/intel/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64 -Wl,-_start-group -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -Wl,-_end-group -liomp5
+ id        : lbl
+
+ Nodes     nprocs
+ nid00009    11
+ Number of processes for MPI-2 version of Molpro:   nprocs(total)=   12   nprocs(compute)=   11   nprocs(helper)=    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=sf  
+
+ --><job>
+  <!--
+ ***,Calculation for Rh atom, singlet and triplet
+ memory,512,m
+ geometry={
+ 1
+ Rh
+ Rh  0.0 0.0 0.0
+ }
+ 
+ basis={
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Rh/Molpro/atom/AE/nr/aug-cc-pwCVTZ.basis
+ }
+ 
+ 
+ 
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Rh/Molpro/atom/AE/nr/Rh_states_ae.proc
+ 
+ 
+ do i=1,17
+     if (i.eq.1) then
+         Id8s1
+     else if (i.eq.2) then
+         Id8p1
+     else if (i.eq.3) then
+         Id9
+     else if (i.eq.4) then
+         EAd8s2
+     else if (i.eq.5) then
+         IPd8
+     else if (i.eq.6) then
+         IPd7s1
+     else if (i.eq.7) then
+         IId7
+     else if (i.eq.8) then
+         IIId6
+     else if (i.eq.9) then
+         IIId5f1
+     else if (i.eq.10) then
+         IIId5p1
+     else if (i.eq.11) then
+         IVd5
+     else if (i.eq.12) then
+         Vd4
+     else if (i.eq.13) then
+         VId3
+     else if (i.eq.14) then
+         VIId2
+     else if (i.eq.15) then
+         VIIId1
+     else if (i.eq.16) then
+         IXp6
+     else if (i.eq.17) then
+         Xp3
+     endif
+     scf(i)=energy
+                                                                                 !_CC_NORM_MAX=2.0
+                                                                                 !{rccsd(t),maxit=100;core}
+                                                                                 !ccsd(i)=energy
+ enddo
+ 
+ table,scf,                                                                      !ccsd
+ type,csv
+ save
+ 
+
+ Variables initialized (889), CPU time= 0.01 sec
+ Commands  initialized (702), CPU time= 0.01 sec, 572 directives.
+ Default parameters read. Elapsed time= 0.12 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                                       Copyright, TTI GmbH Stuttgart, 2015
+                                    Version 2015.1 linked Dec 29 2018 15:55:43
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Rh atom, singlet and triplet                                  
+  64 bit mpp version                                                                     DATE: 21-Sep-22          TIME: 20:44:32  
+ **********************************************************************************************************************************
+
+ SHA1:             19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ **********************************************************************************************************************************
+  -->
+  <!--
+
+Geometry recognized as XYZ
+
+
+ Variable memory set to  512000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+
+ DO I                   =         1.00000000   
+
+ Running procedure=ID8S1
+  --><jobstep command="RHF-SCF" commandset="SCFPRO">
+   <!--
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Atom
+ Symmetry elements: X,Y,Z
+ Rotational constants:       0.0000000      0.0000000      0.0000000 GHz  (calculated with average atomic masses)
+
+ Point group  D2h 
+
+
+   --><cml:molecule>
+    <cml:symmetry pointGroup="D2h"/>
+    <cml:atomArray>
+     <cml:atom id="a1" elementType="Rh" x3="0.0" y3="0.0" z3="0.0"/>
+    </cml:atomArray>
+    <cml:bondArray>
+    </cml:bondArray>
+   </cml:molecule><!--
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  RH     45.00    0.000000000    0.000000000    0.000000000
+
+ NUCLEAR CHARGE:                   45
+ NUMBER OF PRIMITIVE AOS:         315
+ NUMBER OF SYMMETRY AOS:          264
+ NUMBER OF CONTRACTIONS:          264   (  79Ag  +  36B3u +  36B2u +  24B1g +  36B1u +  24B2g +  24B3g +   5Au  )
+ NUMBER OF CORE ORBITALS:          18   (   6Ag  +   3B3u +   3B2u +   1B1g +   3B1u +   1B2g +   1B3g +   0Au  )
+ NUMBER OF VALENCE ORBITALS:        6   (   3Ag  +   0B3u +   0B2u +   1B1g +   0B1u +   1B2g +   1B3g +   0Au  )
+
+
+ NUCLEAR REPULSION ENERGY    0.00000000
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 2 3 2 3 2 3
+                                        2 3 2 3 2 3 2 3 2 3   2 3 2 3 2 3 2 3 2 3   2 3 2 3 2 3 2 3 2 3   4 5 6 4 5 6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 2:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 2 3 2 3   2 3 2 3 2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 3:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 2 3 2 3   2 3 2 3 2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 4:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 2 3   2 3 2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 5:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 2 3 2 3   2 3 2 3 2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 6:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 2 3   2 3 2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 7:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 2 3   2 3 2 3
+
+ Eigenvalues of metric
+
+         1 0.184E-08 0.218E-07 0.319E-06 0.247E-05 0.276E-05 0.276E-05 0.503E-05 0.276E-04
+         2 0.689E-06 0.406E-05 0.170E-04 0.824E-04 0.579E-03 0.165E-02 0.165E-02 0.179E-02
+         3 0.689E-06 0.406E-05 0.170E-04 0.824E-04 0.579E-03 0.165E-02 0.165E-02 0.179E-02
+         4 0.276E-05 0.493E-04 0.686E-03 0.452E-02 0.127E-01 0.271E-01 0.556E-01 0.113E+00
+         5 0.689E-06 0.406E-05 0.170E-04 0.824E-04 0.579E-03 0.165E-02 0.165E-02 0.179E-02
+         6 0.276E-05 0.493E-04 0.686E-03 0.452E-02 0.127E-01 0.271E-01 0.556E-01 0.113E+00
+         7 0.276E-05 0.493E-04 0.686E-03 0.452E-02 0.127E-01 0.271E-01 0.556E-01 0.113E+00
+         8 0.165E-02 0.129E+00 0.410E+00 0.133E+01 0.313E+01
+
+ ERROR: BASIS LINEARLY DEPENDENT OR WRONG S
+
+ The current threshold for the smallest tolerated eigenvalue of S is   1.0D-08
+
+ This threshold can be changed with  GTHRESH,THROVL=value, but values smaller than 1.d-8
+ are normally not recommended and can cause numerical problems.
+   --><error/><!--
+  --></jobstep><!--
+  -->
+  <stm:metadataList>
+   <stm:metadata name="dc:date" content="2022-09-21T20:44:32-07:00"/>
+   <stm:metadata name="dc:creator" content="haihan"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList>
+  <platform>
+   <version major="2015" minor="1" SHA="19cd028119e0e09f93f0674bd8af7968d9b3eff6"
+     integer_bits="64" parallelism="mpp">
+    2015.1
+    <date year="2022" month="9" day="21" hour="20" minute="44" second="32">
+     2022-09-21T20:44:32
+    </date>
+   </version>
+   <licence id="lbl"/>
+   <parallel processes="11" nodes="1" all_processes="11" openmp="1"/>
+   <machine hostname="" architecture="">
+     64 bit mpp version
+    <sysinfo name="cpu MHz" content="2831.869"/>
+    <sysinfo name="MemTotal" content="131890088 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts md_clear flush_l1d"/>
+    <sysinfo name="MemTotal" content="131890088 kB"/>
+    <sysinfo name="cache size" content="40960 KB"/>
+    <sysinfo name="ncpu" content="64"/>
+   </machine>
+  </platform>
+  <input>
+   <p> ***,Calculation for Rh atom, singlet and triplet </p>
+   <p> memory,512,m </p>
+   <p> geometry={ </p>
+   <p> 1 </p>
+   <p> Rh </p>
+   <p> Rh  0.0 0.0 0.0 </p>
+   <p> } </p>
+   <p> basis={ </p>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Rh/Molpro/atom/AE/nr/aug-cc-pwCVTZ.basis"/>
+   <p> } </p>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Rh/Molpro/atom/AE/nr/Rh_states_ae.proc"/>
+   <p> do i=1,17 </p>
+   <p>     if (i.eq.1) then </p>
+   <p>         Id8s1 </p>
+   <p>     else if (i.eq.2) then </p>
+   <p>         Id8p1 </p>
+   <p>     else if (i.eq.3) then </p>
+   <p>         Id9 </p>
+   <p>     else if (i.eq.4) then </p>
+   <p>         EAd8s2 </p>
+   <p>     else if (i.eq.5) then </p>
+   <p>         IPd8 </p>
+   <p>     else if (i.eq.6) then </p>
+   <p>         IPd7s1 </p>
+   <p>     else if (i.eq.7) then </p>
+   <p>         IId7 </p>
+   <p>     else if (i.eq.8) then </p>
+   <p>         IIId6 </p>
+   <p>     else if (i.eq.9) then </p>
+   <p>         IIId5f1 </p>
+   <p>     else if (i.eq.10) then </p>
+   <p>         IIId5p1 </p>
+   <p>     else if (i.eq.11) then </p>
+   <p>         IVd5 </p>
+   <p>     else if (i.eq.12) then </p>
+   <p>         Vd4 </p>
+   <p>     else if (i.eq.13) then </p>
+   <p>         VId3 </p>
+   <p>     else if (i.eq.14) then </p>
+   <p>         VIId2 </p>
+   <p>     else if (i.eq.15) then </p>
+   <p>         VIIId1 </p>
+   <p>     else if (i.eq.16) then </p>
+   <p>         IXp6 </p>
+   <p>     else if (i.eq.17) then </p>
+   <p>         Xp3 </p>
+   <p>     endif </p>
+   <p>     scf(i)=energy </p>
+   <p>                                                                                 !_CC_NORM_MAX=2.0 </p>
+   <p>                                                                                 !{rccsd(t),maxit=100;core} </p>
+   <p>                                                                                 !ccsd(i)=energy </p>
+   <p> enddo </p>
+   <p> table,scf,                                                                      !ccsd </p>
+   <p> type,csv </p>
+   <p> save </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>
