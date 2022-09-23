@@ -1,13 +1,9 @@
-***,Calculation for Nb atom, singlet and triplet
-
-gthresh,twoint=1.e-15
-gthresh,oneint=0.e-15
-
+***,Calculation for Rh atom, singlet and triplet
 memory,512,m
 geometry={
 1
-Nb
-Nb  0.0 0.0 0.0
+Rh
+Rh  0.0 0.0 0.0
 }
 
 basis={
@@ -16,16 +12,22 @@ include,aug-cc-pwCVTZ.basis
 
 
 
-include,Nb_states_ae.proc
+include,Rh_states_ae.proc
 
 
-do i=3,3
+do i=1,6
     if (i.eq.1) then
-        IPd4
+        Id8s1
     else if (i.eq.2) then
-        IId3
+        Id8p1
     else if (i.eq.3) then
-        IVd1
+        EAd8s2
+    else if (i.eq.4) then
+        IPd8
+    else if (i.eq.5) then
+        IIId5f1
+    else if (i.eq.6) then
+        VId3
     endif
     scf(i)=energy
     !_CC_NORM_MAX=2.0
