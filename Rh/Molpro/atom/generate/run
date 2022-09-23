@@ -1,0 +1,9 @@
+#!/bin/bash
+
+HOME=`pwd`
+for i in crenbs crenbl lanl2 sbkjc mwbstu mdfstu
+do
+cd $HOME/r_$i
+sbatch job
+done
+
