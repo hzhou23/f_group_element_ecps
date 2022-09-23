@@ -21,7 +21,7 @@ set,dkroll=1,dkho=10,dkhp=4
 include,Rh_states_ae.proc
 
 
-do i=1,17
+do i=1,16
     if (i.eq.1) then
         Id8s1
     else if (i.eq.2) then
@@ -39,22 +39,20 @@ do i=1,17
     else if (i.eq.8) then
         IIId6
     else if (i.eq.9) then
-        IIId5f1
-    else if (i.eq.10) then
         IIId5p1
-    else if (i.eq.11) then
+    else if (i.eq.10) then
         IVd5
-    else if (i.eq.12) then
+    else if (i.eq.11) then
         Vd4
-    else if (i.eq.13) then
+    else if (i.eq.12) then
         VId3
-    else if (i.eq.14) then
+    else if (i.eq.13) then
         VIId2
-    else if (i.eq.15) then
+    else if (i.eq.14) then
         VIIId1
-    else if (i.eq.16) then
+    else if (i.eq.15) then
         IXp6
-    else if (i.eq.17) then
+    else if (i.eq.16) then
         Xp3
     endif
     scf(i)=energy
