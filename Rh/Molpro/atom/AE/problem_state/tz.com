@@ -15,7 +15,7 @@ include,aug-cc-pwCVTZ.basis
 include,Rh_states_ae.proc
 
 
-do i=1,6
+do i=7,7
     if (i.eq.1) then
         Id8s1
     else if (i.eq.2) then
@@ -28,6 +28,8 @@ do i=1,6
         IIId5f1
     else if (i.eq.6) then
         VId3
+    else if (i.eq.7) then
+        Id8f1
     endif
     scf(i)=energy
     !_CC_NORM_MAX=2.0
