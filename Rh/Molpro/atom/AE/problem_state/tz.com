@@ -29,7 +29,7 @@ do i=7,7
     else if (i.eq.6) then
         VId3
     else if (i.eq.7) then
-        Id8f1
+        Idf1
     endif
     scf(i)=energy
     !_CC_NORM_MAX=2.0
