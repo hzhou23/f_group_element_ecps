@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /global/cscratch1/sd/haihan
+ Secondary working directories  : /global/cscratch1/sd/haihan
+ Wavefunction directory         : /global/homes/h/haihan/Research/ECP/f_group_element_ecps/Zr/Molpro/molecule/ZrO/crenbl/wfu/
+ Main file repository           : /global/cscratch1/sd/haihan/
+
+ SHA1      : 19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ NAME      : 2015.1.36
+ ARCHNAME  : linux/x86_64
+ FC        : /opt/cray/pe/craype/2.5.14/bin/ftn
+ BLASLIB   : -L/opt/intel/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64 -Wl,-_start-group -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -Wl,-_end-group -liomp5
+ id        : lbl
+
+ Nodes     nprocs
+ nid01845    11
+ Number of processes for MPI-2 version of Molpro:   nprocs(total)=   12   nprocs(compute)=   11   nprocs(helper)=    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=sf  
+
+ --><job>
+  <!--
+ ***,Calculation for Y atom, singlet and triplet
+ memory,1,g
+ 
+ gthresh,twoint=1.0E-15
+ gthresh,throvl=1.0E-15
+ 
+ 
+ basis={
+ ECP, zr, 28, 3 ;
+ 5;                                                                              !  ul potential
+ 2,1.96560001,-0.27778301;
+ 2,4.82639980,-6.66180706;
+ 2,12.26459980,-38.94683075;
+ 2,38.00030136,-86.41357422;
+ 1,114.34359741,-20.21328354;
+ 7;                                                                              !  s-ul potential
+ 2,2.70860004,51.15351486;
+ 2,3.23639989,-166.17219543;
+ 2,4.53420019,354.62121582;
+ 2,6.97310019,-347.42883301;
+ 2,10.91759968,262.91113281;
+ 1,42.70869827,44.85594177;
+ 0,158.05920410,2.81595111;
+ 7;                                                                              !  p-ul potential
+ 2,2.57399988,53.14321518;
+ 2,3.03749990,-172.25927734;
+ 2,4.15030003,357.74844360;
+ 2,6.21470022,-387.61001587;
+ 2,9.40369987,275.60794067;
+ 1,29.28240013,12.65426922;
+ 0,25.48209953,5.28926516;
+ 7;                                                                              !  d-ul potential
+ 2,1.78410006,35.59209442;
+ 2,2.08969998,-115.19468689;
+ 2,2.79329991,225.52505493;
+ 2,4.06930017,-291.76715088;
+ 2,5.94059992,232.36845398;
+ 1,18.74440002,11.23965740;
+ 0,16.13680077,7.27583790;
+ ecp,O,2,1,0
+ 3
+ 1,  12.30997,  6.000000
+ 3,  14.76962,  73.85984
+ 2,  13.71419, -47.87600
+ 1
+ 2,  13.65512,  85.86406
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Zr/Molpro/molecule/ZrO/crenbl/r_2.20/../../generate/Zr-aug-cc-pwCVTZ.basis
+
+ File /global/common/cori/software/molpro/2015/molprop_2015_1_linux_x86_64_i8/lib/include/../../generate/O-aug-cc-pVTZ.basis does not exist
+ Input error
+
+ GLOBAL ERROR Input error on processor   0                                    

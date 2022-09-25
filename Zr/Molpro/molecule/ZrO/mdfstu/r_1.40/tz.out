@@ -1,0 +1,47 @@
+
+ Primary working directories    : /global/cscratch1/sd/haihan
+ Secondary working directories  : /global/cscratch1/sd/haihan
+ Wavefunction directory         : /global/homes/h/haihan/Research/ECP/f_group_element_ecps/Zr/Molpro/molecule/ZrO/mdfstu/wfu/
+ Main file repository           : /global/cscratch1/sd/haihan/
+
+ SHA1      : 19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ NAME      : 2015.1.36
+ ARCHNAME  : linux/x86_64
+ FC        : /opt/cray/pe/craype/2.5.14/bin/ftn
+ BLASLIB   : -L/opt/intel/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64 -Wl,-_start-group -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -Wl,-_end-group -liomp5
+ id        : lbl
+
+ Nodes     nprocs
+ nid01838    11
+ Number of processes for MPI-2 version of Molpro:   nprocs(total)=   12   nprocs(compute)=   11   nprocs(helper)=    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=sf  
+
+ ***,Calculation for Y atom, singlet and triplet
+ memory,1,g
+ 
+ gthresh,twoint=1.0E-15
+ gthresh,throvl=1.0E-15
+ 
+ 
+ basis={
+ ECP,Zr,28,4,0;
+ 1; 2,1.000000,0.000000;
+ 2; 2,8.636528,150.242994; 2,3.717639,18.780036;
+ 4; 2,7.626728,33.192791; 2,7.453207,66.389039; 2,3.358389,4.620726; 2,3.229738,9.260270;
+ 4; 2,5.938086,13.993383; 2,5.825544,20.995882; 2,2.205019,2.285166; 2,2.206292,3.441260;
+ 2; 2,4.800215,-5.239320; 2,4.798992,-6.987424;
+ ecp,O,2,1,0
+ 3
+ 1,  12.30997,  6.000000
+ 3,  14.76962,  73.85984
+ 2,  13.71419, -47.87600
+ 1
+ 2,  13.65512,  85.86406
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Zr/Molpro/molecule/ZrO/mdfstu/r_1.40/../../generate/Zr-aug-cc-pwCVTZ.basis
+
+ File /global/common/cori/software/molpro/2015/molprop_2015_1_linux_x86_64_i8/lib/include/../../generate/O-aug-cc-pVTZ.basis does not exist
+ Input error
+
+ GLOBAL ERROR Input error on processor   0                                    

@@ -83,7 +83,7 @@ do i=1,16
     endif
     scf(i)=energy
     _CC_NORM_MAX=2.0
-    {rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;thresh,coeff=1d-3,energy=1d-5;diis,1,1,15,1;maxit,200;core}
+    {rccsd(t),shifts=0.2,shiftp=0.2,thrdis=1.0;diis,1,1,15,1;maxit,100;core}
     ccsd(i)=energy
 enddo
 

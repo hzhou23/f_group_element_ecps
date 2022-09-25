@@ -1,0 +1,50 @@
+***,Calculation for all-electron YH molecule, SCF and CCSD(T)
+memory,1,g
+gthresh,twoint=1.0E-15
+gthresh,throvl=1.0E-15
+
+set,dkroll=1,dkho=10,dkhp=4
+basis={
+include,../generate/Zr-aug-cc-pwCVTZ.basis
+include,../generate/H-aug-cc-pVTZ.basis
+}
+
+Zr_ccsd=-3596.607176
+H_ccsd=-0.49982785
+  
+!These are the wf cards parameters
+ne = 41
+symm = 1
+ss= 1
+
+!There are irrep cards paramters
+A1=12
+B1=4
+B2=4
+A2=1
+
+
+geometry={
+    2
+    YH molecule
+    Zr 0.0 0.0 0.0
+    H 0.0 0.0 2.10
+}
+{rhf,nitord=100;
+ maxit,200;
+ wf,ne,symm,ss
+ occ,A1,B1,B2,A2
+ closed,A1-1,B1,B2,A2
+ print,orbitals=2
+}
+scf=energy
+_CC_NORM_MAX=2.0
+{rccsd(t),shifts=0.2,shiftp=0.2,thrdis=1.0;diis,1,1,15,1;maxit,100;core,7,3,3,1}
+ccsd=energy
+bind=ccsd-Zr_ccsd-H_ccsd
+
+
+table,2.10,scf,ccsd,bind
+save
+type,csv
+

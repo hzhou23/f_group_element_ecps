@@ -1,0 +1,10 @@
+#!/bin/bash
+
+HOME=`pwd`
+for i in 1.90 2.00 2.10 2.20 2.30 2.40 2.50 2.60
+do
+cd $HOME/r_$i
+rm *out* *xml*
+sbatch job
+done
+
