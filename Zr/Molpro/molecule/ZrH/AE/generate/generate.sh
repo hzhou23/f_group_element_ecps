@@ -15,6 +15,6 @@ do
 	cp $HOME/job $basefolder/r_$r
 	cp $HOME/template.com $basefolder/r_$r/tz.com
 	#cp $HOME/*.basis $basefolder/r_$r/
-	sed -i "s/length/$r/g" $basefolder/r_$r/tz.com
+        sed -i "s/length/$r/g" $basefolder/r_$r/tz.com
 	sed -i "s/length/$r/g" $basefolder/r_$r/job
 done

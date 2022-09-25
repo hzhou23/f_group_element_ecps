@@ -28,7 +28,25 @@ _CC_NORM_MAX=2.0
 O_ccsd=energy
 
 
-table,1.10,O_ccsd
+geometry={
+   1
+   Oxygen
+   O 0.0 0.0 0.0
+}
+{rhf;
+ start,atden
+ wf,8,7,2;
+ occ,2,1,1,0,1,0,0,0;
+ closed,2,1,0,0,0,0,0,0;
+}
+O_scf_1=energy
+_CC_NORM_MAX=2.0
+{rccsd(t);maxit,100;core}
+O_ccsd_1=energy
+
+
+
+table,1.10,O_ccsd,O_ccsd_1
 save
 type,csv
 

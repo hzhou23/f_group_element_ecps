@@ -11,14 +11,14 @@ n=15
 for i in crenbl sbkjc mwbstu mdfstu lanl2
 do
 	echo $i
-        #mkdir $basefolder/$i
+        mkdir $basefolder/$i
 for ((j=0; j<=n; j++))
 do
 	r=$(echo "$equil+$j*$d" | bc -l)
-	#mkdir $basefolder/$i/r_$r
+	mkdir $basefolder/$i/r_$r
 	cp $HOME/job $basefolder/$i/r_$r
-	#cp $HOME/$i.com $basefolder/$i/r_$r/tz.com
-	#cp $HOME/run $basefolder/$i/run
+	cp $HOME/$i.com $basefolder/$i/r_$r/tz.com
+	cp $HOME/run $basefolder/$i/run
 	#cp $HOME/*.basis $basefolder/r_$r/
 	sed -i "s/length/$r/g" $basefolder/$i/r_$r/tz.com
 	sed -i "s/ecp/$i/g" $basefolder/$i/r_$r/job

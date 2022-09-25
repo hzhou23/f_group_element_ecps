@@ -20,12 +20,12 @@ ecp,O,2,1,0
 1
 2,  13.65512,  85.86406
 include,../../generate/Zr-aug-cc-pwCVTZ.basis
-include,../../generate/O-aug-cc-pVTZ.basis
+include,../../generate/O-aug-cc-pwCVTZ.basis
 }
 
 
 Zr_ccsd=-46.83345410
-O_ccsd=-15.85572648
+O_ccsd=-15.86622096
 
 !These are the wf cards parameters
 ne = 18

@@ -14,12 +14,12 @@ H_ccsd=-0.49982785
   
 !These are the wf cards parameters
 ne = 41
-symm = 1
+symm = 2
 ss= 1
 
 !There are irrep cards paramters
-A1=12
-B1=4
+A1=11
+B1=5
 B2=4
 A2=1
 
@@ -34,7 +34,7 @@ geometry={
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
- closed,A1-1,B1,B2,A2
+ closed,A1,B1-1,B2,A2
  print,orbitals=2
 }
 scf=energy

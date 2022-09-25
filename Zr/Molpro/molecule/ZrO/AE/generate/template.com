@@ -11,7 +11,7 @@ include,../generate/O-aug-cc-pwCVTZ.basis
 
 Zr_ccsd=-3597.393660
 O_ccsd= -75.09173839
-  
+ 
 !These are the wf cards parameters
 ne = 48
 symm = 1
