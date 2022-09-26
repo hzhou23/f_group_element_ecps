@@ -53,6 +53,13 @@ geometry={
     Rh 0.0 0.0 0.0
     O 0.0 0.0 2.40
 }
+{rks,pbe0
+ start,atden
+ maxit,200;
+ wf,ne,symm,ss
+ occ,A1,B1,B2,A2
+ closed,A1,B1-1,B2-1,A2-1
+}
 {rhf,nitord=20;
  maxit,200;
  wf,ne,symm,ss
