@@ -1,8 +1,8 @@
 ***,Calculation for Y atom, singlet and triplet
 memory,1,g
 
-gthresh,twoint=1.0E-15
-gthresh,throvl=1.0E-15
+gthresh,twoint=1.0E-12
+gthresh,throvl=1.0E-12
 
 
 basis={
@@ -70,12 +70,18 @@ geometry={
     Rh 0.0 0.0 0.0
     O 0.0 0.0 1.90
 }
-{rhf,nitord=20;
+{rks,pbe0
+ start,atden
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1,B1-1,B2-1,A2-1
- print,orbitals=2
+}
+{rhf,nitord=20;
+ maxit,200
+ wf,ne,symm,ss
+ occ,A1,B1,B2,A2
+ closed,A1,B1-1,B2-1,A2-1
 }
 scf=energy
 _CC_NORM_MAX=2.0
