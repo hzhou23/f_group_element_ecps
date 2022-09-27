@@ -1,8 +1,8 @@
 ***,Calculation for Y atom, singlet and triplet
 memory,1,g
 
-gthresh,twoint=1.0E-12
-gthresh,throvl=1.0E-12
+gthresh,twoint=1.0E-15
+gthresh,throvl=1.0E-15
 
 
 basis={
