@@ -1,6 +1,15 @@
 proc Id4s1
-{rhf
+{rks,pbe0
  start,atden
+ wf,41,1,5
+ occ,8,3,3,2,3,2,2,0
+ closed,6,3,3,1,3,1,1,0
+ sym,1,1,1,1,3,2,1,1,3,2
+ restrict,1,1,7.1
+ orbital,3202.2
+}
+{rhf
+ start,3202.2
  print,orbitals=2
  wf,41,1,5
  occ,8,3,3,2,3,2,2,0
@@ -37,7 +46,7 @@ endproc
 
 
 proc IPd4
-{rhf
+{rks,pbe0
  start,atden
  print,orbitals=2
  wf,40,1,4
@@ -45,6 +54,15 @@ proc IPd4
  closed,6,3,3,1,3,1,1
  sym,1,1,1,1,3,2,1,1,3,2
  restrict,1,1,8.1
+ orbital,3202.2
+}
+{rhf
+ start,3202.2
+ print,orbitals=2
+ wf,40,1,4
+ occ,7,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
  orbital,4202.2
 }
 pop
@@ -53,13 +71,9 @@ pop
  occ,9,3,3,2,3,2,2
  closed,6,3,3,1,3,1,1
  wf,40,4,4;state,1
- restrict,0,0,7.1
  wf,40,6,4;state,1
- restrict,0,0,7.1
  wf,40,7,4;state,1
- restrict,0,0,7.1
  wf,40,1,4;state,2
- restrict,0,0,7.1
  natorb,ci,print
  orbital,5202.2
 }
@@ -68,19 +82,27 @@ pop
  wf,40,1,4
  occ,7,3,3,2,3,2,2
  closed,6,3,3,1,3,1,1
- sym,1,1,1,1,3,2,1,1,3,2
- restrict,1,1,8.1
 }
 endproc
 
+
 proc IId3
-{rhf
+{rks,pbe0
  start,atden
  print,orbitals=2
  wf,39,1,3
  occ,6,3,3,2,3,2,2
  closed,6,3,3,1,3,1,1
- sym,1,1,1,1,3,2,1,1,3,2
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,3202.2
+}
+{rhf
+ start,3202.2
+ print,orbitals=2
+ wf,39,1,3
+ occ,6,3,3,2,3,2,2
+ closed,6,3,3,1,3,1,1
+ sym,1,1,1,1,3,2,1,3,2
  orbital,4202.2
 }
 pop
@@ -89,13 +111,9 @@ pop
  occ,9,3,3,2,3,2,2
  closed,6,3,3,1,3,1,1
  wf,39,4,3;state,3
- restrict,0,0,7.1
  wf,39,6,3;state,3
- restrict,0,0,7.1
  wf,39,7,3;state,3
- restrict,0,0,7.1
  wf,39,1,3;state,1
- restrict,0,0,7.1
  natorb,ci,print
  orbital,5202.2
 }
@@ -104,21 +122,28 @@ pop
  wf,39,1,3
  occ,6,3,3,2,3,2,2
  closed,6,3,3,1,3,1,1
- sym,1,1,1,1,3,2,1,1,3,2
 }
 endproc
 
 
 proc IVd1
-{rhf
+{rks,pbe0
  start,atden
  print,orbitals=2
  wf,37,1,1
  occ,7,3,3,1,3,1,1,0
  closed,6,3,3,1,3,1,1,0
- sym,1,1,1,1,3,2,1,1,3,2
- restrict,1,1,8.1
+ sym,1,1,1,1,3,2,1,3,2
  orbital,3202.2
+}
+{rhf
+ start,3202.2
+ print,orbitals=2
+ wf,37,1,1
+ occ,7,3,3,1,3,1,1,0
+ closed,6,3,3,1,3,1,1,0
+ sym,1,1,1,1,3,2,1,3,2
+ orbital,4202.2
 }
 pop
 {multi
@@ -126,13 +151,9 @@ pop
  occ,9,3,3,2,3,2,2,0
  closed,6,3,3,1,3,1,1,0
  wf,37,1,1;state,2
- restrict,0,0,7.1
  wf,37,4,1;state,1
- restrict,0,0,7.1
  wf,37,6,1;state,1
- restrict,0,0,7.1
  wf,37,7,1;state,1
- restrict,0,0,7.1
  natorb,ci,print
  orbital,5202.2
 }
@@ -141,8 +162,6 @@ pop
  wf,37,1,1
  occ,7,3,3,1,3,1,1,0
  closed,6,3,3,1,3,1,1,0
- sym,1,1,1,1,3,2,1,1,3,2
- restrict,1,1,8.1
 }
 endproc
 
