@@ -19,12 +19,14 @@ include,aug-cc-pwCVTZ.basis
 include,Nb_states_ae.proc
 
 
-do i=3,3
+do i=1,4
     if (i.eq.1) then
-        IPd4
+        Id4s1
     else if (i.eq.2) then
-        IId3
+        IPd4
     else if (i.eq.3) then
+        IId3
+    else if (i.eq.4) then
         IVd1
     endif
     scf(i)=energy
