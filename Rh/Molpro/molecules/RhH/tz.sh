@@ -4,7 +4,7 @@
 
 HOME=`pwd`
 
-for j in AE UC crenbl  lanl2  mdfstu  sbkjc  mwbstu ECP ECP2
+for j in AE UC crenbl  lanl2  mdfstu  sbkjc  mwbstu ECP ECP2 ECP3
 do
 echo $j
 rm $HOME/$j/tzbind
