@@ -11,7 +11,7 @@ Nb  0.0 0.0 0.0
 }
 
 basis={
-include,aug-cc-pwCVTZ.basis
+include,../nr/aug-cc-pwCVTZ.basis
 }
 
 
@@ -19,7 +19,7 @@ include,aug-cc-pwCVTZ.basis
 include,Nb_states_ae.proc
 
 
-do i=1,4
+do i=5,6
     if (i.eq.1) then
         Id4s1
     else if (i.eq.2) then
@@ -28,6 +28,10 @@ do i=1,4
         IId3
     else if (i.eq.4) then
         IVd1
+    else if (i.eq.5) then
+        EAd4s2
+    else if (i.eq.6) then
+        IVp1
     endif
     scf(i)=energy
     !_CC_NORM_MAX=2.0
