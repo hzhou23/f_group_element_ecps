@@ -1,0 +1,55 @@
+
+ Primary working directories    : /global/cscratch1/sd/haihan
+ Secondary working directories  : /global/cscratch1/sd/haihan
+ Wavefunction directory         : /global/homes/h/haihan/Research/ECP/f_group_element_ecps/Nb/Molpro/atom/wfu/
+ Main file repository           : /global/cscratch1/sd/haihan/
+
+ SHA1      : 19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ NAME      : 2015.1.36
+ ARCHNAME  : linux/x86_64
+ FC        : /opt/cray/pe/craype/2.5.14/bin/ftn
+ BLASLIB   : -L/opt/intel/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64 -Wl,-_start-group -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -Wl,-_end-group -liomp5
+ id        : lbl
+
+ Nodes     nprocs
+ nid02054    11
+ Number of processes for MPI-2 version of Molpro:   nprocs(total)=   12   nprocs(compute)=   11   nprocs(helper)=    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=sf  
+
+ ***,Calculation for Nb atom, singlet and triplet
+ memory,1,g
+ geometry={
+ 1
+ Nb
+ Nb  0.0 0.0 0.0
+ }
+ 
+ gthresh,twoint=1.0E-15
+ gthresh,oneint=1.0E-15
+ 
+ 
+ basis={
+ ECP, nb, 28, 3 ;
+ 1;                                                                              !  ul potential
+ 1,4.6419800,-5.8169500;
+ 3;                                                                              !  s-ul potential
+ 0,1.0733900,4.9993700;
+ 2,2.5117400,-100.1785600;
+ 2,2.9394000,127.2157000;
+ 3;                                                                              !  p-ul potential
+ 0,0.9962600,3.6479400;
+ 2,2.2802000,-62.1743700;
+ 2,2.7336000,85.8084500;
+ 2;                                                                              !  d-ul potential
+ 0,10.4880300,2.7720600;
+ 2,3.6426600,29.0524600;
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Nb/Molpro/atom/sbkjc/../generate/Nb-aug-cc-pwCVTZ.basis
+ }
+ 
+
+ File /global/common/cori/software/molpro/2015/molprop_2015_1_linux_x86_64_i8/lib/include/../generate/Nb_states_ecp.proc does not exist
+ Input error
+
+ GLOBAL ERROR Input error on processor   0                                    

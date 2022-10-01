@@ -13,7 +13,7 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc','ECP','ECP2','ECP3']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc','ECP','ECP2','ECP3','ECP5']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles = {
 'UC'        :{'label': 'UC',       'color':'#8B3E2F','linestyle':'-'},
 'crenbl'    :{'label': 'CRENBL','color':'#ff7f00','linestyle':'--','dashes': (8,5,1,3)},
@@ -27,7 +27,7 @@ styles = {
 'ECP'      :{'label': 'ECP',    'color':'#e41a1c','linestyle':'--','dashes': (4,2,1,2) },
 'ECP2'      :{'label': 'ECP2',    'color':'#cc0099','linestyle':'--','dashes': (4,2,1,2) },
 'ECP3'      :{'label': 'ECP3',    'color':'#39e600','linestyle':'--','dashes': (4,2,1,2) },
-#'w3'     :{'label': 'w3',      'color':'#4daf4a','linestyle':'-','dashes': (2,3)     },
+'ECP5'     :{'label': 'ECP5',      'color':'#4daf4a','linestyle':'-','dashes': (2,3)     },
 }
 
 def init():
