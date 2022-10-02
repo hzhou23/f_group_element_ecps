@@ -21,7 +21,7 @@ set,dkroll=1,dkho=10,dkhp=4
 include,Nb_states_ae.proc
 
 
-do i=2,2
+do i=1,1
     if (i.eq.1) then
         Id4s1
     else if (i.eq.2) then
