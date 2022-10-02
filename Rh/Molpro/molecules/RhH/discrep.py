@@ -15,15 +15,15 @@ toev=27.21138602
 
 ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc','ECP','ECP2','ECP3','ECP4','ECP5']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles = {
-'UC'        :{'label': 'UC',       'color':'#8B3E2F','linestyle':'-'},
-'crenbl'    :{'label': 'CRENBL','color':'#ff7f00','linestyle':'-'},
-'lanl2'   :{'label': 'LANL2',    'color':'#377eb8','linestyle':'-' },
-'mdfstu'    :{'label': 'MDFSTU',      'color':'#984ea3','linestyle':'-'  },
-'sbkjc'     :{'label': 'SBKJC',    'color':'#00CDCD','linestyle':'-' },
+'UC'        :{'label': 'UC',       'color':'#8B3E2F','linestyle':'-','alpha':0.8},
+'crenbl'    :{'label': 'CRENBL','color':'#ff7f00','linestyle':'-','alpha':0.5},
+'lanl2'   :{'label': 'LANL2',    'color':'#377eb8','linestyle':'-','alpha':0.5 },
+'mdfstu'    :{'label': 'MDFSTU',      'color':'#984ea3','linestyle':'-' ,'alpha':0.5 },
+'sbkjc'     :{'label': 'SBKJC',    'color':'#00CDCD','linestyle':'-','alpha':0.5 },
 #'sub0'       :{'label': 'Sub0',      'color':'#6600ff','linestyle':'--','dashes': (3,2)      },
 'ECP4'     :{'label': 'ECP4',      'color':'#006666','linestyle':'--','dashes': (8,1,1,1,1,1)     },
 #
-'mwbstu'     :{'label': 'MWBSTU',      'color':'#008000','linestyle':'-'     },
+'mwbstu'     :{'label': 'MWBSTU',      'color':'#008000','linestyle':'-','alpha':0.5     },
 'ECP'      :{'label': 'ECP',    'color':'#e41a1c','linestyle':'--','dashes':   (8,1,1,1,1,1) },
 'ECP2'      :{'label': 'ECP2',    'color':'#cc0099','linestyle':'--','dashes': (8,1,1,1,1,1) },
 'ECP3'      :{'label': 'ECP3',    'color':'#39e600','linestyle':'--','dashes': (8,1,1,1,1,1) },
