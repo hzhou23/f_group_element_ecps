@@ -76,7 +76,7 @@ do i=1,17
     endif
     scf(i)=energy
     _CC_NORM_MAX=2.0
-    {rccsd(t),shifts=0.2,shiftp=0.2,thrdis=1.0;diis,1,1,15,1;maxit,100;core}
+    {rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,100;core}
     ccsd(i)=energy
 enddo
 

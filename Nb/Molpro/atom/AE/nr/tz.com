@@ -1,5 +1,10 @@
 ***,Calculation for Nb atom, singlet and triplet
 memory,512,m
+
+gthresh,twoint=1.e-15
+gthresh,oneint=1.e-15
+
+
 geometry={
 1
 Nb
