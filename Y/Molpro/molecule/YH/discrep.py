@@ -63,7 +63,7 @@ def plot():
     #print data.head()
     data.to_csv("YH_TZ.csv", sep=',', index=False)
 
-    ax.axhspan(-0.05,0.05,alpha=0.25,color='gray')
+    ax.axhspan(-0.043,0.043,alpha=0.25,color='gray')
     ax.axhline(0.0,color='black')
     ax.set_xlabel('Bond Length (\AA)')
     ax.set_ylabel('Discrepancy (eV)')

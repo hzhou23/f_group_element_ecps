@@ -61,9 +61,9 @@ def plot():
     fig,ax = init()
     data = get_data()
     #print data.head()
-    data.to_csv("YH_TZ.csv", sep=',', index=False)
+    data.to_csv("RhO_TZ.csv", sep=',', index=False)
 
-    ax.axhspan(-0.05,0.05,alpha=0.25,color='gray')
+    ax.axhspan(-0.043,0.043,alpha=0.25,color='gray')
     ax.axhline(0.0,color='black')
     ax.set_xlabel('Bond Length (\AA)')
     ax.set_ylabel('Discrepancy (eV)')
@@ -71,13 +71,13 @@ def plot():
         x = data['r']
         y = (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((1.20,2.60))
+    ax.set_xlim((1.30,2.30))
 #    ax.set_ylim((-0.25,0.25))
-    ax.set(title='YH tz Discrepancies')
+    ax.set(title='RhO tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
-    plt.axvline(1.9163505966976846,ls='--',color='gray',linewidth=1.0)
-    plt.savefig('YH_TZ.pdf')
+    plt.axvline(1.7574395444969195,ls='--',color='gray',linewidth=1.0)
+    plt.savefig('RhO_TZ.pdf')
     plt.show()
 
 if __name__ == '__main__':
