@@ -13,21 +13,15 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc','ECP2','ECP4','ECP3','ECP5']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
-styles = {
-'UC'        :{'label': 'UC',       'color':'#8B3E2F','linestyle':'-','alpha':0.8},
-'crenbl'    :{'label': 'CRENBL','color':'#ff7f00','linestyle':'-','alpha':0.5},
-'lanl2'   :{'label': 'LANL2',    'color':'#377eb8','linestyle':'-','alpha':0.5 },
-'mdfstu'    :{'label': 'MDFSTU',      'color':'#984ea3','linestyle':'-'   ,'alpha':0.5 },
-'sbkjc'     :{'label': 'SBKJC',    'color':'#00CDCD','linestyle':'-','alpha':0.5 },
-#'sub0'       :{'label': 'Sub0',      'color':'#6600ff','linestyle':'--','dashes': (3,2)      },
-#'smal-se3'     :{'label': 'energy3',      'color':'#006666','linestyle':'--','dashes': (4,3)     },
-#
-'mwbstu'     :{'label': 'MWBSTU',      'color':'#008000','linestyle':'-'  ,'alpha':0.5   },
-'ECP2'      :{'label': 'ECP2',    'color':'#e41a1c','linestyle':'--','dashes': (8,1,1,1,1,1) },
-'ECP3'      :{'label': 'ECP3',    'color':'#cc0099','linestyle':'--','dashes': (8,1,1,1,1,1) },
-'ECP5'      :{'label': 'ECP5',    'color':'#39e600','linestyle':'--','dashes': (8,1,1,1,1,1) },
-'ECP4'     :{'label': 'ECP4',      'color':'#4daf4a','linestyle':'--','dashes': (8,1,1,1,1,1)     },
+ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc', 'ccECP']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+styles={
+'UC'		:{'label':'UC',		'color':'#ff0000','linestyle':'-'			},
+'mdfstu'	:{'label':'MDFSTU',	'color':'#ff6600','linestyle':'--','dashes':(4,1)	},
+'mwbstu'	:{'label':'MWBSTU',	'color':'#ff33cc','linestyle':'--','dashes':(4,1,1,1)	},
+'crenbl'	:{'label':'CRENBS',	'color':'#2f4f4f','linestyle':'--','dashes':(6,3)	},
+'sbkjc'		:{'label':'SBKJC',	'color':'#1e90ff','linestyle':'--','dashes':(2,1,8,1)	},
+'lanl2'		:{'label':'LANL2',	'color':'#a52a2a','linestyle':'--','dashes':(1,1)	},
+'ccECP'	        :{'label':'ccECP',	'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
 }
 
 def init():
@@ -67,7 +61,7 @@ def plot():
     fig,ax = init()
     data = get_data()
     #print data.head()
-    data.to_csv("ZrH_TZ.csv", sep=',', index=False)
+    data.to_csv("YH_TZ.csv", sep=',', index=False)
 
     ax.axhspan(-0.05,0.05,alpha=0.25,color='gray')
     ax.axhline(0.0,color='black')
@@ -79,11 +73,11 @@ def plot():
         plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.20,2.60))
 #    ax.set_ylim((-0.25,0.25))
-    ax.set(title='ZrH tz Discrepancies')
+    ax.set(title='YH tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
-    plt.axvline(1.8028608262958439,ls='--',color='gray',linewidth=1.0)
-    plt.savefig('ZrH_TZ.pdf')
+    plt.axvline(1.9163505966976846,ls='--',color='gray',linewidth=1.0)
+    plt.savefig('YH_TZ.pdf')
     plt.show()
 
 if __name__ == '__main__':

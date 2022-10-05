@@ -13,21 +13,15 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc', 'ECP']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
-styles = {
-'UC'        :{'label': 'UC',       'color':'#8B3E2F','linestyle':'-'},
-'crenbl'    :{'label': 'CRENBL','color':'#ff7f00','linestyle':'--','dashes': (8,5,1,3)},
-'lanl2'   :{'label': 'LANL2',    'color':'#377eb8','linestyle':'-','dashes': (3,1,1,2) },
-'mdfstu'    :{'label': 'MDFSTU',      'color':'#984ea3','linestyle':'--','dashes': (6,3)     },
-'sbkjc'     :{'label': 'SBKJC',    'color':'#00CDCD','linestyle':'-','dashes': (3,1,1,2) },
-#'sub0'       :{'label': 'Sub0',      'color':'#6600ff','linestyle':'--','dashes': (3,2)      },
-#'smal-se3'     :{'label': 'energy3',      'color':'#006666','linestyle':'--','dashes': (4,3)     },
-#
-'mwbstu'     :{'label': 'MWBSTU',      'color':'#008000','linestyle':'--','dashes': (6,6)     },
-'ECP'      :{'label': 'ccECP',    'color':'#e41a1c','linestyle':'--','dashes': (4,2,1,2) },
-#'ECP1'      :{'label': 'ECP1.1',    'color':'#cc0099','linestyle':'--','dashes': (4,2,1,2) },
-#'ECP1_2'      :{'label': 'ECP1.2',    'color':'#39e600','linestyle':'--','dashes': (4,2,1,2) },
-#'w3'     :{'label': 'w3',      'color':'#4daf4a','linestyle':'-','dashes': (2,3)     },
+ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc', 'ccECP']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+styles={
+'UC'		:{'label':'UC',		'color':'#ff0000','linestyle':'-'			},
+'mdfstu'	:{'label':'MDFSTU',	'color':'#ff6600','linestyle':'--','dashes':(4,1)	},
+'mwbstu'	:{'label':'MWBSTU',	'color':'#ff33cc','linestyle':'--','dashes':(4,1,1,1)	},
+'crenbl'	:{'label':'CRENBS',	'color':'#2f4f4f','linestyle':'--','dashes':(6,3)	},
+'sbkjc'		:{'label':'SBKJC',	'color':'#1e90ff','linestyle':'--','dashes':(2,1,8,1)	},
+'lanl2'		:{'label':'LANL2',	'color':'#a52a2a','linestyle':'--','dashes':(1,1)	},
+'ccECP'	        :{'label':'ccECP',	'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
 }
 
 def init():

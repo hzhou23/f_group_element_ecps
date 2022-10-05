@@ -13,21 +13,15 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc', 'ECP']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
-styles = {
-'UC'        :{'label': 'UC',       'color':'#8B3E2F','linestyle':'-'},
-'crenbl'    :{'label': 'CRENBL','color':'#ff7f00','linestyle':'--','dashes': (8,5,1,3)},
-'lanl2'   :{'label': 'LANL2',    'color':'#377eb8','linestyle':'-','dashes': (3,1,1,2) },
-'mdfstu'    :{'label': 'MDFSTU',      'color':'#984ea3','linestyle':'--','dashes': (6,3)     },
-'sbkjc'     :{'label': 'SBKJC',    'color':'#00CDCD','linestyle':'-','dashes': (3,1,1,2) },
-#'sub0'       :{'label': 'Sub0',      'color':'#6600ff','linestyle':'--','dashes': (3,2)      },
-#'smal-se3'     :{'label': 'energy3',      'color':'#006666','linestyle':'--','dashes': (4,3)     },
-#
-'mwbstu'     :{'label': 'MWBSTU',      'color':'#008000','linestyle':'--','dashes': (6,6)     },
-'ECP'      :{'label': 'ccECP',    'color':'#e41a1c','linestyle':'--','dashes': (4,2,1,2) },
-#'ECP1'      :{'label': 'ECP1.1',    'color':'#cc0099','linestyle':'--','dashes': (4,2,1,2) },
-#'ECP1_2'      :{'label': 'ECP1.2',    'color':'#39e600','linestyle':'--','dashes': (4,2,1,2) },
-#'w3'     :{'label': 'w3',      'color':'#4daf4a','linestyle':'-','dashes': (2,3)     },
+ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu','sbkjc', 'ccECP']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+styles={
+'UC'		:{'label':'UC',		'color':'#ff0000','linestyle':'-'			},
+'mdfstu'	:{'label':'MDFSTU',	'color':'#ff6600','linestyle':'--','dashes':(4,1)	},
+'mwbstu'	:{'label':'MWBSTU',	'color':'#ff33cc','linestyle':'--','dashes':(4,1,1,1)	},
+'crenbl'	:{'label':'CRENBS',	'color':'#2f4f4f','linestyle':'--','dashes':(6,3)	},
+'sbkjc'		:{'label':'SBKJC',	'color':'#1e90ff','linestyle':'--','dashes':(2,1,8,1)	},
+'lanl2'		:{'label':'LANL2',	'color':'#a52a2a','linestyle':'--','dashes':(1,1)	},
+'ccECP'	        :{'label':'ccECP',	'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
 }
 
 def init():
@@ -67,7 +61,7 @@ def plot():
     fig,ax = init()
     data = get_data()
     #print data.head()
-    data.to_csv("YO_TZ.csv", sep=',', index=False)
+    data.to_csv("YH_TZ.csv", sep=',', index=False)
 
     ax.axhspan(-0.05,0.05,alpha=0.25,color='gray')
     ax.axhline(0.0,color='black')
@@ -75,18 +69,15 @@ def plot():
     ax.set_ylabel('Discrepancy (eV)')
     for i,ecp in enumerate(ecps):
         x = data['r']
-        if ecp == 'UC':
-            y = (data[ecp] - data['ae']-0.000018)*toev
-        else:
-            y = (data[ecp] - data['ae']+0.01049448)*toev
+        y = (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((1.40,2.30))
-    ax.set_ylim((-0.2,0.1))
-    ax.set(title='YO tz Discrepancies')
+    ax.set_xlim((1.20,2.60))
+#    ax.set_ylim((-0.25,0.25))
+    ax.set(title='YH tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
-    plt.axvline(1.7845062635213145,ls='--',color='gray',linewidth=1.0)
-    plt.savefig('YO_TZ.pdf')
+    plt.axvline(1.9163505966976846,ls='--',color='gray',linewidth=1.0)
+    plt.savefig('YH_TZ.pdf')
     plt.show()
 
 if __name__ == '__main__':

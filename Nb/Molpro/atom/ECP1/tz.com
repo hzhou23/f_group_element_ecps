@@ -1,9 +1,9 @@
-***,Calculation for Zr atom, singlet and triplet
+***,Calculation for Nb atom, singlet and triplet
 memory,1,g
 geometry={
 1
-Zr
-Zr  0.0 0.0 0.0
+Nb
+Nb  0.0 0.0 0.0
 }
 
 gthresh,twoint=1.0E-15
@@ -11,61 +11,65 @@ gthresh,oneint=1.0E-15
 
 
 basis={
-ECP, zr, 28, 3 ;
+ECP,Nb,28,4,0
 4
-1, 17.78984221741632,  12.0
-3, 19.93686370599208,  213.478106608995840
-2, 6.40062642362168, -22.02452811280729
-2, 3.37683579128669, -3.20394997122408
+1, 19.86089158295794,  13.0
+3, 19.52592677324002,  258.191590578453220
+2, 7.38820086785453 , -23.26312802426079
+2, 4.55864105458634 , -4.88737492545031
 2
-2, 7.99374746633501, 171.22658823886050
-2, 3.80607120531516, 20.79929642362780
+2, 8.45144984331345 , 188.14727662154681
+2, 4.65585389203211 , 25.67388126105923
 2
-2, 7.05455178071119, 120.35697990799744
-2, 3.31053299754673, 14.83923309966889
+2, 8.19202422427608 , 134.29806965607142
+2, 3.46626252816859 , 17.38155611740850
 2
-2, 5.63559173621223, 55.42655127487784
-2, 2.70440625320208, 8.69687520010147
-include,../generate/Zr-aug-cc-pwCVTZ.basis
+2, 6.82507161050075 , 60.15121909620855
+2, 2.85815732720811 , 10.39336936151948
+include,../generate/Nb-aug-cc-pwCVTZ.basis
 }
 
-include,../generate/Zr_states_ecp.proc
+include,../generate/Nb_states_ecp.proc
 
-do i=1,15
+do i=1,17
     if (i.eq.1) then
-        Id2s2
+        Id4s1
     else if (i.eq.2) then
-        Id3s1
+        Id5
     else if (i.eq.3) then
-        EAd3s2
+        EAd4s2
     else if (i.eq.4) then
-        IPd2s1
+        IPd4
     else if (i.eq.5) then
-        IPd3
+        IPd3s1
     else if (i.eq.6) then
-        IId2
+        IId3
     else if (i.eq.7) then
-        IIId1
+        IIId2
     else if (i.eq.8) then
-        IIIp1
+        IVd1
     else if (i.eq.9) then
-        III_f1
+        IVp1
     else if (i.eq.10) then
-        IVp6
+        IVf1
     else if (i.eq.11) then
-        VIp4
+        Vp6
     else if (i.eq.12) then
-        VIIp3
+        VIp5
     else if (i.eq.13) then
-        VIIIp2
+        VIIp4
     else if (i.eq.14) then
-        IXp1
+        VIIIp3
     else if (i.eq.15) then
-        Xp
+        IXp2
+    else if (i.eq.16) then
+        Xp1
+    else if (i.eq.17) then
+        XIp
     endif
     scf(i)=energy
     _CC_NORM_MAX=2.0
-    {rccsd(t),shifts=0.2,shiftp=0.2,thrdis=1.0;diis,1,1,15,1;maxit,100;core}
+    {rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,100;core}
     ccsd(i)=energy
 enddo
 

@@ -1,34 +1,59 @@
 #! /usr/bin/env python
 
-import pickle
+import pickle 
 import pandas as pd
-import os
+import numpy as np
 
-pd.options.display.float_format = '{:,.5f}'.format
+###==================================================
+
+pps=['UC','mwbstu','mdfstu','crenbl','sbkjc','lanl2','ccECP']
+remove_index = []
+lmad_index = [3,4,5,6]
+
+###==================================================
+
+toev = 27.211386245988
+pd.options.display.float_format = '{:,.4f}'.format
 
 df = pd.DataFrame()
-workdir = os.getcwd()
 
-ae = pd.read_csv(workdir+'/AE/dkh/tz.table1.csv', sep='\s*,\s*', engine='python')
+ae = pd.read_csv("AE/dkh/tz.table1.csv", sep='\s*,\s*', engine='python')
 df['AE'] = ae['CCSD'].values-ae['CCSD'].values[0]
 
-pps=['UC', 'sbkjc', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu', 'ECP1','ECP2','ECP3','ECP4','ECP5']
-
 for pp in pps:
-        ecp = pd.read_csv(workdir+'/'+pp+'/tz.table1.csv', sep='\s*,\s*', engine='python')
-        df[pp] = ecp['CCSD'].values-ecp['CCSD'].values[0]
+	ecp = pd.read_csv(pp+'/tz.table1.csv', sep='\s*,\s*', engine='python')
+	df[pp] = ecp['CCSD'].values-ecp['CCSD'].values[0]
 
-mad = pd.DataFrame(columns=df.columns)
-diffs = 27.211386*df.copy()
-#diffs=diffs[1:]   # Getting rid of ground state
-#print(diffs)
+### Drop some undesired states:
+df = df.drop(index=remove_index)
 
-#print("MADS")
-for pp in pps:
-        #print(pp)
-        diffs[pp] = diffs[pp] - diffs['AE']
-        mad.loc['MAD',pp]=diffs[pp].abs().mean()
-        #print(diffs[pp].abs().mean())
+diffs = df.copy()*toev
+diffs = diffs[1:]  # Getting rid of ground state
+ae_gaps = diffs['AE']  # Save AE values before subtracting
+diffs = diffs.sub(ae_gaps, axis=0)
 
-print(diffs.to_latex())
-print(mad.to_latex())
+mad = diffs.copy().abs().mean()
+diffs.loc['MAD'] = mad
+
+lmad = diffs.copy().loc[lmad_index].abs().mean()
+diffs.loc['LMAD'] = lmad
+
+weight = np.sqrt(ae_gaps.abs())
+wmad = diffs.copy().abs().div(weight, axis=0).mean()*100
+diffs.loc['WMAD'] = wmad
+
+diffs['AE'] = ae_gaps  # Revert back to AE gaps
+
+### Sorting everything except AE
+ecp_sorted = diffs.iloc[:,1:].sort_values(by="WMAD", ascending=False, axis=1)
+final_sorted = pd.concat([diffs.iloc[:,0:1], ecp_sorted], axis=1)
+#print(final_sorted)
+print(final_sorted.to_latex())
+
+### Write MADs for later analysis
+spectral = final_sorted.loc["MAD":"WMAD"]
+#spectral = spectral.rename(columns={"CRENBS":"CRENBL"}) # Specific to Bi only
+spectral = spectral.T
+spectral = spectral[1:] # Getting rid of AE
+#print(spectral)
+spectral.to_csv("Y.csv", float_format="%.4f")
