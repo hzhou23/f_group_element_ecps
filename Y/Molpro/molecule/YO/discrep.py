@@ -69,7 +69,10 @@ def plot():
     ax.set_ylabel('Discrepancy (eV)')
     for i,ecp in enumerate(ecps):
         x = data['r']
-        y = (data[ecp] - data['ae']+ 0.01049448)*toev
+        if ecp =='UC':
+            y = (data[ecp] - data['ae'])*toev
+        else:
+            y = (data[ecp] - data['ae']+0.01049448)*toev
         plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.20,2.30))
 #    ax.set_ylim((-0.25,0.25))
