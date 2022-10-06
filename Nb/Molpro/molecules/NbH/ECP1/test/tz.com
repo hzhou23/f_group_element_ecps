@@ -6,7 +6,7 @@ gthresh,throvl=1.0E-15
 
 
 basis={
-ECP,Nb,28,4,0
+ECP,Nb,28,3,0
 4
 1, 19.86089158295794,  13.0
 3, 19.52592677324002,  258.191590578453220
@@ -38,7 +38,7 @@ H_ccsd=-0.49982987
 !These are the wf cards parameters
 ne = 14
 symm = 1
-ss= 4
+ss=4
 
 !There are irrep cards paramters
 A1=4
@@ -58,11 +58,12 @@ geometry={
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-1,B1-1,B2-1,A2-1
+ sym,1,1,1,1,2
  print,orbitals=2
 }
 scf=energy
 _CC_NORM_MAX=2.0
-{rccsd(t);maxit,100;core}
+{rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core}
 ccsd=energy
 bind=ccsd-Nb_ccsd-H_ccsd
 

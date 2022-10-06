@@ -74,6 +74,7 @@ geometry={
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-1,B1-1,B2-1,A2-1
+ sym,1,1,1,1,2
  print,orbitals=2
 }
 scf=energy

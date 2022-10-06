@@ -6,7 +6,7 @@ gthresh,throvl=1.0E-15
 
 
 basis={
-ECP,Nb,28,4,0
+ECP,Nb,28,3,0
 4
 1, 19.86089158295794,  13.0
 3, 19.52592677324002,  258.191590578453220
@@ -58,6 +58,7 @@ geometry={
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-1,B1-1,B2-1,A2-1
+ sym,1,1,1,1,2
  print,orbitals=2
 }
 scf=energy

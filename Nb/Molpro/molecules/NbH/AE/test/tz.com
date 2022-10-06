@@ -35,11 +35,12 @@ geometry={
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-1,B1-1,B2-1,A2-1
+ sym,1,1,1,1,
  print,orbitals=2
 }
 scf=energy
 _CC_NORM_MAX=2.0
-{rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core}
+{rccsd(t);maxit,200;core}
 ccsd=energy
 bind=ccsd-Nb_ccsd-H_ccsd
 
