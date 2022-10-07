@@ -28,7 +28,7 @@ do i=4,4
     else if (i.eq.3) then
         Id4p1
     else if (i.eq.4) then
-        Id4f1
+        EAd5f1
     else if (i.eq.5) then
         EAd5s1
     else if (i.eq.6) then

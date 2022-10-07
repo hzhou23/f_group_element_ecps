@@ -12,7 +12,7 @@ Ta  0.0 0.0 0.0
 }
 
 basis={
-include,../W.basis
+include,../aug-cc-pwCVTZ.basis
 }
 
 
