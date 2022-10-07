@@ -362,14 +362,14 @@ endproc
 
 proc IVf1
 {rhf
- start,atden
+ start,3202.2
  print,orbitals=2
- wf,69,2,1
- occ,9,7,6,2,6,2,2,1
+ wf,69,8,1
+ occ,9,6,6,2,6,2,2,2
  closed,9,6,6,2,6,2,2,1
- sym,2,1,1,1,3,2,1,3,2
- sym,3,1,1,1,3,2,1,3,2
- sym,5,1,1,1,3,2,1,3,2
+ sym,2,1,1,1,3,2,1,2,3
+ sym,3,1,1,1,3,2,1,2,3
+ sym,5,1,1,1,3,2,1,2,3
  orbital,4202.2
 }
 pop
@@ -386,8 +386,8 @@ pop
 }
 {rhf,nitord=1,maxit=0
  start,5202.2
- wf,69,2,1
- occ,9,7,6,2,6,2,2,1
+ wf,69,8,1
+ occ,9,6,6,2,6,2,2,2
  closed,9,6,6,2,6,2,2,1
 }
 endproc
@@ -400,6 +400,8 @@ proc IVs1
  wf,69,1,1
  occ,10,6,6,2,6,2,2,1
  closed,9,6,6,2,6,2,2,1
+ sym,1,1,1,1,3,2,1,3,2,1,1
+ restrict,1,1,10.1
  orbital,4202.2
 }
 pop
@@ -408,6 +410,7 @@ pop
  occ,10,6,6,2,6,2,2,1
  closed,9,6,6,2,6,2,2,1
  wf,69,1,1;state,1
+ restrict,1,1,10.1
  natorb,ci,print
  orbital,5202.2
 }
