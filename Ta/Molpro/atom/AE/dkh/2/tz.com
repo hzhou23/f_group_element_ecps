@@ -1,5 +1,5 @@
 ***,Calculation for Nb atom, singlet and triplet
-memory,1,g
+memory,3,g
 
 gthresh,twoint=1.e-15
 gthresh,oneint=1.e-15

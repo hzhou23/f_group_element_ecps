@@ -22,7 +22,7 @@ ecp_states = [
 [0]*10+[2,6,0,1],
 [0]*10+[2,6,0,0,0,0,1],
 [0]*10+[2,6],
-[0]*10+[2,5],
+[0]*10+[2,4],
 [0]*10+[2,3],
         ]
 
@@ -39,8 +39,8 @@ result_path_ecp = work_path + '/Re/yoon_files/ECP/'
 ecp_file_names = ["ip1.d","ip2.d","ip3.d","ip4.d","ip5.d","ip6.d","ip7.d","ip8.d","ip9.d","ip10.d","ip11.d","ip12.d","ip13.d","ip14.d","ip15.d","ip16.d"]
 Re.write_yoon(result_path = result_path_ecp, file_names = ecp_file_names, ae = False)
 
-molpro_path = './'
-proc_names = [ "Id5s2", 'Id6s1','EAd6s2','IPd5s1','IPd5f1','IPd5p1','IId5','IIId4','IVd3','Vd2','VId1','VIf1','VIp1','VIIp6','VIIIp5','IXp3' ]
-S_A =[ "5d", "5d", "5d", "5d", "5f", "6p", "5d", "5d", "5d", "5d", "5d", "5f","6p","5p","5p","5p"]
-Re.write_Molpro(molpro_path = molpro_path, proc_name = proc_names, state_average_orbs = S_A, ae = False)
-Re.write_Molpro(molpro_path = molpro_path, proc_name = proc_names, state_average_orbs = S_A, ae = True)
+#molpro_path = './'
+#proc_names = [ "Id5s2", 'Id6s1','EAd6s2','IPd5s1','IPd5f1','IPd5p1','IId5','IIId4','IVd3','Vd2','VId1','VIf1','VIp1','VIIp6','VIIIp5','IXp3' ]
+#S_A =[ "5d", "5d", "5d", "5d", "5f", "6p", "5d", "5d", "5d", "5d", "5d", "5f","6p","5p","5p","5p"]
+#Re.write_Molpro(molpro_path = molpro_path, proc_name = proc_names, state_average_orbs = S_A, ae = False)
+#Re.write_Molpro(molpro_path = molpro_path, proc_name = proc_names, state_average_orbs = S_A, ae = True)
