@@ -2,7 +2,7 @@
 
 HOME=`pwd`
 
-n=17
+n=16
 
 for ((i=1; i<=n; i++))
 do

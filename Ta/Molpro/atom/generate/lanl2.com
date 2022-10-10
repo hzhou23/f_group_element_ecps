@@ -54,7 +54,7 @@ include,../generate/aug-cc-pwCVTZ.basis
 include,../generate/Ta_states_ae.proc
 
 
-do i=1,17
+do i=1,16
     if (i.eq.1) then
         Id3s2
     else if (i.eq.2) then
@@ -86,8 +86,6 @@ do i=1,17
     else if (i.eq.15) then
         IXp2
     else if (i.eq.16) then
-        Xp1
-    else if (i.eq.17) then
         XIp
     endif
     scf(i)=energy

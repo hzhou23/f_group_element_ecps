@@ -21,7 +21,7 @@ include,../aug-cc-pwCVTZ.basis
 include,../Ta_states_ae.proc
 
 
-do i=16,16
+do i=17,17
     if (i.eq.1) then
         Id3s2
     else if (i.eq.2) then
