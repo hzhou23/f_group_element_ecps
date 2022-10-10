@@ -1837,3 +1837,104 @@ Geometry recognized as XYZ
   RHF-RMP2 correlation energy          -3.189309958968
  !RHF-RMP2 energy                    -15604.8253516087    
  (NB above energy spin projected)
+
+ Starting RCCSD calculation
+
+ ITER.      SQ.NORM     CORR.ENERGY   TOTAL ENERGY   ENERGY CHANGE        DEN1      VAR(S)    VAR(P)  DIIS     TIME
+   1      1.10717133    -2.77422306-15604.41026471    -2.77422306    -0.16484610  0.62D-02  0.96D-02  0  0    67.76
+   2      1.12093070    -2.92133840-15604.55738005    -0.14711534    -0.02592794  0.12D-02  0.18D-02  0  0   118.43
+   3      1.11720376    -2.86502312-15604.50106477     0.05631528    -0.00625480  0.64D-03  0.38D-03  1  1   169.26
+   4      1.11859593    -2.88229827-15604.51833992    -0.01727515    -0.00003345  0.16D-05  0.82D-05  2  2   220.52
+   5      1.11884556    -2.88262427-15604.51866592    -0.00032599    -0.00000668  0.11D-05  0.28D-05  3  3   271.98
+   6      1.11908365    -2.88277228-15604.51881393    -0.00014801    -0.00000045  0.30D-07  0.28D-06  4  4   324.08
+   7      1.11912550    -2.88279341-15604.51883506    -0.00002114    -0.00000010  0.11D-07  0.66D-07  5  5   375.97
+   8      1.11915110    -2.88279374-15604.51883539    -0.00000033    -0.00000001  0.73D-09  0.28D-08  6  6   427.94
+
+ Norm of t1 vector:      0.08102135      S-energy:    -0.00735584      T1 diagnostic:  0.00576930
+                                                                       D1 diagnostic:  0.01784696
+ Norm of t2 vector:      0.33553933      P-energy:    -2.87543790
+                                         Alpha-Beta:  -1.87145729
+                                         Alpha-Alpha: -0.53191189
+                                         Beta-Beta:   -0.47206872
+
+ Spin contamination <S**2-Sz**2-Sz>     0.00000000
+
+ Memory could be reduced to 366.71 Mwords without degradation in triples
+ 
+
+  Correlated core orbitals:             1.1       2.1       3.1       4.1       5.1       6.1       7.1       8.1       9.1       1.2
+                                        2.2       3.2       4.2       5.2       6.2       1.3       2.3       3.3       4.3       5.3
+                                        6.3       1.4       2.4       1.5       2.5       3.5       4.5       5.5       6.5       1.6
+                                        2.6       1.7       2.7       1.8
+  Orbital energies:                 -2491.1500 -433.2127 -101.5981  -66.3221  -66.3239  -22.0012   -9.5358   -9.5371   -3.4134 -380.5164
+                                      -85.5817  -16.6317   -2.0513   -1.6508   -1.6408 -380.5164  -85.5817  -16.6317   -2.0513   -1.6508
+                                       -1.6408  -66.3241   -9.5372 -380.5161  -85.5861  -16.6414   -2.0319   -1.6506   -1.6496  -66.3275
+                                       -9.5469  -66.3275   -9.5469   -1.6496
+ 
+  RCCSD core-core energy               -2.672391533250
+  RCCSD core-valence energy            -0.179417214878
+  RCCSD valence correlation energy     -0.030984990742
+ 
+
+ RESULTS
+ =======
+
+  Reference energy                   -15601.6360416497    
+  RCCSD singles energy                 -0.007355841375
+  RCCSD pair energy                    -2.875437897495
+  RCCSD correlation energy             -2.882793738870
+  Triples (T) contribution             -0.035691323233
+  Total correlation energy             -2.918485062104
+ 
+  RHF-RCCSD energy                   -15604.5188353886    
+  RHF-RCCSD[T] energy                -15604.5593321010    
+  RHF-RCCSD-T energy                 -15604.5539078848    
+ !RHF-RCCSD(T) energy                -15604.5545267118    
+
+ Program statistics:
+
+ Available memory in ccsd:              2999987968
+ Min. memory needed in ccsd:              76333060
+ Max. memory used in ccsd:               112531170
+ Max. memory used in cckext:              92910714 ( 8 integral passes)
+ Max. memory used in cckint:              74662685 ( 1 integral passes)
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      23      187.51       500      610      700      900      950      970     1001      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1080     1600     1380   
+                                         AOSYM     SMH     JKOP   
+
+              2       9       14.87       200      700     1000      520     4202     5202     1001     6202     2108   
+                                        OPTIONS   GEOM     BASIS   MCVARS     RHF     MCSCF    BASIS    MCSCF     RHF  
+
+ PROGRAMS   *        TOTAL  RCCSD(T)       RHF     MULTI       INT       POP     MULTI       RHF       INT
+ CPU TIMES  *      4395.12   4171.83      0.28     18.68    182.68      0.00      1.58      0.14     19.57
+ REAL TIME  *      4551.11 SEC
+ DISK USED  *        15.87 GB      
+ SF USED    *         7.48 GB      
+ GA USED    *         0.00 MB       (max)       0.00 MB       (current)
+ **********************************************************************************************************************************
+ SETTING CCSD(4)        =    -15604.55452671  AU                              
+ Output type csv         
+                                                                                                                                                                                                                                                                
+
+          SCF,CCSD
+        0.00000,        0.00000
+        0.00000,        0.00000
+        0.00000,        0.00000
+   -15601.63604,   -15604.55453
+                                                  
+
+ RCCSD(T)/USERDEF energy= -15604.554526711818
+
+        RCCSD(T)        RHF-SCF         MULTI           MULTI           RHF-SCF 
+ -15604.55452671 -15601.63604165 -15601.63604165 -15225.17237717 -15225.17398722
+ **********************************************************************************************************************************
+ Molpro calculation terminated
+ Variable memory released

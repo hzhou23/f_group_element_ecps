@@ -1,0 +1,21 @@
+
+ GLOBAL ERROR fehler on processor   0                                         
+    0: fehler 1 (0x1).
+    0: fehler 1 (0x1).
+Rank 0 [Mon Oct 10 01:09:15 2022] [c10-0c1s5n0] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+srun: error: nid02004: task 0: Aborted
+srun: launch/slurm: _step_signal: Terminating StepId=63428558.0
+
+ GLOBAL ERROR fehler on processor   1                                         
+    1: fehler 1 (0x1).
+    1: fehler 1 (0x1).
+Rank 1 [Mon Oct 10 01:09:16 2022] [c10-0c1s5n0] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1
+
+ GLOBAL ERROR fehler on processor   2                                         
+    2: fehler 1 (0x1).
+    2: fehler 1 (0x1).
+Rank 2 [Mon Oct 10 01:09:16 2022] [c10-0c1s5n0] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2
+srun: error: nid02004: tasks 1-2: Aborted
+slurmstepd: error: *** STEP 63428558.0 ON nid02004 CANCELLED AT 2022-10-10T01:09:20 ***
+srun: error: nid02004: task 3: Terminated
+srun: Force Terminated StepId=63428558.0
