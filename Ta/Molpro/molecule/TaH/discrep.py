@@ -68,8 +68,12 @@ def plot():
     ax.set_xlabel('Bond Length (\AA)')
     ax.set_ylabel('Discrepancy (eV)')
     for i,ecp in enumerate(ecps):
-        x = data['r']
-        y = (data[ecp] - data['ae'])*toev
+        if ecp == 'mdfstu':
+            x = data['r']
+            y = (data[ecp] - data['ae'] -0.01822127)*toev
+        else:
+            x = data['r']
+            y = (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.40,2.40))
 #    ax.set_ylim((-0.25,0.25))

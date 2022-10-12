@@ -53,8 +53,6 @@ do i=9,9
     else if (i.eq.15) then
         IXp2
     else if (i.eq.16) then
-        Xp1
-    else if (i.eq.17) then
         XIp
     endif
     scf(i)=energy
