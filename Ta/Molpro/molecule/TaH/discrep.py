@@ -71,6 +71,9 @@ def plot():
         if ecp == 'mdfstu':
             x = data['r']
             y = (data[ecp] - data['ae'] -0.01822127)*toev
+        elif ecp == 'UC':
+            x = data['r']
+            y = (data[ecp] - data['ae']+0.01699)*toev
         else:
             x = data['r']
             y = (data[ecp] - data['ae'])*toev
