@@ -18,8 +18,8 @@ include,../contracted.basis
 {rhf
  start,atden
  print,orbitals=2
- wf,73,4,3
- occ,11,6,6,2,6,3,3,1
+ wf,73,1,3
+ occ,10,6,6,3,6,3,3,1
  closed,10,6,6,2,6,2,2,1
  sym,1,1,1,1,3,2,1,3,2,1,1,3,2
  orbital,4202.2
@@ -52,8 +52,8 @@ include,../aug-cc-pwCVTZ.basis
 }
 {rhf,nitord=1,maxit=0
  start,6202.2
- wf,73,4,3
- occ,11,6,6,2,6,3,3,1
+ wf,73,1,3
+ occ,10,6,6,3,6,3,3,1
  closed,10,6,6,2,6,2,2,1
 }
 scf(i)=energy

@@ -13,7 +13,7 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu', 'mwbstu']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC'		:{'label':'UC',		'color':'#ff0000','linestyle':'-'			},
 'mdfstu'	:{'label':'MDFSTU',	'color':'#ff6600','linestyle':'--','dashes':(4,1)	},
@@ -51,10 +51,22 @@ def get_data():
     data = pd.DataFrame()
     df = pd.read_csv("AE/tzbind", delim_whitespace=True)
     data['r']= df['r']
-    data['ae']= df['bind']
+    data['ae']= df['bind']-15604.86783+15604.88640
     for ecp in ecps:
         df = pd.read_csv("%s/tzbind" % ecp, delim_whitespace=True)
-        data[ecp] = df['bind']
+        if ecp == 'crenbl':
+            data[ecp] = df['bind']-57.46339875+57.48166149
+        elif ecp == 'lanl2':
+            data[ecp] = df['bind']-57.54698452+57.56523592
+        elif ecp == 'sbkjc':
+            data[ecp] = df['bind']-57.46009777+57.47847470
+        elif ecp == 'mwbstu':
+            data[ecp] = df['bind']-56.68236708+56.70059800
+        elif ecp == 'mdfstu':
+            data[ecp] = df['bind']-57.14841446+57.14841446
+        else:
+            data[ecp] = df['bind']-15602.12726+15602.13852
+
     return data
 
 def plot():
@@ -68,15 +80,8 @@ def plot():
     ax.set_xlabel('Bond Length (\AA)')
     ax.set_ylabel('Discrepancy (eV)')
     for i,ecp in enumerate(ecps):
-        if ecp == 'mdfstu':
-            x = data['r']
-            y = (data[ecp] - data['ae'] -0.01822127)*toev
-        elif ecp == 'UC':
-            x = data['r']
-            y = (data[ecp] - data['ae']+0.01699)*toev
-        else:
-            x = data['r']
-            y = (data[ecp] - data['ae'])*toev
+        x = data['r']
+        y= (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.40,2.40))
 #    ax.set_ylim((-0.25,0.25))
