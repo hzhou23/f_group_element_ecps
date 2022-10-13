@@ -2,7 +2,7 @@
 
 HOME=`pwd`
 
-n=16
+n=13
 
 rm $HOME/tz.table1.csv
 
