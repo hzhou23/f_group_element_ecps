@@ -31,7 +31,7 @@ geometry={
     H 0.0 0.0 1.40
 }
 {rhf,nitord=20;
- start,2202.2
+ start,atden
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
@@ -40,7 +40,7 @@ geometry={
 }
 scf=energy
 _CC_NORM_MAX=2.0
-{rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core,13,7,7,3}
+{rccsd(t);maxit,200;core,13,7,7,3}
 ccsd=energy
 bind=ccsd-Ta_ccsd-H_ccsd
 

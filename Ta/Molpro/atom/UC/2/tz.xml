@@ -19,7 +19,7 @@
  id        : lbl
 
  Nodes     nprocs
- nid02056     3
+ nid00780     3
  Number of processes for MPI-2 version of Molpro:   nprocs(total)=    4   nprocs(compute)=    3   nprocs(helper)=    1
 
  Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
@@ -129,7 +129,7 @@
  save
 
  Variables initialized (889), CPU time= 0.01 sec
- Commands  initialized (702), CPU time= 0.00 sec, 572 directives.
+ Commands  initialized (702), CPU time= 0.01 sec, 572 directives.
  Default parameters read. Elapsed time= 0.18 sec
 
  Checking input...
@@ -144,7 +144,7 @@
 
  **********************************************************************************************************************************
  LABEL *   Calculation for Nb atom, singlet and triplet                                  
-  64 bit mpp version                                                                     DATE: 12-Oct-22          TIME: 16:53:38  
+  64 bit mpp version                                                                     DATE: 13-Oct-22          TIME: 14:49:18  
  **********************************************************************************************************************************
 
  SHA1:             19cd028119e0e09f93f0674bd8af7968d9b3eff6
@@ -254,7 +254,7 @@ Geometry recognized as XYZ
 
      42.729 MB (compressed) written to integral file ( 69.2%)
 
-     Node minimum: 11.010 MB, node maximum: 17.564 MB
+     Node minimum: 7.864 MB, node maximum: 23.855 MB
 
 
  NUMBER OF SORTED TWO-ELECTRON INTEGRALS:    1224663.     BUFFER LENGTH:  32768
@@ -262,8 +262,8 @@ Geometry recognized as XYZ
 
  Memory used in sort:       1.78 MW
 
- SORT1 READ     7715674. AND WROTE      910562. INTEGRALS IN      3 RECORDS. CPU TIME:     0.12 SEC, REAL TIME:     0.15 SEC
- SORT2 READ     2718204. AND WROTE     3672651. INTEGRALS IN    126 RECORDS. CPU TIME:     0.04 SEC, REAL TIME:     0.21 SEC
+ SORT1 READ     7715674. AND WROTE      910562. INTEGRALS IN      3 RECORDS. CPU TIME:     0.13 SEC, REAL TIME:     0.16 SEC
+ SORT2 READ     2718204. AND WROTE     3672651. INTEGRALS IN    126 RECORDS. CPU TIME:     0.04 SEC, REAL TIME:     0.28 SEC
 
  Node minimum:     1223771.  Node maximum:     1224663. integrals
 
@@ -299,9 +299,9 @@ Geometry recognized as XYZ
                                          AOSYM     SMH  
 
  PROGRAMS   *        TOTAL       INT
- CPU TIMES  *        21.92     21.63
- REAL TIME  *        24.15 SEC
- DISK USED  *        68.78 MB      
+ CPU TIMES  *        21.61     21.30
+ REAL TIME  *        24.50 SEC
+ DISK USED  *        71.58 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
 
@@ -597,15 +597,15 @@ Geometry recognized as XYZ
                                         OPTIONS   GEOM     BASIS   MCVARS     RHF  
 
  PROGRAMS   *        TOTAL       RHF       INT
- CPU TIMES  *        22.05      0.13     21.63
- REAL TIME  *        24.42 SEC
- DISK USED  *       148.22 MB      
+ CPU TIMES  *        21.75      0.14     21.30
+ REAL TIME  *        24.93 SEC
+ DISK USED  *       151.03 MB      
  SF USED    *         0.01 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
    -->
-   <time start="16:53:39" end="16:54:02" cpu="22.05" system="1.74" real="24.42"/>
-   <storage units="megabyte" memory="24001.84" sf="0.01" df="79.44" eaf="68.78" ga="0.0"/>
+   <time start="14:49:19" end="14:49:43" cpu="21.75" system="1.76" real="24.93"/>
+   <storage units="megabyte" memory="24001.84" sf="0.01" df="79.44" eaf="71.58" ga="0.0"/>
   </jobstep><!--
   --><jobstep command="MULTI" commandset="MULTI">
    <!--
@@ -723,10 +723,10 @@ Geometry recognized as XYZ
 
  ITER. MIC  NCI  NEG     ENERGY(VAR)     ENERGY(PROJ)   ENERGY CHANGE     GRAD(0)  GRAD(ORB)   GRAD(CI)     STEP       TIME
 
-   1   33   28    0  -15601.72824034  -15601.91475227   -0.18651193    0.19881189 0.00000000 0.00000000  0.10D+01      0.41
-   2   18   32    0  -15601.87975080  -15601.89538412   -0.01563333    0.17228062 0.00000000 0.00000000  0.17D+00      0.77
-   3   17   32    0  -15601.89585805  -15601.89590001   -0.00004196    0.00631720 0.00000000 0.00000000  0.10D-01      1.15
-   4   25   20    0  -15601.89590010  -15601.89590010   -0.00000000    0.00001804 0.00000000 0.00000000  0.32D-04      1.39
+   1   33   28    0  -15601.72824034  -15601.91475227   -0.18651193    0.19881189 0.00000000 0.00000000  0.10D+01      0.60
+   2   18   32    0  -15601.87975080  -15601.89538412   -0.01563333    0.17228062 0.00000000 0.00000000  0.17D+00      0.99
+   3   17   32    0  -15601.89585805  -15601.89590001   -0.00004196    0.00631720 0.00000000 0.00000000  0.10D-01      1.56
+   4   25   20    0  -15601.89590010  -15601.89590010   -0.00000000    0.00001804 0.00000000 0.00000000  0.32D-04      1.80
 
  ** WVFN ****  CONVERGENCE REACHED, FINAL GRADIENT:  0.19D-09
 
@@ -1059,15 +1059,15 @@ Geometry recognized as XYZ
                                         OPTIONS   GEOM     BASIS   MCVARS     RHF     MCSCF   
 
  PROGRAMS   *        TOTAL     MULTI       RHF       INT
- CPU TIMES  *        23.81      1.75      0.13     21.63
- REAL TIME  *        27.98 SEC
- DISK USED  *       148.22 MB      
+ CPU TIMES  *        25.02      3.27      0.14     21.30
+ REAL TIME  *        31.71 SEC
+ DISK USED  *       151.03 MB      
  SF USED    *        83.94 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
    -->
-   <time start="16:54:02" end="16:54:06" cpu="1.76" system="1.39" real="3.56"/>
-   <storage units="megabyte" memory="24001.84" sf="83.94" df="79.44" eaf="68.78" ga="0.0"/>
+   <time start="14:49:43" end="14:49:50" cpu="3.27" system="1.32" real="6.78"/>
+   <storage units="megabyte" memory="24001.84" sf="83.94" df="79.44" eaf="71.58" ga="0.0"/>
   </jobstep><!--
   --><jobstep command="POP" commandset="POP">
    <!--
@@ -1097,15 +1097,15 @@ Geometry recognized as XYZ
                                         OPTIONS   GEOM     BASIS   MCVARS     RHF     MCSCF   
 
  PROGRAMS   *        TOTAL       POP     MULTI       RHF       INT
- CPU TIMES  *        23.81      0.00      1.75      0.13     21.63
- REAL TIME  *        27.98 SEC
- DISK USED  *       148.22 MB      
+ CPU TIMES  *        25.03      0.00      3.27      0.14     21.30
+ REAL TIME  *        31.75 SEC
+ DISK USED  *       151.03 MB      
  SF USED    *        83.94 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
    -->
-   <time start="16:54:06" end="16:54:06" cpu="0.0" system="0.0" real="0.0"/>
-   <storage units="megabyte" memory="24001.84" sf="83.94" df="79.44" eaf="68.78" ga="0.0"/>
+   <time start="14:49:50" end="14:49:50" cpu="0.01" system="0.0" real="0.04"/>
+   <storage units="megabyte" memory="24001.84" sf="83.94" df="79.44" eaf="71.58" ga="0.0"/>
   </jobstep><!--
  SETTING BASIS          =    USERDEF
   --><jobstep command="MULTI" commandset="MULTI">
@@ -1158,7 +1158,7 @@ Geometry recognized as XYZ
 
      2357.461 MB (compressed) written to integral file ( 47.5%)
 
-     Node minimum: 618.922 MB, node maximum: 1013.187 MB
+     Node minimum: 618.922 MB, node maximum: 1045.955 MB
 
 
  NUMBER OF SORTED TWO-ELECTRON INTEGRALS:  101359485.     BUFFER LENGTH:  32768
@@ -1166,8 +1166,8 @@ Geometry recognized as XYZ
 
  Memory used in sort:      32.56 MW
 
- SORT1 READ   620842336. AND WROTE    63934281. INTEGRALS IN    185 RECORDS. CPU TIME:    11.28 SEC, REAL TIME:    13.47 SEC
- SORT2 READ   190733767. AND WROTE   304061875. INTEGRALS IN   7083 RECORDS. CPU TIME:     1.45 SEC, REAL TIME:     2.67 SEC
+ SORT1 READ   620842336. AND WROTE    63934281. INTEGRALS IN    185 RECORDS. CPU TIME:    11.44 SEC, REAL TIME:    13.54 SEC
+ SORT2 READ   190733767. AND WROTE   304061875. INTEGRALS IN   7926 RECORDS. CPU TIME:     1.48 SEC, REAL TIME:     3.80 SEC
 
  Node minimum:   101278730.  Node maximum:   101423660. integrals
 
@@ -1211,8 +1211,8 @@ Geometry recognized as XYZ
                                         OPTIONS   GEOM     BASIS   MCVARS     RHF     MCSCF    BASIS   
 
  PROGRAMS   *        TOTAL       INT       POP     MULTI       RHF       INT
- CPU TIMES  *       205.71    181.89      0.00      1.75      0.13     21.63
- REAL TIME  *       215.06 SEC
+ CPU TIMES  *       207.21    182.18      0.00      3.27      0.14     21.30
+ REAL TIME  *       220.45 SEC
  DISK USED  *         4.78 GB      
  SF USED    *        83.94 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
@@ -1327,8 +1327,8 @@ Geometry recognized as XYZ
 
  ITER. MIC  NCI  NEG     ENERGY(VAR)     ENERGY(PROJ)   ENERGY CHANGE     GRAD(0)  GRAD(ORB)   GRAD(CI)     STEP       TIME
 
-   1   70   32    0  -15601.89586475  -15601.89632868   -0.00046393   33.25709711 0.00060336 0.00000000  0.23D-01      4.16
-   2   70   24    0  -15601.89632868  -15601.89632869   -0.00000002    0.00060314 0.00000243 0.00000000  0.22D-03      7.60
+   1   70   32    0  -15601.89586475  -15601.89632868   -0.00046393   33.25709711 0.00060336 0.00000000  0.23D-01      4.64
+   2   70   24    0  -15601.89632868  -15601.89632869   -0.00000002    0.00060314 0.00000243 0.00000000  0.22D-03      8.91
 
  ** WVFN ****  CONVERGENCE REACHED, FINAL GRADIENT:  0.24D-05
 
@@ -1846,14 +1846,14 @@ Geometry recognized as XYZ
                                         OPTIONS   GEOM     BASIS   MCVARS     RHF     MCSCF    BASIS    MCSCF   
 
  PROGRAMS   *        TOTAL     MULTI       INT       POP     MULTI       RHF       INT
- CPU TIMES  *       217.14     11.43    181.89      0.00      1.75      0.13     21.63
- REAL TIME  *       234.14 SEC
+ CPU TIMES  *       223.30     16.09    182.18      0.00      3.27      0.14     21.30
+ REAL TIME  *       244.78 SEC
  DISK USED  *         4.78 GB      
  SF USED    *       681.05 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
    -->
-   <time start="16:54:06" end="16:57:32" cpu="193.33" system="9.43" real="206.16"/>
+   <time start="14:49:50" end="14:53:23" cpu="198.27" system="8.91" real="213.03"/>
    <storage units="megabyte" memory="24001.84" sf="681.05" df="142.45" eaf="4633.88"
      ga="0.0"/>
   </jobstep><!--
@@ -1878,6 +1878,9 @@ Geometry recognized as XYZ
  Molecular orbitals read from record     6202.2  Type=MCSCF/NATURAL (state averaged)
 
  Molecular orbital dump at record        2103.2
+ ROTATION OF ORBITALS   4.2    6.2       90.00 DEGREES
+ ROTATION OF ORBITALS   4.3    6.3       90.00 DEGREES
+ ROTATION OF ORBITALS   4.5    6.5       90.00 DEGREES
 
  ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS   ORB.
     1      0.000D+00      0.000D+00    -15601.89632869  11651.164255    0.00000    0.00000    0.00000    0    start
@@ -1944,14 +1947,14 @@ Geometry recognized as XYZ
                                         OPTIONS   GEOM     BASIS   MCVARS     RHF     MCSCF    BASIS    MCSCF     RHF  
 
  PROGRAMS   *        TOTAL       RHF     MULTI       INT       POP     MULTI       RHF       INT
- CPU TIMES  *       217.42      0.28     11.43    181.89      0.00      1.75      0.13     21.63
- REAL TIME  *       234.48 SEC
+ CPU TIMES  *       223.59      0.28     16.09    182.18      0.00      3.27      0.14     21.30
+ REAL TIME  *       245.17 SEC
  DISK USED  *         4.78 GB      
  SF USED    *       681.05 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
    -->
-   <time start="16:57:32" end="16:57:33" cpu="0.28" system="0.03" real="0.34"/>
+   <time start="14:53:23" end="14:53:23" cpu="0.29" system="0.02" real="0.39"/>
    <storage units="megabyte" memory="24001.84" sf="681.05" df="142.45" eaf="4633.88"
      ga="0.0"/>
   </jobstep><!--
@@ -1984,64 +1987,54 @@ Geometry recognized as XYZ
 
  Molecular orbitals read from record     2103.2  Type=RHF/CANONICAL (state 1.1)
 
- Integral transformation finished. Total CPU:   1.99 sec, npass=  1  Memory used:  17.85 MW
+ Integral transformation finished. Total CPU:   2.02 sec, npass=  1  Memory used:  17.85 MW
 
  Starting RMP2 calculation
 
  Wavefunction is spin-projected
 
  ITER.      SQ.NORM     CORR.ENERGY   TOTAL ENERGY   ENERGY CHANGE        DEN1      VAR(S)    VAR(P)  DIIS     TIME
-   1      1.04050881    -0.19299965-15602.08932835    -0.19299965    -0.00089714  0.87D-05  0.53D-03  1  1     2.32
-   2      1.04199556    -0.19401921-15602.09034790    -0.00101955    -0.00000769  0.28D-06  0.66D-05  2  2     2.38
-   3      1.04214271    -0.19407701-15602.09040570    -0.00005780    -0.00000011  0.11D-07  0.11D-06  3  3     2.42
-   4      1.04215209    -0.19407861-15602.09040730    -0.00000160    -0.00000000  0.28D-09  0.10D-08  4  4     2.48
-   5      1.04215223    -0.19407859-15602.09040729     0.00000002    -0.00000000  0.93D-11  0.53D-11  5  5     2.53
+   1      1.07786824    -0.32623493-15602.22256362    -0.32623493    -0.00116144  0.16D-04  0.61D-03  1  1     2.33
+   2      1.07952229    -0.32753357-15602.22386226    -0.00129864    -0.00000985  0.32D-06  0.81D-05  2  2     2.36
+   3      1.07968658    -0.32759521-15602.22392391    -0.00006165    -0.00000012  0.11D-07  0.12D-06  3  3     2.40
+   4      1.07969640    -0.32759693-15602.22392562    -0.00000172    -0.00000000  0.30D-09  0.11D-08  4  4     2.45
+   5      1.07969661    -0.32759695-15602.22392565    -0.00000003    -0.00000000  0.99D-11  0.63D-11  5  5     2.51
 
- Norm of t1 vector:      0.02749792      S-energy:    -0.00179147      T1 diagnostic:  0.00403666
- Norm of t2 vector:      0.20346030      P-energy:    -0.19228712
-                                         Alpha-Beta:  -0.09417935
-                                         Alpha-Alpha: -0.08289326
-                                         Beta-Beta:   -0.01521452
+ Norm of t1 vector:      0.04817766      S-energy:    -0.00583095      T1 diagnostic:  0.00485274
+ Norm of t2 vector:      0.27816456      P-energy:    -0.32176600
+                                         Alpha-Beta:  -0.20030578
+                                         Alpha-Alpha: -0.09934570
+                                         Beta-Beta:   -0.02211452
 
  Spin contamination <S**2-Sz**2-Sz>     0.00000000
   Reference energy                   -15601.8963286946    
    --><property name="energy" method="Reference" stateSymmetry="1" stateNumber="1"
      value="-15601.8963286946"/><!--
-  RHF-RMP2 correlation energy          -0.194078594304
+  RHF-RMP2 correlation energy          -0.327596954009
    --><property name="energy" method="RHF-RMP2 correlation" stateSymmetry="1" stateNumber="1"
-     value="-0.194078594304483"/><!--
- !RHF-RMP2 energy                    -15602.0904072889    
+     value="-0.32759695400873"/><!--
+ !RHF-RMP2 energy                    -15602.2239256486    
    --><property name="energy" method="RHF-RMP2" principal="true" stateSymmetry="1"
-     stateNumber="1" value="-15602.0904072889"/><!--
+     stateNumber="1" value="-15602.2239256486"/><!--
  (NB above energy spin projected)
 
  Starting RCCSD calculation
 
  ITER.      SQ.NORM     CORR.ENERGY   TOTAL ENERGY   ENERGY CHANGE        DEN1      VAR(S)    VAR(P)  DIIS     TIME
-   1      1.04656871    -0.19559280-15602.09192150    -0.19559280    -0.00468105  0.50D-03  0.18D-02  1  1     4.41
-   2      1.05334284    -0.20038808-15602.09671678    -0.00479528    -0.00043300  0.29D-04  0.29D-03  2  2     6.22
-   3      1.05708027    -0.20161483-15602.09794353    -0.00122675    -0.00009353  0.13D-04  0.76D-04  3  3     8.03
-   4      1.06022891    -0.20216712-15602.09849581    -0.00055228    -0.00001323  0.16D-05  0.10D-04  4  4     9.86
-   5      1.06135632    -0.20225489-15602.09858358    -0.00008777    -0.00000132  0.48D-07  0.10D-05  5  5    11.71
-   6      1.06164492    -0.20228648-15602.09861517    -0.00003159    -0.00000013  0.44D-07  0.72D-07  6  6    13.56
-   7      1.06166555    -0.20228807-15602.09861676    -0.00000159    -0.00000002  0.23D-07  0.92D-08  6  1    15.40
-   8      1.06166513    -0.20228745-15602.09861615     0.00000062    -0.00000001  0.18D-07  0.25D-08  6  2    17.23
-   9      1.06166308    -0.20228725-15602.09861595     0.00000020    -0.00000001  0.17D-07  0.82D-09  6  3    19.05
-  10      1.06166413    -0.20228728-15602.09861598    -0.00000003    -0.00000001  0.16D-07  0.46D-09  6  4    20.84
-  11      1.06166498    -0.20228731-15602.09861600    -0.00000003    -0.00000001  0.16D-07  0.40D-09  6  5    22.65
-  12      1.06166706    -0.20228731-15602.09861601    -0.00000000    -0.00000001  0.16D-07  0.40D-09  6  6    24.50
-  13      1.06167205    -0.20228731-15602.09861600     0.00000001    -0.00000001  0.16D-07  0.41D-09  6  1    26.34
-  14      1.06169912    -0.20228744-15602.09861613    -0.00000013    -0.00000001  0.15D-07  0.43D-09  6  2    28.14
-  15      1.06181089    -0.20228780-15602.09861649    -0.00000036    -0.00000001  0.13D-07  0.43D-09  6  3    29.99
-  16      1.06217408    -0.20228850-15602.09861719    -0.00000070    -0.00000001  0.11D-07  0.40D-09  6  4    31.83
-  17      1.06297553    -0.20228911-15602.09861780    -0.00000061    -0.00000000  0.71D-08  0.40D-09  6  5    33.68
+   1      1.07774805    -0.32652532-15602.22285402    -0.32652532    -0.00396195  0.42D-03  0.12D-02  1  1     4.40
+   2      1.08337809    -0.33070798-15602.22703667    -0.00418266    -0.00029087  0.75D-04  0.18D-03  2  2     6.24
+   3      1.08650310    -0.33153361-15602.22786230    -0.00082563    -0.00005645  0.19D-04  0.39D-04  3  3     8.07
+   4      1.08882129    -0.33191960-15602.22824829    -0.00038599    -0.00000534  0.92D-06  0.38D-05  4  4     9.91
+   5      1.08938574    -0.33196819-15602.22829689    -0.00004860    -0.00000036  0.91D-07  0.23D-06  5  5    11.72
+   6      1.08945367    -0.33197339-15602.22830209    -0.00000520    -0.00000003  0.22D-07  0.12D-07  6  6    13.53
+   7      1.08945393    -0.33197286-15602.22830155     0.00000054    -0.00000000  0.35D-08  0.12D-08  6  1    15.41
 
- Norm of t1 vector:      0.05892343      S-energy:    -0.00206337      T1 diagnostic:  0.01081473
-                                                                       D1 diagnostic:  0.02774488
- Norm of t2 vector:      0.24393352      P-energy:    -0.20022574
-                                         Alpha-Beta:  -0.09592936
-                                         Alpha-Alpha: -0.08952471
-                                         Beta-Beta:   -0.01477167
+ Norm of t1 vector:      0.06535346      S-energy:    -0.00569915      T1 diagnostic:  0.01031107
+                                                                       D1 diagnostic:  0.03023936
+ Norm of t2 vector:      0.29186103      P-energy:    -0.32627371
+                                         Alpha-Beta:  -0.20704531
+                                         Alpha-Alpha: -0.09840103
+                                         Beta-Beta:   -0.02082737
 
  Spin contamination <S**2-Sz**2-Sz>     0.00000000
 
@@ -2049,17 +2042,17 @@ Geometry recognized as XYZ
  
 
   Correlated core orbitals:             9.1       6.2       6.3       6.5
-  Orbital energies:                    -3.1663   -1.4013   -1.3920   -1.4000
+  Orbital energies:                    -3.1663   -1.7926   -1.7926   -1.7753
  
-  RCCSD core-core energy               -0.100148921530
+  RCCSD core-core energy               -0.149991957526
    --><property name="core-core energy" method="RCCSD" stateSymmetry="1" stateNumber="1"
-     value="-0.100148921529924"/><!--
-  RCCSD core-valence energy            -0.043882719629
+     value="-0.14999195752644"/><!--
+  RCCSD core-valence energy            -0.129125574725
    --><property name="core-valence energy" method="RCCSD" stateSymmetry="1" stateNumber="1"
-     value="-0.438827196294116E-01"/><!--
-  RCCSD valence correlation energy     -0.058257467687
+     value="-0.129125574724665"/><!--
+  RCCSD valence correlation energy     -0.052855323680
    --><property name="valence correlation energy" method="RCCSD" stateSymmetry="1"
-     stateNumber="1" value="-0.582574676868969E-01"/><!--
+     stateNumber="1" value="-0.52855323680373E-01"/><!--
  
 
  RESULTS
@@ -2068,41 +2061,41 @@ Geometry recognized as XYZ
   Reference energy                   -15601.8963286946    
    --><property name="energy" method="Reference" stateSymmetry="1" stateNumber="1"
      value="-15601.8963286946"/><!--
-  RCCSD singles energy                 -0.002063373330
+  RCCSD singles energy                 -0.005699149477
    --><property name="energy" method="RCCSD singles" stateSymmetry="1" stateNumber="1"
-     value="-0.206337333041762E-02"/><!--
-  RCCSD pair energy                    -0.200225735516
+     value="-0.569914947717848E-02"/><!--
+  RCCSD pair energy                    -0.326273706454
    --><property name="energy" method="RCCSD pair" stateSymmetry="1" stateNumber="1"
-     value="-0.200225735515815"/><!--
-  RCCSD correlation energy             -0.202289108846
+     value="-0.3262737064543"/><!--
+  RCCSD correlation energy             -0.331972855931
    --><property name="energy" method="RCCSD correlation" stateSymmetry="1" stateNumber="1"
-     value="-0.202289108846233"/><!--
-  Triples (T) contribution             -0.004621535029
+     value="-0.331972855931479"/><!--
+  Triples (T) contribution             -0.010257579719
    --><property name="contribution" method="Triples (T)" stateSymmetry="1" stateNumber="1"
-     value="-0.462153502865658E-02"/><!--
-  Total correlation energy             -0.206910643875
+     value="-0.102575797193883E-01"/><!--
+  Total correlation energy             -0.342230435651
    --><property name="energy" method="Total correlation" stateSymmetry="1" stateNumber="1"
-     value="-0.206910643874889"/><!--
+     value="-0.342230435650867"/><!--
  
-  RHF-RCCSD energy                   -15602.0986178034    
+  RHF-RCCSD energy                   -15602.2283015505    
    --><property name="energy" method="RHF-RCCSD" stateSymmetry="1" stateNumber="1"
-     value="-15602.0986178034"/><!--
-  RHF-RCCSD[T] energy                -15602.1034063603    
+     value="-15602.2283015505"/><!--
+  RHF-RCCSD[T] energy                -15602.2385073874    
    --><property name="energy" method="RHF-RCCSD[T]" stateSymmetry="1" stateNumber="1"
-     value="-15602.1034063603"/><!--
-  RHF-RCCSD-T energy                 -15602.1031499535    
+     value="-15602.2385073874"/><!--
+  RHF-RCCSD-T energy                 -15602.2385522126    
    --><property name="energy" method="RHF-RCCSD-T" stateSymmetry="1" stateNumber="1"
-     value="-15602.1031499535"/><!--
- !RHF-RCCSD(T) energy                -15602.1032393384    
+     value="-15602.2385522126"/><!--
+ !RHF-RCCSD(T) energy                -15602.2385591302    
    --><property name="energy" method="RHF-RCCSD(T)" principal="true" stateSymmetry="1"
-     stateNumber="1" value="-15602.1032393384"/><!--
+     stateNumber="1" value="-15602.2385591302"/><!--
 
  Program statistics:
 
  Available memory in ccsd:              2999999162
  Min. memory needed in ccsd:               2918296
  Max. memory used in ccsd:                 3870580
- Max. memory used in cckext:               3745405 (17 integral passes)
+ Max. memory used in cckext:               3745405 ( 7 integral passes)
  Max. memory used in cckint:              17849819 ( 1 integral passes)
 
 
@@ -2120,42 +2113,42 @@ Geometry recognized as XYZ
                                         OPTIONS   GEOM     BASIS   MCVARS     RHF     MCSCF    BASIS    MCSCF     RHF  
 
  PROGRAMS   *        TOTAL  RCCSD(T)       RHF     MULTI       INT       POP     MULTI       RHF       INT
- CPU TIMES  *       270.77     53.34      0.28     11.43    181.89      0.00      1.75      0.13     21.63
- REAL TIME  *       295.71 SEC
+ CPU TIMES  *       257.79     34.19      0.28     16.09    182.18      0.00      3.27      0.14     21.30
+ REAL TIME  *       285.04 SEC
  DISK USED  *         5.59 GB      
  SF USED    *         1.20 GB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
    -->
-   <time start="16:57:33" end="16:58:34" cpu="53.35" system="5.69" real="61.23"/>
+   <time start="14:53:23" end="14:54:03" cpu="34.2" system="3.53" real="39.87"/>
    <storage units="megabyte" memory="24001.84" sf="1204.1" df="956.93" eaf="4633.88"
      ga="0.0"/>
   </jobstep><!--
- SETTING CCSD(2)        =    -15602.10323934  AU                              
+ SETTING CCSD(2)        =    -15602.23855913  AU                              
  Output type csv         
                                                                                                                                                                                                                                                                 
 
           SCF,CCSD
         0.00000,        0.00000
-   -15601.89633,   -15602.10324
+   -15601.89633,   -15602.23856
                                                   
 -->
 <table xmlns="http://www.w3.org/1999/xhtml" id="table1">
 <thead><tr><th>SCF  </th><th>CCSD </th></tr></thead><tbody>
 <tr><td>        0.00000</td><td>        0.00000</td></tr>
-<tr><td>   -15601.89633</td><td>   -15602.10324</td></tr>
+<tr><td>   -15601.89633</td><td>   -15602.23856</td></tr>
 </tbody></table>
 <!--
 
- RCCSD(T)/USERDEF energy= -15602.103239338441
+ RCCSD(T)/USERDEF energy= -15602.238559130217
 
         RCCSD(T)        RHF-SCF         MULTI           MULTI           RHF-SCF 
- -15602.10323934 -15601.89632869 -15601.89632869 -15601.89590010 -15601.89682318
+ -15602.23855913 -15601.89632869 -15601.89632869 -15601.89590010 -15601.89682318
  **********************************************************************************************************************************
  Molpro calculation terminated
  Variable memory released
   --><stm:metadataList>
-   <stm:metadata name="dc:date" content="2022-10-12T16:58:34-07:00"/>
+   <stm:metadata name="dc:date" content="2022-10-13T14:54:03-07:00"/>
    <stm:metadata name="dc:creator" content="haihan"/>
    <stm:metadata name="dc:title" content="Calculation for Nb atom, singlet and triplet"/>
    <stm:metadata name="cmlm:insilico" content="Molpro"/>
@@ -2164,15 +2157,15 @@ Geometry recognized as XYZ
    <version major="2015" minor="1" SHA="19cd028119e0e09f93f0674bd8af7968d9b3eff6"
      integer_bits="64" parallelism="mpp">
     2015.1
-    <date year="2022" month="10" day="12" hour="16" minute="53" second="38">
-     2022-10-12T16:53:38
+    <date year="2022" month="10" day="13" hour="14" minute="49" second="18">
+     2022-10-13T14:49:18
     </date>
    </version>
    <licence id="lbl"/>
    <parallel processes="3" nodes="1" all_processes="3" openmp="1"/>
    <machine hostname="" architecture="">
      64 bit mpp version
-    <sysinfo name="cpu MHz" content="2883.316"/>
+    <sysinfo name="cpu MHz" content="3106.751"/>
     <sysinfo name="MemTotal" content="131890088 kB"/>
     <sysinfo name="vendor_id" content="GenuineIntel"/>
     <sysinfo name="cpu family" content="6"/>

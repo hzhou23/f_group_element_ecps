@@ -6,7 +6,7 @@ HOME=`pwd`
 
 basefolder=$HOME/..
 
-for i in crenbl sbkjc mwbstu mdfstu lanl2
+for i in ECP1
 do
 	echo $i
 	mkdir $basefolder/$i

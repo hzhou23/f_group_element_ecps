@@ -6,9 +6,9 @@ import numpy as np
 
 ###==================================================
 
-pps=['UC','mwbstu','mdfstu','crenbl','sbkjc','lanl2']
+pps=['UC','mwbstu','mdfstu','crenbl','sbkjc','lanl2','ECP1']
 remove_index = []
-lmad_index = [3,4,5,6]
+lmad_index = [2,3,4,5]
 
 ###==================================================
 
