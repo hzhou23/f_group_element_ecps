@@ -5,7 +5,7 @@
 
 HOME=`pwd`
 
-for j in crenbl lanl2 sbkjc mwbstu mdfstu
+for j in UC 
 do
 echo $j
 rm $HOME/$j/tzbind
