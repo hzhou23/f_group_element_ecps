@@ -26,7 +26,7 @@ do i=11,11
     else if (i.eq.2) then
         Id6s1
     else if (i.eq.3) then
-        EAd6s2
+        EAd7s1
     else if (i.eq.4) then
         IPd5s1
     else if (i.eq.5) then
