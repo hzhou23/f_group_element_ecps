@@ -62,8 +62,10 @@ def get_data():
             data[ecp] = df['bind']-57.46009777+57.47847470
         elif ecp == 'mwbstu':
             data[ecp] = df['bind']-56.68236708+56.70059800
-        else: 
-            data[ecp] = df['bind']-57.14841446+57.14841446
+        elif ecp == 'UC': 
+            data[ecp] = df['bind']-15602.27534+15602.13852
+        else:
+            data[ecp] = df['bind']
 
     return data
 

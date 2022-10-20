@@ -60,11 +60,10 @@ include,../generate/O-aug-cc-pwCVTZ.basis
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1,B1-1,B2-1,A2-1
- rotate,13.1,15.1,0
- rotate,14.1,16.1,0
+ rotate,13.1,16.1,0
+ rotate,14.1,15.1,0
  rotate,6.2,8.2,0
  rotate,6.3,8.3,0
- orbital,4202.2
  print,orbitals=2
 }
 scf=energy
