@@ -62,18 +62,18 @@ include,../../generate/O-aug-cc-pwCVTZ.basis
 }
 
 
-Ta_ccsd=-57.46339875
+Ta_ccsd=-57.48166149
 O_ccsd=-15.86622096
 
 !These are the wf cards parameters
 ne = 19
 symm = 1
-ss= 3
+ss= 1
 
 !There are irrep cards paramters
-A1=4
-B1=3
-B2=3
+A1=5
+B1=2
+B2=2
 A2=1
 
 
@@ -87,7 +87,7 @@ geometry={
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
- closed,A1,B1-1,B2-1,A2-1
+ closed,A1-1,B1,B2,A2
  print,orbitals=2
 }
 scf=energy
