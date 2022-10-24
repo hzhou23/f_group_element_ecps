@@ -14,7 +14,7 @@ toev = 27.211386
 #~~~Analyze Binding Energy~~~~~
 
 
-binding = pd.read_csv("tzbind", delim_whitespace=True)
+binding = pd.read_csv("prebind", delim_whitespace=True)
 print (binding)
 #binding = binding.drop([0]).reset_index(drop=True)
 #print binding
@@ -24,5 +24,5 @@ fig=plt.figure()
 ax=fig.add_subplot(111)
 
 plt.plot(r,bind)
-plt.savefig('bind.pdf')
+plt.savefig('prebind.pdf')
 
