@@ -21,7 +21,6 @@ include,../contracted.basis
  wf,73,1,3
  occ,10,6,6,3,6,3,3,1
  closed,10,6,6,2,6,2,2,1
- sym,1,1,1,1,3,2,1,3,2,1,1,3,2
  orbital,4202.2
 }
 {multi
@@ -55,6 +54,9 @@ include,../aug-cc-pwCVTZ.basis
  wf,73,1,3
  occ,10,6,6,3,6,3,3,1
  closed,10,6,6,2,6,2,2,1
+ sym,2,1,1,1,3,2,1
+ sym,3,1,1,1,3,2,1
+ sym,5,1,1,1,3,2,1
 }
 scf(i)=energy
 _CC_NORM_MAX=2.0

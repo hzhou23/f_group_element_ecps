@@ -1,22 +1,102 @@
-<?xml version="1.0"?>
-<molpro xmlns="http://www.molpro.net/schema/molpro-output"
-  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
-  xmlns:cml="http://www.xml-cml.org/schema"
-  xmlns:stm="http://www.xml-cml.org/schema"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
- <!--
+
+ Primary working directories    : /global/cscratch1/sd/haihan
+ Secondary working directories  : /global/cscratch1/sd/haihan
+ Wavefunction directory         : /global/homes/h/haihan/wfu/
+ Main file repository           : /global/cscratch1/sd/haihan/
+
+ SHA1      : 19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ NAME      : 2015.1.36
+ ARCHNAME  : linux/x86_64
+ FC        : /opt/cray/pe/craype/2.5.14/bin/ftn
+ BLASLIB   : -L/opt/intel/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64 -Wl,-_start-group -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -Wl,-_end-group -liomp5
+ id        : lbl
 
  Nodes     nprocs
  nid00286     3
  Number of processes for MPI-2 version of Molpro:   nprocs(total)=    4   nprocs(compute)=    3   nprocs(helper)=    1
 
  Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
- default implementation of scratch files=sf
+ default implementation of scratch files=sf  
 
- --><job>
-  <!--
+ ***,Calculation for Nb atom, singlet and triplet
+ memory,3,g
+ 
+ gthresh,twoint=1.e-15
+ gthresh,oneint=1.e-15
+ 
+ set,dkroll=1,dkho=10,dkhp=4
+ 
+ geometry={
+ 1
+ Ta
+ Ta  0.0 0.0 0.0
+ }
+ 
+ basis={
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Ta/Molpro/atom/UC/test_1/../contracted.basis
+ }
+ {rhf
+  start,atden
+  print,orbitals=2
+  wf,73,1,3
+  occ,10,6,6,3,6,3,3,1
+  closed,10,6,6,2,6,2,2,1
+  orbital,4202.2
+ }
+ {multi
+  start,4202.2
+  occ,12,6,6,3,6,3,3,1
+  closed,10,6,6,2,6,2,2,1
+  wf,73,4,3;state,3
+  wf,73,6,3;state,3
+  wf,73,7,3;state,3
+  wf,73,1,3;state,1
+  natorb,ci,print
+  orbital,5202.2
+ }
+ pop
+ basis={
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Ta/Molpro/atom/UC/test_1/../aug-cc-pwCVTZ.basis
+ }
+ {rhf
+  start,5202.2
+  print,orbitals=2
+  wf,73,1,3
+  occ,10,6,6,3,6,3,3,1
+  closed,10,6,6,2,6,2,2,1
+  sym,1,1,1,1,3,2,1,3,2,1,1,3,2
+  sym,2,1,1,1,3,2,1
+  sym,3,1,1,1,3,2,1
+  sym,5,1,1,1,3,2,1
+  orbital,6202.2
+ }
+ {multi
+  start,6202.2
+  occ,12,6,6,3,6,3,3,1
+  closed,10,6,6,2,6,2,2,1
+  wf,73,4,3;state,3
+  wf,73,6,3;state,3
+  wf,73,7,3;state,3
+  wf,73,1,3;state,1
+  natorb,ci,print
+  orbital,7202.2
+ }
+ {rhf,nitord=1,maxit=0
+  start,7202.2
+  wf,73,1,3
+  occ,10,6,6,3,6,3,3,1
+  closed,10,6,6,2,6,2,2,1
+ }
+ scf(i)=energy
+ _CC_NORM_MAX=2.0
+ {rccsd(t),maxit=100;core,8,5,5,2,5,2,2,1}
+ ccsd(i)=energy
+ 
+ table,scf,ccsd
+ type,csv
+ save
 
- Variables initialized (889), CPU time= 0.07 sec
+ Variables initialized (889), CPU time= 0.00 sec
  Commands  initialized (702), CPU time= 0.01 sec, 572 directives.
  Default parameters read. Elapsed time= 0.10 sec
 
@@ -31,14 +111,12 @@
 
 
  **********************************************************************************************************************************
- LABEL *   Calculation for Nb atom, singlet and triplet
-  64 bit mpp version                                                                     DATE: 23-Oct-22          TIME: 13:25:48
+ LABEL *   Calculation for Nb atom, singlet and triplet                                  
+  64 bit mpp version                                                                     DATE: 23-Oct-22          TIME: 13:25:48  
  **********************************************************************************************************************************
 
  SHA1:             19cd028119e0e09f93f0674bd8af7968d9b3eff6
  **********************************************************************************************************************************
-  -->
-  <!--
 
  THRESHOLDS:
 
@@ -69,9 +147,9 @@
  THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
 
 
- SETTING DKROLL         =         1.00000000
- SETTING DKHO           =        10.00000000
- SETTING DKHP           =         4.00000000
+ SETTING DKROLL         =         1.00000000                                  
+ SETTING DKHO           =        10.00000000                                  
+ SETTING DKHP           =         4.00000000                                  
 
 Geometry recognized as XYZ
 
@@ -79,8 +157,6 @@ Geometry recognized as XYZ
  Variable memory set to 3000000000 words,  buffer space   230000 words
 
  SETTING BASIS          =    USERDEF
-  --><jobstep command="RHF-SCF" commandset="SCFPRO">
-   <!--
 
 
  Recomputing integrals since basis changed
@@ -94,22 +170,14 @@ Geometry recognized as XYZ
 
  Geometry written to block  1 of record 700
 
- Orientation using atomic masses
+ Orientation using atomic masses  
  Molecule type: Atom
  Symmetry elements: X,Y,Z
  Rotational constants:       0.0000000      0.0000000      0.0000000 GHz  (calculated with average atomic masses)
 
- Point group  D2h
+ Point group  D2h 
 
 
-   --><cml:molecule>
-    <cml:symmetry pointGroup="D2h"/>
-    <cml:atomArray>
-     <cml:atom id="a1" elementType="Ta" x3="0.0" y3="0.0" z3="0.0"/>
-    </cml:atomArray>
-    <cml:bondArray>
-    </cml:bondArray>
-   </cml:molecule><!--
 
  ATOMIC COORDINATES
 
@@ -140,13 +208,13 @@ Geometry recognized as XYZ
      Node minimum: 7.864 MB, node maximum: 18.874 MB
 
 
- NUMBER OF SORTED TWO-ELECTRON INTEGRALS:    1223771.     BUFFER LENGTH:  32768
- NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:    1223771      RECORD LENGTH: 524288
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:    1224663.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:    1224663      RECORD LENGTH: 524288
 
  Memory used in sort:       1.78 MW
 
- SORT1 READ     7715674. AND WROTE      901108. INTEGRALS IN      3 RECORDS. CPU TIME:     0.14 SEC, REAL TIME:     0.21 SEC
- SORT2 READ     2718204. AND WROTE     3672651. INTEGRALS IN     90 RECORDS. CPU TIME:     0.07 SEC, REAL TIME:     0.11 SEC
+ SORT1 READ     7715674. AND WROTE      910562. INTEGRALS IN      3 RECORDS. CPU TIME:     0.15 SEC, REAL TIME:     0.20 SEC
+ SORT2 READ     2718204. AND WROTE     3672651. INTEGRALS IN     90 RECORDS. CPU TIME:     0.04 SEC, REAL TIME:     0.11 SEC
 
  Node minimum:     1223771.  Node maximum:     1224663. integrals
 
@@ -174,17 +242,17 @@ Geometry recognized as XYZ
 
  **********************************************************************************************************************************
  DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
-              1      22       20.55       500      610      700      900      950      970     1000      129      960     1700
-                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER
-                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210
-                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01
-                                         1080     1600
-                                         AOSYM     SMH
+              1      22       20.55       500      610      700      900      950      970     1000      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1080     1600   
+                                         AOSYM     SMH  
 
  PROGRAMS   *        TOTAL       INT
- CPU TIMES  *        21.80     21.54
+ CPU TIMES  *        21.50     21.33
  REAL TIME  *        23.95 SEC
- DISK USED  *        71.70 MB
+ DISK USED  *        71.70 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
 
@@ -192,12 +260,12 @@ Geometry recognized as XYZ
  PROGRAM * RHF-SCF (OPEN SHELL)       Authors: W. Meyer, H.-J. Werner
 
 
- NUMBER OF ELECTRONS:      38+   35-    SPACE SYMMETRY=1    SPIN SYMMETRY: Quartet
+ NUMBER OF ELECTRONS:      38+   35-    SPACE SYMMETRY=1    SPIN SYMMETRY: Quartet 
  CONVERGENCE THRESHOLDS:    1.00E-05 (Density)    1.46E-07 (Energy)
  MAX. NUMBER OF ITERATIONS:       60
  INTERPOLATION TYPE:            DIIS
  INTERPOLATION STEPS:              2 (START)      1 (STEP)
- LEVEL SHIFTS:                 -0.60 (CLOSED) -0.30 (OPEN)
+ LEVEL SHIFTS:                 -0.60 (CLOSED) -0.30 (OPEN) 
 
  Number of closed-shell orbitals:   35 (  10   6   6   2   6   2   2   1 )
  Number of open-shell orbitals:      3 (   0   0   0   1   0   1   1   0 )
@@ -241,17 +309,13 @@ Geometry recognized as XYZ
  Final alpha occupancy:  10   6   6   3   6   3   3   1
  Final beta  occupancy:  10   6   6   2   6   2   2   1
 
- !RHF STATE 1.1 Energy               -15601.7007445799
-   --><property name="Energy" method="RHF" principal="true" stateSymmetry="1" stateNumber="1"
-     value="-15601.7007445799"/><!--
+ !RHF STATE 1.1 Energy               -15601.7007445799    
  Nuclear energy                         0.00000000
  One-electron energy               -21429.61863222
  Two-electron energy                 5827.91788764
  Virial quotient                       -0.71390253
  !RHF STATE 1.1 Dipole moment           0.00000000     0.00000000     0.00000000
  Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
-   --><property name="Dipole moment" method="RHF" principal="true" stateSymmetry="1"
-     stateNumber="1" value="0.0 0.0 0.0"/><!--
 
  ELECTRON ORBITALS
  =================
@@ -259,10 +323,10 @@ Geometry recognized as XYZ
 
    Orb  Occ    Energy  Couls-En    Coefficients
 
-                                   1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s
-                                   1 1s      1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0
-                                   1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 5g0
-                                   1 5g4+    1 5g2+    1 5g0     1 5g4+    1 5g2+    1 5g0     1 5g4+    1 5g2+
+                                   1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s   
+                                   1 1s      1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0  
+                                   1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 5g0  
+                                   1 5g4+    1 5g2+    1 5g0     1 5g4+    1 5g2+    1 5g0     1 5g4+    1 5g2+ 
 
    1.1   2 -2490.8696-5376.8907  1.000000 -0.000002 -0.000001 -0.000001 -0.000001 -0.000001  0.000003  0.000034 -0.000130 -0.000097
                                  0.000000 -0.000000  0.000000  0.000000 -0.000000 -0.000000 -0.000000 -0.000000  0.000000  0.000002
@@ -324,8 +388,8 @@ Geometry recognized as XYZ
                                 -0.000000 -0.146952 -0.000000 -0.019795 -0.000000  0.003965  0.000000  0.310271  0.000000  0.000069
                                 -0.000186 -0.000000 -0.000450 -0.000909 -0.000000 -0.001717 -0.002244  0.000000
 
-                                   1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 4f1+    1 4f3+
-                                   1 4f1+    1 4f3+
+                                   1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 4f1+    1 4f3+ 
+                                   1 4f1+    1 4f3+ 
 
    1.2   2  -380.2309-1072.0473  1.000000  0.000000 -0.000000 -0.000000  0.000000 -0.000001  0.000001 -0.000000 -0.000000  0.000000
                                 -0.000000 -0.000000
@@ -351,8 +415,8 @@ Geometry recognized as XYZ
    8.2   0     0.0198   -3.5323 -0.000000 -0.000000 -0.000001  0.000002  0.000769  0.000134 -0.000295  0.000662 -0.000001 -0.000066
                                 -0.003377  0.999994
 
-                                   1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 4f1-    1 4f3-
-                                   1 4f1-    1 4f3-
+                                   1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 4f1-    1 4f3- 
+                                   1 4f1-    1 4f3- 
 
    1.3   2  -380.2309-1072.0473  1.000000  0.000000 -0.000000 -0.000000  0.000000 -0.000001  0.000001 -0.000000 -0.000000 -0.000000
                                 -0.000000  0.000000
@@ -378,8 +442,8 @@ Geometry recognized as XYZ
    8.3   0     0.0198   -3.5323  0.000000  0.000000  0.000001 -0.000002 -0.000769 -0.000134  0.000295 -0.000662  0.000001 -0.000066
                                  0.003377  0.999994
 
-                                   1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 5g2-
-                                   1 5g4-    1 5g2-    1 5g4-    1 5g2-    1 5g4-
+                                   1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 5g2- 
+                                   1 5g4-    1 5g2-    1 5g4-    1 5g2-    1 5g4- 
 
    1.4   2   -66.0414 -350.9174  1.000000  0.000013 -0.000004  0.000002  0.000134  0.000137  0.000018  0.000000 -0.000000 -0.000001
                                 -0.000000  0.000001  0.000000 -0.000000 -0.000000
@@ -396,8 +460,8 @@ Geometry recognized as XYZ
    5.4   0     0.1292  -11.6861  0.000008  0.000189  0.246278  0.777441 12.880846 12.326487  1.733259 -0.349881 -0.594326  0.000027
                                  0.000000  0.001608  0.000000 -0.001126 -0.000000
 
-                                   1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 4f0     1 4f2+
-                                   1 4f0     1 4f2+
+                                   1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 4f0     1 4f2+ 
+                                   1 4f0     1 4f2+ 
 
    1.5   2  -380.2294-1072.0458  1.000000 -0.000002 -0.000001  0.000000  0.000001  0.000002 -0.000002 -0.000000 -0.000001 -0.000000
                                  0.000000 -0.000000
@@ -423,8 +487,8 @@ Geometry recognized as XYZ
    8.5   0     0.0202   -3.5319 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000  0.000000  0.000000 -0.000000 -0.000067
                                  0.000000  1.000000
 
-                                   1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 5g1+
-                                   1 5g3+    1 5g1+    1 5g3+    1 5g1+    1 5g3+
+                                   1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 5g1+ 
+                                   1 5g3+    1 5g1+    1 5g3+    1 5g1+    1 5g3+ 
 
    1.6   2   -66.0372 -350.9147  1.000000 -0.000005 -0.000000  0.000005 -0.000402 -0.000406 -0.000048  0.000002  0.000000 -0.000002
                                  0.000001  0.000001 -0.000000 -0.000000  0.000000
@@ -441,8 +505,8 @@ Geometry recognized as XYZ
    5.6   0     0.1391  -11.9825  0.000009  0.000114  0.213017  0.768149 13.384007 12.821665  1.796622 -0.362622 -0.584044  0.000264
                                  0.000169  0.003421  0.000523 -0.000466  0.000528
 
-                                   1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 5g1-
-                                   1 5g3-    1 5g1-    1 5g3-    1 5g1-    1 5g3-
+                                   1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 5g1- 
+                                   1 5g3-    1 5g1-    1 5g3-    1 5g1-    1 5g3- 
 
    1.7   2   -66.0372 -350.9147  1.000000 -0.000005 -0.000000  0.000005 -0.000402 -0.000406 -0.000048  0.000002  0.000000 -0.000002
                                 -0.000001  0.000001  0.000000 -0.000000 -0.000000
@@ -459,7 +523,7 @@ Geometry recognized as XYZ
    5.7   0     0.1391  -11.9825  0.000009  0.000114  0.213017  0.768149 13.384007 12.821665  1.796622 -0.362622 -0.584044  0.000264
                                 -0.000169  0.003421 -0.000523 -0.000466 -0.000528
 
-                                   1 4f2-    1 4f2-
+                                   1 4f2-    1 4f2- 
 
    1.8   2    -1.3539 -114.2785  1.000000 -0.000010
 
@@ -472,29 +536,23 @@ Geometry recognized as XYZ
 
  **********************************************************************************************************************************
  DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
-              1      22       20.55       500      610      700      900      950      970     1000      129      960     1700
-                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER
-                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210
-                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01
-                                         1080     1600
-                                         AOSYM     SMH
+              1      22       20.55       500      610      700      900      950      970     1000      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1080     1600   
+                                         AOSYM     SMH  
 
-              2       4        2.87       700     1000      520     4202
-                                         GEOM     BASIS   MCVARS     RHF
+              2       4        2.87       700     1000      520     4202   
+                                         GEOM     BASIS   MCVARS     RHF  
 
  PROGRAMS   *        TOTAL       RHF       INT
- CPU TIMES  *        22.11      0.30     21.54
+ CPU TIMES  *        21.72      0.21     21.33
  REAL TIME  *        24.31 SEC
- DISK USED  *       143.36 MB
- SF USED    *         0.01 MB
+ DISK USED  *       143.36 MB      
+ SF USED    *         0.01 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
-   -->
-   <time start="13:25:48" end="13:26:12" cpu="22.11" system="1.72" real="24.31"/>
-   <storage units="megabyte" memory="24001.84" sf="0.01" df="71.67" eaf="71.7" ga="0.0"/>
-  </jobstep><!--
-  --><jobstep command="MULTI" commandset="MULTI">
-   <!--
 
 
  PROGRAM * MULTI (Direct Multiconfiguration SCF)       Authors: P.J. Knowles, H.-J. Werner (1984)     S.T. Elbert (1988)
@@ -583,10 +641,10 @@ Geometry recognized as XYZ
 
  ITER. MIC  NCI  NEG     ENERGY(VAR)     ENERGY(PROJ)   ENERGY CHANGE     GRAD(0)  GRAD(ORB)   GRAD(CI)     STEP       TIME
 
-   1   33   28    0  -15601.61534861  -15601.68107334   -0.06572473    0.29564275 0.00000000 0.00000000  0.47D+00      0.75
-   2   18   32    0  -15601.67674832  -15601.67723601   -0.00048769    0.02586903 0.00000000 0.00000000  0.49D-01      1.50
-   3   18   20    0  -15601.67723963  -15601.67723970   -0.00000007    0.00028097 0.00000000 0.00000000  0.57D-03      1.98
-   4   21   20    0  -15601.67723970  -15601.67723970   -0.00000000    0.00000004 0.00000000 0.00000000  0.10D-06      2.49
+   1   33   28    0  -15601.61534861  -15601.68107334   -0.06572473    0.29564275 0.00000000 0.00000000  0.47D+00      0.37
+   2   18   32    0  -15601.67674832  -15601.67723601   -0.00048769    0.02586903 0.00000000 0.00000000  0.49D-01      0.76
+   3   18   20    0  -15601.67723963  -15601.67723970   -0.00000007    0.00028097 0.00000000 0.00000000  0.57D-03      1.00
+   4   21   20    0  -15601.67723970  -15601.67723970   -0.00000000    0.00000004 0.00000000 0.00000000  0.10D-06      1.25
 
  ** WVFN ****  CONVERGENCE REACHED, FINAL GRADIENT:  0.93D-11
 
@@ -595,9 +653,7 @@ Geometry recognized as XYZ
  Results for state 1.4
  =====================
 
- !MCSCF STATE 1.4 Energy             -15601.7550800654
-   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="4" stateNumber="1"
-     value="-15601.7550800654"/><!--
+ !MCSCF STATE 1.4 Energy             -15601.7550800654    
  Nuclear energy                         0.00000000
  Kinetic energy                     21855.49817078
  One electron energy               -21430.36493135
@@ -606,15 +662,11 @@ Geometry recognized as XYZ
 
  !MCSCF STATE 1.4 Dipole moment         0.00000000     0.00000000     0.00000000
  Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
-   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="4"
-     stateNumber="1" value="0.0 0.0 0.0"/><!--
 
  Results for state 2.4
  =====================
 
- !MCSCF STATE 2.4 Energy             -15601.6733465061
-   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="4" stateNumber="2"
-     value="-15601.6733465061"/><!--
+ !MCSCF STATE 2.4 Energy             -15601.6733465061    
  Nuclear energy                         0.00000000
  Kinetic energy                     21852.26960690
  One electron energy               -21401.14116280
@@ -623,15 +675,11 @@ Geometry recognized as XYZ
 
  !MCSCF STATE 2.4 Dipole moment         0.00000000     0.00000000     0.00000000
  Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
-   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="4"
-     stateNumber="2" value="0.0 0.0 0.0"/><!--
 
  Results for state 3.4
  =====================
 
- !MCSCF STATE 3.4 Energy             -15601.5833526659
-   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="4" stateNumber="3"
-     value="-15601.5833526659"/><!--
+ !MCSCF STATE 3.4 Energy             -15601.5833526659    
  Nuclear energy                         0.00000000
  Kinetic energy                     21853.98155355
  One electron energy               -21414.06676509
@@ -640,17 +688,13 @@ Geometry recognized as XYZ
 
  !MCSCF STATE 3.4 Dipole moment         0.00000000     0.00000000     0.00000000
  Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
-   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="4"
-     stateNumber="3" value="0.0 0.0 0.0"/><!--
 
 
 
  Results for state 1.6
  =====================
 
- !MCSCF STATE 1.6 Energy             -15601.7934051856
-   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="6" stateNumber="1"
-     value="-15601.7934051856"/><!--
+ !MCSCF STATE 1.6 Energy             -15601.7934051856    
  Nuclear energy                         0.00000000
  Kinetic energy                     21855.63649760
  One electron energy               -21431.05024073
@@ -659,15 +703,11 @@ Geometry recognized as XYZ
 
  !MCSCF STATE 1.6 Dipole moment         0.00000000     0.00000000     0.00000000
  Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
-   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="6"
-     stateNumber="1" value="0.0 0.0 0.0"/><!--
 
  Results for state 2.6
  =====================
 
- !MCSCF STATE 2.6 Energy             -15601.6307040642
-   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="6" stateNumber="2"
-     value="-15601.6307040642"/><!--
+ !MCSCF STATE 2.6 Energy             -15601.6307040642    
  Nuclear energy                         0.00000000
  Kinetic energy                     21852.12617150
  One electron energy               -21400.42094133
@@ -676,15 +716,11 @@ Geometry recognized as XYZ
 
  !MCSCF STATE 2.6 Dipole moment         0.00000000     0.00000000     0.00000000
  Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
-   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="6"
-     stateNumber="2" value="0.0 0.0 0.0"/><!--
 
  Results for state 3.6
  =====================
 
- !MCSCF STATE 3.6 Energy             -15601.6240763962
-   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="6" stateNumber="3"
-     value="-15601.6240763962"/><!--
+ !MCSCF STATE 3.6 Energy             -15601.6240763962    
  Nuclear energy                         0.00000000
  Kinetic energy                     21854.13053767
  One electron energy               -21414.82506209
@@ -693,17 +729,13 @@ Geometry recognized as XYZ
 
  !MCSCF STATE 3.6 Dipole moment         0.00000000     0.00000000     0.00000000
  Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
-   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="6"
-     stateNumber="3" value="0.0 0.0 0.0"/><!--
 
 
 
  Results for state 1.7
  =====================
 
- !MCSCF STATE 1.7 Energy             -15601.7934051856
-   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="7" stateNumber="1"
-     value="-15601.7934051856"/><!--
+ !MCSCF STATE 1.7 Energy             -15601.7934051856    
  Nuclear energy                         0.00000000
  Kinetic energy                     21855.63649760
  One electron energy               -21431.05024073
@@ -712,15 +744,11 @@ Geometry recognized as XYZ
 
  !MCSCF STATE 1.7 Dipole moment         0.00000000     0.00000000     0.00000000
  Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
-   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="7"
-     stateNumber="1" value="0.0 0.0 0.0"/><!--
 
  Results for state 2.7
  =====================
 
- !MCSCF STATE 2.7 Energy             -15601.6307040642
-   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="7" stateNumber="2"
-     value="-15601.6307040642"/><!--
+ !MCSCF STATE 2.7 Energy             -15601.6307040642    
  Nuclear energy                         0.00000000
  Kinetic energy                     21852.12617150
  One electron energy               -21400.42094133
@@ -729,15 +757,11 @@ Geometry recognized as XYZ
 
  !MCSCF STATE 2.7 Dipole moment         0.00000000     0.00000000     0.00000000
  Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
-   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="7"
-     stateNumber="2" value="0.0 0.0 0.0"/><!--
 
  Results for state 3.7
  =====================
 
- !MCSCF STATE 3.7 Energy             -15601.6240763962
-   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="7" stateNumber="3"
-     value="-15601.6240763962"/><!--
+ !MCSCF STATE 3.7 Energy             -15601.6240763962    
  Nuclear energy                         0.00000000
  Kinetic energy                     21854.13053767
  One electron energy               -21414.82506209
@@ -746,17 +770,13 @@ Geometry recognized as XYZ
 
  !MCSCF STATE 3.7 Dipole moment         0.00000000     0.00000000     0.00000000
  Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
-   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="7"
-     stateNumber="3" value="0.0 0.0 0.0"/><!--
 
 
 
  Results for state 1.1
  =====================
 
- !MCSCF STATE 1.1 Energy             -15601.6642464419
-   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="1" stateNumber="1"
-     value="-15601.6642464419"/><!--
+ !MCSCF STATE 1.1 Energy             -15601.6642464419    
  Nuclear energy                         0.00000000
  Kinetic energy                     21857.49786849
  One electron energy               -21444.73730346
@@ -765,8 +785,6 @@ Geometry recognized as XYZ
 
  !MCSCF STATE 1.1 Dipole moment         0.00000000     0.00000000     0.00000000
  Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
-   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="1"
-     stateNumber="1" value="0.0 0.0 0.0"/><!--
 
  State-averaged charge density matrix saved on record  5202.2 (density set 1)
 
@@ -782,10 +800,10 @@ Geometry recognized as XYZ
 
    Orb     Occ        Energy       Coefficients
 
-                                   1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s
-                                   1 1s      1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0
-                                   1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 5g0
-                                   1 5g4+    1 5g2+    1 5g0     1 5g4+    1 5g2+    1 5g0     1 5g4+    1 5g2+
+                                   1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s   
+                                   1 1s      1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0  
+                                   1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 5g0  
+                                   1 5g4+    1 5g2+    1 5g0     1 5g4+    1 5g2+    1 5g0     1 5g4+    1 5g2+ 
 
    1.1  2.00000 -2491.028223     1.000000 -0.000001 -0.000001 -0.000001 -0.000001 -0.000001  0.000003  0.000037 -0.000140 -0.000104
                                  0.000000  0.000000 -0.000000 -0.000000  0.000000  0.000000  0.000000 -0.000000 -0.000000 -0.000000
@@ -847,8 +865,8 @@ Geometry recognized as XYZ
                                 -0.000000  0.000000 -0.000000  0.000000 -0.000000 -0.000000  0.000000  0.000000  0.000000  0.000000
                                  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
 
-                                   1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 4f1+    1 4f3+
-                                   1 4f1+    1 4f3+
+                                   1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 4f1+    1 4f3+ 
+                                   1 4f1+    1 4f3+ 
 
    1.2  2.00000  -380.392319     1.000000  0.000001  0.000000 -0.000001  0.000000 -0.000002  0.000002 -0.000000  0.000000  0.000000
                                  0.000000  0.000000
@@ -868,8 +886,8 @@ Geometry recognized as XYZ
    6.2  2.00000    -1.504501     0.000000  0.000000 -0.000000  0.000000  0.000000 -0.000000  0.000000  0.000000  1.000000 -0.000000
                                 -0.000014  0.000000
 
-                                   1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 4f1-    1 4f3-
-                                   1 4f1-    1 4f3-
+                                   1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 4f1-    1 4f3- 
+                                   1 4f1-    1 4f3- 
 
    1.3  2.00000  -380.392319     1.000000  0.000001  0.000000 -0.000001  0.000000 -0.000002  0.000002 -0.000000  0.000000  0.000000
                                  0.000000  0.000000
@@ -889,8 +907,8 @@ Geometry recognized as XYZ
    6.3  2.00000    -1.504501    -0.000000 -0.000000 -0.000000  0.000000  0.000000 -0.000000  0.000000  0.000000  1.000000  0.000000
                                 -0.000014 -0.000000
 
-                                   1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 5g2-
-                                   1 5g4-    1 5g2-    1 5g4-    1 5g2-    1 5g4-
+                                   1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 5g2- 
+                                   1 5g4-    1 5g2-    1 5g4-    1 5g2-    1 5g4- 
 
    1.4  2.00000   -66.203253     1.000000  0.000028 -0.000005 -0.000011  0.001290  0.001300  0.000151 -0.000007 -0.000001  0.000000
                                  0.000000  0.000000  0.000000  0.000000  0.000000
@@ -901,8 +919,8 @@ Geometry recognized as XYZ
    3.4  0.60000    -0.068558     0.000006 -0.000542  0.973730 -0.202785 -0.512577 -0.449504 -0.080164  0.015825 -0.001363  0.000000
                                  0.000000  0.000000  0.000000  0.000000  0.000000
 
-                                   1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 4f0     1 4f2+
-                                   1 4f0     1 4f2+
+                                   1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 4f0     1 4f2+ 
+                                   1 4f0     1 4f2+ 
 
    1.5  2.00000  -380.389775     1.000000 -0.000002 -0.000001  0.000000  0.000001  0.000004 -0.000004  0.000000  0.000000  0.000000
                                  0.000000  0.000000
@@ -922,8 +940,8 @@ Geometry recognized as XYZ
    6.5  2.00000    -1.500869     0.000000  0.000000  0.000000 -0.000000 -0.000000 -0.000000  0.000000  0.000000  1.000000 -0.000000
                                 -0.000011  0.000000
 
-                                   1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 5g1+
-                                   1 5g3+    1 5g1+    1 5g3+    1 5g1+    1 5g3+
+                                   1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 5g1+ 
+                                   1 5g3+    1 5g1+    1 5g3+    1 5g1+    1 5g3+ 
 
    1.6  2.00000   -66.196791     1.000000 -0.000000 -0.000000 -0.000004  0.000360  0.000360  0.000040 -0.000003 -0.000000  0.000000
                                  0.000000  0.000000  0.000000  0.000000  0.000000
@@ -934,8 +952,8 @@ Geometry recognized as XYZ
    3.6  0.60000    -0.030824     0.000001 -0.000170  0.980522 -0.168778 -0.657950 -0.597973 -0.098715  0.019941 -0.004634  0.000000
                                  0.000000  0.000000  0.000000  0.000000  0.000000
 
-                                   1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 5g1-
-                                   1 5g3-    1 5g1-    1 5g3-    1 5g1-    1 5g3-
+                                   1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 5g1- 
+                                   1 5g3-    1 5g1-    1 5g3-    1 5g1-    1 5g3- 
 
    1.7  2.00000   -66.196791     1.000000 -0.000000 -0.000000 -0.000004  0.000360  0.000360  0.000040 -0.000003 -0.000000  0.000000
                                  0.000000  0.000000  0.000000  0.000000  0.000000
@@ -946,10 +964,10 @@ Geometry recognized as XYZ
    3.7  0.60000    -0.030824     0.000001 -0.000170  0.980522 -0.168778 -0.657950 -0.597973 -0.098715  0.019941 -0.004634  0.000000
                                  0.000000  0.000000  0.000000  0.000000  0.000000
 
-                                   1 4f2-    1 4f2-
+                                   1 4f2-    1 4f2- 
 
    1.8  2.00000    -1.514403     1.000000 -0.000021
-
+ 
 
  EXTRA SYMMETRY OF MOS IN SYMMETRY 1:   1 1 1 3 2 1 3 2 1 2   1 1 3 2 3 2 3 1 2 3   5 6 4 1 3 2 5 6 4 1   3 2 5 6 4 3 2 1
 
@@ -994,36 +1012,30 @@ Geometry recognized as XYZ
 
  **********************************************************************************************************************************
  DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
-              1      23       39.36       500      610      700      900      950      970     1000      129      960     1700
-                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER
-                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210
-                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01
-                                         1080     1600     1380
-                                         AOSYM     SMH     JKOP
+              1      23       39.36       500      610      700      900      950      970     1000      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1080     1600     1380   
+                                         AOSYM     SMH     JKOP   
 
-              2       5        5.45       700     1000      520     4202     5202
-                                         GEOM     BASIS   MCVARS     RHF     MCSCF
+              2       5        5.45       700     1000      520     4202     5202   
+                                         GEOM     BASIS   MCVARS     RHF     MCSCF   
 
  PROGRAMS   *        TOTAL     MULTI       RHF       INT
- CPU TIMES  *        25.31      3.19      0.30     21.54
+ CPU TIMES  *        23.38      1.66      0.21     21.33
  REAL TIME  *        27.86 SEC
- DISK USED  *       143.36 MB
- SF USED    *        83.93 MB
+ DISK USED  *       143.36 MB      
+ SF USED    *        83.93 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
-   -->
-   <time start="13:26:12" end="13:26:16" cpu="3.2" system="0.2" real="3.55"/>
-   <storage units="megabyte" memory="24001.84" sf="83.93" df="71.67" eaf="71.7" ga="0.0"/>
-  </jobstep><!--
-  --><jobstep command="POP" commandset="POP">
-   <!--
 
 
  PROGRAM * POP (Mulliken population analysis)
 
-
+ 
  Density matrix read from record         5202.2  Type=MCSCF/CHARGE (state averaged)
-
+ 
  Population analysis by basis function type
 
  Unique atom        s        p        d        f        g    Total    Charge
@@ -1032,30 +1044,24 @@ Geometry recognized as XYZ
 
  **********************************************************************************************************************************
  DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
-              1      23       39.36       500      610      700      900      950      970     1000      129      960     1700
-                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER
-                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210
-                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01
-                                         1080     1600     1380
-                                         AOSYM     SMH     JKOP
+              1      23       39.36       500      610      700      900      950      970     1000      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1080     1600     1380   
+                                         AOSYM     SMH     JKOP   
 
-              2       5        5.45       700     1000      520     4202     5202
-                                         GEOM     BASIS   MCVARS     RHF     MCSCF
+              2       5        5.45       700     1000      520     4202     5202   
+                                         GEOM     BASIS   MCVARS     RHF     MCSCF   
 
  PROGRAMS   *        TOTAL       POP     MULTI       RHF       INT
- CPU TIMES  *        25.34      0.02      3.19      0.30     21.54
+ CPU TIMES  *        23.38      0.00      1.66      0.21     21.33
  REAL TIME  *        27.89 SEC
- DISK USED  *       143.36 MB
- SF USED    *        83.93 MB
+ DISK USED  *       143.36 MB      
+ SF USED    *        83.93 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
-   -->
-   <time start="13:26:16" end="13:26:16" cpu="0.03" system="0.0" real="0.03"/>
-   <storage units="megabyte" memory="24001.84" sf="83.93" df="71.67" eaf="71.7" ga="0.0"/>
-  </jobstep><!--
  SETTING BASIS          =    USERDEF
-  --><jobstep command="RHF-SCF" commandset="SCFPRO">
-   <!--
 
 
  Recomputing integrals since basis changed
@@ -1069,12 +1075,12 @@ Geometry recognized as XYZ
 
  Geometry written to block  1 of record 700
 
- Orientation using atomic masses
+ Orientation using atomic masses  
  Molecule type: Atom
  Symmetry elements: X,Y,Z
  Rotational constants:       0.0000000      0.0000000      0.0000000 GHz  (calculated with average atomic masses)
 
- Point group  D2h
+ Point group  D2h 
 
 
 
@@ -1107,13 +1113,13 @@ Geometry recognized as XYZ
      Node minimum: 618.922 MB, node maximum: 1042.809 MB
 
 
- NUMBER OF SORTED TWO-ELECTRON INTEGRALS:  101423660.     BUFFER LENGTH:  32768
- NUMBER OF SEGMENTS:   4  SEGMENT LENGTH:   31998458      RECORD LENGTH: 524288
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:  101359485.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   4  SEGMENT LENGTH:   31999029      RECORD LENGTH: 524288
 
  Memory used in sort:      32.56 MW
 
- SORT1 READ   620842336. AND WROTE    63404576. INTEGRALS IN    184 RECORDS. CPU TIME:    11.37 SEC, REAL TIME:    13.52 SEC
- SORT2 READ   190733767. AND WROTE   304061875. INTEGRALS IN  11934 RECORDS. CPU TIME:     1.62 SEC, REAL TIME:     3.14 SEC
+ SORT1 READ   620842336. AND WROTE    63934281. INTEGRALS IN    185 RECORDS. CPU TIME:    11.30 SEC, REAL TIME:    13.51 SEC
+ SORT2 READ   190733767. AND WROTE   304061875. INTEGRALS IN  11934 RECORDS. CPU TIME:     2.09 SEC, REAL TIME:     3.15 SEC
 
  Node minimum:   101278730.  Node maximum:   101423660. integrals
 
@@ -1146,21 +1152,21 @@ Geometry recognized as XYZ
 
  **********************************************************************************************************************************
  DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
-              1      22       21.46       500      610      700      900      950      970     1001      129      960     1700
-                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER
-                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210
-                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01
-                                         1080     1600
-                                         AOSYM     SMH
+              1      22       21.46       500      610      700      900      950      970     1001      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1080     1600   
+                                         AOSYM     SMH  
 
-              2       6        5.63       700     1000      520     4202     5202     1001
-                                         GEOM     BASIS   MCVARS     RHF     MCSCF    BASIS
+              2       6        5.63       700     1000      520     4202     5202     1001   
+                                         GEOM     BASIS   MCVARS     RHF     MCSCF    BASIS   
 
  PROGRAMS   *        TOTAL       INT       POP     MULTI       RHF       INT
- CPU TIMES  *       206.79    181.43      0.02      3.19      0.30     21.54
+ CPU TIMES  *       204.88    181.50      0.00      1.66      0.21     21.33
  REAL TIME  *       214.49 SEC
- DISK USED  *         4.77 GB
- SF USED    *        83.93 MB
+ DISK USED  *         4.77 GB      
+ SF USED    *        83.93 MB      
  GA USED    *         0.00 MB       (max)       0.00 MB       (current)
  **********************************************************************************************************************************
 
@@ -1168,31 +1174,31 @@ Geometry recognized as XYZ
  PROGRAM * RHF-SCF (OPEN SHELL)       Authors: W. Meyer, H.-J. Werner
 
 
- NUMBER OF ELECTRONS:      38+   35-    SPACE SYMMETRY=1    SPIN SYMMETRY: Quartet
+ NUMBER OF ELECTRONS:      38+   35-    SPACE SYMMETRY=1    SPIN SYMMETRY: Quartet 
  CONVERGENCE THRESHOLDS:    1.00E-05 (Density)    1.46E-07 (Energy)
  MAX. NUMBER OF ITERATIONS:       60
  INTERPOLATION TYPE:            DIIS
  INTERPOLATION STEPS:              2 (START)      1 (STEP)
- LEVEL SHIFTS:                 -0.60 (CLOSED) -0.30 (OPEN)
+ LEVEL SHIFTS:                 -0.60 (CLOSED) -0.30 (OPEN) 
 
  Number of closed-shell orbitals:   35 (  10   6   6   2   6   2   2   1 )
  Number of open-shell orbitals:      3 (   0   0   0   1   0   1   1   0 )
 
 
-
+ 
  Extra symmetries of mos in symmetry 1:   1   1   1   3   2   1   3   2   1   1   3   2
  Extra symmetries of mos in symmetry 2:   1   1   1   3   2   1
  Extra symmetries of mos in symmetry 3:   1   1   1   3   2   1
  Extra symmetries of mos in symmetry 5:   1   1   1   3   2   1
  Molecular orbitals read from record     5202.2  Type=MCSCF/NATURAL (state averaged)
-
+ 
  Present basis size:      88  61  61  28  61  28  28  15
  Previous basis size:     38  12  12  15  12  15  15   2
  Previous occupation:     12   6   6   3   6   3   3   1
  Previous closed-shells:  10   6   6   2   6   2   2   1
  Present occupation:      12   6   6   3   6   3   3   1
  Present closed-shells:   10   6   6   2   6   2   2   1
- Wavefunction symmetry:    4   Quartet
+ Wavefunction symmetry:    4   Quartet 
 
  Orbital overlap <old|new>:  < 1.1| 1.1> = 1.000000   < 2.1| 2.1> = 1.000000   < 3.1| 3.1> = 1.000000   < 4.1| 4.1> = 1.000000
                              < 5.1| 5.1> = 1.000000   < 6.1| 6.1> = 1.000000   < 7.1| 7.1> = 1.000000   < 8.1| 8.1> = 1.000000
@@ -1212,10 +1218,3 @@ Geometry recognized as XYZ
     2      0.000D+00      0.331D+00  20364693.53534725  99703.645744    0.00000    0.00000    0.00000    1    diag,B
     3      0.123D+00      0.419D+03  20364693.53535610  99703.644728    0.00000    0.00000    0.00000    2    fixocc
  ?TOTAL ENERGY UNREASONABLE, ETOT =         0.20365D+08, ENEST =          -0.10026D+05
-   --><error/><!--
-  --></jobstep><!--
-  -->
-  <input>
-  <!--
- --></job><!--
---></molpro>
