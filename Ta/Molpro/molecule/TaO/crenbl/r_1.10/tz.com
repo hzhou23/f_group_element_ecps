@@ -1,5 +1,5 @@
 ***,Calculation for Y atom, singlet and triplet
-memory,1,g
+memory,3,g
 
 gthresh,twoint=1.0E-15
 gthresh,throvl=1.0E-15
@@ -83,13 +83,14 @@ geometry={
     Ta 0.0 0.0 0.0
     O 0.0 0.0 1.10
 }
-{rhf,nitord=20;
- maxit,200;
+{rhf
+ start,atden
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-1,B1,B2,A2
  print,orbitals=2
 }
+
 scf=energy
 _CC_NORM_MAX=2.0
 {rccsd(t);maxit,100;core}

@@ -51,19 +51,19 @@ def get_data():
     data = pd.DataFrame()
     df = pd.read_csv("AE/tzbind", delim_whitespace=True)
     data['r']= df['r']
-    data['ae']= df['bind']-15604.86783+15604.88640
+    data['ae']= df['bind']
     for ecp in ecps:
         df = pd.read_csv("%s/tzbind" % ecp, delim_whitespace=True)
         if ecp == 'crenbl':
-            data[ecp] = df['bind']-57.46339875+57.48166149
+            data[ecp] = df['bind']
         elif ecp == 'lanl2':
-            data[ecp] = df['bind']-57.54698452+57.56523592
+            data[ecp] = df['bind']
         elif ecp == 'sbkjc':
-            data[ecp] = df['bind']-57.46009777+57.47847470
+            data[ecp] = df['bind']
         elif ecp == 'mwbstu':
-            data[ecp] = df['bind']-56.68236708+56.70059800
+            data[ecp] = df['bind']
         elif ecp == 'UC': 
-            data[ecp] = df['bind']-15602.27534+15602.13852
+            data[ecp] = df['bind']
         else:
             data[ecp] = df['bind']
 
@@ -83,12 +83,12 @@ def plot():
         x = data['r']
         y= (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((1.40,2.40))
+    ax.set_xlim((1.30,1.90))
 #    ax.set_ylim((-0.25,0.25))
     ax.set(title='TaO tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
-    plt.axvline(1.765819055962117,ls='--',color='gray',linewidth=1.0)
+    plt.axvline(1.5666515025428518,ls='--',color='gray',linewidth=1.0)
     plt.savefig('TaO_TZ.pdf')
     plt.show()
 

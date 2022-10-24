@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Nodes     nprocs
+ nid00864    11
+ Number of processes for MPI-2 version of Molpro:   nprocs(total)=   12   nprocs(compute)=   11   nprocs(helper)=    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=sf
+
+ --><job>
+  <!--
+
+ Variables initialized (889), CPU time= 0.03 sec
+ Commands  initialized (702), CPU time= 0.02 sec, 572 directives.
+ Default parameters read. Elapsed time= 0.17 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                                       Copyright, TTI GmbH Stuttgart, 2015
+                                    Version 2015.1 linked Dec 29 2018 15:55:43
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Y atom, singlet and triplet
+  64 bit mpp version                                                                     DATE: 22-Oct-22          TIME: 09:06:25
+ **********************************************************************************************************************************
+
+ SHA1:             19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ **********************************************************************************************************************************
+  -->
+  <!--
+
+ THRESHOLDS:
+
+ ZERO    =  1.00D-12  ONEINT  =  1.00D-12  TWOINT  =  1.00D-15  PREFAC  =  1.00D-14  LOCALI  =  1.00D-09  EORDER  =  1.00D-04
+ ENERGY  =  0.00D+00  ETEST   =  0.00D+00  EDENS   =  0.00D+00  THRDEDEF=  1.00D-06  GRADIENT=  1.00D-02  STEP    =  1.00D-03
+ ORBITAL =  1.00D-05  CIVEC   =  1.00D-05  COEFF   =  1.00D-04  PRINTCI =  5.00D-02  PUNCHCI =  9.90D+01  OPTGRAD =  3.00D-04
+ OPTENERG=  1.00D-06  OPTSTEP =  3.00D-04  THRGRAD =  1.00D-10  COMPRESS=  1.00D-11  VARMIN  =  1.00D-07  VARMAX  =  1.00D-03
+ THRDOUB =  0.00D+00  THRDIV  =  1.00D-05  THRRED  =  1.00D-07  THRPSP  =  1.00D+00  THRDC   =  1.00D-10  THRCS   =  1.00D-10
+ THRNRM  =  1.00D-08  THREQ   =  0.00D+00  THRDE   =  1.00D+00  THRREF  =  1.00D-05  SPARFAC =  1.00D+00  THRDLP  =  1.00D-07
+ THRDIA  =  1.00D-10  THRDLS  =  1.00D-07  THRGPS  =  0.00D+00  THRKEX  =  0.00D+00  THRDIS  =  2.00D-01  THRVAR  =  1.00D-10
+ THRLOC  =  1.00D-06  THRGAP  =  1.00D-06  THRLOCT = -1.00D+00  THRGAPT = -1.00D+00  THRORB  =  1.00D-06  THRMLTP =  0.00D+00
+ THRCPQCI=  1.00D-10  KEXTA   =  0.00D+00  THRCOARS=  0.00D+00  SYMTOL  =  1.00D-06  GRADTOL =  1.00D-06  THROVL  =  1.00D-08
+ THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
+
+
+
+ THRESHOLDS:
+
+ ZERO    =  1.00D-12  ONEINT  =  1.00D-12  TWOINT  =  1.00D-15  PREFAC  =  1.00D-14  LOCALI  =  1.00D-09  EORDER  =  1.00D-04
+ ENERGY  =  0.00D+00  ETEST   =  0.00D+00  EDENS   =  0.00D+00  THRDEDEF=  1.00D-06  GRADIENT=  1.00D-02  STEP    =  1.00D-03
+ ORBITAL =  1.00D-05  CIVEC   =  1.00D-05  COEFF   =  1.00D-04  PRINTCI =  5.00D-02  PUNCHCI =  9.90D+01  OPTGRAD =  3.00D-04
+ OPTENERG=  1.00D-06  OPTSTEP =  3.00D-04  THRGRAD =  1.00D-10  COMPRESS=  1.00D-11  VARMIN  =  1.00D-07  VARMAX  =  1.00D-03
+ THRDOUB =  0.00D+00  THRDIV  =  1.00D-05  THRRED  =  1.00D-07  THRPSP  =  1.00D+00  THRDC   =  1.00D-10  THRCS   =  1.00D-10
+ THRNRM  =  1.00D-08  THREQ   =  0.00D+00  THRDE   =  1.00D+00  THRREF  =  1.00D-05  SPARFAC =  1.00D+00  THRDLP  =  1.00D-07
+ THRDIA  =  1.00D-10  THRDLS  =  1.00D-07  THRGPS  =  0.00D+00  THRKEX  =  0.00D+00  THRDIS  =  2.00D-01  THRVAR  =  1.00D-10
+ THRLOC  =  1.00D-06  THRGAP  =  1.00D-06  THRLOCT = -1.00D+00  THRGAPT = -1.00D+00  THRORB  =  1.00D-06  THRMLTP =  0.00D+00
+ THRCPQCI=  1.00D-10  KEXTA   =  0.00D+00  THRCOARS=  0.00D+00  SYMTOL  =  1.00D-06  GRADTOL =  1.00D-06  THROVL  =  1.00D-15
+ THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
+
+
+
+ Variable memory set to 1000000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+ SETTING TA_CCSD        =       -57.56523592
+ SETTING O_CCSD         =       -15.86622096
+ SETTING NE             =        19.00000000
+ SETTING SYMM           =         1.00000000
+ SETTING SS             =         1.00000000
+ SETTING A1             =         5.00000000
+ SETTING B1             =         2.00000000
+ SETTING B2             =         2.00000000
+ SETTING A2             =         1.00000000
+
+Geometry recognized as XYZ
+
+  --><jobstep command="RHF-SCF" commandset="SCFPRO">
+   <!--
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+
+ Point group  C2v
+
+
+   --><cml:molecule>
+    <cml:symmetry pointGroup="C2v"/>
+    <cml:atomArray>
+     <cml:atom id="a1" elementType="Ta" x3="0.0" y3="0.0" z3="0.0"/>
+     <cml:atom id="a2" elementType="O" x3="0.0" y3="0.0" z3="2.5"/>
+    </cml:atomArray>
+    <cml:bondArray>
+     <cml:bond atomRefs2="a1 a2"/>
+    </cml:bondArray>
+   </cml:molecule><!--
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  TA     13.00    0.000000000    0.000000000    0.000000000
+   2  O       6.00    0.000000000    0.000000000    4.724315311
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  4.724315311
+     ( 2.500000000)
+
+ NUCLEAR CHARGE:                   19
+ NUMBER OF PRIMITIVE AOS:         536
+ NUMBER OF SYMMETRY AOS:          441
+ NUMBER OF CONTRACTIONS:          441   ( 182A1  + 105B1  + 105B2  +  49A2  )
+ NUMBER OF CORE ORBITALS:           4   (   2A1  +   1B1  +   1B2  +   0A2  )
+ NUMBER OF VALENCE ORBITALS:       10   (   5A1  +   2B1  +   2B2  +   1A2  )
+
+
+ NUCLEAR REPULSION ENERGY   16.51032898
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+                                        1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 2 1 2   1 2 1 2 1 2 1 2 1 2
+                                        1 2 1 2 1 2 1 2 1 2   1 2 1 2 1 2 1 2 1 2   1 2 1 2 1 2 1 2 1 2   1 2 1 2 1 2 1 2 1 2
+                                        1 2 1 2 1 2 1 2 1 2   1 2 1 2 1 2 1 2 1 2   1 3 2 1 3 2 1 3 2 1   1 1 1 1 1 1 1 1 1 1
+                                        1 1 1 1 1 1 1 1 1 1   1 2 1 2 1 2 1 2 1 2   1 2
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 2:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+                                        1 1 1 1 1 1 1 1 1 1   1 1 1 1 2 1 2 1 2 1   2 1 2 1 2 1 2 1 2 1   2 1 2 1 2 1 2 1 2 1
+                                        2 1 2 1 2 1 2 1 2 1   1 1 1 1 1 1 1 1 1 1   1 1 2 1 2
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 3:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+                                        1 1 1 1 1 1 1 1 1 1   1 1 1 1 2 1 2 1 2 1   2 1 2 1 2 1 2 1 2 1   2 1 2 1 2 1 2 1 2 1
+                                        2 1 2 1 2 1 2 1 2 1   1 1 1 1 1 1 1 1 1 1   1 1 2 1 2
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 4:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 2 1
+                                        2 1 2 1 1 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.413E-06 0.676E-06 0.107E-04 0.133E-04 0.139E-04 0.220E-04 0.455E-04 0.706E-04
+         2 0.467E-06 0.113E-04 0.138E-04 0.967E-04 0.100E-03 0.132E-03 0.141E-03 0.442E-03
+         3 0.467E-06 0.113E-04 0.138E-04 0.967E-04 0.100E-03 0.132E-03 0.141E-03 0.442E-03
+         4 0.139E-04 0.100E-03 0.143E-03 0.607E-03 0.146E-02 0.227E-02 0.654E-02 0.734E-02
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-15
+ AO integral compression algorithm  1   Integral accuracy      1.0D-15
+
+     3784.049 MB (compressed) written to integral file ( 33.7%)
+
+     Node minimum: 180.617 MB, node maximum: 765.460 MB
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:  110531496.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   4  SEGMENT LENGTH:   31986939      RECORD LENGTH: 524288
+
+ Memory used in sort:      32.54 MW
+
+ SORT1 READ  1401473000. AND WROTE    38237649. INTEGRALS IN    112 RECORDS. CPU TIME:    19.44 SEC, REAL TIME:    27.35 SEC
+ SORT2 READ   413876461. AND WROTE  1216411966. INTEGRALS IN   7579 RECORDS. CPU TIME:     1.40 SEC, REAL TIME:     2.46 SEC
+
+ Node minimum:   110449701.  Node maximum:   110660215. integrals
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19       22.35       500      610      700      900      950      970     1000      129      960     1100
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S
+                                         1400     1410     1420     1200     1210     1080     1600     1650     1700
+                                           T        V       ECP      H0       H01     AOSYM     SMH    MOLCAS    OPER
+
+ PROGRAMS   *        TOTAL       INT
+ CPU TIMES  *       157.22    156.80
+ REAL TIME  *       167.45 SEC
+ DISK USED  *         8.82 GB
+ GA USED    *         0.00 MB       (max)       0.00 MB       (current)
+ **********************************************************************************************************************************
+
+
+ PROGRAM * RHF-SCF (OPEN SHELL)       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:      10+    9-    SPACE SYMMETRY=1    SPIN SYMMETRY: Doublet
+ CONVERGENCE THRESHOLDS:    1.00E-05 (Density)    1.00E-07 (Energy)
+ MAX. NUMBER OF ITERATIONS:      200
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                 -0.60 (CLOSED) -0.30 (OPEN)
+
+ Number of closed-shell orbitals:    9 (   4   2   2   1 )
+ Number of open-shell orbitals:      1 (   1   0   0   0 )
+
+
+ Orbital guess generated from atomic densities. Full valence occupancy:    7   3   3   1
+
+ Molecular orbital dump at record        2100.2
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS   ORB.
+    1      0.000D+00      0.000D+00       -72.23357630    131.685217    0.00000    0.00000   -8.18257    0    start
+    2      0.000D+00      0.154D-01       -72.59710313    129.379901    0.00000    0.00000   -3.05398    1    diag,B
+    3      0.175D-01      0.102D-01       -72.68947627    130.712062    0.00000    0.00000   -4.11641    2    diag,B
+    4      0.650D-02      0.195D-02       -72.70229401    131.074721    0.00000    0.00000   -3.61972    3    diag,B
+    5      0.382D-02      0.102D-02       -72.70821380    131.191155    0.00000    0.00000   -3.38917    4    diag,B
+    6      0.191D-02      0.651D-03       -72.71424032    131.125807    0.00000    0.00000   -3.10067    5    diag,B
+    7      0.151D-02      0.573D-03       -72.72052028    130.963940    0.00000    0.00000   -2.84065    6    diag,B
+    8      0.128D-02      0.579D-03       -72.72148781    130.934204    0.00000    0.00000   -2.80818    7    diag,B
+    9      0.187D-03      0.584D-03       -72.71637380    131.154539    0.00000    0.00000   -3.00016    8    diag,B
+   10      0.115D-02      0.495D-03       -72.71307284    131.524661    0.00000    0.00000   -3.14708    9    orth
+   11      0.211D-02      0.419D-03       -72.71254546    131.743115    0.00000    0.00000   -3.20099    9    diag,B
+   12      0.146D-02      0.331D-03       -72.71186853    132.029914    0.00000    0.00000   -3.20462    9    diag,B
+   13      0.134D-02      0.408D-03       -72.71133259    132.110852    0.00000    0.00000   -3.21695    9    diag,B
+   14      0.498D-03      0.473D-03       -72.71272636    131.971869    0.00000    0.00000   -3.16620    9    diag,B
+   15      0.962D-03      0.273D-03       -72.71355775    131.941414    0.00000    0.00000   -3.06017    9    diag,B
+   16      0.452D-03      0.256D-03       -72.71414620    131.900162    0.00000    0.00000   -2.98958    9    diag,B
+   17      0.321D-03      0.251D-03       -72.71548895    131.733948    0.00000    0.00000   -2.83667    9    diag,B
+   18      0.965D-03      0.197D-03       -72.71655913    131.593664    0.00000    0.00000   -2.69822    9    diag,B
+   19      0.705D-03      0.229D-03       -72.71690613    131.551277    0.00000    0.00000   -2.68158    9    fixocc
+   20      0.226D-03      0.215D-03       -72.71681564    131.588252    0.00000    0.00000   -2.65921    9    orth
+   21      0.219D-03      0.219D-03       -72.71691230    131.622927    0.00000    0.00000   -2.65350    9    diag,B

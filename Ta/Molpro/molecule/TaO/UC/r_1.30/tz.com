@@ -54,9 +54,8 @@ include,../generate/O-aug-cc-pwCVTZ.basis
  orbital,3202.2
  print,orbitals=2
 }
-{rhf,nitord=20;
+{rhf,nitord=1,maxit=0;
  start,3202.2
- maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-1,B1,B2,A2

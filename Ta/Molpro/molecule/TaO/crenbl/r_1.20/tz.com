@@ -83,8 +83,8 @@ geometry={
     Ta 0.0 0.0 0.0
     O 0.0 0.0 1.20
 }
-{rhf,nitord=20;
- maxit,200;
+{rhf
+ start,atden
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-1,B1,B2,A2
