@@ -22,7 +22,7 @@ styles={
 'sbkjc'		:{'label':'SBKJC',	'color':'#1e90ff','linestyle':'--','dashes':(2,1,8,1)	},
 'lanl2'		:{'label':'LANL2',	'color':'#a52a2a','linestyle':'--','dashes':(1,1)	},
 'ECP1'	        :{'label':'ECP1',	'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP2'          :{'label':'ECP2',   'color':'#458B00','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP2'          :{'label':'ECP2',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
 }
 
 def init():
