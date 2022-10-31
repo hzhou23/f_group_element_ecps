@@ -1,6 +1,15 @@
 proc Id5s2
-{rhf
+{rks,pbe0
  start,atden
+ print,orbitals=2
+ wf,75,1,5
+ occ,12,6,6,3,6,3,3,1
+ closed,10,6,6,2,6,2,2,1
+ sym,1,1,1,1,3,2,1,3,2,1,1,3,2
+ orbital,3202.2
+}
+{rhf
+ start,3202.2
  print,orbitals=2
  wf,75,1,5
  occ,12,6,6,3,6,3,3,1
@@ -63,7 +72,7 @@ pop
 endproc
 
 
-proc EAd7s1
+proc EAd6s2
 {rhf,nitord=60,maxit=60
  start,atden
  print,orbitals=2
@@ -71,14 +80,13 @@ proc EAd7s1
  occ,12,6,6,3,6,3,3,1
  closed,11,6,6,2,6,2,2,1
  sym,1,1,1,1,3,2,1,3,2,1,1,3,2
- restrict,1,1,10.1
  orbital,4202.2
 }
 pop
 {multi
  start,4202.2
  occ,12,6,6,3,6,3,3,1
- closed,10,6,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
  wf,76,1,4;state,2
  wf,76,4,4;state,1
  wf,76,6,4;state,1
@@ -155,10 +163,6 @@ pop
  wf,74,2,6
  occ,11,7,6,3,6,3,3,1
  closed,9,6,6,2,6,2,2,1
- sym,1,1,1,1,3,2,1,3,2,1,3,2
- sym,2,1,1,1,3,2,1,3,2
- sym,3,1,1,1,3,2,1,3,2
- sym,5,1,1,1,3,2,1,3,2
 }
 endproc
 
@@ -259,8 +263,8 @@ proc IVd3
 {rhf
  start,atden
  print,orbitals=2
- wf,71,4,3
- occ,11,6,6,3,6,2,2,1
+ wf,71,1,3
+ occ,9,6,6,3,6,3,3,1
  closed,9,6,6,2,6,2,2,1
  sym,1,1,1,1,3,2,1,3,2,1,3,2
  orbital,4202.2
@@ -279,8 +283,8 @@ pop
 }
 {rhf,nitord=1,maxit=0
  start,5202.2
- wf,71,4,3
- occ,11,6,6,3,6,2,2,1
+ wf,71,1,3
+ occ,9,6,6,3,6,3,3,1
  closed,9,6,6,2,6,2,2,1
 }
 endproc
@@ -290,8 +294,8 @@ proc Vd2
 {rhf
  start,atden
  print,orbitals=2
- wf,70,4,2
- occ,9,6,6,2,6,3,3,1
+ wf,70,1,2
+ occ,11,6,6,2,6,2,2,1
  closed,9,6,6,2,6,2,2,1
  sym,1,1,1,1,3,2,1,3,2,1,3,2
  orbital,4202.2
@@ -310,8 +314,8 @@ pop
 }
 {rhf,nitord=1,maxit=0
  start,5202.2
- wf,70,4,2
- occ,9,6,6,2,6,3,3,1
+ wf,70,1,2
+ occ,11,6,6,2,6,2,2,1
  closed,9,6,6,2,6,2,2,1
 }
 endproc
