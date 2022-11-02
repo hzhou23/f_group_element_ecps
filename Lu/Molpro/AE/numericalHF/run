@@ -1,0 +1,18 @@
+#!/bin/bash
+
+workd=`pwd`
+
+for i in {1..16}
+do
+cp $workd/AE/ae$i.d $workd/yoon-fchan/ip.d
+cd $workd/yoon-fchan/
+./a.out &> energy.out
+grep 'TOTAL' energy.out | awk -F'-' '{printf("%.6f\n",-$2)}' >> aeenergy.out
+done
+
+ref=`awk 'NR==1{print $1}' aeenergy.out`
+awk -v ref=$ref '{printf("%.14f\n", $1 - ref)}' aeenergy.out >> spect.out
+
+mv spect.out ../spect.out
+
+
