@@ -195,9 +195,10 @@ class orbital_occupation:
 
 
     def molpro_state_openshell_sym(self, state: List[int])->Tuple[int, int]:
-        openshell = 0
+        openshell_total = 0
         sym = 1
         for i_num,i in enumerate(state):
+            openshell = 0
             if i != 0:
                 current_orb = self.orbital_map[i_num][1]
 
@@ -211,23 +212,24 @@ class orbital_occupation:
                     orb_feature = f()
 
                 site = list(range(len(orb_feature.symmetries)))
-
                 if i <= orb_feature.half_fill:
                     openshell += i
                     ind= list(combinations(site, openshell))[0]
+                elif i == orb_feature.full_fill:
+                    ind = []
                 else :
-                    assert i <= orb_feature.full_fill, "Occupation exceeding, current orbital is {}, current occupation is {}".format(current_orb, i)
+                    assert i < orb_feature.full_fill, "Occupation exceeding, current orbital is {}, current occupation is {}".format(current_orb, i)
                     openshell += orb_feature.full_fill - i
                     ind= list(combinations(site, openshell))[-1]
-
+                
                 if len(ind) == 0:
                     ind = (0,0)
                 tmp_sym_list = [orb_feature.symmetries[i] for i in ind]
                 tmp_sym = total_sym(tmp_sym_list)
                 sym = bipart_sym(sym, tmp_sym)
+                openshell_total += openshell
 
-
-        return openshell, sym
+        return openshell_total, sym
 
     def molpro_wf(self, state : List[int], state_average_orb: str) -> Tuple[List[int],List[str]]: 
         ''' For a given input state, and the given state average orbital, it will return : number of valence electron, total symmetry and number of open shell electron as a list.'''
@@ -237,7 +239,7 @@ class orbital_occupation:
                 remain_state[k] = 0
         
         remain_openshell, remain_sym = self.molpro_state_openshell_sym(remain_state)
-        print(remain_sym)
+        #print(remain_sym)
         weights=[]
         molpro_wf_list=[]
         for k,v in self.orbital_map.items():
@@ -269,7 +271,7 @@ class orbital_occupation:
         symmetry = []
         if reverse is False:
             index_list = index_list[::-1]
-        print(index_list)
+        #print(index_list)
         for ind in index_list :
             tmp_sym_list = [orb_feature.symmetries[i] for i in ind]
             tmp_sym = total_sym(tmp_sym_list)

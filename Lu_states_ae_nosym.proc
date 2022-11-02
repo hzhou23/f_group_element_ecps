@@ -1,0 +1,430 @@
+proc Id1s2
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,71,1,1
+ occ,11,6,6,2,6,2,2,1
+ closed,10,6,6,2,6,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,12,6,6,3,6,3,3,1
+ closed,10,6,6,2,6,2,2,1
+ wf,71,1,1;state,2
+ wf,71,4,1;state,1
+ wf,71,6,1;state,1
+ wf,71,7,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,71,1,1
+ occ,11,6,6,2,6,2,2,1
+ closed,10,6,6,2,6,2,2,1
+}
+endproc
+
+
+proc Ip1s2
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,71,2,1
+ occ,10,7,6,2,6,2,2,1
+ closed,10,6,6,2,6,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,10,7,7,2,7,2,2,1
+ closed,10,6,6,2,6,2,2,1
+ wf,71,2,1;state,1
+ wf,71,3,1;state,1
+ wf,71,5,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,71,2,1
+ occ,10,7,6,2,6,2,2,1
+ closed,10,6,6,2,6,2,2,1
+}
+endproc
+
+
+proc IEf1s1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,71,2,1
+ occ,10,7,6,2,6,2,2,1
+ closed,10,6,6,2,6,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,10,8,8,2,8,2,2,2
+ closed,10,6,6,2,6,2,2,1
+ wf,71,2,1;state,2
+ wf,71,3,1;state,2
+ wf,71,5,1;state,2
+ wf,71,8,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,71,2,1
+ occ,10,7,6,2,6,2,2,1
+ closed,10,6,6,2,6,2,2,1
+}
+endproc
+
+
+proc EAd2s2
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,72,1,2
+ occ,12,6,6,2,6,2,2,1
+ closed,10,6,6,2,6,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,12,6,6,3,6,3,3,1
+ closed,10,6,6,2,6,2,2,1
+ wf,72,1,2;state,1
+ wf,72,4,2;state,3
+ wf,72,6,2;state,3
+ wf,72,7,2;state,3
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,72,1,2
+ occ,12,6,6,2,6,2,2,1
+ closed,10,6,6,2,6,2,2,1
+}
+endproc
+
+
+proc IIds2
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,70,1,0
+ occ,10,6,6,2,6,2,2,1
+ closed,10,6,6,2,6,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,10,6,6,2,6,2,2,1
+ closed,10,6,6,2,6,2,2,1
+ wf,70,1,0;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,70,1,0
+ occ,10,6,6,2,6,2,2,1
+ closed,10,6,6,2,6,2,2,1
+}
+endproc
+
+
+proc IIId1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,69,1,1
+ occ,10,6,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,11,6,6,3,6,3,3,1
+ closed,9,6,6,2,6,2,2,1
+ wf,69,1,1;state,2
+ wf,69,4,1;state,1
+ wf,69,6,1;state,1
+ wf,69,7,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,69,1,1
+ occ,10,6,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+}
+endproc
+
+
+proc IIIf1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,69,2,1
+ occ,9,7,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,9,8,8,2,8,2,2,2
+ closed,9,6,6,2,6,2,2,1
+ wf,69,2,1;state,2
+ wf,69,3,1;state,2
+ wf,69,5,1;state,2
+ wf,69,8,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,69,2,1
+ occ,9,7,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+}
+endproc
+
+
+proc IIIps1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,69,1,1
+ occ,10,6,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,10,6,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+ wf,69,1,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,69,1,1
+ occ,10,6,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+}
+endproc
+
+
+proc IIIp1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,69,2,1
+ occ,9,7,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,9,7,7,2,7,2,2,1
+ closed,9,6,6,2,6,2,2,1
+ wf,69,2,1;state,1
+ wf,69,3,1;state,1
+ wf,69,5,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,69,2,1
+ occ,9,7,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+}
+endproc
+
+
+proc IVp6
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,68,1,0
+ occ,9,6,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,9,6,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+ wf,68,1,0;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,68,1,0
+ occ,9,6,6,2,6,2,2,1
+ closed,9,6,6,2,6,2,2,1
+}
+endproc
+
+
+proc VIp4
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,66,7,2
+ occ,9,6,6,2,6,2,2,1
+ closed,9,6,5,2,5,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,9,6,6,2,6,2,2,1
+ closed,9,5,5,2,5,2,2,1
+ wf,66,7,2;state,1
+ wf,66,6,2;state,1
+ wf,66,4,2;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,66,7,2
+ occ,9,6,6,2,6,2,2,1
+ closed,9,6,5,2,5,2,2,1
+}
+endproc
+
+
+proc VIIp3
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,65,8,3
+ occ,9,6,6,2,6,2,2,1
+ closed,9,5,5,2,5,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,9,6,6,2,6,2,2,1
+ closed,9,5,5,2,5,2,2,1
+ wf,65,8,3;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,65,8,3
+ occ,9,6,6,2,6,2,2,1
+ closed,9,5,5,2,5,2,2,1
+}
+endproc
+
+
+proc VIIIp2
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,64,4,2
+ occ,9,6,6,2,5,2,2,1
+ closed,9,5,5,2,5,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,9,6,6,2,6,2,2,1
+ closed,9,5,5,2,5,2,2,1
+ wf,64,4,2;state,1
+ wf,64,6,2;state,1
+ wf,64,7,2;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,64,4,2
+ occ,9,6,6,2,5,2,2,1
+ closed,9,5,5,2,5,2,2,1
+}
+endproc
+
+
+proc IXp1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,63,2,1
+ occ,9,6,5,2,5,2,2,1
+ closed,9,5,5,2,5,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,9,6,6,2,6,2,2,1
+ closed,9,5,5,2,5,2,2,1
+ wf,63,2,1;state,1
+ wf,63,3,1;state,1
+ wf,63,5,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,63,2,1
+ occ,9,6,5,2,5,2,2,1
+ closed,9,5,5,2,5,2,2,1
+}
+endproc
+
+
+proc Xp
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,62,1,0
+ occ,9,5,5,2,5,2,2,1
+ closed,9,5,5,2,5,2,2,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,9,5,5,2,5,2,2,1
+ closed,9,5,5,2,5,2,2,1
+ wf,62,1,0;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,62,1,0
+ occ,9,5,5,2,5,2,2,1
+ closed,9,5,5,2,5,2,2,1
+}
+endproc
+
+

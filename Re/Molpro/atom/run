@@ -1,0 +1,9 @@
+#!/bin/bash
+
+HOME=`pwd`
+for i in crenbl lanl2 sbkjc mwbstu mdfstu
+do
+cd $HOME/$i
+rm *out* *xml* mol* *table*
+sbatch job
+done
