@@ -59,6 +59,6 @@ do i=1,1
     ccsd(i)=energy
 enddo
 
-table,scf,!ccsd
+table,scf,ccsd
 type,csv
 save

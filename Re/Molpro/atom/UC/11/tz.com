@@ -1,5 +1,5 @@
 ***,Calculation for Re atom, singlet and triplet
-memory,3,g
+memory,1,g
 
 gthresh,twoint=1.e-15
 gthresh,oneint=1.e-15

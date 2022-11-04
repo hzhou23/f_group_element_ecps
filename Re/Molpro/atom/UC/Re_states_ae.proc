@@ -20,10 +20,6 @@ include,../contracted.basis
  sym,1,1,1,1,3,2,1,3,2,1,1,3,2
  orbital,4202.2
 }
-pop
-basis={
-include,../aug-cc-pwCVTZ.basis
-}
 {multi
  start,4202.2
  occ,12,6,6,3,6,3,3,1
@@ -32,8 +28,20 @@ include,../aug-cc-pwCVTZ.basis
  natorb,ci,print
  orbital,5202.2
 }
-{rhf,nitord=1,maxit=0
+pop
+basis={
+include,../aug-cc-pwCVTZ.basis
+}
+{multi
  start,5202.2
+ occ,12,6,6,3,6,3,3,1
+ closed,10,6,6,2,6,2,2,1
+ wf,75,1,5;state,1
+ natorb,ci,print
+ orbital,6202.2
+}
+{rhf,nitord=1,maxit=0
+ start,6202.2
  wf,75,1,5
  occ,12,6,6,3,6,3,3,1
  closed,10,6,6,2,6,2,2,1
@@ -58,10 +66,6 @@ include,../contracted.basis
  restrict,1,1,10.1
  orbital,4202.2
 }
-pop
-basis={
-include,../aug-cc-pwCVTZ.basis
-}
 {multi
  start,4202.2
  occ,12,6,6,3,6,3,3,1
@@ -77,8 +81,27 @@ include,../aug-cc-pwCVTZ.basis
  natorb,ci,print
  orbital,5202.2
 }
-{rhf,nitord=1,maxit=0
+pop
+basis={
+include,../aug-cc-pwCVTZ.basis
+}
+{multi
  start,5202.2
+ occ,12,6,6,3,6,3,3,1
+ closed,9,6,6,2,6,2,2,1
+ wf,75,1,5;state,2
+ restrict,1,1,10.1
+ wf,75,4,5;state,1
+ restrict,1,1,10.1
+ wf,75,6,5;state,1
+ restrict,1,1,10.1
+ wf,75,7,5;state,1
+ restrict,1,1,10.1
+ natorb,ci,print
+ orbital,6202.2
+}
+{rhf,nitord=1,maxit=0
+ start,6202.2
  wf,75,1,5
  occ,12,6,6,3,6,3,3,1
  closed,10,6,6,2,6,2,2,1
@@ -102,10 +125,6 @@ include,../contracted.basis
  sym,1,1,1,1,3,2,1,3,2,1,1,3,2
  orbital,4202.2
 }
-pop
-basis={
-include,../aug-cc-pwCVTZ.basis
-}
 {multi
  start,4202.2
  occ,12,6,6,3,6,3,3,1
@@ -117,8 +136,23 @@ include,../aug-cc-pwCVTZ.basis
  natorb,ci,print
  orbital,5202.2
 }
-{rhf,nitord=1,maxit=0
+pop
+basis={
+include,../aug-cc-pwCVTZ.basis
+}
+{multi
  start,5202.2
+ occ,12,6,6,3,6,3,3,1
+ closed,9,6,6,2,6,2,2,1
+ wf,76,1,4;state,2
+ wf,76,4,4;state,1
+ wf,76,6,4;state,1
+ wf,76,7,4;state,1
+ natorb,ci,print
+ orbital,6202.2
+}
+{rhf,nitord=1,maxit=0
+ start,6202.2
  wf,76,1,4
  occ,12,6,6,3,6,3,3,1
  closed,11,6,6,2,6,2,2,1
@@ -143,10 +177,6 @@ include,../contracted.basis
  restrict,1,1,10.1
  orbital,4202.2
 }
-pop
-basis={
-include,../aug-cc-pwCVTZ.basis
-}
 {multi
  start,4202.2
  occ,12,6,6,3,6,3,3,1
@@ -156,8 +186,21 @@ include,../aug-cc-pwCVTZ.basis
  natorb,ci,print
  orbital,5202.2
 }
-{rhf,nitord=1,maxit=0
+pop
+basis={
+include,../aug-cc-pwCVTZ.basis
+}
+{multi
  start,5202.2
+ occ,12,6,6,3,6,3,3,1
+ closed,9,6,6,2,6,2,2,1
+ wf,74,1,6;state,1
+ restrict,1,1,10.1
+ natorb,ci,print
+ orbital,6202.2
+}
+{rhf,nitord=1,maxit=0
+ start,6202.2
  wf,74,1,6
  occ,12,6,6,3,6,3,3,1
  closed,9,6,6,2,6,2,2,1
@@ -224,10 +267,6 @@ include,../contracted.basis
  sym,1,1,1,1,3,2,1,3,2,1,3,2
  orbital,4202.2
 }
-pop
-basis={
-include,../aug-cc-pwCVTZ.basis
-}
 {multi
  start,4202.2
  occ,11,7,7,3,7,3,3,1
@@ -238,8 +277,22 @@ include,../aug-cc-pwCVTZ.basis
  natorb,ci,print
  orbital,5202.2
 }
-{rhf,nitord=1,maxit=0
+pop
+basis={
+include,../aug-cc-pwCVTZ.basis
+}
+{multi
  start,5202.2
+ occ,11,7,7,3,7,3,3,1
+ closed,9,6,6,2,6,2,2,1
+ wf,74,2,6;state,1
+ wf,74,3,6;state,1
+ wf,74,5,6;state,1
+ natorb,ci,print
+ orbital,6202.2
+}
+{rhf,nitord=1,maxit=0
+ start,6202.2
  wf,74,2,6
  occ,11,7,6,3,6,3,3,1
  closed,9,6,6,2,6,2,2,1
@@ -627,9 +680,6 @@ include,../contracted.basis
  wf,66,7,2
  occ,9,6,6,2,6,2,2,1
  closed,9,6,5,2,5,2,2,1
- sym,2,1,1,1,3,2,1
- sym,3,1,1,1,3,2,1
- sym,5,1,1,1,3,2,1
  orbital,4202.2
 }
 {multi
@@ -661,9 +711,6 @@ include,../aug-cc-pwCVTZ.basis
  wf,66,7,2
  occ,9,6,6,2,6,2,2,1
  closed,9,6,5,2,5,2,2,1
- rotate,4.2,6.2,0
- rotate,4.3,6.3,0
- rotate,4.5,6.5,0
 }
 endproc
 
@@ -705,9 +752,6 @@ include,../aug-cc-pwCVTZ.basis
  wf,65,8,3
  occ,9,6,6,2,6,2,2,1
  closed,9,5,5,2,5,2,2,1
- rotate,4.2,6.2,0
- rotate,4.3,6.3,0
- rotate,4.5,6.5,0
 }
 endproc
 
