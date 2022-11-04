@@ -5,7 +5,7 @@
 
 HOME=`pwd`
 
-for j in ECP10
+for j in ECP11
 do
 echo $j
 rm $HOME/$j/tzbind
