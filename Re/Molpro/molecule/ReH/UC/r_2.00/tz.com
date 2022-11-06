@@ -9,7 +9,7 @@ include,../generate/aug-cc-pwCVTZ.basis
 include,../generate/H-aug-cc-pVTZ.basis
 }
 
-Re_ccsd=-16690.90005569
+Re_ccsd=-16691.05054145
 H_ccsd=-0.49982785
   
 !These are the wf cards parameters
@@ -60,9 +60,6 @@ include,../generate/H-aug-cc-pVTZ.basis
  occ,A1,B1,B2,A2
  closed,A1-1,B1-1,B2-1,A2-1
  rotate,12.1,14.1,0
- rotate,13.1,15.1,0
- rotate,6.2,8.2,0
- rotate,6.3,8.3,0
  print,orbitals=2
 }
 scf=energy

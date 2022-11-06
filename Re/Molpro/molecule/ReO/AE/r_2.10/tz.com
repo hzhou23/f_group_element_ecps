@@ -13,7 +13,7 @@ Re_ccsd=-16693.56841112
 O_ccsd=-75.09173839
   
 !These are the wf cards parameters
-ne = 85
+ne = 83
 symm = 1
 ss= 5
 

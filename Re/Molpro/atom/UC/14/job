@@ -1,10 +1,10 @@
 #!/bin/bash -l
 #SBATCH -J Re_UC_14
-#SBATCH -q debug
+#SBATCH -q regular
 #SBATCH -N 1
 #!SBATCH -n 16
 #SBATCH -C haswell
-#SBATCH -t 00:20:00
+#SBATCH -t 00:08:00
 #SBATCH -o mol_molpro.o%j
 
 module load molpro

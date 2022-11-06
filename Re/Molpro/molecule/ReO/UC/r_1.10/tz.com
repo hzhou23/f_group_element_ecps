@@ -9,11 +9,11 @@ include,../generate/aug-cc-pwCVTZ.basis
 include,../generate/O-aug-cc-pwCVTZ.basis
 }
 
-Re_ccsd=-16690.90005569
+Re_ccsd=-16691.05054145
 O_ccsd=-75.03694110
   
 !These are the wf cards parameters
-ne = 85
+ne = 83
 symm = 1
 ss= 5
 
@@ -61,8 +61,6 @@ include,../generate/O-aug-cc-pwCVTZ.basis
  closed,A1-2,B1-1,B2-1,A2-1
  rotate,13.1,15.1,0
  rotate,14.1,16.1,0
- rotate,6.2,8.2,0
- rotate,6.3,8.3,0
  orbital,4202.2
  print,orbitals=2
 }
