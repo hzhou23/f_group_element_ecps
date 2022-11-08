@@ -31,7 +31,6 @@ include,../Gd_states_ae.proc
  sym,5,1,1,1,1,3,2
  orbital,4202.2
 }
-pop
 {multi
  start,4202.2
  occ,9,6,6,2,6,2,2,1
@@ -43,8 +42,20 @@ pop
  natorb,ci,print
  orbital,5202.2
 }
-{rhf,nitord=1,maxit=0
+pop
+{multi
  start,5202.2
+ occ,9,6,6,2,6,2,2,1
+ closed,9,4,4,2,4,2,2,0
+ wf,58,1,4;state,11
+ wf,58,7,4;state,8
+ wf,58,6,4;state,8
+ wf,58,4,4;state,8
+ natorb,ci,print
+ orbital,6202.2
+}
+{rhf,nitord=1,maxit=0
+ start,6202.2
  wf,58,1,4
  occ,9,5,5,2,5,2,2,1
  closed,9,4,4,2,4,2,2,0

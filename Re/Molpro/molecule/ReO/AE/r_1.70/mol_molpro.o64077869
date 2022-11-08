@@ -1,0 +1,82 @@
+forrtl: No such file or directory
+forrtl: severe (28): CLOSE error, unit 7, file "Unknown"
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   0000155544561DD6  for__io_return        Unknown  Unknown
+libifcoremt.so.5   0000155544550B9C  for_close             Unknown  Unknown
+molpro.exe         00000000025293EF  Unknown               Unknown  Unknown
+molpro.exe         00000000024E8EAF  Unknown               Unknown  Unknown
+molpro.exe         000000000041C171  Unknown               Unknown  Unknown
+molpro.exe         00000000024B98C4  Unknown               Unknown  Unknown
+molpro.exe         0000000000432299  Unknown               Unknown  Unknown
+libc-2.26.so       0000155541C2B3EA  __libc_start_main     Unknown  Unknown
+molpro.exe         000000000040FFA9  Unknown               Unknown  Unknown
+forrtl: severe (28): CLOSE error, unit 9, file "Unknown"
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   000015554456A9CE  for__exit_handler     Unknown  Unknown
+libifcoremt.so.5   0000155544562C10  for__issue_diagno     Unknown  Unknown
+libifcoremt.so.5   0000155544561DD6  for__io_return        Unknown  Unknown
+libifcoremt.so.5   0000155544550B9C  for_close             Unknown  Unknown
+molpro.exe         00000000025293EF  Unknown               Unknown  Unknown
+molpro.exe         00000000024E8EAF  Unknown               Unknown  Unknown
+molpro.exe         000000000041C171  Unknown               Unknown  Unknown
+molpro.exe         00000000024B98C4  Unknown               Unknown  Unknown
+molpro.exe         0000000000432299  Unknown               Unknown  Unknown
+libc-2.26.so       0000155541C2B3EA  __libc_start_main     Unknown  Unknown
+molpro.exe         000000000040FFA9  Unknown               Unknown  Unknown
+
+ GLOBAL ERROR fehler on processor   2                                         
+    2: fehler 1 (0x1).
+    2: fehler 1 (0x1).
+Rank 2 [Mon Nov  7 21:44:41 2022] [c11-0c2s9n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2
+
+ GLOBAL ERROR fehler on processor   9                                         
+    9: fehler 1 (0x1).
+    9: fehler 1 (0x1).
+Rank 9 [Mon Nov  7 21:44:41 2022] [c11-0c2s9n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 9
+
+ GLOBAL ERROR fehler on processor   8                                         
+    8: fehler 1 (0x1).
+    8: fehler 1 (0x1).
+Rank 8 [Mon Nov  7 21:44:41 2022] [c11-0c2s9n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 8
+
+ GLOBAL ERROR fehler on processor   5                                         
+    5: fehler 1 (0x1).
+    5: fehler 1 (0x1).
+Rank 5 [Mon Nov  7 21:44:41 2022] [c11-0c2s9n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 5
+
+ GLOBAL ERROR fehler on processor   6                                         
+    6: fehler 1 (0x1).
+    6: fehler 1 (0x1).
+Rank 6 [Mon Nov  7 21:44:41 2022] [c11-0c2s9n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 6
+
+ GLOBAL ERROR fehler on processor   1                                         
+    1: fehler 1 (0x1).
+    1: fehler 1 (0x1).
+Rank 1 [Mon Nov  7 21:44:41 2022] [c11-0c2s9n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1
+
+ GLOBAL ERROR fehler on processor   7                                         
+    7: fehler 1 (0x1).
+    7: fehler 1 (0x1).
+Rank 7 [Mon Nov  7 21:44:41 2022] [c11-0c2s9n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 7
+
+ GLOBAL ERROR fehler on processor   4                                         
+    4: fehler 1 (0x1).
+    4: fehler 1 (0x1).
+Rank 4 [Mon Nov  7 21:44:41 2022] [c11-0c2s9n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4
+
+ GLOBAL ERROR fehler on processor   3                                         
+    3: fehler 1 (0x1).
+    3: fehler 1 (0x1).
+Rank 3 [Mon Nov  7 21:44:41 2022] [c11-0c2s9n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3
+
+ GLOBAL ERROR fehler on processor  10                                         
+   10: fehler 1 (0x1).
+   10: fehler 1 (0x1).
+Rank 10 [Mon Nov  7 21:44:41 2022] [c11-0c2s9n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 10
+srun: error: nid02279: task 0: Exited with exit code 28
+srun: launch/slurm: _step_signal: Terminating StepId=64077869.0
+srun: error: nid02279: tasks 1-2,5-9: Aborted
+slurmstepd: error: *** STEP 64077869.0 ON nid02279 CANCELLED AT 2022-11-07T21:44:41 ***
+srun: error: nid02279: tasks 3-4,10: Aborted
+srun: error: nid02279: task 11: Terminated
+srun: Force Terminated StepId=64077869.0

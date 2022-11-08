@@ -1,0 +1,20 @@
+MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra process manager was found
+DIRAC pam run in /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Dirac
+
+ ====  below this line is the stderr stream  ====
+Error in system call pthread_mutex_destroy: Device or resource busy
+    ../../src/mpi/init/init_thread_cs.c:60
+Assertion failed in file ../../src/mpi/init/init_thread_cs.c at line 60: *&err == 0
+/usr/common/software/intel/parallel_studio_xe_2020_update4_cluster_edition/impi/2019.9.304/intel64/lib/debug_mt/libmpi.so.12(MPL_backtrace_show+0x28) [0x1555534cf53c]
+/usr/common/software/intel/parallel_studio_xe_2020_update4_cluster_edition/impi/2019.9.304/intel64/lib/debug_mt/libmpi.so.12(MPIR_Assert_fail+0x5c) [0x1555528635c2]
+/usr/common/software/intel/parallel_studio_xe_2020_update4_cluster_edition/impi/2019.9.304/intel64/lib/debug_mt/libmpi.so.12(+0x6bf942) [0x155552734942]
+/usr/common/software/intel/parallel_studio_xe_2020_update4_cluster_edition/impi/2019.9.304/intel64/lib/debug_mt/libmpi.so.12(+0x6c0e52) [0x155552735e52]
+/usr/common/software/intel/parallel_studio_xe_2020_update4_cluster_edition/impi/2019.9.304/intel64/lib/debug_mt/libmpi.so.12(PMPI_Init_thread+0x10b) [0x155552735f69]
+/usr/common/software/intel/parallel_studio_xe_2020_update4_cluster_edition/impi/2019.9.304/intel64/lib/libmpifort.so.12(MPI_INIT_THREAD+0x2c) [0x155554e46f4c]
+/global/homes/h/haihan/DIRAC_scratch_directory/haihan/DIRAC_core_ae_25681/dirac.x(__interface_to_mpi_MOD_interface_mpi_init+0x1b) [0x107abcb]
+/global/homes/h/haihan/DIRAC_scratch_directory/haihan/DIRAC_core_ae_25681/dirac.x(mpixinit_+0x4a) [0x5493da]
+/global/homes/h/haihan/DIRAC_scratch_directory/haihan/DIRAC_core_ae_25681/dirac.x() [0x540a11]
+/global/homes/h/haihan/DIRAC_scratch_directory/haihan/DIRAC_core_ae_25681/dirac.x(main+0x1d) [0x53d4dd]
+/lib64/libc.so.6(__libc_start_main+0xea) [0x1555508a43ea]
+/global/homes/h/haihan/DIRAC_scratch_directory/haihan/DIRAC_core_ae_25681/dirac.x(_start+0x2a) [0x5408da]
+Abort(1) on node 0: Internal error

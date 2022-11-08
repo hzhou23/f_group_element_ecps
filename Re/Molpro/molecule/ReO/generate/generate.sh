@@ -8,7 +8,7 @@ HOME=`pwd`
 basefolder=$HOME/..
 n=15
 
-for i in mdfstu
+for i in ECP1
 do
 	echo $i
         mkdir $basefolder/$i
