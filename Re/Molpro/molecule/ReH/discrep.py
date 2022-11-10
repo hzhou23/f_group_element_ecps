@@ -23,9 +23,9 @@ styles={
 'lanl2'		:{'label':'LANL2',	'color':'#a52a2a','linestyle':'--','dashes':(1,1)	},
 'ECP1'	        :{'label':'ECP1',	'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP2'          :{'label':'ECP2',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP3'          :{'label':'ECP3',   'color':'#F0F8FF','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP4'          :{'label':'ECP4',   'color':'#FAEBD7','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP5'          :{'label':'ECP5',   'color':'#FFEFDB','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP3'          :{'label':'ECP3',   'color':'#00FFFF','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP4'          :{'label':'ECP4',   'color':'#76EEC6','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP5'          :{'label':'ECP5',   'color':'#66CDAA','linestyle':'--','dashes':(8,1,1,1,1,1)},
 }
 
 def init():
