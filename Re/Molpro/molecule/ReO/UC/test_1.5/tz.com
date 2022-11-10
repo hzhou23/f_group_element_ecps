@@ -28,7 +28,7 @@ geometry={
     2
     ReO molecule
     Re 0.0 0.0 0.0
-    O 0.0 0.0 1.40
+    O 0.0 0.0 1.50
 }
 basis={
 include,../generate/new_contracted.basis
@@ -71,7 +71,7 @@ ccsd=energy
 bind=ccsd-Re_ccsd-O_ccsd
 
 
-table,1.40,scf,ccsd,bind
+table,1.50,scf,ccsd,bind
 save
 type,csv
 
