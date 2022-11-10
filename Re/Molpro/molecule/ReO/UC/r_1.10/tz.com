@@ -60,6 +60,7 @@ include,../generate/O-aug-cc-pwCVTZ.basis
  occ,A1,B1,B2,A2
  closed,A1-2,B1-1,B2-1,A2-1
  rotate,13.1,15.1,0
+ rotate,14.1,16.1,0
  orbital,4202.2
  print,orbitals=2
 }
