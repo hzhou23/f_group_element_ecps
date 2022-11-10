@@ -1546,3 +1546,210 @@ Geometry recognized as XYZ
  Spin contamination <S**2-Sz**2-Sz>     0.00000000
 
  For full I/O caching in triples, increase memory by 407.89 Mwords to 1408.17 Mwords.
+ 
+
+  Correlated core orbitals:             1.1       2.1       3.1       4.1       5.1       6.1       7.1       8.1       9.1      10.1
+                                       11.1      12.1      13.1      14.1      15.1      16.1       1.2       2.2       3.2       4.2
+                                        5.2       6.2       7.2       8.2       1.3       2.3       3.3       4.3       5.3       6.3
+                                        7.3       8.3       1.4       2.4       3.4
+  Orbital energies:                 -2648.9227 -464.5286 -406.4692 -109.9005  -92.4169  -71.9172  -71.9176  -24.1938  -20.5791  -18.3363
+                                      -10.7326  -10.7309   -3.8339   -2.2589   -2.2599   -2.2822 -406.4699  -92.4162  -71.9185  -18.3353
+                                      -10.7339   -2.2592   -2.2592   -2.2976 -406.4699  -92.4162  -71.9185  -18.3353  -10.7339   -2.2592
+                                       -2.2592   -2.2976  -71.9176  -10.7326   -2.2599
+ 
+  RCCSD core-core energy               -2.583194278738
+   --><property name="core-core energy" method="RCCSD" stateSymmetry="1" stateNumber="1"
+     value="-2.58319427873757"/><!--
+  RCCSD core-valence energy            -0.269119896965
+   --><property name="core-valence energy" method="RCCSD" stateSymmetry="1" stateNumber="1"
+     value="-0.269119896964681"/><!--
+  RCCSD valence correlation energy     -0.390442223339
+   --><property name="valence correlation energy" method="RCCSD" stateSymmetry="1"
+     stateNumber="1" value="-0.39044222333877"/><!--
+ 
+
+ RESULTS
+ =======
+
+  Reference energy                   -16765.3790287529    
+   --><property name="energy" method="Reference" stateSymmetry="1" stateNumber="1"
+     value="-16765.3790287529"/><!--
+  RCCSD singles energy                 -0.012279074381
+   --><property name="energy" method="RCCSD singles" stateSymmetry="1" stateNumber="1"
+     value="-0.122790743811976E-01"/><!--
+  RCCSD pair energy                    -3.230477324660
+   --><property name="energy" method="RCCSD pair" stateSymmetry="1" stateNumber="1"
+     value="-3.23047732465982"/><!--
+  RCCSD correlation energy             -3.242756399041
+   --><property name="energy" method="RCCSD correlation" stateSymmetry="1" stateNumber="1"
+     value="-3.24275639904102"/><!--
+  Triples (T) contribution             -0.065138985450
+   --><property name="contribution" method="Triples (T)" stateSymmetry="1" stateNumber="1"
+     value="-0.651389854495596E-01"/><!--
+  Total correlation energy             -3.307895384491
+   --><property name="energy" method="Total correlation" stateSymmetry="1" stateNumber="1"
+     value="-3.30789538449058"/><!--
+ 
+  RHF-RCCSD energy                   -16768.6217851519    
+   --><property name="energy" method="RHF-RCCSD" stateSymmetry="1" stateNumber="1"
+     value="-16768.6217851519"/><!--
+  RHF-RCCSD[T] energy                -16768.6967727389    
+   --><property name="energy" method="RHF-RCCSD[T]" stateSymmetry="1" stateNumber="1"
+     value="-16768.6967727389"/><!--
+  RHF-RCCSD-T energy                 -16768.6851424411    
+   --><property name="energy" method="RHF-RCCSD-T" stateSymmetry="1" stateNumber="1"
+     value="-16768.6851424411"/><!--
+ !RHF-RCCSD(T) energy                -16768.6869241374    
+   --><property name="energy" method="RHF-RCCSD(T)" principal="true" stateSymmetry="1"
+     stateNumber="1" value="-16768.6869241374"/><!--
+
+ Program statistics:
+
+ Available memory in ccsd:               999983972
+ Min. memory needed in ccsd:             289530507
+ Max. memory used in ccsd:               427793639
+ Max. memory used in cckext:             349400322 (17 integral passes)
+ Max. memory used in cckint:             134726979 ( 1 integral passes)
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      22       23.82       500      610      700      900      950      970     1001      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1080     1600   
+                                         AOSYM     SMH  
+
+              2       6        7.53       700     1000      520     2202     1001     2101   
+                                         GEOM     BASIS   MCVARS     RHF     BASIS     RHF  
+
+ PROGRAMS   *        TOTAL  RCCSD(T)       RHF       INT       RHF       INT
+ CPU TIMES  *     14313.11  14119.80     10.22    161.34      1.04     20.41
+ REAL TIME  *     19128.37 SEC
+ DISK USED  *       380.22 GB      
+ SF USED    *        29.05 GB      
+ GA USED    *         0.00 MB       (max)       0.00 MB       (current)
+ **********************************************************************************************************************************
+   -->
+   <time start="13:05:15" end="18:20:38" cpu="14119.8" system="1043.75" real="18922.83"/>
+   <storage units="megabyte" memory="8001.84" sf="29051.2" df="371398.86" eaf="8822.36"
+     ga="0.0"/>
+  </jobstep><!--
+ SETTING CCSD           =    -16768.68692414  AU                              
+ SETTING BIND           =        -0.02677463  AU                              
+ Output type csv         
+                                                                                                                                                                                                                                                                
+
+  2.50,SCF  ,CCSD ,BIND
+   2.5,   -16765.37903,   -16768.68692,   -0.02677463
+                                                  
+-->
+<table xmlns="http://www.w3.org/1999/xhtml" id="table1">
+<thead><tr><th>2.50</th><th>SCF  </th><th>CCSD </th><th>BIND</th></tr></thead><tbody>
+<tr><td>   2.5</td><td>   -16765.37903</td><td>   -16768.68692</td><td>   -0.02677463</td></tr>
+</tbody></table>
+<!--
+
+ RCCSD(T)/USERDEF energy= -16768.686924137386
+
+        RCCSD(T)        RHF-SCF         RHF-SCF 
+ -16768.68692414 -16765.37902875 -16329.65352438
+ **********************************************************************************************************************************
+ Molpro calculation terminated
+ Variable memory released
+  --><stm:metadataList>
+   <stm:metadata name="dc:date" content="2022-11-09T18:20:40-08:00"/>
+   <stm:metadata name="dc:creator" content="haihan"/>
+   <stm:metadata name="dc:title"
+     content="Calculation for all-electron ReO molecule, SCF and CCSD(T)"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList><!--
+  --><platform>
+   <version major="2015" minor="1" SHA="19cd028119e0e09f93f0674bd8af7968d9b3eff6"
+     integer_bits="64" parallelism="mpp">
+    2015.1
+    <date year="2022" month="11" day="9" hour="13" minute="1" second="49">
+     2022-11-09T13:01:49
+    </date>
+   </version>
+   <licence id="lbl"/>
+   <parallel processes="11" nodes="1" all_processes="11" openmp="1"/>
+   <machine hostname="" architecture="">
+     64 bit mpp version
+    <sysinfo name="cpu MHz" content="2912.672"/>
+    <sysinfo name="MemTotal" content="131890088 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts md_clear flush_l1d"/>
+    <sysinfo name="MemTotal" content="131890088 kB"/>
+    <sysinfo name="cache size" content="40960 KB"/>
+    <sysinfo name="ncpu" content="64"/>
+   </machine>
+  </platform><!--
+  -->
+  <input>
+   <p> ***,Calculation for all-electron ReO molecule, SCF and CCSD(T) </p>
+   <p> memory,1,g </p>
+   <p> gthresh,twoint=1.0E-15 </p>
+   <p> gthresh,throvl=1.0E-15 </p>
+   <p> set,dkroll=1,dkho=10,dkhp=4 </p>
+   <p> basis={ </p>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Re/Molpro/molecule/ReO/AE/r_2.50/../generate/aug-cc-pwCVTZ.basis"/>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Re/Molpro/molecule/ReO/AE/r_2.50/../generate/O-aug-cc-pwCVTZ.basis"/>
+   <p> } </p>
+   <p> Re_ccsd=-16693.56841112 </p>
+   <p> O_ccsd=-75.09173839 </p>
+   <p>                                                                                 !These are the wf cards parameters </p>
+   <p> ne = 83 </p>
+   <p> symm = 1 </p>
+   <p> ss= 5 </p>
+   <p>                                                                                 !There are irrep cards paramters </p>
+   <p> A1=20 </p>
+   <p> B1=10 </p>
+   <p> B2=10 </p>
+   <p> A2=4 </p>
+   <p> geometry={ </p>
+   <p>     2 </p>
+   <p>     ReO molecule </p>
+   <p>     Re 0.0 0.0 0.0 </p>
+   <p>     O 0.0 0.0 2.50 </p>
+   <p> } </p>
+   <p> basis={ </p>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Re/Molpro/molecule/ReO/AE/r_2.50/../generate/new_contracted.basis"/>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Re/Molpro/molecule/ReO/AE/r_2.50/../generate/O-aug-cc-pwCVTZ.basis"/>
+   <p> } </p>
+   <p> {rhf,nitord=20; </p>
+   <p>  maxit,200; </p>
+   <p>  wf,ne,symm,ss </p>
+   <p>  occ,A1,B1,B2,A2 </p>
+   <p>  closed,A1-2,B1-1,B2-1,A2-1 </p>
+   <p>  orbital,2202.2 </p>
+   <p> } </p>
+   <p> basis={ </p>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Re/Molpro/molecule/ReO/AE/r_2.50/../generate/aug-cc-pwCVTZ.basis"/>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Re/Molpro/molecule/ReO/AE/r_2.50/../generate/O-aug-cc-pwCVTZ.basis"/>
+   <p> } </p>
+   <p> {rhf,nitord=20; </p>
+   <p>  start,2202.2 </p>
+   <p>  maxit,200; </p>
+   <p>  wf,ne,symm,ss </p>
+   <p>  occ,A1,B1,B2,A2 </p>
+   <p>  closed,A1-2,B1-1,B2-1,A2-1 </p>
+   <p>  print,orbitals=2 </p>
+   <p> } </p>
+   <p> scf=energy </p>
+   <p> _CC_NORM_MAX=2.0 </p>
+   <p> {rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core} </p>
+   <p> ccsd=energy </p>
+   <p> bind=ccsd-Re_ccsd-O_ccsd </p>
+   <p> table,2.50,scf,ccsd,bind </p>
+   <p> save </p>
+   <p> type,csv </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>
