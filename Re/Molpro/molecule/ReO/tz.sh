@@ -5,7 +5,7 @@
 
 HOME=`pwd`
 
-for j in UC
+for j in AE
 do
 echo $j
 rm $HOME/$j/tzbind
