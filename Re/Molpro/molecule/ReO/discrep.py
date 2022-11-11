@@ -13,7 +13,7 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP1','ECP2','ECP3','ECP4','ECP5']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP1','ECP2']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC'		:{'label':'UC',		'color':'#ff0000','linestyle':'-'			},
 'mdfstu'	:{'label':'MDFSTU',	'color':'#ff6600','linestyle':'--','dashes':(4,1)	},
@@ -77,7 +77,7 @@ def plot():
         y= (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.40,2.20))
-#    ax.set_ylim((-0.25,0.25))
+    ax.set_ylim((-0.5,0.2))
     ax.set(title='ReO tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
