@@ -76,7 +76,7 @@ def plot():
         x = data['r']
         y= (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((1.40,2.20))
+    ax.set_xlim((1.50,2.20))
     ax.set_ylim((-0.5,0.2))
     ax.set(title='ReO tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")

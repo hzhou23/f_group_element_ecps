@@ -1,6 +1,7 @@
 ***,Calculation for Gd atom, singlet and triplet
 memory,2,g
 
+
 gthresh,twoint=1.e-15
 gthresh,oneint=1.e-15
 
