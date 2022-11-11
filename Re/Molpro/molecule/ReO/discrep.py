@@ -76,13 +76,13 @@ def plot():
         x = data['r']
         y= (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((1.50,2.20))
-    ax.set_ylim((-0.5,0.2))
+    ax.set_xlim((1.40,2.20))
+    ax.set_ylim((-0.5,0.7))
     ax.set(title='ReO tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
     plt.axvline(1.6938856759017575,ls='--',color='gray',linewidth=1.0)
-    plt.savefig('ReO_TZ.pdf')
+    plt.savefig('ReO_TZ_original.pdf')
     plt.show()
 
 if __name__ == '__main__':
