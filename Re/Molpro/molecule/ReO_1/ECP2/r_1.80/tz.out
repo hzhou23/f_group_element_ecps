@@ -729,3 +729,110 @@ Geometry recognized as XYZ
   10      1.32834281    -0.80711677   -94.28021989    -0.00011099    -0.00000038  0.43D-06  0.83D-07  6  4   120.75
   11      1.32846784    -0.80710701   -94.28021013     0.00000977    -0.00000014  0.14D-06  0.30D-07  6  5   131.03
   12      1.32854626    -0.80709542   -94.28019854     0.00001159    -0.00000003  0.24D-07  0.11D-07  6  6   141.22
+  13      1.32861435    -0.80710346   -94.28020658    -0.00000804    -0.00000001  0.71D-08  0.30D-08  6  1   151.50
+  14      1.32863066    -0.80710168   -94.28020480     0.00000178    -0.00000000  0.95D-09  0.11D-08  6  2   161.74
+  15      1.32864880    -0.80710240   -94.28020551    -0.00000072    -0.00000000  0.27D-09  0.25D-09  6  3   171.89
+
+ Norm of t1 vector:      0.27345048      S-energy:    -0.00261405      T1 diagnostic:  0.04146908
+                                                                       D1 diagnostic:  0.11825086
+ Norm of t2 vector:      0.50385874      P-energy:    -0.80448835
+                                         Alpha-Beta:  -0.60335983
+                                         Alpha-Alpha: -0.10964288
+                                         Beta-Beta:   -0.09148565
+
+ Singles amplitudes (print threshold =  0.500E-01):
+
+         I         SYM. A    A   T(IA) [Alpha-Alpha]
+
+         8         2         1      0.09492360
+         8         2         2      0.05186867
+         8         2         4      0.05601633
+        10         3         1      0.09492362
+        10         3         2      0.05186868
+        10         3         4      0.05601631
+ 
+         I         SYM. A    A   T(IA) [Beta-Beta]
+
+         5         1         2     -0.05808702
+         8         2         1      0.08024969
+        10         3         1      0.08024970
+
+ Doubles amplitudes (print threshold =  0.500E-01):
+
+         I         J         SYM. A    SYM. B    A         B      T(IJ, AB) [Alpha-Beta]
+
+         5         5         1         1         2         2     -0.05093874
+         5         5         2         2         1         1     -0.06150186
+         5         5         3         3         1         1     -0.06150180
+
+ Spin contamination <S**2-Sz**2-Sz>     0.00000000
+
+ Memory could be reduced to 393.81 Mwords without degradation in triples
+ 
+
+  Correlated core orbitals:             1.1       2.1       1.2       1.3
+  Orbital energies:                    -3.7647   -2.2292   -2.2332   -2.2332
+ 
+  RCCSD core-core energy               -0.148304432416
+  RCCSD core-valence energy            -0.179795441380
+  RCCSD valence correlation energy     -0.479002523499
+ 
+
+ RESULTS
+ =======
+
+  Reference energy                    -93.473103117621
+  RCCSD singles energy                 -0.002614045114
+  RCCSD pair energy                    -0.804488352181
+  RCCSD correlation energy             -0.807102397295
+  Triples (T) contribution             -0.058525085759
+  Total correlation energy             -0.865627483054
+ 
+  RHF-RCCSD energy                    -94.280205514917
+  RHF-RCCSD[T] energy                 -94.355767918370
+  RHF-RCCSD-T energy                  -94.337190967825
+ !RHF-RCCSD(T) energy                 -94.338730600676
+
+ Program statistics:
+
+ Available memory in ccsd:               999998822
+ Min. memory needed in ccsd:              22094577
+ Max. memory used in ccsd:                31518932
+ Max. memory used in cckext:              26024904 (15 integral passes)
+ Max. memory used in cckint:              33912529 ( 1 integral passes)
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19       22.43       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1420     1200     1210     1080     1600     1650     1700   
+                                           T        V       ECP      H0       H01     AOSYM     SMH    MOLCAS    OPER   
+
+              2       4        4.45       700     1000      520     2100   
+                                         GEOM     BASIS   MCVARS     RHF  
+
+ PROGRAMS   *        TOTAL  RCCSD(T)       RHF       INT
+ CPU TIMES  *       536.81    368.97      9.94    157.70
+ REAL TIME  *       597.90 SEC
+ DISK USED  *        20.70 GB      
+ SF USED    *         6.22 GB      
+ GA USED    *         0.00 MB       (max)       0.00 MB       (current)
+ **********************************************************************************************************************************
+ SETTING CCSD           =       -94.33873060  AU                              
+ SETTING BIND           =        -0.21940086  AU                              
+ Output type csv         
+                                                                                                                                                                                                                                                                
+
+  1.80,SCF,CCSD,BIND
+   1.8,   -93.47310312,   -94.33873060,   -0.21940086
+                                                  
+
+ RCCSD(T)/USERDEF energy=    -94.338730600676
+
+        RCCSD(T)        RHF-SCF 
+    -94.33873060    -93.47310312
+ **********************************************************************************************************************************
+ Molpro calculation terminated
+ Variable memory released

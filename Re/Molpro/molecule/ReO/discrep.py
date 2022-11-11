@@ -66,7 +66,7 @@ def plot():
     fig,ax = init()
     data = get_data()
     #print data.head()
-    data.to_csv("ReO_TZ.csv", sep=',', index=False)
+    data.to_csv("ReO_TZ_new.csv", sep=',', index=False)
 
     ax.axhspan(-0.043,0.043,alpha=0.25,color='gray')
     ax.axhline(0.0,color='black')
@@ -76,13 +76,13 @@ def plot():
         x = data['r']
         y= (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((1.40,2.20))
+    ax.set_xlim((1.40,1.60))
     ax.set_ylim((-0.5,0.7))
     ax.set(title='ReO tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
-    plt.axvline(1.6938856759017575,ls='--',color='gray',linewidth=1.0)
-    plt.savefig('ReO_TZ_original.pdf')
+    #plt.axvline(1.6938856759017575,ls='--',color='gray',linewidth=1.0)
+    plt.savefig('ReO_TZ_new.pdf')
     plt.show()
 
 if __name__ == '__main__':
