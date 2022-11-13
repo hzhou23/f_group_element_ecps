@@ -13,7 +13,7 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = [ 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP2','ECP6','ECP9','ECP10','ECP11']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = [ 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP2','ECP6','ECP9','ECP10','ECP13']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC'		:{'label':'UC',		'color':'#ff0000','linestyle':'-'			},
 'mdfstu'	:{'label':'MDFSTU',	'color':'#ff6600','linestyle':'--','dashes':(4,1)	},
@@ -25,7 +25,7 @@ styles={
 'ECP2'          :{'label':'ECP2',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP9'          :{'label':'ECP9',   'color':'#00FFFF','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP10'          :{'label':'ECP10',   'color':'#76EEC6','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP11'          :{'label':'ECP11',   'color':'#66CDAA','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP13'          :{'label':'ECP13',   'color':'#66CDAA','linestyle':'--','dashes':(8,1,1,1,1,1)},
 }
 
 def init():
@@ -82,7 +82,7 @@ def plot():
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
     plt.axvline(1.6938856759017575,ls='--',color='gray',linewidth=1.0)
-    plt.savefig('ReO_TZ_new.pdf')
+    plt.savefig('ReO_TZ.pdf')
     plt.show()
 
 if __name__ == '__main__':
