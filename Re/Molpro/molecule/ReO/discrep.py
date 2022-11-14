@@ -13,7 +13,7 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP2','ECP14','ECP15']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC','crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP2','ECP14','ECP15']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC'		:{'label':'UC',		'color':'#ff0000','linestyle':'-'			},
 'mdfstu'	:{'label':'MDFSTU',	'color':'#ff6600','linestyle':'--','dashes':(4,1)	},
@@ -55,9 +55,13 @@ def get_data():
     data['r']= df['r']
     data['ae']= df['bind']
     for ecp in ecps:
-        df = pd.read_csv("%s/tzbind" % ecp, delim_whitespace=True)
-        data[ecp] = df['bind']
-
+        if ecp != 'UC':
+            df = pd.read_csv("%s/tzbind" % ecp, delim_whitespace=True)
+            data[ecp] = df['bind']
+        else:
+            df = pd.read_csv("%s/tzbind" % ecp, delim_whitespace=True)
+            data['UC'] = df['bind']
+            data['UC_r'] = df['r']
     return data
 
 def plot():
@@ -70,10 +74,15 @@ def plot():
     ax.axhline(0.0,color='black')
     ax.set_xlabel('Bond Length (\AA)')
     ax.set_ylabel('Discrepancy (eV)')
-    for i,ecp in enumerate(ecps):
-        x = data['r']
-        y= (data[ecp] - data['ae'])*toev
-        plt.plot(x,y,**styles[ecp])
+    for ecp in ecps:
+        if ecp != 'UC':
+            x = data['r']
+            y= (data[ecp] - data['ae'])*toev
+            plt.plot(x,y,**styles[ecp])
+        else:
+            x = data['UC_r']
+            y= (data[ecp] - data['ae'])*toev
+            plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.40,2.10))
     ax.set_ylim((-0.5,0.7))
     ax.set(title='ReO tz Discrepancies')
