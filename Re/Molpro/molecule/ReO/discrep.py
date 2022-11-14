@@ -81,7 +81,7 @@ def plot():
             plt.plot(x,y,**styles[ecp])
         else:
             x = data['UC_r']
-            y= (data[ecp] - data['ae'])*toev
+            y= (data[ecp] - data['ae'][3:])*toev
             plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.40,2.10))
     ax.set_ylim((-0.5,0.7))
