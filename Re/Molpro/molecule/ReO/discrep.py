@@ -55,13 +55,8 @@ def get_data():
     data['r']= df['r']
     data['ae']= df['bind']
     for ecp in ecps:
-        if ecp != 'UC':
-            df = pd.read_csv("%s/tzbind" % ecp, delim_whitespace=True)
-            data[ecp] = df['bind']
-        else:
-            df = pd.read_csv("%s/tzbind" % ecp, delim_whitespace=True)
-            data['UC'] = df['bind']
-            data['UC_r'] = df['r']
+        df = pd.read_csv("%s/tzbind" % ecp, delim_whitespace=True)
+        data[ecp] = df['bind']
     return data
 
 def plot():
@@ -80,9 +75,9 @@ def plot():
             y= (data[ecp] - data['ae'])*toev
             plt.plot(x,y,**styles[ecp])
         else:
-            x = data['UC_r']
-            y= (data[ecp] - data['ae'][3:])*toev
-            plt.plot(x,y,**styles[ecp])
+            x =data['r']
+            y= (data[ecp] - data['ae'])*toev
+            plt.plot(x[3:],y[3:],**styles[ecp])
     ax.set_xlim((1.40,2.10))
     ax.set_ylim((-0.5,0.7))
     ax.set(title='ReO tz Discrepancies')
