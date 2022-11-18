@@ -1,0 +1,12 @@
+#!/bin/bash
+
+HOME=`pwd`
+
+n=12
+
+for ((i=1; i<=n; i++))
+do
+   cd $HOME/$i
+   rm *xml* *out* *table* mol*
+   sbatch job
+done

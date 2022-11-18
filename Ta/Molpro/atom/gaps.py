@@ -6,7 +6,7 @@ import numpy as np
 
 ###==================================================
 
-pps=['UC','mwbstu','mdfstu','crenbl','sbkjc','lanl2','ECP2','ECP13','ECP14']
+pps=['UC','crenbl','lanl2','sbkjc','mwbstu','mdfstu','ECP14','ECP21']
 remove_index = []
 lmad_index = [1,2,3,4]
 
@@ -23,6 +23,7 @@ df['AE'] = ae['CCSD'].values-ae['CCSD'].values[0]
 for pp in pps:
 	ecp = pd.read_csv(pp+'/tz.table1.csv', sep='\s*,\s*', engine='python')
 	df[pp] = ecp['CCSD'].values-ecp['CCSD'].values[0]
+
 
 ### Drop some undesired states:
 df = df.drop(index=remove_index)

@@ -1,0 +1,17 @@
+Rank 4 [Mon Nov 14 05:29:26 2022] [c4-0c1s4n2] Fatal error in PMPI_Bcast: Message truncated, error stack:
+PMPI_Bcast(1614)....................: MPI_Bcast(buf=0x3959eba8, count=84, MPI_DOUBLE, root=0, comm=0x84000002) failed
+MPIR_Bcast_impl(1454)...............: 
+MPIR_CRAY_Bcast(1158)...............: 
+MPIR_CRAY_Bcast_Tree(382)...........: 
+MPIC_Recv(418)......................: 
+MPIDI_CH3U_Request_unpack_uebuf(595): Message truncated; 4288 bytes received but buffer size is 672
+Rank 5 [Mon Nov 14 05:29:26 2022] [c4-0c1s4n2] Fatal error in MPIR_CRAY_Bcast_Tree: Other MPI error, error stack:
+MPIR_CRAY_Bcast_Tree(405): message sizes do not match across processes in the collective routine: Received 84 but expected 536
+Rank 6 [Mon Nov 14 05:29:26 2022] [c4-0c1s4n2] Fatal error in MPIR_CRAY_Bcast_Tree: Other MPI error, error stack:
+MPIR_CRAY_Bcast_Tree(405): message sizes do not match across processes in the collective routine: Received 84 but expected 536
+srun: error: nid00850: tasks 4-6: Aborted
+srun: launch/slurm: _step_signal: Terminating StepId=64292774.0
+slurmstepd: error: *** STEP 64292774.0 ON nid00850 CANCELLED AT 2022-11-14T05:29:26 ***
+srun: error: nid00850: task 11: Terminated
+srun: error: nid00850: tasks 0-3,7-10: Terminated
+srun: Force Terminated StepId=64292774.0
