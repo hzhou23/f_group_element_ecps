@@ -6,7 +6,7 @@ import numpy as np
 
 ###==================================================
 
-pps=['UC','ECPinit','ECP1','ECP4']
+pps=['UC','ECPinit','ECP1','ECP5']
 remove_index = []
 lmad_index = [1,2,3,4]
 
@@ -24,11 +24,13 @@ for pp in pps:
 	ecp = pd.read_csv(pp+'/tz.table1.csv', sep='\s*,\s*', engine='python')
 	df[pp] = ecp['CCSD'].values-ecp['CCSD'].values[0]
 
+
 ### Drop some undesired states:
 df = df.drop(index=remove_index)
 
 diffs = df.copy()*toev
 diffs = diffs[1:]  # Getting rid of ground state
+print(diffs)
 ae_gaps = diffs['AE']  # Save AE values before subtracting
 diffs = diffs.sub(ae_gaps, axis=0)
 
