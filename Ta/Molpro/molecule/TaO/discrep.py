@@ -13,7 +13,7 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP2','ECP14','ECP23','ECP26']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP2','ECP14','ECP23','ECP27']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC'		:{'label':'UC',		'color':'#ff0000','linestyle':'-'			},
 'mdfstu'	:{'label':'MDFSTU',	'color':'#ff6600','linestyle':'--','dashes':(4,1)	},
@@ -24,7 +24,7 @@ styles={
 'ECP14'	        :{'label':'ECP14',	'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP2'          :{'label':'ECP2',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP23'          :{'label':'ECP23',   'color':'#E3CF57','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP26'          :{'label':'ECP26',   'color':'#FF6103','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP27'          :{'label':'ECP27',   'color':'#FF6103','linestyle':'--','dashes':(8,1,1,1,1,1)},
 }
 
 def init():
@@ -65,6 +65,8 @@ def get_data():
             data[ecp] = df['bind']-57.46009777+57.47847470
         elif ecp == 'mwbstu':
             data[ecp] = df['bind']-56.68236708+56.70059800
+        elif ecp == 'ECP27':
+            data[ecp] = df['bind']-56.35601039+56.76340619
         else: 
             data[ecp] = df['bind']-57.14841446+57.14841446
 
