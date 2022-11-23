@@ -6,7 +6,7 @@ import numpy as np
 
 ###==================================================
 
-pps=['UC','ECPinit','ECP1','ECP2','ECP3','ECP4','ECP5','ECP6','ECP7','ECP8','ECP9','ECP10']
+pps=['UC','ECPinit','ECP1','ECP10']
 remove_index = []
 lmad_index = [1,2,3,4]
 

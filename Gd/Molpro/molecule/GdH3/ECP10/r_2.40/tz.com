@@ -57,8 +57,8 @@ geometry={
     H3 Gd 2.40 H1 120 H2 180
 }
 basis={
-include,../generate/contracted.basis
-include,../generate/H-aug-cc-pVTZ.basis
+include,../../generate/contracted.basis
+include,../../generate/H-aug-cc-pVTZ.basis
 }
 {rks,pbe0
  start,atden
@@ -79,8 +79,8 @@ include,../generate/H-aug-cc-pVTZ.basis
  orbital,3202.2
 }
 basis={
-include,../generate/aug-cc-pwCVTZ.basis
-include,../generate/H-aug-cc-pVTZ.basis
+include,../../generate/aug-cc-pwCVTZ.basis
+include,../../generate/H-aug-cc-pVTZ.basis
 }
 {rhf,nitord=60;
  start,3202.2

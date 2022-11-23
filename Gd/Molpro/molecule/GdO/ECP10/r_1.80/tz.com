@@ -57,7 +57,34 @@ geometry={
     Gd 0.0 0.0 0.0
     O 0.0 0.0 1.80
 }
-{rhf,nitord=20;
+basis={
+include,../../generate/contracted.basis
+include,../../generate/H-aug-cc-pVTZ.basis
+}
+{rks,pbe0
+ start,atden
+ maxit,200;
+ wf,ne,symm,ss
+ occ,A1,B1,B2,A2
+ closed,A1-3,B1-2,B2-2,A2-1
+ print,orbitals=2
+ orbital,2202.2
+}
+{rhf,nitord=60;
+ start,2202.2
+ maxit,200;
+ wf,ne,symm,ss
+ occ,A1,B1,B2,A2
+ closed,A1-3,B1-2,B2-2,A2-1
+ print,orbitals=2
+ orbital,3202.2
+}
+basis={
+include,../../generate/aug-cc-pwCVTZ.basis
+include,../../generate/H-aug-cc-pVTZ.basis
+}
+{rhf,nitord=60;
+ start,3202.2
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
@@ -66,7 +93,7 @@ geometry={
 }
 scf=energy
 _CC_NORM_MAX=2.0
-{rccsd(t);maxit,100;core}
+{rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core}
 ccsd=energy
 bind=ccsd-Gd_ccsd-O_ccsd
 
