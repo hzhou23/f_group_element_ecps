@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /global/cscratch1/sd/haihan
+ Secondary working directories  : /global/cscratch1/sd/haihan
+ Wavefunction directory         : /global/homes/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdO/ECP10/wfu/
+ Main file repository           : /global/cscratch1/sd/haihan/
+
+ SHA1      : 19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ NAME      : 2015.1.36
+ ARCHNAME  : linux/x86_64
+ FC        : /opt/cray/pe/craype/2.5.14/bin/ftn
+ BLASLIB   : -L/opt/intel/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64 -Wl,-_start-group -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -Wl,-_end-group -liomp5
+ id        : lbl
+
+ Nodes     nprocs
+ nid13047    11
+ Number of processes for MPI-2 version of Molpro:   nprocs(total)=   12   nprocs(compute)=   11   nprocs(helper)=    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=sf  
+
+ --><job>
+  <!--
+ ***,Calculation for GdO, singlet and triplet
+ memory,1,g
+ 
+ gthresh,twoint=1.0E-15
+ gthresh,throvl=1.0E-15
+ 
+ 
+ basis={
+ ECP, Gd, 46, 4 ;
+ 4
+ 1, 4.64649423380707,  18.0
+ 3, 5.03898469561614,  83.636896208527260
+ 2, 6.14922726155977,  -94.54346463109100
+ 2, 5.39086597594697,  -9.07764978300212
+ 2
+ 2, 9.64508287717261,  160.08091893942253
+ 2, 4.89569161141406,  82.16244181564230
+ 2
+ 2, 7.84634259934576,  88.42449114602753
+ 2, 3.73740426162130,  54.36568213794933
+ 2
+ 2, 9.87079385121206,  55.57793911614991
+ 2, 2.47059638061654,  31.33022231606614
+ 2
+ 2, 3.70555603254771,  -25.69937903186067
+ 2, 6.16350930047429,  -4.52646585527923
+ ecp,O,2,1,0
+ 3
+ 1,  12.30997,  6.000000
+ 3,  14.76962,  73.85984
+ 2,  13.71419, -47.87600
+ 1
+ 2,  13.65512,  85.86406
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdO/ECP10/r_1.90/../../generate/aug-cc-pwCVTZ.basis
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdO/ECP10/r_1.90/../../generate/O-aug-cc-pwCVTZ.basis
+ }
+ 
+ 
+ Gd_ccsd=-109.2993715
+ O_ccsd=-15.86622096
+ 
+                                                                                 !These are the wf cards parameters
+ ne = 24
+ symm = 4
+ ss= 8
+ 
+                                                                                 !There are irrep cards paramters
+ A1=7
+ B1=4
+ B2=4
+ A2=1
+ 
+ 
+ geometry={
+     2
+     GdO molecule
+     Gd 0.0 0.0 0.0
+     O 0.0 0.0 1.90
+ }
+ basis={
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdO/ECP10/r_1.90/../../generate/contracted.basis
+
+ File /global/common/cori/software/molpro/2015/molprop_2015_1_linux_x86_64_i8/lib/include/../../generate/H-aug-cc-pVTZ.basis does not exist
+ Input error
+
+ GLOBAL ERROR Input error on processor   0                                    
