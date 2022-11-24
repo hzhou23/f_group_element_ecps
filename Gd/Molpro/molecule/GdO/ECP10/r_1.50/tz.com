@@ -57,10 +57,6 @@ geometry={
     Gd 0.0 0.0 0.0
     O 0.0 0.0 1.50
 }
-basis={
-include,../../generate/contracted.basis
-include,../../generate/H-aug-cc-pVTZ.basis
-}
 {rks,pbe0
  start,atden
  maxit,200;
@@ -78,18 +74,6 @@ include,../../generate/H-aug-cc-pVTZ.basis
  closed,A1-3,B1-2,B2-2,A2-1
  print,orbitals=2
  orbital,3202.2
-}
-basis={
-include,../../generate/aug-cc-pwCVTZ.basis
-include,../../generate/H-aug-cc-pVTZ.basis
-}
-{rhf,nitord=60;
- start,3202.2
- maxit,200;
- wf,ne,symm,ss
- occ,A1,B1,B2,A2
- closed,A1-3,B1-2,B2-2,A2-1
- print,orbitals=2
 }
 scf=energy
 _CC_NORM_MAX=2.0

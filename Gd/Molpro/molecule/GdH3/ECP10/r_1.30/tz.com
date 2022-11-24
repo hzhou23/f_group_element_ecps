@@ -29,7 +29,8 @@ ECP,H,0,1,0
 2,   21.77696655044365 ,     -10.85192405303825 ;
 1,   21.24359508259891 ,       1.00000000000000;
 3,   21.24359508259891 ,      21.24359508259891;
-1; 2,                   1.,                      0.;
+1;
+2,                   1.,                      0.;
 include,../../generate/aug-cc-pwCVTZ.basis
 include,../../generate/H-aug-cc-pVTZ.basis
 }
@@ -56,10 +57,6 @@ geometry={
     H2 Gd 1.30 H1 120
     H3 Gd 1.30 H1 120 H2 180
 }
-basis={
-include,../../generate/contracted.basis
-include,../../generate/H-aug-cc-pVTZ.basis
-}
 {rks,pbe0
  start,atden
  maxit,200;
@@ -77,18 +74,6 @@ include,../../generate/H-aug-cc-pVTZ.basis
  closed,A1-2,B1-2,B2-2,A2-1
  print,orbitals=2
  orbital,3202.2
-}
-basis={
-include,../../generate/aug-cc-pwCVTZ.basis
-include,../../generate/H-aug-cc-pVTZ.basis
-}
-{rhf,nitord=60;
- start,3202.2
- maxit,200;
- wf,ne,symm,ss
- occ,A1,B1,B2,A2
- closed,A1-2,B1-2,B2-2,A2-1
- print,orbitals=2
 }
 
 scf=energy
