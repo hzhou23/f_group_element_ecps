@@ -14,7 +14,7 @@ import pandas as pd
 toev=27.21138602
 
 
-ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP2','ECP14','ECP33','ECP34','ECP35','ECP36','ECP37','ECP38']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP39','ECP40','ECP33','ECP34','ECP35','ECP36','ECP37','ECP38']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC'        :{'label':'UC',     'color':'#ff0000','linestyle':'-'           },
 'mdfstu'    :{'label':'MDFSTU', 'color':'#ff6600','linestyle':'--','dashes':(4,1)   },
@@ -22,8 +22,8 @@ styles={
 'crenbl'    :{'label':'CRENBL', 'color':'#2f4f4f','linestyle':'--','dashes':(6,3)   },
 'sbkjc'     :{'label':'SBKJC',  'color':'#1e90ff','linestyle':'--','dashes':(2,1,8,1)   },
 'lanl2'     :{'label':'LANL2',  'color':'#a52a2a','linestyle':'--','dashes':(1,1)   },
-'ECP2'          :{'label':'ECP2',   'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP14'          :{'label':'ECP14',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP39'          :{'label':'ECP39',   'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP40'          :{'label':'ECP40',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP33'          :{'label':'ECP33',   'color':'#E3CF57','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP34'          :{'label':'ECP34',   'color':'#FF6103','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP35'          :{'label':'ECP35',   'color':'#838B8B','linestyle':'--','dashes':(8,1,1,1,1,1)},
@@ -92,7 +92,7 @@ def plot():
         y= (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.50,2.10))
-    ax.set_ylim((-0.40,0.25))
+    ax.set_ylim((-0.40,0.35))
     ax.set(title='TaO tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
