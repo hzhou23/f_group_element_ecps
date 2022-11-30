@@ -57,11 +57,11 @@ geometry={
     Gd 0.0 0.0 0.0
     O 0.0 0.0 1.40
 }
-{rks,pbe0
+{rks,pbe0,maxdis=30,nitord=50;
  start,atden
  maxit,200;
- wf,ne,symm,ss
- occ,A1,B1,B2,A2
+ wf,ne-1,symm,ss-1
+ occ,A1-1,B1,B2,A2
  closed,A1-3,B1-2,B2-2,A2-1
  print,orbitals=2
  orbital,2202.2
@@ -69,11 +69,30 @@ geometry={
 {rhf,nitord=60;
  start,2202.2
  maxit,200;
+ wf,ne-1,symm,ss-1
+ occ,A1-1,B1,B2,A2
+ closed,A1-3,B1-2,B2-2,A2-1
+ print,orbitals=2
+ orbital,3202.2
+}
+{rks,pbe0,maxdis=30,nitord=50;
+ start,3202.2
+ maxit,200;
+ shift,-2.0,-1.0
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-3,B1-2,B2-2,A2-1
  print,orbitals=2
- orbital,3202.2
+ orbital,4202.2
+}
+{rhf,nitord=60;
+ start,4202.2
+ maxit,200;
+ wf,ne,symm,ss
+ occ,A1,B1,B2,A2
+ closed,A1-3,B1-2,B2-2,A2-1
+ print,orbitals=2
+ orbital,5202.2
 }
 scf=energy
 _CC_NORM_MAX=2.0
