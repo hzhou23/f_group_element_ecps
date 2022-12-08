@@ -14,7 +14,7 @@ import pandas as pd
 toev=27.21138602
 
 
-ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP39','ECP40','ECP2','ECP14','ECP41','ECP42','ECP43','ECP44']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC', 'crenbl', 'lanl2', 'mdfstu','sbkjc','mwbstu','ECP39','ECP45','ECP46']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC'        :{'label':'UC',     'color':'#ff0000','linestyle':'-'           },
 'mdfstu'    :{'label':'MDFSTU', 'color':'#ff6600','linestyle':'--','dashes':(4,1)   },
@@ -23,13 +23,13 @@ styles={
 'sbkjc'     :{'label':'SBKJC',  'color':'#1e90ff','linestyle':'--','dashes':(2,1,8,1)   },
 'lanl2'     :{'label':'LANL2',  'color':'#a52a2a','linestyle':'--','dashes':(1,1)   },
 'ECP39'          :{'label':'ECP39',   'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP40'          :{'label':'ECP40',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP45'          :{'label':'ECP45',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP2'          :{'label':'ECP2',   'color':'#E3CF57','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP14'          :{'label':'ECP14',   'color':'#FF6103','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP41'          :{'label':'ECP41',   'color':'#838B8B','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP42'          :{'label':'ECP42',   'color':'#9400D3','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP43'          :{'label':'ECP43',   'color':'#006400','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP44'          :{'label':'ECP44',   'color':'#BF3EFF','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP46'          :{'label':'ECP46',   'color':'#BF3EFF','linestyle':'--','dashes':(8,1,1,1,1,1)},
 }
 
 def init():

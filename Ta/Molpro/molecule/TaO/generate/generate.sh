@@ -8,7 +8,7 @@ HOME=`pwd`
 basefolder=$HOME/..
 n=15
 
-for i in ECP43 ECP44
+for i in ECP46
 do
 	echo $i
         mkdir $basefolder/$i
