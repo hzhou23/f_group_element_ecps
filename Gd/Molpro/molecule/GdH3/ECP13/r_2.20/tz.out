@@ -2394,3 +2394,64 @@
  SF USED    *         0.31 MB      
  GA USED    *         0.25 MB       (max)       0.25 MB       (current)
  **********************************************************************************************************************************
+ SETTING SCF            =      -109.77977492  AU                              
+ SETTING _CC_NORM_MAX   =         2.00000000                                  
+
+
+ PROGRAM * CCSD (Restricted open-shell coupled cluster)     Authors: C. Hampel, H.-J. Werner, 1991, M. Deegan, P.J. Knowles, 1992
+
+
+ Convergence thresholds:  THRVAR = 1.00D-08  THRDEN = 1.00D-06
+
+ CCSD(T)     terms to be evaluated (factor= 1.000)
+
+
+ Number of closed-shell orbitals:   8 (   4   2   2   0 )
+ Number of active  orbitals:        5 (   2   1   1   1 )
+ Number of external orbitals:     506 ( 195 127 116  68 )
+
+ Memory could be reduced to 683.28 Mwords without degradation in triples
+
+ Number of N-1 electron functions:              21
+ Number of N-2 electron functions:             210
+ Number of singly external CSFs:              3264
+ Number of doubly external CSFs:          10447351
+ Total number of CSFs:                    10450615
+
+ Molecular orbitals read from record     2103.2  Type=RHF/CANONICAL (state 1.1)
+
+ Integral transformation finished. Total CPU:  28.73 sec, npass=  1  Memory used:  66.23 MW
+
+ Starting RMP2 calculation
+
+ Wavefunction is spin-projected
+
+ ITER.      SQ.NORM     CORR.ENERGY   TOTAL ENERGY   ENERGY CHANGE        DEN1      VAR(S)    VAR(P)  DIIS     TIME
+   1      1.17313496    -0.89629022  -110.67606514    -0.89629022    -0.00793635  0.56D-04  0.27D-02  1  1    30.22
+   2      1.18108994    -0.90532340  -110.68509832    -0.00903318    -0.00010194  0.13D-05  0.53D-04  2  2    31.61
+   3      1.18214722    -0.90600723  -110.68578215    -0.00068383    -0.00000170  0.61D-07  0.97D-06  3  3    33.06
+   4      1.18222992    -0.90603283  -110.68580774    -0.00002559    -0.00000003  0.61D-08  0.15D-07  4  4    35.45
+   5      1.18223375    -0.90603372  -110.68580864    -0.00000089    -0.00000000  0.75D-09  0.23D-09  5  5    37.37
+
+ Norm of t1 vector:      0.05046033      S-energy:    -0.00763833      T1 diagnostic:  0.00040979
+ Norm of t2 vector:      0.42389563      P-energy:    -0.89839539
+                                         Alpha-Beta:  -0.57877799
+                                         Alpha-Alpha: -0.26980099
+                                         Beta-Beta:   -0.04981640
+
+ Spin contamination <S**2-Sz**2-Sz>     0.00000000
+  Reference energy                   -109.779774917003
+  RHF-RMP2 correlation energy          -0.906033720063
+ !RHF-RMP2 energy                    -110.685808637067
+ (NB above energy spin projected)
+
+ Starting RCCSD calculation
+
+ ITER.      SQ.NORM     CORR.ENERGY   TOTAL ENERGY   ENERGY CHANGE        DEN1      VAR(S)    VAR(P)  DIIS     TIME
+   1      1.16270392    -0.83208952  -110.61186443    -0.83208952    -0.02589595  0.19D-02  0.60D-02  1  1    54.39
+   2      1.18631831    -0.85652194  -110.63629686    -0.02443243    -0.00386808  0.41D-03  0.13D-02  2  2    70.76
+   3      1.20604590    -0.86672253  -110.64649744    -0.01020058    -0.00060951  0.17D-03  0.17D-03  3  3    87.27
+   4      1.21523766    -0.86957850  -110.64935342    -0.00285597    -0.00022765  0.54D-04  0.62D-04  4  4   103.90
+   5      1.22239531    -0.87075614  -110.65053106    -0.00117764    -0.00009920  0.20D-04  0.28D-04  5  5   120.71
+   6      1.22930301    -0.87164534  -110.65142025    -0.00088919    -0.00004056  0.69D-05  0.12D-04  6  6   137.62
+   7      1.23313553    -0.87202864  -110.65180356    -0.00038331    -0.00001433  0.54D-05  0.32D-05  7  7   169.43

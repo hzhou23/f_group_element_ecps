@@ -81,7 +81,7 @@ def plot():
         y= (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.40,2.10))
-    #ax.set_ylim((-0.40,0.35))
+    ax.set_ylim((-0.30,0.35))
     ax.set(title='GdO tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
