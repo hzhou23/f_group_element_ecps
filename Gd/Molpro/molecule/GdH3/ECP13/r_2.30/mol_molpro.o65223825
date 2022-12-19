@@ -1,0 +1,17 @@
+
+ GLOBAL ERROR fehler on processor   0                                         
+    0: fehler 1 (0x1).
+    0: fehler 1 (0x1).
+Rank 0 [Sun Dec 18 20:00:30 2022] [c7-0c0s8n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+
+ GLOBAL ERROR fehler on processor   1                                         
+    1: fehler 1 (0x1).
+    1: fehler 1 (0x1).
+Rank 1 [Sun Dec 18 20:00:31 2022] [c7-0c0s8n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1
+srun: error: nid01379: task 0: Aborted
+srun: launch/slurm: _step_signal: Terminating StepId=65223825.0
+slurmstepd: error: *** STEP 65223825.0 ON nid01379 CANCELLED AT 2022-12-18T20:00:31 ***
+srun: error: nid01379: task 1: Aborted
+srun: error: nid01379: task 11: Terminated
+srun: error: nid01379: tasks 2-10: Terminated
+srun: Force Terminated StepId=65223825.0

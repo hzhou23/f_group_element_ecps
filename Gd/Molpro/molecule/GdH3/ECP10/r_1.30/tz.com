@@ -29,8 +29,7 @@ ECP,H,0,1,0
 2,   21.77696655044365 ,     -10.85192405303825 ;
 1,   21.24359508259891 ,       1.00000000000000;
 3,   21.24359508259891 ,      21.24359508259891;
-1;
-2,                   1.,                      0.;
+1; 2,                   1.,                      0.;
 include,../../generate/aug-cc-pwCVTZ.basis
 include,../../generate/H-aug-cc-pVTZ.basis
 }
@@ -41,11 +40,11 @@ H_ccsd=-0.49982987
 
 !These are the wf cards parameters
 ne = 21
-symm = 4
-ss= 7
+symm = 1
+ss= 5
 
 !There are irrep cards paramters
-A1=7
+A1=6
 B1=3
 B2=3
 A2=1
@@ -57,23 +56,42 @@ geometry={
     H2 Gd 1.30 H1 120
     H3 Gd 1.30 H1 120 H2 180
 }
-{rks,pbe0
+{rks,pbe0,maxdis=30,nitord=50;
  start,atden
  maxit,200;
- wf,ne,symm,ss
- occ,A1,B1,B2,A2
- closed,A1-2,B1-2,B2-2,A2-1
+ shift,-2.0,-1.0
+ wf,ne-1,symm,ss-1
+ occ,A1-1,B1,B2,A2
+ closed,A1-2,B1-1,B2-1,A2-1
  print,orbitals=2
  orbital,2202.2
 }
 {rhf,nitord=60;
  start,2202.2
  maxit,200;
- wf,ne,symm,ss
- occ,A1,B1,B2,A2
- closed,A1-2,B1-2,B2-2,A2-1
+ wf,ne-1,symm,ss-1
+ occ,A1-1,B1,B2,A2
+ closed,A1-2,B1-1,B2-1,A2-1
  print,orbitals=2
  orbital,3202.2
+}
+{rks,pbe0,maxdis=30,nitord=50;
+ start,3202.2
+ maxit,200;
+ shift,-2.0,-1.0
+ wf,ne,symm,ss
+ occ,A1,B1,B2,A2
+ closed,A1-2,B1-1,B2-1,A2-1
+ print,orbitals=2
+ orbital,4202.2
+}
+{rhf,nitord=60;
+ start,4202.2
+ maxit,200;
+ wf,ne,symm,ss
+ occ,A1,B1,B2,A2
+ closed,A1-2,B1-1,B2-1,A2-1
+ print,orbitals=2
 }
 
 scf=energy

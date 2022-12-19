@@ -14,12 +14,12 @@ H_ccsd=-0.49982785
 
 !These are the wf cards parameters
 ne = 67
-symm = 4 
-ss= 7
+symm = 1 
+ss= 5
 
 
 !There are irrep cards paramters
-A1=18
+A1=17
 B1=8
 B2=8
 A2=3
@@ -40,7 +40,7 @@ include,../generate/H-aug-cc-pVTZ.basis
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
- closed,A1-2,B1-2,B2-2,A2-1
+ closed,A1-2,B1-1,B2-1,A2-1
  print,orbitals=2
  orbital,2202.2
 }
@@ -49,7 +49,7 @@ include,../generate/H-aug-cc-pVTZ.basis
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
- closed,A1-2,B1-2,B2-2,A2-1
+ closed,A1-2,B1-1,B2-1,A2-1
  print,orbitals=2
  orbital,3202.2
 }
@@ -62,7 +62,7 @@ include,../generate/H-aug-cc-pVTZ.basis
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
- closed,A1-2,B1-2,B2-2,A2-1
+ closed,A1-2,B1-1,B2-1,A2-1
  print,orbitals=2
 }
 
