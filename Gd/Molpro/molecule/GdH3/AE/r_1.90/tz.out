@@ -2391,3 +2391,114 @@
   39      1.80686663    -3.29874399-11272.10527334     0.00003944    -0.00000000  0.52D-09  0.27D-09 15  4 13851.49
   40      1.81181149    -3.29878085-11272.10531020    -0.00003686    -0.00000000  0.39D-09  0.15D-09 15 14 14189.13
   41      1.81283816    -3.29877928-11272.10530863     0.00000157    -0.00000000  0.20D-09  0.95D-10 15  1 14528.62
+  42      1.81340624    -3.29878128-11272.10531063    -0.00000200    -0.00000000  0.11D-09  0.58D-10 15  2 14870.40
+  43      1.81318641    -3.29878090-11272.10531025     0.00000038    -0.00000000  0.42D-10  0.37D-10 15  3 15215.09
+
+ Norm of t1 vector:      0.73943029      S-energy:    -0.00807841      T1 diagnostic:  0.06366790
+                                                                       D1 diagnostic:  0.49582705
+ Norm of t2 vector:      0.51616786      P-energy:    -3.29070249
+                                         Alpha-Beta:  -2.19064240
+                                         Alpha-Alpha: -0.63307158
+                                         Beta-Beta:   -0.46698851
+
+ Singles amplitudes (print threshold =  0.500E-01):
+
+         I         SYM. A    A   T(IA) [Alpha-Alpha]
+
+        24         2        18     -0.09407981
+        25         2        14     -0.06033969
+        25         2        17     -0.27519509
+        25         2        18      0.58295687
+        25         2        20     -0.14177581
+        25         2        21     -0.15974785
+        25         2        29      0.05128244
+        25         2        31      0.07756061
+ 
+         I         SYM. A    A   T(IA) [Beta-Beta]
+
+        24         2        18     -0.06068911
+        32         3         1      0.15107881
+
+ Doubles amplitudes (print threshold =  0.500E-01):
+
+         I         J         SYM. A    SYM. B    A         B      T(IJ, AB) [Alpha-Beta]
+
+        32        32         2         2        18        18     -0.05940611
+
+ Spin contamination <S**2-Sz**2-Sz>     0.00000000
+
+ For full I/O caching in triples, increase memory by 1173.50 Mwords to 2173.78 Mwords.
+ 
+
+  Correlated core orbitals:             1.1       2.1       3.1       4.1       5.1       6.1       7.1       8.1       9.1      10.1
+                                       11.1       1.2       2.2       3.2       4.2       5.2       1.3       2.3       3.3       4.3
+                                        5.3       1.4       2.4
+  Orbital energies:                 -1855.7212 -310.8315 -276.7877  -70.8335  -60.0544  -45.5508  -45.5523  -15.2672  -11.6401   -6.4426
+                                       -6.4377 -276.7819  -60.0241  -45.5463  -11.5944   -6.4046 -276.7816  -60.0289  -45.5654  -11.6109
+                                       -6.4832  -45.5238   -6.3746
+ 
+  RCCSD core-core energy               -1.852585964517
+  RCCSD core-valence energy            -0.731823745969
+  RCCSD valence correlation energy     -0.714371190173
+ 
+
+ RESULTS
+ =======
+
+  Reference energy                   -11268.8065293512    
+  RCCSD singles energy                 -0.008078407738
+  RCCSD pair energy                    -3.290702492921
+  RCCSD correlation energy             -3.298780900659
+  Triples (T) contribution             -0.053054921809
+  Total correlation energy             -3.351835822468
+ 
+  RHF-RCCSD energy                   -11272.1053102519    
+  RHF-RCCSD[T] energy                -11272.1728835065    
+  RHF-RCCSD-T energy                 -11272.1612596377    
+ !RHF-RCCSD(T) energy                -11272.1583651737    
+
+ Program statistics:
+
+ Available memory in ccsd:               999989172
+ Min. memory needed in ccsd:             319155191
+ Max. memory used in ccsd:               471563427
+ Max. memory used in cckext:             362914963 (43 integral passes)
+ Max. memory used in cckint:             224159874 ( 1 integral passes)
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      22       25.87       500      610      700      900      950      970     1001      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1080     1600   
+                                         AOSYM     SMH  
+
+              2       8       11.69       700     1000      520     1800     2202     3202     1001     2102   
+                                         GEOM     BASIS   MCVARS    GRID      RKS      RHF     BASIS     RHF  
+
+ PROGRAMS   *        TOTAL  RCCSD(T)       RHF       INT       RHF       RKS       INT
+ CPU TIMES  *     26814.57  26104.14     68.26    605.27      1.28      3.00     32.40
+ REAL TIME  *     45982.83 SEC
+ DISK USED  *       440.55 GB      
+ SF USED    *        44.20 GB      
+ GA USED    *         0.25 MB       (max)       0.00 MB       (current)
+ **********************************************************************************************************************************
+ SETTING CCSD           =    -11272.15836517  AU                              
+ SETTING BIND           =        -0.08425429  AU                              
+ Output type csv         
+                                                                                                                                                                                                                                                                
+
+  1.90,SCF  ,CCSD ,BIND
+   1.9,   -11268.80653,   -11272.15837,   -0.08425429
+                                                  
+
+ RCCSD(T)/USERDEF energy= -11272.158365173682
+
+        RCCSD(T)        RHF-SCF         RHF-SCF         RKS-SCF 
+ -11272.15836517 -11268.80652935 -11268.54024187 -11272.47333760
+ **********************************************************************************************************************************
+ Molpro calculation terminated
+ Variable memory released
