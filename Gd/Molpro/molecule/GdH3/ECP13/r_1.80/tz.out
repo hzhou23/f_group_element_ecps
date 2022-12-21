@@ -2498,3 +2498,67 @@
          I         J         SYM. A    SYM. B    A         B      T(IJ, AB) [Alpha-Beta]
 
          6        11         2         4        21         1      0.05034758
+
+ Spin contamination <S**2-Sz**2-Sz>     0.00000000
+
+ Memory could be reduced to 712.58 Mwords without degradation in triples
+ 
+
+ RESULTS
+ =======
+
+  Reference energy                   -109.752363760685
+  RCCSD singles energy                 -0.009636952848
+  RCCSD pair energy                    -0.879480070572
+  RCCSD correlation energy             -0.889117023421
+  Triples (T) contribution             -0.039818547070
+  Total correlation energy             -0.928935570491
+ 
+  RHF-RCCSD energy                   -110.641480784106
+  RHF-RCCSD[T] energy                -110.682772370625
+  RHF-RCCSD-T energy                 -110.680954487746
+ !RHF-RCCSD(T) energy                -110.681299331176
+
+ Program statistics:
+
+ Available memory in ccsd:               999998418
+ Min. memory needed in ccsd:              30888507
+ Max. memory used in ccsd:                43926699
+ Max. memory used in cckext:              36468826 (16 integral passes)
+ Max. memory used in cckint:              66234930 ( 1 integral passes)
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      20       23.20       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1420     1200     1210     1080     1600     1650     1700     1800   
+                                           T        V       ECP      H0       H01     AOSYM     SMH    MOLCAS    OPER     GRID   
+
+              2       8       21.71       700     1000      520     1800     2202     3202     4202     2103   
+                                         GEOM     BASIS   MCVARS    GRID      RKS      RHF      RKS      RHF  
+
+ PROGRAMS   *        TOTAL  RCCSD(T)       RHF       RKS       RHF       RKS       INT
+ CPU TIMES  *      1650.50   1012.17     25.36    234.30     46.31     76.10    254.63
+ REAL TIME  *      2245.42 SEC
+ DISK USED  *        64.43 GB      
+ SF USED    *        11.78 GB      
+ GA USED    *         0.26 MB       (max)       0.26 MB       (current)
+ **********************************************************************************************************************************
+ SETTING CCSD           =      -110.68129933  AU                              
+ SETTING BIND           =        -0.11172052  AU                              
+ Output type csv         
+                                                                                                                                                                                                                                                                
+
+  1.80,SCF,CCSD,BIND
+   1.8,   -109.7523638,   -110.6812993,   -0.11172052
+                                                  
+
+ RCCSD(T)/USERDEF energy=   -110.681299331176
+
+        RCCSD(T)        RHF-SCF         RKS-SCF         RHF-SCF         RKS-SCF 
+   -110.68129933   -109.75236376   -111.92068895   -109.21182599   -111.41408734
+ **********************************************************************************************************************************
+ Molpro calculation terminated
+ Variable memory released

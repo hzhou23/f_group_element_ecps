@@ -2425,3 +2425,81 @@
          I         J         SYM. A    SYM. B    A         B      T(IJ, AB) [Alpha-Beta]
 
         32        32         2         2        18        18     -0.06294950
+
+ Spin contamination <S**2-Sz**2-Sz>     0.00000000
+
+ For full I/O caching in triples, increase memory by 1173.50 Mwords to 2173.78 Mwords.
+ 
+
+  Correlated core orbitals:             1.1       2.1       3.1       4.1       5.1       6.1       7.1       8.1       9.1      10.1
+                                       11.1       1.2       2.2       3.2       4.2       5.2       1.3       2.3       3.3       4.3
+                                        5.3       1.4       2.4
+  Orbital energies:                 -1855.6971 -310.8075 -276.7635  -70.8101  -60.0301  -45.5271  -45.5292  -15.2439  -11.6153   -6.4195
+                                       -6.4140 -276.7580  -60.0013  -45.5228  -11.5718   -6.3813 -276.7576  -60.0058  -45.5415  -11.5878
+                                       -6.4586  -45.5008   -6.3517
+ 
+  RCCSD core-core energy               -1.852647514491
+  RCCSD core-valence energy            -0.731851493688
+  RCCSD valence correlation energy     -0.720391797096
+ 
+
+ RESULTS
+ =======
+
+  Reference energy                   -11268.7806092265    
+  RCCSD singles energy                 -0.008184219697
+  RCCSD pair energy                    -3.296706585578
+  RCCSD correlation energy             -3.304890805275
+  Triples (T) contribution             -0.055899549699
+  Total correlation energy             -3.360790354973
+ 
+  RHF-RCCSD energy                   -11272.0855000318    
+  RHF-RCCSD[T] energy                -11272.1524989383    
+  RHF-RCCSD-T energy                 -11272.1432081585    
+ !RHF-RCCSD(T) energy                -11272.1413995815    
+
+ Program statistics:
+
+ Available memory in ccsd:               999989172
+ Min. memory needed in ccsd:             319155191
+ Max. memory used in ccsd:               471563427
+ Max. memory used in cckext:             362914963 (41 integral passes)
+ Max. memory used in cckint:             224159874 ( 1 integral passes)
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      22       25.87       500      610      700      900      950      970     1001      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1080     1600   
+                                         AOSYM     SMH  
+
+              2       8       11.69       700     1000      520     1800     2202     3202     1001     2102   
+                                         GEOM     BASIS   MCVARS    GRID      RKS      RHF     BASIS     RHF  
+
+ PROGRAMS   *        TOTAL  RCCSD(T)       RHF       INT       RHF       RKS       INT
+ CPU TIMES  *     26098.30  25406.52     49.98    605.07      1.29      3.25     31.97
+ REAL TIME  *     42839.19 SEC
+ DISK USED  *       440.93 GB      
+ SF USED    *        44.20 GB      
+ GA USED    *         0.26 MB       (max)       0.00 MB       (current)
+ **********************************************************************************************************************************
+ SETTING CCSD           =    -11272.14139958  AU                              
+ SETTING BIND           =        -0.06728870  AU                              
+ Output type csv         
+                                                                                                                                                                                                                                                                
+
+  1.80,SCF  ,CCSD ,BIND
+   1.8,   -11268.78061,   -11272.14140,   -0.06728870
+                                                  
+
+ RCCSD(T)/USERDEF energy= -11272.141399581478
+
+        RCCSD(T)        RHF-SCF         RHF-SCF         RKS-SCF 
+ -11272.14139958 -11268.78060923 -11268.51414153 -11272.45662866
+ **********************************************************************************************************************************
+ Molpro calculation terminated
+ Variable memory released
