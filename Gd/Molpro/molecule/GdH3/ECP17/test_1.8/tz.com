@@ -59,7 +59,6 @@ geometry={
 {rks,pbe0,maxdis=30,nitord=50;
  start,atden
  maxit,200;
- shift,-2.0,-1.0
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-2,B1-1,B2-1,A2-1

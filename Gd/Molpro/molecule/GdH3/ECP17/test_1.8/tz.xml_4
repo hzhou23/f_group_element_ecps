@@ -1,0 +1,428 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /global/cscratch1/sd/haihan
+ Secondary working directories  : /global/cscratch1/sd/haihan
+ Wavefunction directory         : /global/homes/h/haihan/wfu/
+ Main file repository           : /global/cscratch1/sd/haihan/
+
+ SHA1      : 19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ NAME      : 2015.1.36
+ ARCHNAME  : linux/x86_64
+ FC        : /opt/cray/pe/craype/2.5.14/bin/ftn
+ BLASLIB   : -L/opt/intel/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64 -Wl,-_start-group -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -Wl,-_end-group -liomp5
+ id        : lbl
+
+ Nodes     nprocs
+ nid00042    11
+ Number of processes for MPI-2 version of Molpro:   nprocs(total)=   12   nprocs(compute)=   11   nprocs(helper)=    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=sf  
+
+ --><job>
+  <!--
+ ***,Calculation for GdH3 atom, singlet and triplet
+ memory,1,g
+ 
+ gthresh,twoint=1.0E-15
+ gthresh,throvl=1.0E-15
+ 
+ 
+ basis={
+ ECP, Gd, 46, 4 ;
+ 4
+ 1,  4.482334567,  18
+ 3,  4.564889708,  82.168014744
+ 2,  5.66712002 , -92.9838255305621
+ 2,  3.16146066 , -4.5706186489810925
+ 2
+ 2,  11.95874295,  158.74380701879028
+ 2,  4.57502029 , 75.24558611007733
+ 2
+ 2,  9.32702741 , 85.27718849776822
+ 2,  3.72730927 , 55.169023412731704
+ 2
+ 2,  9.14239802 , 55.34157036482078
+ 2,  2.41026285 , 27.58623059967926
+ 2
+ 2,  3.49609108 , -24.953301558714806
+ 2,  6.1622991  ,-2.8384856422783815
+ ECP,H,0,1,0
+ 3;
+ 2,   21.77696655044365 ,     -10.85192405303825 ;
+ 1,   21.24359508259891 ,       1.00000000000000;
+ 3,   21.24359508259891 ,      21.24359508259891;
+ 1; 2,                   1.,                      0.;
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdH3/ECP17/test_1.8/../../generate/aug-cc-pwCVTZ.basis
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdH3/ECP17/test_1.8/../../generate/H-aug-cc-pVTZ.basis
+ }
+ 
+ 
+ Gd_ccsd=-108.9485971
+ H_ccsd=-0.49982987
+ 
+                                                                                 !These are the wf cards parameters
+ ne = 21
+ symm = 1
+ ss= 5
+ 
+                                                                                 !There are irrep cards paramters
+ A1=6
+ B1=3
+ B2=3
+ A2=1
+ 
+ angstrom
+ geometry={
+     Gd
+     H1 Gd 1.80
+     H2 Gd 1.80 H1 120
+     H3 Gd 1.80 H1 120 H2 180
+ }
+ {rks,pbe0,maxdis=30,nitord=50;
+  start,atden
+  maxit,200;
+  shift,-2.0,-1.0
+  wf,ne,symm,ss
+  occ,A1,B1,B2,A2
+  closed,A1-2,B1-1,B2-1,A2-1
+  print,orbitals=2
+  orbital,4202.2
+ }
+ {rhf,nitord=60;
+  start,4202.2
+  maxit,200;
+  shift,-2.0,-1.0
+  wf,ne,symm,ss
+  occ,A1,B1,B2,A2
+  closed,A1-2,B1-1,B2-1,A2-1
+  print,orbitals=2
+ }
+ 
+ scf=energy
+ _CC_NORM_MAX=2.0
+ {rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core}
+ ccsd=energy
+ bind=ccsd-Gd_ccsd-H_ccsd-H_ccsd-H_ccsd
+ 
+ table,1.80,scf,ccsd,bind
+ save
+ type,csv
+ 
+
+ Variables initialized (889), CPU time= 0.01 sec
+ Commands  initialized (702), CPU time= 0.01 sec, 572 directives.
+ Default parameters read. Elapsed time= 0.15 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                                       Copyright, TTI GmbH Stuttgart, 2015
+                                    Version 2015.1 linked Dec 29 2018 15:55:43
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for GdH3 atom, singlet and triplet                                
+  64 bit mpp version                                                                     DATE: 29-Dec-22          TIME: 06:02:48  
+ **********************************************************************************************************************************
+
+ SHA1:             19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ **********************************************************************************************************************************
+  -->
+  <!--
+
+ THRESHOLDS:
+
+ ZERO    =  1.00D-12  ONEINT  =  1.00D-12  TWOINT  =  1.00D-15  PREFAC  =  1.00D-14  LOCALI  =  1.00D-09  EORDER  =  1.00D-04
+ ENERGY  =  0.00D+00  ETEST   =  0.00D+00  EDENS   =  0.00D+00  THRDEDEF=  1.00D-06  GRADIENT=  1.00D-02  STEP    =  1.00D-03
+ ORBITAL =  1.00D-05  CIVEC   =  1.00D-05  COEFF   =  1.00D-04  PRINTCI =  5.00D-02  PUNCHCI =  9.90D+01  OPTGRAD =  3.00D-04
+ OPTENERG=  1.00D-06  OPTSTEP =  3.00D-04  THRGRAD =  1.00D-10  COMPRESS=  1.00D-11  VARMIN  =  1.00D-07  VARMAX  =  1.00D-03
+ THRDOUB =  0.00D+00  THRDIV  =  1.00D-05  THRRED  =  1.00D-07  THRPSP  =  1.00D+00  THRDC   =  1.00D-10  THRCS   =  1.00D-10
+ THRNRM  =  1.00D-08  THREQ   =  0.00D+00  THRDE   =  1.00D+00  THRREF  =  1.00D-05  SPARFAC =  1.00D+00  THRDLP  =  1.00D-07
+ THRDIA  =  1.00D-10  THRDLS  =  1.00D-07  THRGPS  =  0.00D+00  THRKEX  =  0.00D+00  THRDIS  =  2.00D-01  THRVAR  =  1.00D-10
+ THRLOC  =  1.00D-06  THRGAP  =  1.00D-06  THRLOCT = -1.00D+00  THRGAPT = -1.00D+00  THRORB  =  1.00D-06  THRMLTP =  0.00D+00
+ THRCPQCI=  1.00D-10  KEXTA   =  0.00D+00  THRCOARS=  0.00D+00  SYMTOL  =  1.00D-06  GRADTOL =  1.00D-06  THROVL  =  1.00D-08
+ THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
+
+
+
+ THRESHOLDS:
+
+ ZERO    =  1.00D-12  ONEINT  =  1.00D-12  TWOINT  =  1.00D-15  PREFAC  =  1.00D-14  LOCALI  =  1.00D-09  EORDER  =  1.00D-04
+ ENERGY  =  0.00D+00  ETEST   =  0.00D+00  EDENS   =  0.00D+00  THRDEDEF=  1.00D-06  GRADIENT=  1.00D-02  STEP    =  1.00D-03
+ ORBITAL =  1.00D-05  CIVEC   =  1.00D-05  COEFF   =  1.00D-04  PRINTCI =  5.00D-02  PUNCHCI =  9.90D+01  OPTGRAD =  3.00D-04
+ OPTENERG=  1.00D-06  OPTSTEP =  3.00D-04  THRGRAD =  1.00D-10  COMPRESS=  1.00D-11  VARMIN  =  1.00D-07  VARMAX  =  1.00D-03
+ THRDOUB =  0.00D+00  THRDIV  =  1.00D-05  THRRED  =  1.00D-07  THRPSP  =  1.00D+00  THRDC   =  1.00D-10  THRCS   =  1.00D-10
+ THRNRM  =  1.00D-08  THREQ   =  0.00D+00  THRDE   =  1.00D+00  THRREF  =  1.00D-05  SPARFAC =  1.00D+00  THRDLP  =  1.00D-07
+ THRDIA  =  1.00D-10  THRDLS  =  1.00D-07  THRGPS  =  0.00D+00  THRKEX  =  0.00D+00  THRDIS  =  2.00D-01  THRVAR  =  1.00D-10
+ THRLOC  =  1.00D-06  THRGAP  =  1.00D-06  THRLOCT = -1.00D+00  THRGAPT = -1.00D+00  THRORB  =  1.00D-06  THRMLTP =  0.00D+00
+ THRCPQCI=  1.00D-10  KEXTA   =  0.00D+00  THRCOARS=  0.00D+00  SYMTOL  =  1.00D-06  GRADTOL =  1.00D-06  THROVL  =  1.00D-15
+ THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
+
+
+
+ Variable memory set to 1000000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+ SETTING GD_CCSD        =      -108.94859710                                  
+ SETTING H_CCSD         =        -0.49982987                                  
+ SETTING NE             =        21.00000000                                  
+ SETTING SYMM           =         1.00000000                                  
+ SETTING SS             =         5.00000000                                  
+ SETTING A1             =         6.00000000                                  
+ SETTING B1             =         3.00000000                                  
+ SETTING B2             =         3.00000000                                  
+ SETTING A2             =         1.00000000                                  
+ ZUNIT=ANG
+ 
+  --><jobstep command="RKS-SCF" commandset="SCFPRO">
+   <!--
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Symmetric top,     Order of principal axis = 3
+ Symmetry elements: Y,Z
+ Rotational constants:     103.1682917    103.1682917     51.5841459 GHz  (calculated with average atomic masses)
+
+ Point group  C2v 
+
+
+   --><cml:molecule>
+    <cml:symmetry pointGroup="C2v"/>
+    <cml:atomArray>
+     <cml:atom id="a1" elementType="Gd" x3="-0.367190452293942E-17" y3="0.0" z3="0.0"/>
+     <cml:atom id="a2" elementType="H" x3="1.8" y3="0.0" z3="0.0"/>
+     <cml:atom id="a3" elementType="H" x3="-0.9" y3="-1.55884572681199" z3="0.0"/>
+     <cml:atom id="a4" elementType="H" x3="-0.9" y3="1.55884572681199" z3="0.0"/>
+    </cml:atomArray>
+    <cml:bondArray>
+     <cml:bond atomRefs2="a1 a2"/>
+     <cml:bond atomRefs2="a1 a3"/>
+     <cml:bond atomRefs2="a1 a4"/>
+    </cml:bondArray>
+   </cml:molecule><!--
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  GD     18.00   -0.000000000    0.000000000    0.000000000
+   2  H1      1.00    3.401507024    0.000000000    0.000000000
+   3  H2      1.00   -1.700753512   -2.945791494    0.000000000
+   4  H3      1.00   -1.700753512    2.945791494    0.000000000
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  3.401507024  1-3  3.401507024  1-4  3.401507024
+     ( 1.800000000)     ( 1.800000000)     ( 1.800000000)
+
+ Bond angles
+
+  2-1-3  120.00000000   2-1-4  120.00000000   3-1-4  120.00000000
+
+ NUCLEAR CHARGE:                   21
+ NUMBER OF PRIMITIVE AOS:         673
+ NUMBER OF SYMMETRY AOS:          519
+ NUMBER OF CONTRACTIONS:          519   ( 201A1  + 130B1  + 119B2  +  69A2  )
+ NUMBER OF CORE ORBITALS:           0   (   0A1  +   0B1  +   0B2  +   0A2  )
+ NUMBER OF VALENCE ORBITALS:       20   (   9A1  +   5B1  +   4B2  +   2A2  )
+
+
+ NUCLEAR REPULSION ENERGY   16.38451734
+
+
+ Eigenvalues of metric
+
+         1 0.113E-06 0.276E-06 0.603E-06 0.719E-06 0.721E-06 0.732E-06 0.125E-05 0.212E-05
+         2 0.603E-06 0.719E-06 0.421E-05 0.957E-05 0.133E-04 0.190E-04 0.235E-04 0.398E-04
+         3 0.616E-06 0.727E-06 0.439E-05 0.138E-04 0.238E-04 0.443E-04 0.878E-04 0.147E-03
+         4 0.727E-06 0.238E-04 0.147E-03 0.532E-03 0.820E-03 0.887E-03 0.309E-02 0.471E-02
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-15
+ AO integral compression algorithm  1   Integral accuracy      1.0D-15
+
+     10675.290 MB (compressed) written to integral file ( 55.9%)
+
+     Node minimum: 552.600 MB, node maximum: 1138.229 MB
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:  210040721.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   7  SEGMENT LENGTH:   31985888      RECORD LENGTH: 524288
+
+ Memory used in sort:      32.54 MW
+
+ SORT1 READ  2385076976. AND WROTE   123923299. INTEGRALS IN    359 RECORDS. CPU TIME:    57.99 SEC, REAL TIME:    83.33 SEC
+ SORT2 READ  1357505142. AND WROTE  2310732286. INTEGRALS IN  41140 RECORDS. CPU TIME:    12.77 SEC, REAL TIME:    32.37 SEC
+
+ Node minimum:   209948383.  Node maximum:   210299431. integrals
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19       23.13       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1420     1200     1210     1080     1600     1650     1700   
+                                           T        V       ECP      H0       H01     AOSYM     SMH    MOLCAS    OPER   
+
+ PROGRAMS   *        TOTAL       INT
+ CPU TIMES  *       213.86    213.60
+ REAL TIME  *       261.58 SEC
+ DISK USED  *        27.08 GB      
+ GA USED    *         0.00 MB       (max)       0.00 MB       (current)
+ **********************************************************************************************************************************
+
+ Density functional group PBE0=PBEX+PBEC
+ Functional: PBEX(Automatically generated (new) PBEX)                          Gradient terms: 1
+ Functional: PBEC(Automatically generated (new) PBEC)                          Gradient terms: 1
+ Use grid at  1800.2
+ 
+
+ Exact exchange will be calculated, factor:  0.2500
+
+ Functional: PBEX                      Factor:  0.7500
+ Functional: PBEC                      Factor:  1.0000
+ 
+ Generated new metagrid on record  1800.2 with target accuracy 1.0D-06 and 6103 points in CPU time    0.1
+ Computed new grid on record 1800.1 in CPU time    0.1
+  414270 words reserved for DFT integration
+
+ PROGRAM * RKS-SCF (Restricted open shell Kohn-Sham)     Authors: W. Meyer, H.-J. Werner, P.J. Knowles, 1993
+
+ NUMBER OF ELECTRONS:      13+    8-    SPACE SYMMETRY=1    SPIN SYMMETRY: Sextet  
+ CONVERGENCE THRESHOLDS:    1.00E-05 (Density)    1.00E-06 (Energy)
+ MAX. NUMBER OF ITERATIONS:      200
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                 -2.00 (CLOSED) -1.00 (OPEN) 
+
+ Number of closed-shell orbitals:    8 (   4   2   2   0 )
+ Number of open-shell orbitals:      5 (   2   1   1   1 )
+
+
+ Use fine grid record 1800.2 for energy threshold  1.0D-06
+ Guess basis ATOMIC-GUESS,GD=ECP46_GUESS not found. No density guess!
+
+
+ Molecular orbital dump at record        4202.2
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS   ORB.
+    1      0.000D+00      0.000D+00       -64.27437239    463.484981   -0.00534    0.00000    0.00000    0    start
+    2      0.000D+00      0.223D+00       -27.80184589     26.528609    0.63833    0.00000    0.00000    0    diag,B
+    3      0.826D+01      0.850D-01       -67.58653483    455.314038   -0.05598    0.00000    0.00000    1    diag,B
+    4      0.826D+01      0.214D+00       -78.07132200    429.050152   -0.09903    0.00000    0.00000    2    diag,B
+    5      0.188D-01      0.174D+00       -88.19407070    397.205757   -0.24339    0.00000    0.00000    3    diag,B
+    6      0.228D-01      0.136D+00       -95.17715215    368.365922   -0.63315    0.00000    0.00000    4    diag,B
+    7      0.223D-01      0.108D+00       -98.87279552    349.473538   -1.02761    0.00000    0.00000    5    diag,B
+    8      0.166D-01      0.934D-01       -99.81098768    345.003969   -1.03162    0.00000    0.00000    6    diag,B
+    9      0.651D-02      0.901D-01      -100.44185764    343.337283   -0.90013    0.00000    0.00000    7    diag,B
+   10      0.738D-02      0.884D-01      -102.66986256    331.502950   -1.05938    0.00000    0.00000    8    orth
+   11      0.156D-01      0.777D-01      -105.15894610    317.436315   -1.08619    0.00000    0.00000    9    diag,B
+   12      0.223D-01      0.637D-01      -107.49303155    301.481457   -1.04087    0.00000    0.00000   10    diag,B
+   13      0.276D-01      0.479D-01      -109.41718035    280.998544   -0.90060    0.00000    0.00000   11    diag,B
+   14      0.158D-01      0.314D-01      -110.99469545    252.416164   -0.48254    0.00000    0.00000   12    diag,B
+   15      0.154D-01      0.921D-02      -111.39192393    236.208791   -0.34241    0.00000    0.00000   13    diag,B
+   16      0.105D-01      0.720D-02      -111.49876222    235.611282   -0.38112    0.00000    0.00000   14    diag,B
+   17      0.141D-01      0.578D-02      -111.65232375    235.156604   -0.40859    0.00000    0.00000   15    diag,B
+   18      0.238D-01      0.308D-02      -111.72990858    234.430232   -0.32887    0.00000    0.00000   16    diag,B
+   19      0.119D-01      0.181D-02      -111.77023451    233.252408   -0.25909    0.00000    0.00000   17    diag,B
+   20      0.433D-02      0.149D-02      -111.78904173    233.168031   -0.19781    0.00000    0.00000   18    orth
+   21      0.278D-02      0.821D-03      -111.79820132    232.866181   -0.18178    0.00000    0.00000   19    diag,B
+   22      0.178D-02      0.582D-03      -111.80235895    232.877527   -0.17384    0.00000    0.00000   20    diag,B
+   23      0.182D-02      0.373D-03      -111.80388430    232.761118   -0.17086    0.00000    0.00000   21    diag,B
+   24      0.111D-02      0.298D-03      -111.80443718    232.803674   -0.16793    0.00000    0.00000   22    diag,B
+   25      0.476D-03      0.289D-03      -111.80486216    232.781910   -0.16299    0.00000    0.00000   23    diag,B
+   26      0.210D-03      0.306D-03      -111.80434919    232.799611   -0.16961    0.00000    0.00000   24    diag,B
+   27      0.190D-03      0.253D-03      -111.80368286    232.867947   -0.18708    0.00000    0.00000   25    diag,B
+   28      0.371D-03      0.260D-03      -111.80372954    232.864114   -0.18602    0.00000    0.00000   26    diag,B
+   29      0.299D-04      0.257D-03      -111.80357184    232.887690   -0.18977    0.00000    0.00000   27    diag,B
+   30      0.630D-04      0.269D-03      -111.80477711    232.756837   -0.16855    0.00000    0.00000   28    orth
+   31      0.421D-03      0.500D-03      -111.80227294    233.043154   -0.21455    0.00000    0.00000   29    diag,B
+   32      0.955D-03      0.538D-03      -111.80213988    233.041995   -0.21668    0.00000    0.00000   29    diag,B
+   33      0.118D-03      0.577D-03      -111.79958138    233.281676   -0.25441    0.00000    0.00000   29    diag,B
+   34      0.533D-03      0.718D-03      -111.79947615    233.289396   -0.25542    0.00000    0.00000   29    diag,B
+   35      0.632D-04      0.728D-03      -111.79876382    233.358120   -0.26524    0.00000    0.00000   29    diag,B
+   36      0.169D-03      0.765D-03      -111.79892303    233.342041   -0.26282    0.00000    0.00000   29    diag,B
+   37      0.626D-04      0.750D-03      -111.80030001    233.196393   -0.24025    0.00000    0.00000   29    diag,B
+   38      0.504D-03      0.652D-03      -111.80105100    233.110654   -0.22665    0.00000    0.00000   29    diag,B
+   39      0.251D-03      0.613D-03      -111.80152840    233.032275   -0.21326    0.00000    0.00000   29    diag,B
+   40      0.295D-03      0.626D-03      -111.80200990    232.934972   -0.19679    0.00000    0.00000   29    orth
+   41      0.405D-03      0.663D-03      -111.80226419    232.898264   -0.19041    0.00000    0.00000   29    diag,B
+   42      0.148D-03      0.661D-03      -111.80244232    232.868773   -0.18532    0.00000    0.00000   29    diag,B
+   43      0.130D-03      0.662D-03      -111.80309327    232.719738   -0.16303    0.00000    0.00000   29    diag,B
+   44      0.659D-03      0.686D-03      -111.80328261    232.693702   -0.15862    0.00000    0.00000   29    diag,B
+   45      0.121D-03      0.685D-03      -111.80365071    232.629976   -0.14970    0.00000    0.00000   29    diag,B
+   46      0.236D-03      0.681D-03      -111.80404899    232.586578   -0.14139    0.00000    0.00000   29    diag,B
+   47      0.201D-03      0.663D-03      -111.80388776    232.577928   -0.14446    0.00000    0.00000   29    diag,B
+   48      0.134D-03      0.654D-03      -111.80410972    232.546834   -0.13680    0.00000    0.00000   29    diag,B
+   49      0.237D-03      0.664D-03      -111.80422325    232.523388   -0.13367    0.00000    0.00000   29    fixocc
+   50      0.633D-04      0.656D-03      -111.80423602    232.519003   -0.13319    0.00000    0.00000   29    orth
+   51      0.156D-04      0.653D-03      -111.80430750    232.512976   -0.13362    0.00000    0.00000   29    diag,B
+   52      0.620D-04      0.633D-03      -111.80421262    232.518201   -0.13551    0.00000    0.00000   29    diag,B
+   53      0.103D-03      0.653D-03      -111.80463070    232.504692   -0.13030    0.00000    0.00000   29    diag,B
+   54      0.142D-03      0.634D-03      -111.80446077    232.516434   -0.13278    0.00000    0.00000   29    diag,B
+   55      0.736D-04      0.649D-03      -111.80445375    232.513896   -0.13410    0.00000    0.00000   29    diag,B
+   56      0.955D-04      0.628D-03      -111.80423345    232.530510   -0.13634    0.00000    0.00000   29    diag,B
+   57      0.909D-04      0.656D-03      -111.80493796    232.466053   -0.12433    0.00000    0.00000   29    diag,B
+   58      0.234D-03      0.615D-03      -111.80570725    232.301745   -0.10511    0.00000    0.00000   29    diag,B
+   59      0.336D-03      0.542D-03      -111.80606430    232.271189   -0.09759    0.00000    0.00000   29    diag,B
+   60      0.173D-03      0.541D-03      -111.80636975    232.243887   -0.09117    0.00000    0.00000   29    orth
+   61      0.133D-03      0.520D-03      -111.80642352    232.239138   -0.08916    0.00000    0.00000   29    diag,B
+   62      0.642D-04      0.520D-03      -111.80650214    232.226345   -0.08750    0.00000    0.00000   29    diag,B
+   63      0.809D-04      0.515D-03      -111.80677053    232.240516   -0.08345    0.00000    0.00000   29    diag,B
+   64      0.148D-03      0.509D-03      -111.80669107    232.242162   -0.08400    0.00000    0.00000   29    diag,B
+   65      0.838D-04      0.510D-03      -111.80667405    232.235473   -0.08389    0.00000    0.00000   29    diag,B
+   66      0.412D-04      0.509D-03      -111.80632655    232.266790   -0.09399    0.00000    0.00000   29    diag,B
+   67      0.293D-03      0.520D-03      -111.80637019    232.269526   -0.09421    0.00000    0.00000   29    diag,B
+   68      0.427D-04      0.515D-03      -111.80624477    232.251669   -0.09413    0.00000    0.00000   29    diag,B
+   69      0.935D-04      0.534D-03      -111.80632379    232.240796   -0.09165    0.00000    0.00000   29    diag,B
+   70      0.246D-03      0.560D-03      -111.80605738    232.269943   -0.09817    0.00000    0.00000   29    orth
+   71      0.225D-03      0.569D-03      -111.80592080    232.234838   -0.09843    0.00000    0.00000   29    diag,B
+   72      0.813D-04      0.615D-03      -111.80609603    232.223896   -0.09517    0.00000    0.00000   29    diag,B
+   73      0.687D-04      0.608D-03      -111.80627345    232.214471   -0.09342    0.00000    0.00000   29    diag,B
+   74      0.670D-04      0.596D-03      -111.80590944    232.263457   -0.10005    0.00000    0.00000   29    diag,B
+   75      0.221D-03      0.658D-03      -111.80599578    232.255657   -0.09871    0.00000    0.00000   29    diag,B
+   76      0.516D-04      0.653D-03      -111.80558627    232.289564   -0.10594    0.00000    0.00000   29    diag,B
+   77      0.160D-03      0.686D-03      -111.80582320    232.261863   -0.10201    0.00000    0.00000   29    diag,B
+   78      0.723D-04      0.680D-03      -111.80628293    232.232975   -0.09435    0.00000    0.00000   29    diag,B
+   79      0.175D-03      0.670D-03      -111.80554356    232.312767   -0.10871    0.00000    0.00000   29    diag,B
+   80      0.258D-03      0.684D-03      -111.80556429    232.294075   -0.10688    0.00000    0.00000   29    orth
+   81      0.805D-04      0.686D-03      -111.80556545    232.304207   -0.10650    0.00000    0.00000   29    diag,B
+   82      0.958D-04      0.693D-03      -111.80551361    232.310916   -0.10924    0.00000    0.00000   29    diag,B
+   83      0.177D-03      0.686D-03      -111.80561110    232.288402   -0.10594    0.00000    0.00000   29    diag,B
+   84      0.116D-03      0.686D-03      -111.80567287    232.290070   -0.10435    0.00000    0.00000   29    diag,B
+   85      0.108D-03      0.688D-03      -111.80551046    232.305168   -0.10852    0.00000    0.00000   29    diag,B
+   86      0.173D-03      0.689D-03      -111.80563511    232.286703   -0.10533    0.00000    0.00000   29    diag,B
+   87      0.102D-03      0.685D-03      -111.80571524    232.282766   -0.10340    0.00000    0.00000   29    diag,B
+   88      0.929D-04      0.684D-03      -111.80558568    232.294825   -0.10683    0.00000    0.00000   29    diag,B
+   89      0.148D-03      0.686D-03      -111.80564297    232.286395   -0.10524    0.00000    0.00000   29    diag,B
+   90      0.573D-04      0.684D-03      -111.80568740    232.284090   -0.10377    0.00000    0.00000   29    orth
+   91      0.837D-04      0.685D-03      -111.80561974    232.290859   -0.10624    0.00000    0.00000   29    diag,B
+   92      0.131D-03      0.684D-03      -111.80563853    232.287240   -0.10542    0.00000    0.00000   29    diag,B
+   93      0.395D-04      0.684D-03      -111.80564872    232.287023   -0.10448    0.00000    0.00000   29    diag,B
+   94      0.681D-04      0.686D-03      -111.80563272    232.289207   -0.10602    0.00000    0.00000   29    diag,B
+   95      0.102D-03      0.684D-03      -111.80563731    232.287577   -0.10551    0.00000    0.00000   29    diag,B
+   96      0.299D-04      0.684D-03      -111.80563668    232.287682   -0.10475    0.00000    0.00000   29    diag,B
+   97      0.566D-04      0.686D-03      -111.80563739    232.288236   -0.10577    0.00000    0.00000   29    diag,B

@@ -5,7 +5,7 @@
 
 HOME=`pwd`
 
-for j in UC ECP17
+for j in AE UC ECP17
 do
 echo $j
 rm $HOME/$j/tzbind
