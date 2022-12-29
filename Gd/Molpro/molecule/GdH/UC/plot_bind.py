@@ -22,10 +22,10 @@ print (binding, ecpbinding)
 r=binding['r']
 bind = binding['bind']
 ecpbind = ecpbinding['bind']
+diff =( ecpbinding['bind'] - binding['bind']) * toev
 fig=plt.figure()
 ax=fig.add_subplot(111)
-
-plt.plot(r,bind)
-plt.plot(r,ecpbind,color = 'r')
+ax.axhspan(-0.043,0.043, alpha = 0.3)
+plt.plot(r,diff,color = 'r')
 plt.savefig('prebind.pdf')
 
