@@ -25,8 +25,8 @@ ecpbind = ecpbinding['bind']
 diff =( ecpbinding['bind'] - binding['bind']) * toev
 fig=plt.figure()
 ax=fig.add_subplot(111)
-ax.axhspan(-0.043,0.043, alpha = 0.3)
-ax.axhline(y = 0, xmin =1.3, xmax = 2.4)
+ax.axhspan(-0.043,0.043, color = '929591' ,alpha = 0.3)
+ax.axhline(y = 0, xmin =1.3, xmax = 2.4, color = '#000000', alpha = 1)
 plt.plot(r,diff,color = 'r')
 plt.savefig('prebind.pdf')
 
