@@ -56,9 +56,10 @@ geometry={
     Gd 0.0 0.0 0.0
     H 0.0 0.0 2.00
 }
-{rhf,nitord=60;
+{rks,pbe0,maxdis=30,nitord=60;
  start,atden
  maxit,200;
+ shift, -2.0, -1.0;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-2,B1-2,B2-2,A2-1
@@ -67,6 +68,16 @@ geometry={
 }
 {rhf,nitord=60;
  start,3202.2
+ maxit,200;
+ shift, -2.0, -1.0;
+ wf,ne,symm,ss
+ occ,A1,B1,B2,A2
+ closed,A1-2,B1-2,B2-2,A2-1
+ print,orbitals=2
+ orbital,4202.2
+}
+{rhf,nitord=60;
+ start,4202.2
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2

@@ -59,6 +59,7 @@ geometry={
 {rhf,nitord=60;
  start,atden
  maxit,200;
+ shift, -2.0, -1.0;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-2,B1-2,B2-2,A2-1
