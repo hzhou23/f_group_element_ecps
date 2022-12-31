@@ -12,9 +12,9 @@ def plot_ccsdt(data_type):
     data = pd.read_csv(file_name, delim_whitespace=True)
 
     r = data['r']
-    ecp = data['ECP17']
-    uc = data['UC']
-    ae = data['AE']
+    ecp = data['ECP17']+108.9485971+0.49982987
+    uc = data['UC']+11268.01765+0.49982785
+    ae = data['AE']+11270.57462733+0.49982785
 
     fig=plt.figure()
     ax = fig.add_subplot(111)
