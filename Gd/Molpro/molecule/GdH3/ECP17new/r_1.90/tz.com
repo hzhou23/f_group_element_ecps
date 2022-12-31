@@ -40,7 +40,7 @@ H_ccsd=-0.49982987
 
 !These are the wf cards parameters
 ne = 21
-symm = 4
+symm = 1
 ss= 5
 
 !There are irrep cards paramters
@@ -56,13 +56,22 @@ geometry={
     H2 Gd 1.90 H1 120
     H3 Gd 1.90 H1 120 H2 180
 }
-{rks,pbe0,maxdis=30,nitord=50;
+{rhf,nitord=60;
  start,atden
  maxit,200;
- shift,-0.5,-0.2
+ wf,ne-1,symm,ss-1
+ occ,A1-1,B1,B2,A2
+ closed,A1-2,B1-1,B2-1,A2-1
+ print,orbitals=2
+ orbital,3202.2
+}
+{rks,pbe0,maxdis=30,nitord=50;
+ start,3202.2
+ maxit,200;
+ shift,-2.0,-1.0
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
- closed,A1,B1-2,B2-2,A2-1
+ closed,A1-2,B1-1,B2-1,A2-1
  print,orbitals=2
  orbital,4202.2
 }
@@ -71,13 +80,13 @@ geometry={
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
- closed,A1,B1-2,B2-2,A2-1
+ closed,A1-2,B1-1,B2-1,A2-1
  print,orbitals=2
 }
 
 scf=energy
 _CC_NORM_MAX=2.0
-{rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core}
+{uccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core}
 ccsd=energy
 bind=ccsd-Gd_ccsd-H_ccsd-H_ccsd-H_ccsd
 
