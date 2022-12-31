@@ -7,14 +7,17 @@ import matplotlib.pyplot as plt
 
 toev = 27.211386
 
+ref = {'rccsdt':[108.948597100215, 11268.0176507189, 11270.5746273344] , 'rccsdT':[108.949703384635, 11268.018886104, 11270.5767078513] , 'RCCSDT':[108.948353465892,11268.0172922890,11270.5744293063] }
+
 def plot_ccsdt(data_type):
+    
     file_name = data_type+'.csv'
     data = pd.read_csv(file_name, delim_whitespace=True)
 
     r = data['r']
-    ecp = data['ECP17']+108.9485971+0.49982987
-    uc = data['UC']+11268.01765+0.49982785
-    ae = data['AE']+11270.57462733+0.49982785
+    ecp = data['ECP17']+ref[data_type][0]+0.49982987
+    uc = data['UC']+ref[data_type][1]+0.49982785
+    ae = data['AE']+ref[data_type][2]+0.49982785
 
     fig=plt.figure()
     ax = fig.add_subplot(111)
