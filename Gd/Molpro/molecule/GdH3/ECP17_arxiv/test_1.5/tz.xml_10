@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /global/cscratch1/sd/haihan
+ Secondary working directories  : /global/cscratch1/sd/haihan
+ Wavefunction directory         : /global/homes/h/haihan/wfu/
+ Main file repository           : /global/cscratch1/sd/haihan/
+
+ SHA1      : 19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ NAME      : 2015.1.36
+ ARCHNAME  : linux/x86_64
+ FC        : /opt/cray/pe/craype/2.5.14/bin/ftn
+ BLASLIB   : -L/opt/intel/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64 -Wl,-_start-group -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -Wl,-_end-group -liomp5
+ id        : lbl
+
+ Nodes     nprocs
+ nid00009    11
+ Number of processes for MPI-2 version of Molpro:   nprocs(total)=   12   nprocs(compute)=   11   nprocs(helper)=    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=sf  
+
+ --><job>
+  <!--
+ ***,Calculation for GdH3 atom, singlet and triplet
+ memory,1,g
+ 
+ gthresh,twoint=1.0E-15
+ gthresh,throvl=1.0E-15
+ 
+ 
+ basis={
+ ECP, Gd, 46, 4 ;
+ 4
+ 1,  4.482334567,  18
+ 3,  4.564889708,  82.168014744
+ 2,  5.66712002 , -92.9838255305621
+ 2,  3.16146066 , -4.5706186489810925
+ 2
+ 2,  11.95874295,  158.74380701879028
+ 2,  4.57502029 , 75.24558611007733
+ 2
+ 2,  9.32702741 , 85.27718849776822
+ 2,  3.72730927 , 55.169023412731704
+ 2
+ 2,  9.14239802 , 55.34157036482078
+ 2,  2.41026285 , 27.58623059967926
+ 2
+ 2,  3.49609108 , -24.953301558714806
+ 2,  6.1622991  ,-2.8384856422783815
+ ECP,H,0,1,0
+ 3;
+ 2,   21.77696655044365 ,     -10.85192405303825 ;
+ 1,   21.24359508259891 ,       1.00000000000000;
+ 3,   21.24359508259891 ,      21.24359508259891;
+ 1; 2,                   1.,                      0.;
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdH3/ECP17_arxiv/test_1.5/../../generate/aug-cc-pwCVTZ.basis
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdH3/ECP17_arxiv/test_1.5/../../generate/H-aug-cc-pVTZ.basis
+ }
+ 
+ 
+ Gd_ccsd=-108.9485971
+ H_ccsd=-0.49982987
+ 
+                                                                                 !These are the wf cards parameters
+ ne = 21
+ symm = 4
+ ss= 7
+ 
+                                                                                 !There are irrep cards paramters
+ A1=7
+ B1=3
+ B2=3
+ A2=1
+ 
+ angstrom
+ geometry={
+     Gd
+     H1 Gd 1.70
+     H2 Gd 1.70 H1 120
+     H3 Gd 1.70 H1 120 H2 180
+ }
+ {rhf,nitord=60;
+  start,atden
+  shift,-0.5,-0.2
+  maxit,200;
+  wf,ne-1,symm,ss-1
+  occ,A1-1,B1,B2,A2
+  closed,A1-2,B1-2,B2-2,A2-1
+  print,orbitals=2
+  orbital,3202.2
+ }
+ {rks,pbe0,maxdis=30,nitord=50;
+  start,3202.2
+  maxit,200;
+  shift,-2.0,-1.0
+  wf,ne,symm,ss
+  occ,A1,B1,B2,A2
+  closed,A1-2,B1-2,B2-2,A2-1
+  print,orbitals=2
+  orbital,4202.2
+ }
+ {multi,maxdis=30,nitord=100;
+  start,4202.2
+  shift,-5.0,-3.0
+  maxit,200;
+  wf,ne,symm,ss
+  occ,A1,B1,B2,A2
+  closed,A1-2,B1-2,B2-2,A2-1
+  print,orbitals=2
+ }
+ {rhf,nitord=1,maxit=0;
+  start,4202.2
+  shift,-5.0,-3.0
+  wf,ne,symm,ss
+  occ,A1,B1,B2,A2
+  closed,A1-2,B1-2,B2-2,A2-1
+  print,orbitals=2
+ }
+ 
+ 
+ scf=energy
+                                                                                 !_CC_NORM_MAX=2.0
+                                                          !{rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core}
+                                                                                 !ccsd=energy
+                                                                                 !bind=ccsd-Gd_ccsd-H_ccsd-H_ccsd-H_ccsd
+ 
+ table,1.50,scf,ccsd,bind
+ save
+ type,csv
+ 
+
+ Variables initialized (889), CPU time= 0.01 sec
+ Commands  initialized (702), CPU time= 0.00 sec, 572 directives.
+ Default parameters read. Elapsed time= 0.12 sec
+
+ Checking input...
+
+ Error on MULTI directive
+
+ Unknown parameter NITORD for set MULTI:THRESH
+ ? Error
+ ? Input error
+ ? The problem occurs in scan_inp
+  --><error type="Error" location="scan_inp" message="Input error"/><!--
+  -->
+  <stm:metadataList>
+   <stm:metadata name="dc:date" content="2023-01-01T17:27:01-08:00"/>
+   <stm:metadata name="dc:creator" content="haihan"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList>
+  <platform>
+   <licence id="lbl"/>
+   <parallel processes="11" nodes="1" all_processes="11" openmp="0"/>
+   <machine hostname="" architecture="">
+    
+    <sysinfo name="cpu MHz" content="2782.938"/>
+    <sysinfo name="MemTotal" content="131890088 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts md_clear flush_l1d"/>
+    <sysinfo name="MemTotal" content="131890088 kB"/>
+    <sysinfo name="cache size" content="40960 KB"/>
+    <sysinfo name="ncpu" content="64"/>
+   </machine>
+  </platform>
+  <input>
+   <p> ***,Calculation for GdH3 atom, singlet and triplet </p>
+   <p> memory,1,g </p>
+   <p> gthresh,twoint=1.0E-15 </p>
+   <p> gthresh,throvl=1.0E-15 </p>
+   <p> basis={ </p>
+   <p> ECP, Gd, 46, 4 ; </p>
+   <p> 4 </p>
+   <p> 1,  4.482334567,  18 </p>
+   <p> 3,  4.564889708,  82.168014744 </p>
+   <p> 2,  5.66712002 , -92.9838255305621 </p>
+   <p> 2,  3.16146066 , -4.5706186489810925 </p>
+   <p> 2 </p>
+   <p> 2,  11.95874295,  158.74380701879028 </p>
+   <p> 2,  4.57502029 , 75.24558611007733 </p>
+   <p> 2 </p>
+   <p> 2,  9.32702741 , 85.27718849776822 </p>
+   <p> 2,  3.72730927 , 55.169023412731704 </p>
+   <p> 2 </p>
+   <p> 2,  9.14239802 , 55.34157036482078 </p>
+   <p> 2,  2.41026285 , 27.58623059967926 </p>
+   <p> 2 </p>
+   <p> 2,  3.49609108 , -24.953301558714806 </p>
+   <p> 2,  6.1622991  ,-2.8384856422783815 </p>
+   <p> ECP,H,0,1,0 </p>
+   <p> 3; </p>
+   <p> 2,   21.77696655044365 ,     -10.85192405303825 ; </p>
+   <p> 1,   21.24359508259891 ,       1.00000000000000; </p>
+   <p> 3,   21.24359508259891 ,      21.24359508259891; </p>
+   <p> 1; 2,                   1.,                      0.; </p>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdH3/ECP17_arxiv/test_1.5/../../generate/aug-cc-pwCVTZ.basis"/>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdH3/ECP17_arxiv/test_1.5/../../generate/H-aug-cc-pVTZ.basis"/>
+   <p> } </p>
+   <p> Gd_ccsd=-108.9485971 </p>
+   <p> H_ccsd=-0.49982987 </p>
+   <p>                                                                                 !These are the wf cards parameters </p>
+   <p> ne = 21 </p>
+   <p> symm = 4 </p>
+   <p> ss= 7 </p>
+   <p>                                                                                 !There are irrep cards paramters </p>
+   <p> A1=7 </p>
+   <p> B1=3 </p>
+   <p> B2=3 </p>
+   <p> A2=1 </p>
+   <p> angstrom </p>
+   <p> geometry={ </p>
+   <p>     Gd </p>
+   <p>     H1 Gd 1.70 </p>
+   <p>     H2 Gd 1.70 H1 120 </p>
+   <p>     H3 Gd 1.70 H1 120 H2 180 </p>
+   <p> } </p>
+   <p> {rhf,nitord=60; </p>
+   <p>  start,atden </p>
+   <p>  shift,-0.5,-0.2 </p>
+   <p>  maxit,200; </p>
+   <p>  wf,ne-1,symm,ss-1 </p>
+   <p>  occ,A1-1,B1,B2,A2 </p>
+   <p>  closed,A1-2,B1-2,B2-2,A2-1 </p>
+   <p>  print,orbitals=2 </p>
+   <p>  orbital,3202.2 </p>
+   <p> } </p>
+   <p> {rks,pbe0,maxdis=30,nitord=50; </p>
+   <p>  start,3202.2 </p>
+   <p>  maxit,200; </p>
+   <p>  shift,-2.0,-1.0 </p>
+   <p>  wf,ne,symm,ss </p>
+   <p>  occ,A1,B1,B2,A2 </p>
+   <p>  closed,A1-2,B1-2,B2-2,A2-1 </p>
+   <p>  print,orbitals=2 </p>
+   <p>  orbital,4202.2 </p>
+   <p> } </p>
+   <p> {multi,maxdis=30,nitord=100; </p>
+   <p>  start,4202.2 </p>
+   <p>  shift,-5.0,-3.0 </p>
+   <p>  maxit,200; </p>
+   <p>  wf,ne,symm,ss </p>
+   <p>  occ,A1,B1,B2,A2 </p>
+   <p>  closed,A1-2,B1-2,B2-2,A2-1 </p>
+   <p>  print,orbitals=2 </p>
+   <p> } </p>
+   <p> {rhf,nitord=1,maxit=0; </p>
+   <p>  start,4202.2 </p>
+   <p>  shift,-5.0,-3.0 </p>
+   <p>  wf,ne,symm,ss </p>
+   <p>  occ,A1,B1,B2,A2 </p>
+   <p>  closed,A1-2,B1-2,B2-2,A2-1 </p>
+   <p>  print,orbitals=2 </p>
+   <p> } </p>
+   <p> scf=energy </p>
+   <p>                                                                                 !_CC_NORM_MAX=2.0 </p>
+   <p>                                                          !{rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core} </p>
+   <p>                                                                                 !ccsd=energy </p>
+   <p>                                                                                 !bind=ccsd-Gd_ccsd-H_ccsd-H_ccsd-H_ccsd </p>
+   <p> table,1.50,scf,ccsd,bind </p>
+   <p> save </p>
+   <p> type,csv </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>

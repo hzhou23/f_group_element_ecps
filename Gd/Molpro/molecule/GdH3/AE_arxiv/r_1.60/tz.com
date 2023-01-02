@@ -35,8 +35,9 @@ basis={
 include,../generate/contracted.basis
 include,../generate/H-aug-cc-pVTZ.basis
 }
-{rks,pbe0
+{rks,pbe0, maxdis=30,nitord=60;
  start,atden
+ shift, -0.5, -0.2
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
