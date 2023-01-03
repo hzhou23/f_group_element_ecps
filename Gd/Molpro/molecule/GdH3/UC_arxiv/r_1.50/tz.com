@@ -19,8 +19,8 @@ ss= 7
 
 
 !There are irrep cards paramters
-A1=18
-B1=8
+A1=17
+B1=9
 B2=8
 A2=3
 
@@ -35,9 +35,8 @@ basis={
 include,../generate/contracted.basis
 include,../generate/H-aug-cc-pVTZ.basis
 }
-{rks,pbe0, maxdis=30, nitord=60;
+{rks,pbe0
  start,atden
- shift,-0.5,-0.2
  maxit,200;
  wf,ne,symm,ss
  occ,A1,B1,B2,A2

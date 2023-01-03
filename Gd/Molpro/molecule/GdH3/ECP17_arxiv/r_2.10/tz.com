@@ -30,7 +30,7 @@ ECP,H,0,1,0
 1,   21.24359508259891 ,       1.00000000000000;
 3,   21.24359508259891 ,      21.24359508259891;
 1; 2,                   1.,                      0.;
-include,../../generate/aeaug-cc-pwCVTZ.basis
+include,../../generate/aug-cc-pwCVTZ.basis
 include,../../generate/H-aug-cc-pVTZ.basis
 }
 
@@ -44,8 +44,8 @@ symm = 4
 ss= 7
 
 !There are irrep cards paramters
-A1=7
-B1=3
+A1=6
+B1=4
 B2=3
 A2=1
 
@@ -56,17 +56,8 @@ geometry={
     H2 Gd 2.10 H1 120
     H3 Gd 2.10 H1 120 H2 180
 }
-{rks,pbe0,maxdis=30,nitord=50;
- start,atden
- maxit,200;
- shift,-2.0,-1.0
- wf,ne,symm,ss
- occ,A1,B1,B2,A2
- closed,A1-2,B1-2,B2-2,A2-1
- print,orbitals=2
- orbital,4202.2
-}
 {multi
+ start,atden
  occ,A1,B1,B2,A2
  closed,A1-2,B1-2,B2-2,A2-1
  wf,ne,symm,ss;state,1;

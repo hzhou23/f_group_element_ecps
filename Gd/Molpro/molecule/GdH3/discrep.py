@@ -14,7 +14,7 @@ import pandas as pd
 toev=27.21138602
 
 
-ecps = ['UC']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['ECP17_arxiv']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC'        :{'label':'UC',     'color':'#ff0000','linestyle':'-'           },
 'mdfstu'    :{'label':'MDFSTU', 'color':'#ff6600','linestyle':'--','dashes':(4,1)   },
@@ -24,7 +24,7 @@ styles={
 'lanl2'     :{'label':'LANL2',  'color':'#a52a2a','linestyle':'--','dashes':(1,1)   },
 'ECP10'          :{'label':'ECP10',   'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP13'          :{'label':'ECP13',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP2'          :{'label':'ECP2',   'color':'#E3CF57','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP17_arxiv'          :{'label':'ECP17',   'color':'#E3CF57','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP14'          :{'label':'ECP14',   'color':'#FF6103','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP41'          :{'label':'ECP41',   'color':'#838B8B','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP42'          :{'label':'ECP42',   'color':'#9400D3','linestyle':'--','dashes':(8,1,1,1,1,1)},
@@ -57,11 +57,11 @@ def init():
 
 def get_data():
     data = pd.DataFrame()
-    df = pd.read_csv("AE_arxiv/tzbind", delim_whitespace=True)
+    df = pd.read_csv("UC_arxiv/tzbind", delim_whitespace=True)
     data['r']= df['r']
     data['ae']= df['bind']
     for ecp in ecps:
-        df = pd.read_csv("%s_arxiv/tzbind" % ecp, delim_whitespace=True)
+        df = pd.read_csv("%s/tzbind" % ecp, delim_whitespace=True)
         data[ecp] = df['bind']
 
     return data
@@ -70,7 +70,7 @@ def plot():
     fig,ax = init()
     data = get_data()
     #print data.head()
-    data.to_csv("GdH3_TZ.csv", sep=',', index=False)
+    data.to_csv("GdH3_QZ.csv", sep=',', index=False)
 
     ax.axhspan(-0.043,0.043,alpha=0.25,color='gray')
     ax.axhline(0.0,color='black')
@@ -80,13 +80,13 @@ def plot():
         x = data['r']
         y= (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((1.70,2.60))
+    ax.set_xlim((1.40,2.60))
     ax.set_ylim((-0.30,0.35))
-    ax.set(title='GdH3 tz Discrepancies')
+    ax.set(title='GdH3 UC and ECP17 Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
-    plt.axvline(2.165786580052331,ls='--',color='gray',linewidth=1.0)
-    plt.savefig('GdH3_TZ.pdf')
+    plt.axvline(2.0075952982812746,ls='--',color='gray',linewidth=1.0)
+    plt.savefig('GdH3_QZ.pdf')
     plt.show()
 
 if __name__ == '__main__':

@@ -19,8 +19,8 @@ ss= 7
 
 
 !There are irrep cards paramters
-A1=18
-B1=8
+A1=17
+B1=9
 B2=8
 A2=3
 
