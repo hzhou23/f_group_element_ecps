@@ -56,18 +56,8 @@ geometry={
     H2 Gd 2.50 H1 120
     H3 Gd 2.50 H1 120 H2 180
 }
-{rhf,nitord=60;
- start,atden
- shift, -0.5, -0.2
- maxit,200;
- wf,ne-1,symm,ss-1
- occ,A1-1,B1,B2,A2
- closed,A1-2,B1-2,B2-2,A2-1
- print,orbitals=2
- orbital,3202.2
-}
 {rks,pbe0,maxdis=30,nitord=50;
- start,3202.2
+ start,atden
  maxit,200;
  shift,-2.0,-1.0
  wf,ne,symm,ss
@@ -76,10 +66,15 @@ geometry={
  print,orbitals=2
  orbital,4202.2
 }
-{rhf,nitord=60;
- start,4202.2
- shift, -10.0, -5.0
- maxit,200;
+{multi
+ occ,A1,B1,B2,A2
+ closed,A1-2,B1-2,B2-2,A2-1
+ wf,ne,symm,ss;state,1;
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf, maxit=0, nitord=1;
+ start,5202.2
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1-2,B1-2,B2-2,A2-1

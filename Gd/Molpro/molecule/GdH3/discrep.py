@@ -85,7 +85,7 @@ def plot():
     ax.set(title='GdH3 tz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
-    plt.axvline(2.042082749046062,ls='--',color='gray',linewidth=1.0)
+    plt.axvline(2.165786580052331,ls='--',color='gray',linewidth=1.0)
     plt.savefig('GdH3_TZ.pdf')
     plt.show()
 
