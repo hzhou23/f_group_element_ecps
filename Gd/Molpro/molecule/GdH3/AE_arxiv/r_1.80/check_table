@@ -1,0 +1,11 @@
+#!usr/bin/bash
+
+while true; do
+  if [[ -f "tz.table.txt" ]]; then
+    cd ../r_2.60/
+    sbatch job
+    break
+  fi
+  sleep 10
+done
+

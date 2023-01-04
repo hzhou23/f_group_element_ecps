@@ -1,10 +1,10 @@
 #!/bin/bash -l
 #SBATCH -J GdH3_1.20
-#SBATCH -q regular
+#SBATCH -q premium
 #SBATCH -N 1
 #!SBATCH -n 16
 #SBATCH -C haswell
-#SBATCH -t 10:00:00
+#SBATCH -t 15:00:00
 #SBATCH -o mol_molpro.o%j
 
 module load molpro
