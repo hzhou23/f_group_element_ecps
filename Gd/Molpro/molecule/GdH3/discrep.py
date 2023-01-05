@@ -14,7 +14,7 @@ import pandas as pd
 toev=27.21138602
 
 
-ecps = ['UC_arxiv','ECP18','ECP19','ECP17_arxiv']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC_arxiv','ECP18','ECP19','ECP20','ECP17_arxiv']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC_arxiv'        :{'label':'UC',     'color':'#ff0000','linestyle':'-'           },
 'mdfstu'    :{'label':'MDFSTU', 'color':'#ff6600','linestyle':'--','dashes':(4,1)   },
@@ -23,7 +23,7 @@ styles={
 'sbkjc'     :{'label':'SBKJC',  'color':'#1e90ff','linestyle':'--','dashes':(2,1,8,1)   },
 'lanl2'     :{'label':'LANL2',  'color':'#a52a2a','linestyle':'--','dashes':(1,1)   },
 'ECP17_arxiv'          :{'label':'ECP17',   'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP13'          :{'label':'ECP13',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP20'          :{'label':'ECP20',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP18'          :{'label':'ECP18',   'color':'#E3CF57','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP19'          :{'label':'ECP19',   'color':'#FF6103','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP41'          :{'label':'ECP41',   'color':'#838B8B','linestyle':'--','dashes':(8,1,1,1,1,1)},
@@ -80,12 +80,12 @@ def plot():
         x = data['r']
         y= (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((1.40,2.50))
+    ax.set_xlim((1.40,2.60))
     ax.set_ylim((-0.30,0.35))
     ax.set(title='GdH3 QZ Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
-    plt.axvline(2.0075952982812746,ls='--',color='gray',linewidth=1.0)
+    plt.axvline(2.013892010337442,ls='--',color='gray',linewidth=1.0)
     plt.savefig('GdH3_QZ.pdf')
     plt.show()
 
