@@ -14,7 +14,7 @@ import pandas as pd
 toev=27.21138602
 
 
-ecps = ['UC_arxiv','ECP18','ECP17_arxiv']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC_arxiv','ECP18','ECP19','ECP17_arxiv']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC_arxiv'        :{'label':'UC',     'color':'#ff0000','linestyle':'-'           },
 'mdfstu'    :{'label':'MDFSTU', 'color':'#ff6600','linestyle':'--','dashes':(4,1)   },
@@ -25,7 +25,7 @@ styles={
 'ECP17_arxiv'          :{'label':'ECP17',   'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP13'          :{'label':'ECP13',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP18'          :{'label':'ECP18',   'color':'#E3CF57','linestyle':'--','dashes':(8,1,1,1,1,1)},
-'ECP14'          :{'label':'ECP14',   'color':'#FF6103','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'ECP19'          :{'label':'ECP19',   'color':'#FF6103','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP41'          :{'label':'ECP41',   'color':'#838B8B','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP42'          :{'label':'ECP42',   'color':'#9400D3','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP43'          :{'label':'ECP43',   'color':'#006400','linestyle':'--','dashes':(8,1,1,1,1,1)},
