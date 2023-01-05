@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+HOME=`pwd`
+
+for i in $(seq 1.30 0.1 2.6)
+do
+	grep 'REAL TIME' $HOME/r_$i/tz.out
+done
