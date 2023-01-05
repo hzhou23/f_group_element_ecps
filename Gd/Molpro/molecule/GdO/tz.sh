@@ -5,12 +5,12 @@
 
 HOME=`pwd`
 
-for j in ECP18
+for j in ECP18 ECP19 ECP20 ECP21
 do
 echo $j
 rm $HOME/$j/tzbind
 echo r bind > $HOME/$j/tzbind
-for i in $(seq 1.30 0.10 2.50 )
+for i in $(seq 1.40 0.10 2.50 )
 do
 cd $HOME/$j/r_$i
 Ebind=$(awk '{print $4}' tz.table1.txt)
