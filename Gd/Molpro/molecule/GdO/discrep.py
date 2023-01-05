@@ -70,7 +70,7 @@ def plot():
     fig,ax = init()
     data = get_data()
     #print data.head()
-    data.to_csv("GdO_TZ.csv", sep=',', index=False)
+    data.to_csv("GdO_QZ.csv", sep=',', index=False)
 
     ax.axhspan(-0.043,0.043,alpha=0.25,color='gray')
     ax.axhline(0.0,color='black')
@@ -82,11 +82,11 @@ def plot():
         plt.plot(x,y,**styles[ecp])
     ax.set_xlim((1.40,2.50))
     ax.set_ylim((-0.08,0.08))
-    ax.set(title='GdO tz Discrepancies')
+    ax.set(title='GdO QZ Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
     plt.axvline(1.7990849245851688,ls='--',color='gray',linewidth=1.0)
-    plt.savefig('GdO_TZ.pdf')
+    plt.savefig('GdO_QZ.pdf')
     plt.show()
 
 if __name__ == '__main__':
