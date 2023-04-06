@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /global/cscratch1/sd/haihan
+ Secondary working directories  : /global/cscratch1/sd/haihan
+ Wavefunction directory         : /global/homes/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdH3/ECP18PP/wfu/
+ Main file repository           : /global/cscratch1/sd/haihan/
+
+ SHA1      : 19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ NAME      : 2015.1.36
+ ARCHNAME  : linux/x86_64
+ FC        : /opt/cray/pe/craype/2.5.14/bin/ftn
+ BLASLIB   : -L/opt/intel/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64 -Wl,-_start-group -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -Wl,-_end-group -liomp5
+ id        : lbl
+
+ Nodes     nprocs
+ nid01705    11
+ Number of processes for MPI-2 version of Molpro:   nprocs(total)=   12   nprocs(compute)=   11   nprocs(helper)=    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=sf  
+
+ --><job>
+  <!--
+ ***,Calculation for GdH3 atom, singlet and triplet
+ memory,1,g
+ 
+ gthresh,twoint=1.0E-15
+ gthresh,throvl=1.0E-15
+ 
+ 
+ basis={
+ CP, Gd, 46, 4 ;
+ 4
+ 1,  4.482334567,  18
+ 3,  4.564889708,  82.168014744
+ 2,  5.66712002 , -92.94902558036668
+ 2,  3.16146066 , -4.588504296630954
+ 2
+ 2,  11.95874295,  160.25157318789057
+ 2,  4.57502029 , 76.83862826274655
+ 2
+ 2,  9.32702741 , 85.29970272818532
+ 2,  3.72730927 , 55.148895643005105
+ 2
+ 2,  9.14239802 , 55.31511392504553
+ 2,  2.41026285 , 27.587515239861645
+ 2
+ 2,  3.49609108 , -24.9529154751256
+ 2,  6.1622991  ,-2.920504453945625
+ ECP,H,0,1,0
+ 3;
+ 2,   21.77696655044365 ,     -10.85192405303825 ;
+ 1,   21.24359508259891 ,       1.00000000000000;
+ 3,   21.24359508259891 ,      21.24359508259891;
+ 1; 2,                   1.,                      0.;
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdH3/ECP18PP/r_1.50/../../generate/aug-cc-pwCVTZ.basis
+ Including file /global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdH3/ECP18PP/r_1.50/../../generate/H-aug-cc-pVTZ.basis
+ }
+ 
+ 
+ Gd_ccsd=-108.96854007
+ H_ccsd=-0.49982987
+ 
+                                                                                 !These are the wf cards parameters
+ ne = 21
+ symm = 4
+ ss= 7
+ 
+                                                                                 !There are irrep cards paramters
+ A1=6
+ B1=4
+ B2=3
+ A2=1
+ 
+ angstrom
+ geometry={
+     Gd
+     H1 Gd 1.50
+     H2 Gd 1.50 H1 120
+     H3 Gd 1.50 H1 120 H2 180
+ }
+ {multi
+  start,atden
+  occ,A1,B1,B2,A2
+  closed,A1-2,B1-2,B2-2,A2-1
+  wf,ne,symm,ss;state,1;
+  natorb,ci,print
+  orbital,5202.2
+ }
+ {rhf, maxit=100, nitord=60;
+  start,5202.2
+  wf,ne,symm,ss
+  occ,A1,B1,B2,A2
+  closed,A1-2,B1-2,B2-2,A2-1
+  print,orbitals=2
+ }
+ 
+ scf=energy
+ _CC_NORM_MAX=2.0
+ {rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core}
+ ccsd=energy
+ bind=ccsd-Gd_ccsd-H_ccsd-H_ccsd-H_ccsd
+ 
+ table,1.50,scf,ccsd,bind
+ save
+ type,csv
+ 
+
+ Variables initialized (889), CPU time= 0.00 sec
+ Commands  initialized (702), CPU time= 0.01 sec, 572 directives.
+ Default parameters read. Elapsed time= 0.14 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                                       Copyright, TTI GmbH Stuttgart, 2015
+                                    Version 2015.1 linked Dec 29 2018 15:55:43
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for GdH3 atom, singlet and triplet                                
+  64 bit mpp version                                                                     DATE: 06-Jan-23          TIME: 15:10:21  
+ **********************************************************************************************************************************
+
+ SHA1:             19cd028119e0e09f93f0674bd8af7968d9b3eff6
+ **********************************************************************************************************************************
+  -->
+  <!--
+
+ THRESHOLDS:
+
+ ZERO    =  1.00D-12  ONEINT  =  1.00D-12  TWOINT  =  1.00D-15  PREFAC  =  1.00D-14  LOCALI  =  1.00D-09  EORDER  =  1.00D-04
+ ENERGY  =  0.00D+00  ETEST   =  0.00D+00  EDENS   =  0.00D+00  THRDEDEF=  1.00D-06  GRADIENT=  1.00D-02  STEP    =  1.00D-03
+ ORBITAL =  1.00D-05  CIVEC   =  1.00D-05  COEFF   =  1.00D-04  PRINTCI =  5.00D-02  PUNCHCI =  9.90D+01  OPTGRAD =  3.00D-04
+ OPTENERG=  1.00D-06  OPTSTEP =  3.00D-04  THRGRAD =  1.00D-10  COMPRESS=  1.00D-11  VARMIN  =  1.00D-07  VARMAX  =  1.00D-03
+ THRDOUB =  0.00D+00  THRDIV  =  1.00D-05  THRRED  =  1.00D-07  THRPSP  =  1.00D+00  THRDC   =  1.00D-10  THRCS   =  1.00D-10
+ THRNRM  =  1.00D-08  THREQ   =  0.00D+00  THRDE   =  1.00D+00  THRREF  =  1.00D-05  SPARFAC =  1.00D+00  THRDLP  =  1.00D-07
+ THRDIA  =  1.00D-10  THRDLS  =  1.00D-07  THRGPS  =  0.00D+00  THRKEX  =  0.00D+00  THRDIS  =  2.00D-01  THRVAR  =  1.00D-10
+ THRLOC  =  1.00D-06  THRGAP  =  1.00D-06  THRLOCT = -1.00D+00  THRGAPT = -1.00D+00  THRORB  =  1.00D-06  THRMLTP =  0.00D+00
+ THRCPQCI=  1.00D-10  KEXTA   =  0.00D+00  THRCOARS=  0.00D+00  SYMTOL  =  1.00D-06  GRADTOL =  1.00D-06  THROVL  =  1.00D-08
+ THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
+
+
+
+ THRESHOLDS:
+
+ ZERO    =  1.00D-12  ONEINT  =  1.00D-12  TWOINT  =  1.00D-15  PREFAC  =  1.00D-14  LOCALI  =  1.00D-09  EORDER  =  1.00D-04
+ ENERGY  =  0.00D+00  ETEST   =  0.00D+00  EDENS   =  0.00D+00  THRDEDEF=  1.00D-06  GRADIENT=  1.00D-02  STEP    =  1.00D-03
+ ORBITAL =  1.00D-05  CIVEC   =  1.00D-05  COEFF   =  1.00D-04  PRINTCI =  5.00D-02  PUNCHCI =  9.90D+01  OPTGRAD =  3.00D-04
+ OPTENERG=  1.00D-06  OPTSTEP =  3.00D-04  THRGRAD =  1.00D-10  COMPRESS=  1.00D-11  VARMIN  =  1.00D-07  VARMAX  =  1.00D-03
+ THRDOUB =  0.00D+00  THRDIV  =  1.00D-05  THRRED  =  1.00D-07  THRPSP  =  1.00D+00  THRDC   =  1.00D-10  THRCS   =  1.00D-10
+ THRNRM  =  1.00D-08  THREQ   =  0.00D+00  THRDE   =  1.00D+00  THRREF  =  1.00D-05  SPARFAC =  1.00D+00  THRDLP  =  1.00D-07
+ THRDIA  =  1.00D-10  THRDLS  =  1.00D-07  THRGPS  =  0.00D+00  THRKEX  =  0.00D+00  THRDIS  =  2.00D-01  THRVAR  =  1.00D-10
+ THRLOC  =  1.00D-06  THRGAP  =  1.00D-06  THRLOCT = -1.00D+00  THRGAPT = -1.00D+00  THRORB  =  1.00D-06  THRMLTP =  0.00D+00
+ THRCPQCI=  1.00D-10  KEXTA   =  0.00D+00  THRCOARS=  0.00D+00  SYMTOL  =  1.00D-06  GRADTOL =  1.00D-06  THROVL  =  1.00D-15
+ THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
+
+
+
+ Variable memory set to 1000000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+ SETTING GD_CCSD        =      -108.96854007                                  
+ SETTING H_CCSD         =        -0.49982987                                  
+ SETTING NE             =        21.00000000                                  
+ SETTING SYMM           =         4.00000000                                  
+ SETTING SS             =         7.00000000                                  
+ SETTING A1             =         6.00000000                                  
+ SETTING B1             =         4.00000000                                  
+ SETTING B2             =         3.00000000                                  
+ SETTING A2             =         1.00000000                                  
+ ZUNIT=ANG
+ 
+  --><jobstep command="MULTI" commandset="MULTI">
+   <!--
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Symmetric top,     Order of principal axis = 3
+ Symmetry elements: Y,Z
+ Rotational constants:     148.5623401    148.5623401     74.2811700 GHz  (calculated with average atomic masses)
+
+ Point group  C2v 
+
+
+   --><cml:molecule>
+    <cml:symmetry pointGroup="C2v"/>
+    <cml:atomArray>
+     <cml:atom id="a1" elementType="Gd" x3="-0.367190452293942E-17" y3="0.0" z3="0.0"/>
+     <cml:atom id="a2" elementType="H" x3="1.5" y3="0.0" z3="0.0"/>
+     <cml:atom id="a3" elementType="H" x3="-0.75" y3="-1.29903810567666" z3="0.0"/>
+     <cml:atom id="a4" elementType="H" x3="-0.75" y3="1.29903810567666" z3="0.0"/>
+    </cml:atomArray>
+    <cml:bondArray>
+     <cml:bond atomRefs2="a1 a2"/>
+     <cml:bond atomRefs2="a1 a3"/>
+     <cml:bond atomRefs2="a1 a4"/>
+    </cml:bondArray>
+   </cml:molecule><!--
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  GD     64.00   -0.000000000    0.000000000    0.000000000
+   2  H1      1.00    2.834589187    0.000000000    0.000000000
+   3  H2      1.00   -1.417294593   -2.454826245    0.000000000
+   4  H3      1.00   -1.417294593    2.454826245    0.000000000
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.834589187  1-3  2.834589187  1-4  2.834589187
+     ( 1.500000000)     ( 1.500000000)     ( 1.500000000)
+
+ Bond angles
+
+  2-1-3  120.00000000   2-1-4  120.00000000   3-1-4  120.00000000
+
+ NUCLEAR CHARGE:                   67
+ NUMBER OF PRIMITIVE AOS:         802
+ NUMBER OF SYMMETRY AOS:          648
+ NUMBER OF CONTRACTIONS:          648   ( 244A1  + 173B1  + 162B2  +  69A2  )
+ NUMBER OF CORE ORBITALS:          23   (  11A1  +   5B1  +   5B2  +   2A2  )
+ NUMBER OF VALENCE ORBITALS:       20   (   9A1  +   5B1  +   4B2  +   2A2  )
+
+
+ NUCLEAR REPULSION ENERGY   68.34572421
+
+
+ Eigenvalues of metric
+
+         1 0.100E+01       NaN       NaN       NaN       NaN       NaN       NaN       NaN
+         2 0.100E+01       NaN       NaN       NaN       NaN       NaN       NaN       NaN
+         3 0.100E+01       NaN       NaN       NaN       NaN       NaN       NaN       NaN
+         4 0.726E-06 0.238E-04 0.147E-03 0.532E-03 0.798E-03 0.845E-03 0.118E-02 0.444E-02
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-15
+ ? Error
+ ? mxnpr
+ ? The problem occurs in basprt
+   --><error type="Error" location="basprt" message="mxnpr"/><!--
+  --></jobstep><!--
+  -->
+  <stm:metadataList>
+   <stm:metadata name="dc:date" content="2023-01-06T15:10:22-08:00"/>
+   <stm:metadata name="dc:creator" content="haihan"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList>
+  <platform>
+   <version major="2015" minor="1" SHA="19cd028119e0e09f93f0674bd8af7968d9b3eff6"
+     integer_bits="64" parallelism="mpp">
+    2015.1
+    <date year="2023" month="1" day="6" hour="15" minute="10" second="21">
+     2023-01-06T15:10:21
+    </date>
+   </version>
+   <licence id="lbl"/>
+   <parallel processes="11" nodes="1" all_processes="11" openmp="1"/>
+   <machine hostname="" architecture="">
+     64 bit mpp version
+    <sysinfo name="cpu MHz" content="2989.732"/>
+    <sysinfo name="MemTotal" content="131890088 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts md_clear flush_l1d"/>
+    <sysinfo name="MemTotal" content="131890088 kB"/>
+    <sysinfo name="cache size" content="40960 KB"/>
+    <sysinfo name="ncpu" content="64"/>
+   </machine>
+  </platform>
+  <input>
+   <p> ***,Calculation for GdH3 atom, singlet and triplet </p>
+   <p> memory,1,g </p>
+   <p> gthresh,twoint=1.0E-15 </p>
+   <p> gthresh,throvl=1.0E-15 </p>
+   <p> basis={ </p>
+   <p> CP, Gd, 46, 4 ; </p>
+   <p> 4 </p>
+   <p> 1,  4.482334567,  18 </p>
+   <p> 3,  4.564889708,  82.168014744 </p>
+   <p> 2,  5.66712002 , -92.94902558036668 </p>
+   <p> 2,  3.16146066 , -4.588504296630954 </p>
+   <p> 2 </p>
+   <p> 2,  11.95874295,  160.25157318789057 </p>
+   <p> 2,  4.57502029 , 76.83862826274655 </p>
+   <p> 2 </p>
+   <p> 2,  9.32702741 , 85.29970272818532 </p>
+   <p> 2,  3.72730927 , 55.148895643005105 </p>
+   <p> 2 </p>
+   <p> 2,  9.14239802 , 55.31511392504553 </p>
+   <p> 2,  2.41026285 , 27.587515239861645 </p>
+   <p> 2 </p>
+   <p> 2,  3.49609108 , -24.9529154751256 </p>
+   <p> 2,  6.1622991  ,-2.920504453945625 </p>
+   <p> ECP,H,0,1,0 </p>
+   <p> 3; </p>
+   <p> 2,   21.77696655044365 ,     -10.85192405303825 ; </p>
+   <p> 1,   21.24359508259891 ,       1.00000000000000; </p>
+   <p> 3,   21.24359508259891 ,      21.24359508259891; </p>
+   <p> 1; 2,                   1.,                      0.; </p>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdH3/ECP18PP/r_1.50/../../generate/aug-cc-pwCVTZ.basis"/>
+   <include file="/global/u2/h/haihan/Research/ECP/f_group_element_ecps/Gd/Molpro/molecule/GdH3/ECP18PP/r_1.50/../../generate/H-aug-cc-pVTZ.basis"/>
+   <p> } </p>
+   <p> Gd_ccsd=-108.96854007 </p>
+   <p> H_ccsd=-0.49982987 </p>
+   <p>                                                                                 !These are the wf cards parameters </p>
+   <p> ne = 21 </p>
+   <p> symm = 4 </p>
+   <p> ss= 7 </p>
+   <p>                                                                                 !There are irrep cards paramters </p>
+   <p> A1=6 </p>
+   <p> B1=4 </p>
+   <p> B2=3 </p>
+   <p> A2=1 </p>
+   <p> angstrom </p>
+   <p> geometry={ </p>
+   <p>     Gd </p>
+   <p>     H1 Gd 1.50 </p>
+   <p>     H2 Gd 1.50 H1 120 </p>
+   <p>     H3 Gd 1.50 H1 120 H2 180 </p>
+   <p> } </p>
+   <p> {multi </p>
+   <p>  start,atden </p>
+   <p>  occ,A1,B1,B2,A2 </p>
+   <p>  closed,A1-2,B1-2,B2-2,A2-1 </p>
+   <p>  wf,ne,symm,ss;state,1; </p>
+   <p>  natorb,ci,print </p>
+   <p>  orbital,5202.2 </p>
+   <p> } </p>
+   <p> {rhf, maxit=100, nitord=60; </p>
+   <p>  start,5202.2 </p>
+   <p>  wf,ne,symm,ss </p>
+   <p>  occ,A1,B1,B2,A2 </p>
+   <p>  closed,A1-2,B1-2,B2-2,A2-1 </p>
+   <p>  print,orbitals=2 </p>
+   <p> } </p>
+   <p> scf=energy </p>
+   <p> _CC_NORM_MAX=2.0 </p>
+   <p> {rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,200;core} </p>
+   <p> ccsd=energy </p>
+   <p> bind=ccsd-Gd_ccsd-H_ccsd-H_ccsd-H_ccsd </p>
+   <p> table,1.50,scf,ccsd,bind </p>
+   <p> save </p>
+   <p> type,csv </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>

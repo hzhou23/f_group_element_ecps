@@ -7,11 +7,11 @@ import ujson
 from typing import Dict, List, Tuple
 from itertools import combinations
 from collections import Counter
-from fractions import gcd
+from math import gcd
 from functools import reduce
 
 class orbital_sym():
-    def __init__(self, name: str, half_fill : int, full_fill : int, symmetries: List[int])-> None:
+    def __init__(self, name:str, half_fill : int, full_fill : int, symmetries: List[int])-> None:
         self.name = name
         self.half_fill = half_fill
         self.full_fill = full_fill

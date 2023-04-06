@@ -57,7 +57,37 @@ pop
 endproc
 
 
-proc IEf1s1
+proc IEd2s1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,11,1,3
+ occ,4,1,1,0,1,0,0,0
+ closed,1,1,1,0,1,0,0,0
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,4,1,1,1,1,1,1,0
+ closed,1,1,1,0,1,0,0,0
+ wf,11,1,3;state,1
+ wf,11,4,3;state,3
+ wf,11,6,3;state,3
+ wf,11,7,3;state,3
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,11,1,3
+ occ,4,1,1,0,1,0,0,0
+ closed,1,1,1,0,1,0,0,0
+}
+endproc
+
+
+proc IEf1s2
 {rhf
  start,atden
  print,orbitals=2
@@ -87,36 +117,6 @@ pop
 endproc
 
 
-proc EAd2s2
-{rhf
- start,atden
- print,orbitals=2
- wf,12,1,2
- occ,4,1,1,0,1,0,0,0
- closed,2,1,1,0,1,0,0,0
- orbital,4202.2
-}
-pop
-{multi
- start,4202.2
- occ,4,1,1,1,1,1,1,0
- closed,2,1,1,0,1,0,0,0
- wf,12,1,2;state,1
- wf,12,4,2;state,3
- wf,12,6,2;state,3
- wf,12,7,2;state,3
- natorb,ci,print
- orbital,5202.2
-}
-{rhf,nitord=1,maxit=0
- start,5202.2
- wf,12,1,2
- occ,4,1,1,0,1,0,0,0
- closed,2,1,1,0,1,0,0,0
-}
-endproc
-
-
 proc IIds2
 {rhf
  start,atden
@@ -140,6 +140,92 @@ pop
  wf,10,1,0
  occ,2,1,1,0,1,0,0,0
  closed,2,1,1,0,1,0,0,0
+}
+endproc
+
+
+proc IId1s1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,10,1,2
+ occ,3,1,1,0,1,0,0,0
+ closed,1,1,1,0,1,0,0,0
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,4,1,1,1,1,1,1,0
+ closed,1,1,1,0,1,0,0,0
+ wf,10,1,2;state,2
+ wf,10,4,2;state,1
+ wf,10,6,2;state,1
+ wf,10,7,2;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,10,1,2
+ occ,3,1,1,0,1,0,0,0
+ closed,1,1,1,0,1,0,0,0
+}
+endproc
+
+
+proc IIIds1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,9,1,1
+ occ,2,1,1,0,1,0,0,0
+ closed,1,1,1,0,1,0,0,0
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,2,1,1,0,1,0,0,0
+ closed,1,1,1,0,1,0,0,0
+ wf,9,1,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,9,1,1
+ occ,2,1,1,0,1,0,0,0
+ closed,1,1,1,0,1,0,0,0
+}
+endproc
+
+
+proc IIIp1
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,9,2,1
+ occ,1,2,1,0,1,0,0,0
+ closed,1,1,1,0,1,0,0,0
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,1,2,2,0,2,0,0,0
+ closed,1,1,1,0,1,0,0,0
+ wf,9,2,1;state,1
+ wf,9,3,1;state,1
+ wf,9,5,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,9,2,1
+ occ,1,2,1,0,1,0,0,0
+ closed,1,1,1,0,1,0,0,0
 }
 endproc
 
@@ -204,63 +290,7 @@ pop
 endproc
 
 
-proc IIIps1
-{rhf
- start,atden
- print,orbitals=2
- wf,9,1,1
- occ,2,1,1,0,1,0,0,0
- closed,1,1,1,0,1,0,0,0
- orbital,4202.2
-}
-pop
-{multi
- start,4202.2
- occ,2,1,1,0,1,0,0,0
- closed,1,1,1,0,1,0,0,0
- wf,9,1,1;state,1
- natorb,ci,print
- orbital,5202.2
-}
-{rhf,nitord=1,maxit=0
- start,5202.2
- wf,9,1,1
- occ,2,1,1,0,1,0,0,0
- closed,1,1,1,0,1,0,0,0
-}
-endproc
-
-
-proc IIIp1
-{rhf
- start,atden
- print,orbitals=2
- wf,9,2,1
- occ,1,2,1,0,1,0,0,0
- closed,1,1,1,0,1,0,0,0
- orbital,4202.2
-}
-pop
-{multi
- start,4202.2
- occ,1,2,2,0,2,0,0,0
- closed,1,1,1,0,1,0,0,0
- wf,9,2,1;state,1
- wf,9,3,1;state,1
- wf,9,5,1;state,1
- natorb,ci,print
- orbital,5202.2
-}
-{rhf,nitord=1,maxit=0
- start,5202.2
- wf,9,2,1
- occ,1,2,1,0,1,0,0,0
- closed,1,1,1,0,1,0,0,0
-}
-endproc
-
-
-proc IVp6
+proc VIp6
 {rhf
  start,atden
  print,orbitals=2
@@ -287,7 +317,36 @@ pop
 endproc
 
 
-proc VIp4
+proc VIIp5
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,7,5,1
+ occ,1,1,1,0,1,0,0,0
+ closed,1,1,1,0,0,0,0,0
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,1,1,1,0,1,0,0,0
+ closed,1,0,0,0,0,0,0,0
+ wf,7,5,1;state,1
+ wf,7,3,1;state,1
+ wf,7,2,1;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,7,5,1
+ occ,1,1,1,0,1,0,0,0
+ closed,1,1,1,0,0,0,0,0
+}
+endproc
+
+
+proc VIIIp4
 {rhf
  start,atden
  print,orbitals=2
@@ -316,7 +375,7 @@ pop
 endproc
 
 
-proc VIIp3
+proc IXp3
 {rhf
  start,atden
  print,orbitals=2
@@ -343,36 +402,7 @@ pop
 endproc
 
 
-proc VIIIp2
-{rhf
- start,atden
- print,orbitals=2
- wf,4,4,2
- occ,1,1,1,0,0,0,0,0
- closed,1,0,0,0,0,0,0,0
- orbital,4202.2
-}
-pop
-{multi
- start,4202.2
- occ,1,1,1,0,1,0,0,0
- closed,1,0,0,0,0,0,0,0
- wf,4,4,2;state,1
- wf,4,6,2;state,1
- wf,4,7,2;state,1
- natorb,ci,print
- orbital,5202.2
-}
-{rhf,nitord=1,maxit=0
- start,5202.2
- wf,4,4,2
- occ,1,1,1,0,0,0,0,0
- closed,1,0,0,0,0,0,0,0
-}
-endproc
-
-
-proc IXp1
+proc Xp
 {rhf
  start,atden
  print,orbitals=2
@@ -401,7 +431,7 @@ pop
 endproc
 
 
-proc Xp
+proc XIs2
 {rhf
  start,atden
  print,orbitals=2
