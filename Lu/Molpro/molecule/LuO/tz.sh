@@ -5,12 +5,12 @@
 
 HOME=`pwd`
 
-for j in AE
+for j in AE UC46 UC60 mwbstu mhfstu ECP602
 do
 echo $j
 rm $HOME/$j/tzbind
 echo r bind > $HOME/$j/tzbind
-for i in $(seq 1.10 0.10 2.60 )
+for i in $(seq 1.30 0.10 2.20 )
 do
 cd $HOME/$j/r_$i
 Ebind=$(awk '{print $4}' tz.table1.txt)
