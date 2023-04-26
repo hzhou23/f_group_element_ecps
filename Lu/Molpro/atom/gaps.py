@@ -6,7 +6,7 @@ import numpy as np
 
 ###==================================================
 
-pps=['UC46','MWBSTU','ECP60_2']
+pps=['MWBSTU']
 remove_index = []
 lmad_index = [1,2,3,4]
 
@@ -17,7 +17,7 @@ pd.options.display.float_format = '{:,.4f}'.format
 
 df = pd.DataFrame()
 
-ae = pd.read_csv("AE/dkh/tz.table1.csv", sep='\s*,\s*', engine='python')
+ae = pd.read_csv("AE/dkh_small_basis/tz.table1.csv", sep='\s*,\s*', engine='python')
 df['AE'] = ae['CCSD'].values-ae['CCSD'].values[0]
 
 for pp in pps:

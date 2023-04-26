@@ -19,12 +19,12 @@ ecp,O,2,1,0
 2,  13.71419, -47.87600
 1
 2,  13.65512,  85.86406
-include,../../generate/aug-cc-pwCVTZ.basis
+include,../../generate/messyminus.basis
 include,../../generate/O-aug-cc-pwCVTZ.basis
 }
 
 
-Lu_ccsd=-39.83658120
+Lu_ccsd=-39.83533460
 O_ccsd=-15.86622096
 
 !These are the wf cards parameters

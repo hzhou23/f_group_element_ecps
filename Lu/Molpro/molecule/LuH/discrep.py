@@ -13,7 +13,7 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = ['UC46','UC60', 'mwbstu','ECP602']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC46','UC60', 'mwbstu']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC46'		:{'label':'UC46',		'color':'#ff0000','linestyle':'-'			},
 'UC60'	:{'label':'UC60',	'color':'#ff6600','linestyle':'--','dashes':(4,1)	},
@@ -74,12 +74,12 @@ def plot():
         x = data['r']
         y= (data[ecp] - data['ae'])*toev
         plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((1.30,2.60))
+    ax.set_xlim((1.40,2.60))
 #    ax.set_ylim((-0.25,0.25))
     ax.set(title='LuH qz Discrepancies')
     #plt.legend(bbox_to_anchor=(0.53, 0.15, 0.5, 0.5), fontsize="x-small")
     plt.legend(loc='best',ncol=2,prop={'size': 15})
-    plt.axvline(1.9084874049865466,ls='--',color='gray',linewidth=1.0)
+    plt.axvline(1.908518738266301,ls='--',color='gray',linewidth=1.0)
     plt.savefig('LuH_TZ.pdf')
     plt.show()
 

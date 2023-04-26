@@ -1,15 +1,15 @@
 ***,Calculation for all-electron GdH3 molecule, SCF and CCSD(T)
-memory,1,g
+memory,2,g
 gthresh,twoint=1.0E-15
 gthresh,throvl=1.0E-15
 
 set,dkroll=1,dkho=10,dkhp=4
 basis={
-include,../generate/aug-cc-pwCVTZ.basis
+include,../generate/messyminus.basis
 include,../generate/H-aug-cc-pVTZ.basis
 }
 
-Lu_ccsd=-14560.00748
+Lu_ccsd=-14559.96444
 H_ccsd=-0.49982785
 
 !These are the wf cards parameters
@@ -45,7 +45,7 @@ include,../generate/H-aug-cc-pVTZ.basis
  orbital,3202.2
 }
 basis={
-include,../generate/aug-cc-pwCVTZ.basis
+include,../generate/messyminus.basis
 include,../generate/H-aug-cc-pVTZ.basis
 }
 {rhf,nitord=60;
@@ -62,10 +62,7 @@ include,../generate/H-aug-cc-pVTZ.basis
  wf,ne,symm,ss
  occ,A1,B1,B2,A2
  closed,A1,B1,B2,A2
- rotate,12.1,14.1
- rotate,13.1,15.1
- rotate,6.2,8.2
- rotate,6.3,8.3
+ rotate,12.1,14.1,0
  print,orbitals=2
 }
 scf=energy

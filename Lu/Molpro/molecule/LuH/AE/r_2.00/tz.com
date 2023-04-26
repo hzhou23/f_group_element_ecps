@@ -5,11 +5,11 @@ gthresh,throvl=1.0E-15
 
 set,dkroll=1,dkho=10,dkhp=4
 basis={
-include,../generate/aug-cc-pwCVTZ.basis
+include,../generate/messyminus.basis
 include,../generate/H-aug-cc-pVTZ.basis
 }
 
-Lu_ccsd=-14563.55448
+Lu_ccsd=-14563.50680
 H_ccsd=-0.49982785
 
 !These are the wf cards parameters
@@ -45,7 +45,7 @@ include,../generate/H-aug-cc-pVTZ.basis
  orbital,3202.2
 }
 basis={
-include,../generate/aug-cc-pwCVTZ.basis
+include,../generate/messyminus.basis
 include,../generate/H-aug-cc-pVTZ.basis
 }
 {rhf,nitord=60;
