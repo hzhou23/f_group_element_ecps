@@ -5,7 +5,7 @@
 
 HOME=`pwd`
 
-for j in AE UC46 UC60 mwbstu mhfstu ECP602
+for j in AE UC46 UC60 mwbstu mhfstu ECP603 ECP604
 do
 echo $j
 rm $HOME/$j/tzbind
