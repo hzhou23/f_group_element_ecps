@@ -18,7 +18,7 @@ styles={
 'UC46'		:{'label':'UC46',		'color':'#ff0000','linestyle':'-'			},
 'UC60'	:{'label':'UC60',	'color':'#ff6600','linestyle':'--','dashes':(4,1)	},
 'mwbstu'	:{'label':'MWBSTU',	'color':'#ff33cc','linestyle':'--','dashes':(4,1,1,1)	},
-'ECP610'	:{'label':'ECP10',	'color':'#2f4f4f','linestyle':'--','dashes':(6,3)	},
+'ECP610'	:{'label':'ECP20',	'color':'#2f4f4f','linestyle':'--','dashes':(6,3)	},
 'ECP604'		:{'label':'ECP14',	'color':'#1e90ff','linestyle':'--','dashes':(2,1,8,1)	},
 'ECP605'		:{'label':'ECP15',	'color':'#a52a2a','linestyle':'--','dashes':(1,1)	},
 'ECP607'	        :{'label':'ECP17',	'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
