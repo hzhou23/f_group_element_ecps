@@ -13,7 +13,7 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = ['UC46','UC60', 'mwbstu','ECP610','ECP604','ECP605','ECP607','ECP606','ECP609']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = ['UC60', 'mwbstu','ECP610','ECP605','ECP607','ECP606','ECP609']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC46'      :{'label':'UC46',       'color':'#ff0000','linestyle':'-'           },
 'UC60'  :{'label':'UC60',   'color':'#ff6600','linestyle':'--','dashes':(4,1)   },
