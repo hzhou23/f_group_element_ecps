@@ -6,7 +6,7 @@ HOME=`pwd`
 
 basefolder=$HOME/..
 
-for i in ECP610
+for i in ECP605s ECP605p ECP605d
 do
 	echo $i
 	mkdir $basefolder/$i

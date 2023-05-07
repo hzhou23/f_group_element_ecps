@@ -1,0 +1,27 @@
+
+ GLOBAL ERROR fehler on processor   0                                         
+    0: fehler 1 (0x1).
+    0: fehler 1 (0x1).
+Rank 0 [Sat May  6 09:50:32 2023] [c3-0c2s10n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+
+ GLOBAL ERROR fehler on processor   9                                         
+    9: fehler 1 (0x1).
+    9: fehler 1 (0x1).
+Rank 9 [Sat May  6 09:50:32 2023] [c3-0c2s10n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 9
+
+ GLOBAL ERROR fehler on processor   3                                         
+    3: fehler 1 (0x1).
+    3: fehler 1 (0x1).
+Rank 3 [Sat May  6 09:50:32 2023] [c3-0c2s10n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3
+srun: error: nid00747: tasks 0,3,9: Aborted
+srun: launch/slurm: _step_signal: Terminating StepId=2484557.0
+
+ GLOBAL ERROR fehler on processor   6                                         
+    6: fehler 1 (0x1).
+    6: fehler 1 (0x1).
+Rank 6 [Sat May  6 09:50:32 2023] [c3-0c2s10n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 6
+slurmstepd: error: *** STEP 2484557.0 ON nid00747 CANCELLED AT 2023-05-06T09:50:32 ***
+srun: error: nid00747: task 11: Terminated
+srun: error: nid00747: tasks 1-2,4-5,7-8,10: Terminated
+srun: error: nid00747: task 6: Aborted
+srun: Force Terminated StepId=2484557.0
