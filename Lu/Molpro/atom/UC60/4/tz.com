@@ -1,8 +1,8 @@
 ***,Calculation for Gd atom, singlet and triplet
 memory,2,g
 
-gthresh,twoint=1.e-12
-gthresh,oneint=1.e-12
+gthresh,twoint=1.e-15
+gthresh,oneint=1.e-15
 
 set,dkroll=1,dkho=10,dkhp=4
 
@@ -14,7 +14,7 @@ Lu  0.0 0.0 0.0
 }
 
 basis={
-include,../aug-cc-pwCVTZ.basis
+include,../SapQZdiff.basis
 }
 
 
@@ -60,7 +60,7 @@ do i=4,4
     endif
     scf(i)=energy
     _CC_NORM_MAX=2.0
-    {rccsd(t),shifts=5.5,shiftp=2.5,thrdis=1.0;diis,1,1,15,1;maxit,100;core,8,5,5,2,5,2,2,1}
+    {rccsd(t),shifts=0.5,shiftp=0.5,thrdis=1.0;diis,1,1,15,1;maxit,100;core,8,5,5,2,5,2,2,1}
     ccsd(i)=energy
 enddo
 

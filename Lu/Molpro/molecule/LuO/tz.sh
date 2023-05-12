@@ -5,7 +5,7 @@
 
 HOME=`pwd`
 
-for j in AE ECP622
+for j in AE UC60
 do
 echo $j
 rm $HOME/$j/tzbind
