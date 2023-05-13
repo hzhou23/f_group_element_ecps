@@ -5,7 +5,7 @@
 
 HOME=`pwd`
 
-for j in AE UC60
+for j in AE mwb_reg
 do
 echo $j
 rm $HOME/$j/tzbind

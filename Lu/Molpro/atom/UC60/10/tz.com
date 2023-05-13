@@ -14,7 +14,7 @@ Lu  0.0 0.0 0.0
 }
 
 basis={
-include,../SapQZdiff.basis
+include,../aug-cc-pwCVTZ.basis
 }
 
 
