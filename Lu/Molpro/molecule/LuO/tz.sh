@@ -5,7 +5,7 @@
 
 HOME=`pwd`
 
-for j in AE mwb_or
+for j in AE mwb_nof
 do
 echo $j
 rm $HOME/$j/tzbind
