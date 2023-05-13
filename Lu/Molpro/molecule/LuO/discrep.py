@@ -13,7 +13,7 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = [ 'mwbstu','mwb_reg','ECP612', 'ECP607']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = [ 'mwbstu','mwb_reg','ECP612', 'ECP607','mwb_or']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
 'UC46'      :{'label':'UC46',       'color':'#ff0000','linestyle':'-'           },
 'UC60'  :{'label':'UC60',   'color':'#ff6600','linestyle':'--','dashes':(4,1)   },
@@ -21,7 +21,7 @@ styles={
 'ECP607'    :{'label':'ECP17',  'color':'#2f4f4f','linestyle':'--','dashes':(6,3)   },
 'ECP612'        :{'label':'ECP22',  'color':'#1e90ff','linestyle':'--','dashes':(2,1,8,1)   },
 'mwb_reg'        :{'label':'mwbreg',  'color':'#a52a2a','linestyle':'--','dashes':(1,1)   },
-'ECP613'            :{'label':'ECP23',  'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
+'mwb_or'            :{'label':'mwbor',  'color':'#009900','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP620'          :{'label':'ECP30',   'color':'#8A3324','linestyle':'--','dashes':(8,1,1,1,1,1)},
 'ECP609'          :{'label':'ECP19',   'color':'#00FFFF','linestyle':'--','dashes':(8,1,1,1,1,1)},
 }
