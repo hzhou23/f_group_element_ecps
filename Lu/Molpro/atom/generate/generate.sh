@@ -6,7 +6,7 @@ HOME=`pwd`
 
 basefolder=$HOME/..
 
-for i in mwb_or
+for i in mwb_reg8 mwb_reg6
 do
 	echo $i
 	mkdir $basefolder/$i
