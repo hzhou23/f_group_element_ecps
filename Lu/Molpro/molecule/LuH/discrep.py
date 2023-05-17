@@ -13,9 +13,9 @@ import pandas as pd
 
 toev=27.21138602
 
-ecps = [ 'mwbstu','ECP612','ECP612S','mwb_reg','mwb_or','mwb_nof','mwb_reg8','mwb_reg6']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
+ecps = [ 'mwbstu','ECP612','ECP612S','mwb_reg','mwb_or','mwb_nof','mwb_reg8','mwb_reg6','ECP612LL']#, 'w3', 'w6', 'w9']#,'i0','i7', 'i6']#'sub0','smal-se3','se3','se4']
 styles={
-'UC46'		:{'label':'UC46',		'color':'#ff0000','linestyle':'-'			},
+'ECP612LL'		:{'label':'ECP22LL',		'color':'#ff0000','linestyle':'-'			},
 'mwb_reg6'	:{'label':'mwbreg6',	'color':'#ff6600','linestyle':'--','dashes':(4,1)	},
 'mwbstu'	:{'label':'MWBSTU',	'color':'#ff33cc','linestyle':'--','dashes':(4,1,1,1)	},
 'ECP612S'	:{'label':'ECP22S',	'color':'#2f4f4f','linestyle':'--','dashes':(6,3)	},
