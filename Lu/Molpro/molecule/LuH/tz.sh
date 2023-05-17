@@ -5,7 +5,7 @@
 
 HOME=`pwd`
 
-for j in AE mwb_reg8 mwb_reg6
+for j in AE ECP612LL ECP612S
 do
 echo $j
 rm $HOME/$j/tzbind

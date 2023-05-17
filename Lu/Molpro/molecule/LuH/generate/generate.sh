@@ -8,7 +8,7 @@ HOME=`pwd`
 basefolder=$HOME/..
 n=15
 
-for i in mwb_reg8 mwb_reg6
+for i in ECP612LL ECP612S
 do
 	echo $i
         mkdir $basefolder/$i
